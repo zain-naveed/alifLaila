@@ -1,0 +1,55 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.name {
+  font-family: PoppinsSemiBold;
+  color: $BLACK;
+  font-size: 16px;
+  text-align: left;
+  text-transform: capitalize;
+  span {
+    color: $PRIMARY;
+  }
+}
+
+.userAvatar {
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+  border-radius: 100%;
+  border: 6px solid $Light_Blue;
+}
+
+.statTitle {
+  font-family: PoppinsRegular;
+  font-size: 12px;
+  text-align: left;
+  color: $BLACK;
+}
+
+.statIcon {
+  height: 22px;
+  width: 22px;
+}
+
+.statLabel {
+  font-family: PoppinsRegular;
+  font-size: 14px;
+  text-align: left;
+  color: $Gray;
+}
+
+@media screen and (max-width: 576px) {
+  .statTitle {
+    font-size: calculatePixels(1200, 12) !important;
+  }
+
+  .statIcon {
+    height: calculatePixels(1200, 22) !important;
+    width: calculatePixels(1200, 22) !important;
+  }
+
+  .statLabel {
+    font-size: calculatePixels(1200, 14) !important;
+  }
+}

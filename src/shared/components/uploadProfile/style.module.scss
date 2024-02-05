@@ -1,0 +1,39 @@
+@import "shared/utils/colors.scss";
+
+.profileTitle {
+  font-size: 16px;
+  font-family: PoppinsMedium;
+  margin-bottom: 5px;
+  color: #11142d;
+}
+.profileImage {
+  width: 114px;
+  height: 114px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+.camera {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5px;
+  text-align: center;
+}
+
+.iconStyle {
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+}
+
+.asterik {
+  color: $PRIMARY;
+}
+
+.error {
+  color: #ea5b5b;
+  font-size: 11px;
+  text-align: left;
+  z-index: 1;
+  margin-left: 5px;
+}

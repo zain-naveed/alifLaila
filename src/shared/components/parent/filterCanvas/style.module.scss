@@ -1,0 +1,193 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.backDropContainer {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 1000;
+  padding: 0px !important;
+  transition: visibility 0.2s;
+  overflow: hidden;
+}
+
+.mainContainer {
+  background-color: white;
+  max-width: 340px;
+  height: 100%;
+  padding: 0px !important;
+  overflow-y: auto;
+  transition: transform 0.3s;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  overflow-x: hidden;
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.hidden {
+  transform: translateX(340px);
+}
+
+.shown {
+  transform: translateX(0px);
+}
+
+.mainContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.crossIconContainer {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  border: 1px solid $Light_Grey_3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 22px;
+  font-family: PoppinsMedium;
+  color: $BLACK;
+  text-align: left;
+}
+
+.crossIcon {
+  height: 12px;
+  width: 12px;
+  path {
+    stroke: $Secondary;
+  }
+}
+
+.accordianContainer {
+  border-bottom: 1px solid $Light_Grey_3;
+  padding-bottom: 18px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.accordianTitle {
+  font-size: 16px;
+  font-family: PoppinsSemiBold;
+  color: $BLACK;
+  text-align: left;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.chevIcon {
+  height: 22px;
+  width: 22px;
+  path {
+    stroke-width: 1.5px;
+  }
+}
+
+.sqaureRadio {
+  height: 16px;
+  width: 16px;
+  border-radius: 3px;
+  border: 1px solid $Gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.radioLabel {
+  font-size: 16px;
+  font-family: PoppinsRegular;
+  color: $Gray;
+  text-align: left;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.activeSqaure {
+  background-color: $Secondary !important;
+  border: 1px solid $Secondary !important;
+}
+
+.activeLabel {
+  font-family: PoppinsMedium !important;
+  color: $Secondary !important;
+}
+
+.roundRadio {
+  height: 16px;
+  width: 16px;
+  border-radius: 100%;
+  border: 1.5px solid $Gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.activeRound {
+  border: 1.5px solid $Secondary !important;
+}
+
+.round {
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  background-color: $Secondary !important;
+}
+
+.contentContainer {
+  height: calc(100vh - 88px);
+  overflow-y: auto;
+
+  &::-webkit-scrollbar-track {
+    border: 7px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: #f2f2f2;
+  }
+
+  &::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 7px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: $PRIMARY;
+  }
+}
+
+.btnContainer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  border-top: 1px solid $Light_Grey_3;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+.extra {
+  height: 88px;
+  width: 100%;
+}
+
+.resetfilterButton {
+  border: 1px solid $Gray !important;
+  color: $Gray !important;
+  background-color: white !important;
+}

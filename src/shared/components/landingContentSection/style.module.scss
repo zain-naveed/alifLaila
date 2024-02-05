@@ -1,0 +1,164 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+@import "shared/components/common/heading/style.module.scss";
+@import "shared/components/common/title/style.module.scss";
+
+.bg1 {
+  background-color: $lightPink;
+}
+
+.bg2 {
+  background-color: $lightYellow;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.waveStyle {
+  @include responsiveProperty(
+    (
+      "height": 134,
+    )
+  );
+}
+
+.learningCont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentSubContainer {
+  @include responsiveProperty(
+    (
+      "max-width": 564,
+    )
+  );
+}
+
+.contentTitle {
+  font-family: BitterBold;
+  @include responsiveProperty(
+    (
+      "font-size": 38,
+    )
+  );
+  color: $DARK_GREEN;
+  text-align: left;
+  text-transform: capitalize;
+  z-index: 1;
+}
+
+.highlighted {
+  color: $Secondary;
+}
+
+.highlighted2 {
+  color: $DARK_GREEN;
+}
+
+.highlighted3 {
+  color: $PRIMARY;
+}
+
+.highlighted4 {
+  color: $Yellow;
+}
+
+.asset1 {
+  @include responsiveProperty(
+    (
+      "max-width": 617,
+      "max-height": 645,
+    )
+  );
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.contentIcon {
+  @include responsiveProperty(
+    (
+      "max-width": 36,
+      "min-width": 36,
+      "max-height": 36,
+      "min-height": 36,
+    )
+  );
+  width: 100%;
+  height: 100%;
+  align-self: start;
+}
+
+.contentLabel {
+  font-family: PoppinsRegular;
+  @include responsiveProperty(
+    (
+      "font-size": 18,
+    )
+  );
+  color: $BLACK;
+  text-align: left;
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .waveStyle {
+    height: calculatePixels(767, 134) !important;
+  }
+
+  .contentSubContainer {
+    max-width: calculatePixels(767, 564) !important;
+  }
+
+  .contentTitle {
+    font-size: calculatePixels(767, 38) !important;
+  }
+
+  .asset1 {
+    max-width: calculatePixels(767, 617) !important;
+    max-height: calculatePixels(767, 645) !important;
+  }
+
+  .contentIcon {
+    max-width: calculatePixels(767, 36) !important;
+    min-width: calculatePixels(767, 36) !important;
+    max-height: calculatePixels(767, 36) !important;
+    min-height: calculatePixels(767, 36) !important;
+  }
+
+  .contentLabel {
+    font-size: calculatePixels(767, 18) !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .waveStyle {
+    height: calculatePixels(767, 134) !important;
+  }
+
+  .contentSubContainer {
+    max-width: calculatePixels(767, 564) !important;
+  }
+
+  .contentTitle {
+    font-size: calculatePixels(767, 38) !important;
+  }
+
+  .asset1 {
+    max-width: calculatePixels(767, 617) !important;
+    max-height: calculatePixels(767, 645) !important;
+  }
+
+  .contentIcon {
+    max-width: calculatePixels(767, 36) !important;
+    min-width: calculatePixels(767, 36) !important;
+    max-height: calculatePixels(767, 36) !important;
+    min-height: calculatePixels(767, 36) !important;
+  }
+
+  .contentLabel {
+    font-size: calculatePixels(767, 18) !important;
+  }
+}

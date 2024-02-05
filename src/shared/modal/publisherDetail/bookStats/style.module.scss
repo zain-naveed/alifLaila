@@ -1,0 +1,27 @@
+@import "shared/utils/colors.scss";
+
+.contentContainer {
+  .bookItemHeading {
+    font-family: PoppinsSemiBold;
+    font-size: 14px;
+    color: black;
+    text-align: left;
+  }
+  span {
+    font-family: PoppinsRegular;
+    font-size: 14px;
+    color: black;
+    text-align: left;
+  }
+}
+
+.seperator {
+  height: 1px;
+  width: 100%;
+  background-color: $Light_Grey_1;
+}
+
+.statsLoader {
+  height: 24px;
+  width: 45px;
+}

@@ -1,0 +1,51 @@
+@import "shared/utils/colors.scss";
+.label{
+    font-size: 14px;
+    font-family: "PoppinsMedium";
+    margin-bottom: 5px;
+    color: #11142d;
+    font-weight: 500;
+}
+.input[type="radio"] {
+    display: grid;
+    place-content: center;
+  }
+  
+.input[type="radio"]::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em $PRIMARY;
+    background:$PRIMARY;
+    border: 0px solid white;
+  }
+  
+.input[type="radio"]:checked::before {
+    transform: scale(0.9);
+  }
+.input[type="radio"]:not(:checked),.input[type="radio"]:checked {
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 50%;
+    background-color: white;
+    // outline: 2px solid $PRIMARY;
+    outline: 2px solid $LIGHT_GREY;
+    height: 12px;
+    width: 12px;
+  }
+.input[type="radio"]:checked{
+    outline: 2px solid $PRIMARY;
+  }
+  .radio_label{
+    font-family: 'PoppinsRegular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  .asterik {
+    color: $PRIMARY;
+  }

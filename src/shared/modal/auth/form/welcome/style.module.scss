@@ -1,0 +1,98 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.header {
+  padding-right: 5px;
+  padding-top: 5px;
+}
+
+.logo {
+  @include MRP(
+    (
+      "width": 172.97,
+      "height": 114,
+    )
+  );
+}
+
+.heading {
+  @include MRP(
+    (
+      "font-size": 24,
+    )
+  );
+  font-family: BitterSemiBold;
+  color: $BLACK;
+  text-align: center;
+}
+
+.btn1 {
+  font-family: PoppinsMedium;
+  @include MRP(
+    (
+      "width": 360,
+      "height": 52,
+      "font-size": 16,
+    )
+  );
+  border: 1px solid $PRIMARY;
+}
+
+.btn2 {
+  @include MRP(
+    (
+      "width": 360,
+      "height": 52,
+      "font-size": 16,
+    )
+  );
+  background-color: white !important;
+  border: 1px solid $PRIMARY !important;
+  color: $PRIMARY !important;
+}
+
+.bottomLabel {
+  font-family: PoppinsMedium;
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+  color: $DARK_GREEN;
+}
+
+.arrowIcon {
+  @include MRP(
+    (
+      "width": 24,
+      "height": 24,
+    )
+  );
+}
+
+@media screen and (max-width: 576px) {
+  .heading {
+    font-size: calculatePixels(992, 24) !important;
+  }
+  .btn1 {
+    width: calculatePixels(992, 360) !important;
+    height: calculatePixels(992, 52) !important;
+    font-size: calculatePixels(992, 16) !important;
+  }
+  .btn2 {
+    width: calculatePixels(992, 360) !important;
+    height: calculatePixels(992, 52) !important;
+    font-size: calculatePixels(992, 16) !important;
+  }
+  .logo {
+    width: calculatePixels(992, 172.97) !important;
+    height: calculatePixels(992, 114) !important;
+  }
+  .bottomLabel {
+    font-size: calculatePixels(992, 16) !important;
+  }
+  .arrowIcon {
+    height: calculatePixels(992, 24) !important;
+    width: calculatePixels(992, 24) !important;
+  }
+}

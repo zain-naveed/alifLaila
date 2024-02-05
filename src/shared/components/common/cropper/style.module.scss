@@ -1,0 +1,42 @@
+@import "shared/utils/colors.scss";
+
+.header {
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.img {
+  margin: 0 auto !important;
+}
+
+.small_icon {
+  width: 20px;
+  height: 24px;
+}
+.large_icon {
+  width: 36px;
+  height: 36px;
+}
+
+.desc {
+  font-family: PoppinsRegular;
+  font-size: 14px;
+  color: $Gray;
+  text-align: center;
+}
+
+.cancelBtn {
+  height: 48px !important;
+  width: 148px !important;
+  border: 1px solid $PRIMARY !important;
+  background-color: white !important;
+  color: $PRIMARY !important;
+}
+
+.saveBtn {
+  height: 48px !important;
+  width: 148px !important;
+  border: 1px solid $PRIMARY !important;
+  color: white !important;
+}

@@ -1,0 +1,141 @@
+@import "shared/utils/colors.scss";
+@import "shared/components/header/main/style.module.scss";
+@import "shared/components/common/customButton/style.module.scss";
+
+.backDropContainer {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 400;
+  padding: 0px !important;
+  transition: visibility 0.2s;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.mainContainer {
+  background-color: white;
+  max-width: 340px;
+  height: 100%;
+  padding: 0px !important;
+  overflow-y: auto;
+  transition: transform 0.3s;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  overflow-x: hidden;
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.hidden {
+  transform: translateX(340px);
+}
+
+.shown {
+  transform: translateX(0px);
+}
+
+.mainContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.crossIconContainer {
+  height: 30px;
+  width: 30px;
+  border-radius: 8px;
+  border: 1px solid $LIGHT_GREY;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navItemContainer,
+.activeNavItemContainer {
+  display: flex;
+  align-items: center;
+  padding-left: 33px;
+  height: 44px;
+
+  svg {
+    margin-right: 12px;
+  }
+
+  .heading,
+  .logout {
+    color: $Gray;
+    font-family: "PoppinsRegular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  &:hover {
+    background-color: #fff3ff;
+    cursor: pointer;
+  }
+}
+
+.activeNavItemContainer {
+  background-color: $LightPrimary;
+  border-right: 3px solid $PRIMARY;
+
+  .heading {
+    font-weight: 600;
+    color: $PRIMARY;
+  }
+
+  svg path {
+    fill: $PRIMARY;
+  }
+}
+
+.filterButton {
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  width: 100%;
+  background-color: white;
+  margin-top: calc(100vh - 332px);
+  display: flex;
+  z-index: 99;
+  position: relative;
+
+  .filterButton {
+    @extend .customBtnContainer;
+    width: 149px;
+    margin: 17px auto;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-left: -16px;
+  }
+  .resetfilterButton {
+    @extend .customBtnContainer;
+    width: 149px;
+    margin: 17px auto;
+    text-transform: uppercase;
+    font-size: 13px;
+    background-color: white;
+    color: $PRIMARY;
+    border: 1px solid $PRIMARY;
+  }
+
+  .iconStyle {
+    margin-left: 10px;
+    min-height: 16px !important;
+    min-width: 16px !important;
+    max-height: 16px !important;
+    max-width: 16px !important;
+
+    path {
+      stroke: white;
+    }
+  }
+}
+
+.sugestionContainer {
+  top: 40px !important;
+  bottom: auto !important;
+}

@@ -1,0 +1,367 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.leaderShipContainer {
+  background-color: white;
+  @include responsiveProperty(
+    (
+      "height": 234,
+    )
+  );
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leadherShipSubContainer {
+  @include responsiveProperty(
+    (
+      "height": 80,
+      "width": 774,
+      "border-radius": 46,
+    )
+  );
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+// .content1 {
+//   &::before {
+//     content: "";
+//     background-image: url("../../../../assets/icons/left-arrow-book.png");
+//     background-size: 297px 226px;
+//     width: 297px;
+//     height: 226px;
+//     position: absolute;
+//     left: -250px;
+//     top: -180px;
+//   }
+// }
+
+// .content2 {
+//   &::before {
+//     content: "";
+//     background-image: url("../../../../assets/icons/left-bulb-arrow.png");
+//     background-size: 285px 261px;
+//     width: 285px;
+//     height: 261px;
+//     position: absolute;
+//     left: -240px;
+//     top: -210px;
+//   }
+// }
+
+.avatarStyle {
+  @include responsiveProperty(
+    (
+      "min-width": 103,
+      "max-width": 103,
+      "min-height": 103,
+      "max-height": 103,
+      "margin-left": -50,
+    )
+  );
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  z-index: 1;
+  border: 3px solid white;
+}
+
+.iconStyle {
+  @include responsiveProperty(
+    (
+      "min-width": 13,
+      "max-width": 133,
+      "min-height": 174,
+      "max-height": 174,
+      "margin-right": -50,
+    )
+  );
+  height: 100%;
+  width: 100%;
+}
+
+@mixin fontMixin {
+  text-align: left;
+  color: white;
+  text-transform: capitalize;
+}
+
+.winnerName {
+  @include fontMixin();
+  font-family: PoppinsSemiBold;
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+}
+
+.winnerGrade {
+  @include fontMixin();
+  font-family: PoppinsRegular;
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+}
+
+.winnerAge {
+  @include fontMixin();
+  font-family: PoppinsSemiBold;
+  @include responsiveProperty(
+    (
+      "font-size": 12,
+    )
+  );
+}
+
+.winnerStatCount {
+  @include fontMixin();
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 24,
+    )
+  );
+}
+
+@media screen and (max-width: 576px) {
+  .leaderShipContainer {
+    height: calculatePixels(576, 234) !important;
+  }
+  .content1 {
+    &::before {
+      background-size: calculatePixels(576, 297) calculatePixels(576, 226) !important;
+      width: calculatePixels(576, 297) !important;
+      height: calculatePixels(576, 226) !important;
+      position: absolute;
+      left: calculatePixels(576, -250) !important;
+      top: calculatePixels(576, -180) !important;
+    }
+  }
+  .content2 {
+    &::before {
+      background-size: calculatePixels(576, 285) calculatePixels(576, 261) !important;
+      width: calculatePixels(576, 285) !important;
+      height: calculatePixels(576, 261) !important;
+      left: calculatePixels(576, -240) !important;
+      top: calculatePixels(576, -210) !important;
+    }
+  }
+
+  .leadherShipSubContainer {
+    height: calculatePixels(576, 80) !important;
+    width: calculatePixels(576, 774) !important;
+    border-radius: calculatePixels(576, 46) !important;
+  }
+
+  .avatarStyle {
+    min-width: calculatePixels(576, 103) !important;
+    max-width: calculatePixels(576, 103) !important;
+    min-height: calculatePixels(576, 103) !important;
+    max-height: calculatePixels(576, 103) !important;
+    margin-left: calculatePixels(576, -50) !important;
+  }
+
+  .iconStyle {
+    min-width: calculatePixels(576, 133) !important;
+    max-width: calculatePixels(576, 133) !important;
+    min-height: calculatePixels(576, 174) !important;
+    max-height: calculatePixels(576, 174) !important;
+    margin-right: calculatePixels(576, -50) !important;
+  }
+
+  .winnerName {
+    font-size: calculatePixels(576, 14) !important;
+  }
+
+  .winnerGrade {
+    font-size: calculatePixels(576, 14) !important;
+  }
+
+  .winnerAge {
+    font-size: calculatePixels(576, 12) !important;
+  }
+
+  .winnerStatCount {
+    font-size: calculatePixels(576, 24) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .leaderShipContainer {
+    height: calculatePixels(768, 234) !important;
+  }
+
+  .content1 {
+    &::before {
+      background-size: calculatePixels(768, 297) calculatePixels(768, 226) !important;
+      width: calculatePixels(768, 297) !important;
+      height: calculatePixels(768, 226) !important;
+      position: absolute;
+      left: calculatePixels(768, -250) !important;
+      top: calculatePixels(768, -180) !important;
+    }
+  }
+
+  .content2 {
+    &::before {
+      background-size: calculatePixels(768, 285) calculatePixels(768, 261) !important;
+      width: calculatePixels(768, 285) !important;
+      height: calculatePixels(768, 261) !important;
+      left: calculatePixels(768, -240) !important;
+      top: calculatePixels(768, -210) !important;
+    }
+  }
+
+  .leadherShipSubContainer {
+    height: calculatePixels(768, 80) !important;
+    width: calculatePixels(768, 774) !important;
+    border-radius: calculatePixels(768, 46) !important;
+  }
+
+  .avatarStyle {
+    min-width: calculatePixels(768, 103) !important;
+    max-width: calculatePixels(768, 103) !important;
+    min-height: calculatePixels(768, 103) !important;
+    max-height: calculatePixels(768, 103) !important;
+    margin-left: calculatePixels(768, -50) !important;
+  }
+
+  .iconStyle {
+    min-width: calculatePixels(768, 133) !important;
+    max-width: calculatePixels(768, 133) !important;
+    min-height: calculatePixels(768, 174) !important;
+    max-height: calculatePixels(768, 174) !important;
+    margin-right: calculatePixels(768, -50) !important;
+  }
+
+  .winnerName {
+    font-size: calculatePixels(768, 14) !important;
+  }
+
+  .winnerGrade {
+    font-size: calculatePixels(768, 14) !important;
+  }
+
+  .winnerAge {
+    font-size: calculatePixels(768, 12) !important;
+  }
+
+  .winnerStatCount {
+    font-size: calculatePixels(768, 24) !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .content1 {
+    &::before {
+      background-size: calculatePixels(992, 297) calculatePixels(992, 226) !important;
+      width: calculatePixels(992, 297) !important;
+      height: calculatePixels(992, 226) !important;
+      position: absolute;
+      left: calculatePixels(992, -250) !important;
+      top: calculatePixels(992, -180) !important;
+    }
+  }
+  .content2 {
+    &::before {
+      background-size: calculatePixels(992, 285) calculatePixels(992, 261) !important;
+      width: calculatePixels(992, 285) !important;
+      height: calculatePixels(992, 261) !important;
+      left: calculatePixels(992, -240) !important;
+      top: calculatePixels(992, -210) !important;
+    }
+  }
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .content1 {
+    &::before {
+      background-size: calculatePixels(1200, 297) calculatePixels(1200, 226) !important;
+      width: calculatePixels(1200, 297) !important;
+      height: calculatePixels(1200, 226) !important;
+      position: absolute;
+      left: calculatePixels(1200, -250) !important;
+      top: calculatePixels(1200, -180) !important;
+    }
+  }
+  .content2 {
+    &::before {
+      background-size: calculatePixels(1200, 285) calculatePixels(1200, 261) !important;
+      width: calculatePixels(1200, 285) !important;
+      height: calculatePixels(1200, 261) !important;
+      left: calculatePixels(1200, -240) !important;
+      top: calculatePixels(1200, -210) !important;
+    }
+  }
+}
+@media (min-width: 1400px) and (max-width: 1600px) {
+  .content1 {
+    &::before {
+      background-size: calculatePixels(1400, 297) calculatePixels(1400, 226) !important;
+      width: calculatePixels(1400, 297) !important;
+      height: calculatePixels(1400, 226) !important;
+      position: absolute;
+      left: calculatePixels(1400, -250) !important;
+      top: calculatePixels(1400, -180) !important;
+    }
+  }
+  .content2 {
+    &::before {
+      background-size: calculatePixels(1400, 285) calculatePixels(1400, 261) !important;
+      width: calculatePixels(1400, 285) !important;
+      height: calculatePixels(1400, 261) !important;
+      left: calculatePixels(1400, -240) !important;
+      top: calculatePixels(1400, -210) !important;
+    }
+  }
+}
+@media (min-width: 1600px) and (max-width: 1800px) {
+  .content1 {
+    &::before {
+      background-size: calculatePixels(1600, 297) calculatePixels(1600, 226) !important;
+      width: calculatePixels(1600, 297) !important;
+      height: calculatePixels(1600, 226) !important;
+      position: absolute;
+      left: calculatePixels(1600, -250) !important;
+      top: calculatePixels(1600, -180) !important;
+    }
+  }
+  .content2 {
+    &::before {
+      background-size: calculatePixels(1600, 285) calculatePixels(1600, 261) !important;
+      width: calculatePixels(1600, 285) !important;
+      height: calculatePixels(1600, 261) !important;
+      left: calculatePixels(1600, -240) !important;
+      top: calculatePixels(1600, -210) !important;
+    }
+  }
+}
+@media (min-width: 1800px) and (max-width: 2000px) {
+  .content1 {
+    &::before {
+      background-size: calculatePixels(1800, 297) calculatePixels(1800, 226) !important;
+      width: calculatePixels(1800, 297) !important;
+      height: calculatePixels(1800, 226) !important;
+      position: absolute;
+      left: calculatePixels(1800, -250) !important;
+      top: calculatePixels(1800, -180) !important;
+    }
+  }
+  .content2 {
+    &::before {
+      background-size: calculatePixels(1800, 285) calculatePixels(1800, 261) !important;
+      width: calculatePixels(1800, 285) !important;
+      height: calculatePixels(1800, 261) !important;
+      left: calculatePixels(1800, -240) !important;
+      top: calculatePixels(1800, -210) !important;
+    }
+  }
+}

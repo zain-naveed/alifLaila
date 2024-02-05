@@ -1,0 +1,702 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/mixin.module.scss";
+@import "shared/utils/responsive.module.scss";
+
+.leftArrowContainer {
+  @include responsiveProperty(
+    (
+      "height": 40,
+      "width": 40,
+    )
+  );
+  border-radius: 100%;
+  background-color: white;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $BorderGray;
+  cursor: pointer;
+  box-shadow: 0px 5.14286px 24.42857px 0px rgba(0, 0, 0, 0.16);
+}
+
+.rightArrowContainer {
+  @include responsiveProperty(
+    (
+      "height": 40,
+      "width": 40,
+    )
+  );
+  border-radius: 100%;
+  background-color: white;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $BorderGray;
+  cursor: pointer;
+  box-shadow: 0px 5.14286px 24.42857px 0px rgba(0, 0, 0, 0.16);
+}
+
+.arrowIcon {
+  @include responsiveProperty(
+    (
+      "height": 28,
+      "width": 28,
+    )
+  );
+  path {
+    fill: black;
+  }
+}
+
+.active {
+  background-color: $DARK_GREEN;
+  border-color: $DARK_GREEN;
+  .arrowIcon path {
+    fill: white;
+  }
+}
+
+.plansContainer {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.freePlanContainer {
+  width: 50%;
+  @include responsiveProperty(
+    (
+      "min-width": 405,
+      "height": 370,
+      "border-radius": 20,
+      "padding-left": 30,
+      "padding-right": 30,
+      "gap": 16,
+    )
+  );
+  background-color: rgba($color: $DARK_GREEN, $alpha: 0.1) !important;
+  border: 1px solid $DARK_GREEN;
+}
+
+.promoContainer {
+  @include responsiveProperty(
+    (
+      "height": 370,
+      "border-radius": 20,
+      "min-width": 733,
+      "max-width": 733,
+      "padding-left": 20,
+      "padding-right": 20,
+      "padding-top": 30,
+      "padding-bottom": 30,
+      "gap": 32,
+    )
+  );
+  z-index: 3;
+  background: linear-gradient(70deg, #07727e 23.3%, #1bacbd 109.78%);
+  .slashStyle {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 1;
+    @include responsiveProperty(
+      (
+        "right": 40,
+        "width": 304,
+      )
+    );
+  }
+}
+
+.promo2Container {
+  background: linear-gradient(
+    254deg,
+    #f56e9a -1.68%,
+    #c72e60 94.32%
+  ) !important;
+  button {
+    span {
+      color: $Secondary !important;
+    }
+  }
+  .discountedContainer {
+    .content {
+      background-color: $DARK_GREEN;
+
+      .bottomCont {
+        background-color: $DARK_GREEN;
+      }
+    }
+  }
+}
+
+.planTitle {
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+  font-family: PoppinsMedium;
+  color: $DARK_GREEN;
+}
+
+.iconStyle {
+  @include responsiveProperty(
+    (
+      "min-width": 22,
+      "min-height": 22,
+      "max-height": 22,
+      "max-width": 22,
+    )
+  );
+  height: 100%;
+  width: 100%;
+}
+
+.planPrice {
+  @include responsiveProperty(
+    (
+      "font-size": 32,
+    )
+  );
+  font-family: BitterBold;
+  color: $Secondary;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.planSubtitle {
+  @include responsiveProperty(
+    (
+      "font-size": 12,
+    )
+  );
+  font-family: BitterMedium;
+  text-align: left;
+  color: $LIGHT_GREY;
+  span {
+    text-decoration: line-through;
+  }
+}
+
+.pointsList {
+  @include responsiveProperty(
+    (
+      "gap": 18,
+    )
+  );
+}
+
+.promoPointsList {
+  @include responsiveProperty(
+    (
+      "gap": 18,
+      "height": 124,
+      "max-width": 693,
+    )
+  );
+  overflow-y: auto;
+  overflow-x: hidden;
+  @include hideScrollBar();
+}
+
+.planBulletLabel {
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  font-family: PoppinsRegular;
+  color: $Gray;
+  @include elipsis(3);
+}
+
+.planBulletIcon {
+  @include responsiveProperty(
+    (
+      "min-width": 24,
+      "min-height": 24,
+      "max-height": 24,
+      "max-width": 24,
+    )
+  );
+  height: 100%;
+  width: 100%;
+}
+
+.btn1Styles {
+  @include responsiveProperty(
+    (
+      "width": 137,
+      "height": 52,
+      "font-size": 16,
+      "border-radius": 40,
+    )
+  );
+  background-color: white !important;
+  font-family: PoppinsMedium;
+  color: $DARK_GREEN !important;
+}
+
+.btn2Styles {
+  @include responsiveProperty(
+    (
+      "width": 137,
+      "height": 52,
+      "font-size": 16,
+      "border-radius": 40,
+    )
+  );
+  background-color: white !important;
+  font-family: PoppinsMedium !important;
+  color: $Secondary !important;
+}
+
+.diabledBtn {
+  background-color: $DISABLE_BTN !important;
+  color: white !important;
+}
+
+.promoPlanImg {
+  @include responsiveProperty(
+    (
+      "max-width": 575,
+      "max-height": 382,
+      "min-width": 375,
+      "min-height": 249,
+    )
+  );
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.limitLabel {
+  @include responsiveProperty(
+    (
+      "font-size": 12,
+    )
+  );
+  font-family: BitterMedium;
+  color: $BLACK;
+}
+
+.timeLabel {
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  font-family: BitterMedium;
+  color: $PRIMARY;
+}
+
+.bottomLabel {
+  font-family: PoppinsRegular;
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  color: $LIGHT_GREY;
+  text-align: left;
+}
+.currentPlanContainer {
+  @include responsiveProperty(
+    (
+      "width": 108,
+      "height": 28,
+      "border-radius": 16,
+    )
+  );
+  background-color: #ecfdf3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.currentPlanLabel {
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+  color: #027a48;
+  text-align: center;
+}
+
+.discountedContainer {
+  position: absolute;
+  z-index: 3;
+  @include responsiveProperty(
+    (
+      "height": 64,
+      "top": 25,
+      "right": -10,
+    )
+  );
+
+  .content {
+    @include responsiveProperty(
+      (
+        "height": 39,
+      )
+    );
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: $Secondary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    label {
+      font-family: BitterMedium;
+      @include responsiveProperty(
+        (
+          "font-size": 14,
+        )
+      );
+      color: white !important;
+    }
+    .bottomCont {
+      @include responsiveProperty(
+        (
+          "top": 9,
+          "height": 40,
+          "width": 9,
+        )
+      );
+      right: 0px;
+      position: absolute;
+      background-color: $Secondary;
+      transform: skewY(120deg);
+    }
+  }
+}
+
+.noPromoContainer {
+  @include responsiveProperty(
+    (
+      "height": 370,
+      "border-radius": 20,
+    )
+  );
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d0d0d0;
+  background-color: #f5f5f5;
+  border-style: dashed;
+
+  img {
+    @include responsiveProperty(
+      (
+        "height": 182,
+        "width": 208,
+      )
+    );
+    object-fit: contain;
+  }
+
+  label {
+    font-family: PoppinsMedium;
+    @include responsiveProperty(
+      (
+        "font-size": 18,
+        "padding-top": 20,
+      )
+    );
+    text-align: center;
+    color: $DARK_GREEN;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .promoContainer {
+    border-radius: calculatePixels(992, 24) !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    height: calculatePixels(992, 370) !important;
+    padding-left: calculatePixels(992, 20) !important;
+    padding-right: calculatePixels(992, 20) !important;
+    padding-top: calculatePixels(992, 30) !important;
+    padding-bottom: calculatePixels(992, 30) !important;
+    gap: calculatePixels(992, 32) !important;
+
+    .slashStyle {
+      position: absolute;
+      right: calculatePixels(992, 40) !important;
+      height: 100%;
+      top: 0;
+      z-index: 1;
+      width: calculatePixels(992, 304) !important;
+    }
+  }
+
+  .freePlanContainer {
+    width: 100%;
+    min-width: calculatePixels(992, 405) !important;
+    height: calculatePixels(992, 370) !important;
+    border-radius: calculatePixels(992, 20) !important;
+    padding-left: calculatePixels(992, 30) !important;
+    padding-right: calculatePixels(992, 30) !important;
+    gap: calculatePixels(992, 16) !important;
+  }
+
+  .planTitle {
+    font-size: calculatePixels(992, 14) !important;
+  }
+  .iconStyle {
+    min-width: calculatePixels(992, 22) !important;
+    min-width: calculatePixels(992, 22) !important;
+    min-height: calculatePixels(992, 22) !important;
+    max-height: calculatePixels(992, 22) !important;
+    max-width: calculatePixels(992, 22) !important;
+  }
+  .planPrice {
+    font-size: calculatePixels(992, 32) !important;
+  }
+  .planSubtitle {
+    font-size: calculatePixels(992, 12) !important;
+  }
+  .pointsList {
+    gap: calculatePixels(992, 18) !important;
+  }
+  .promoPointsList {
+    gap: calculatePixels(992, 18) !important;
+    height: calculatePixels(992, 124) !important;
+    max-width: calculatePixels(992, 683) !important;
+  }
+  .planBulletLabel {
+    font-size: calculatePixels(992, 16) !important;
+  }
+  .planBulletIcon {
+    min-width: calculatePixels(992, 22) !important;
+    min-height: calculatePixels(992, 22) !important;
+    max-height: calculatePixels(992, 22) !important;
+    max-width: calculatePixels(992, 22) !important;
+  }
+  .btn1Styles {
+    width: calculatePixels(992, 137) !important;
+    height: calculatePixels(992, 52) !important;
+    font-size: calculatePixels(992, 16) !important;
+    border-radius: calculatePixels(992, 40) !important;
+  }
+  .btn2Styles {
+    width: calculatePixels(992, 137) !important;
+    height: calculatePixels(992, 52) !important;
+    font-size: calculatePixels(992, 16) !important;
+    border-radius: calculatePixels(992, 40) !important;
+  }
+  .limitLabel {
+    font-size: calculatePixels(992, 12) !important;
+  }
+  .timeLabel {
+    font-size: calculatePixels(992, 16) !important;
+  }
+  .bottomLabel {
+    font-size: calculatePixels(992, 16) !important;
+  }
+  .currentPlanContainer {
+    height: calculatePixels(992, 28) !important;
+    width: calculatePixels(992, 108) !important;
+    border-radius: calculatePixels(992, 16) !important;
+  }
+  .currentPlanLabel {
+    font-size: calculatePixels(992, 14) !important;
+  }
+  .leftArrowContainer {
+    height: calculatePixels(992, 40) !important;
+    width: calculatePixels(992, 40) !important;
+  }
+  .rightArrowContainer {
+    height: calculatePixels(992, 40) !important;
+    width: calculatePixels(992, 40) !important;
+  }
+  .arrowIcon {
+    height: calculatePixels(992, 28) !important;
+    width: calculatePixels(992, 28) !important;
+  }
+  .noPromoContainer {
+    width: 100%;
+    height: calculatePixels(992, 370) !important;
+    border-radius: calculatePixels(992, 20) !important;
+    img {
+      width: calculatePixels(992, 208) !important;
+      height: calculatePixels(992, 182) !important;
+    }
+    label {
+      font-size: calculatePixels(992, 18) !important;
+      padding-top: calculatePixels(992, 20) !important;
+    }
+  }
+}
+
+.activeDot {
+  @include responsiveProperty(
+    (
+      "height": 10,
+      "width": 10,
+    )
+  );
+  background-color: $Secondary;
+  border-radius: 100%;
+}
+
+.inActiveDot {
+  @include responsiveProperty(
+    (
+      "height": 8,
+      "width": 8,
+    )
+  );
+  background-color: #ffebf1;
+  border-radius: 100%;
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .promoContainer {
+    border-radius: calculatePixels(1200, 24) !important;
+    min-width: 100% !important;
+    max-width: calculatePixels(1200, 733) !important;
+    height: calculatePixels(1200, 370) !important;
+    padding-left: calculatePixels(1200, 20) !important;
+    padding-right: calculatePixels(1200, 20) !important;
+    padding-top: calculatePixels(1200, 30) !important;
+    padding-bottom: calculatePixels(1200, 30) !important;
+    gap: calculatePixels(1200, 32) !important;
+
+    .slashStyle {
+      position: absolute;
+      right: calculatePixels(1200, 40) !important;
+      height: 100%;
+      top: 0;
+      z-index: 1;
+      width: calculatePixels(1200, 304) !important;
+    }
+  }
+  .freePlanContainer {
+    width: 100%;
+    min-width: calculatePixels(1200, 405) !important;
+    height: calculatePixels(1200, 370) !important;
+    border-radius: calculatePixels(1200, 20) !important;
+    padding-left: calculatePixels(1200, 30) !important;
+    padding-right: calculatePixels(1200, 30) !important;
+    gap: calculatePixels(1200, 16) !important;
+  }
+  .planTitle {
+    font-size: calculatePixels(1200, 14) !important;
+  }
+  .iconStyle {
+    min-width: calculatePixels(1200, 22) !important;
+    min-width: calculatePixels(1200, 22) !important;
+    min-height: calculatePixels(1200, 22) !important;
+    max-height: calculatePixels(1200, 22) !important;
+    max-width: calculatePixels(1200, 22) !important;
+  }
+  .planPrice {
+    font-size: calculatePixels(1200, 32) !important;
+  }
+  .planSubtitle {
+    font-size: calculatePixels(1200, 12) !important;
+  }
+  .pointsList {
+    gap: calculatePixels(1200, 18) !important;
+  }
+  .promoPointsList {
+    gap: calculatePixels(1200, 18) !important;
+    height: calculatePixels(1200, 124) !important;
+    max-width: calculatePixels(1200, 683) !important;
+  }
+  .planBulletLabel {
+    font-size: calculatePixels(1200, 16) !important;
+  }
+  .planBulletIcon {
+    min-width: calculatePixels(1200, 22) !important;
+    min-height: calculatePixels(1200, 22) !important;
+    max-height: calculatePixels(1200, 22) !important;
+    max-width: calculatePixels(1200, 22) !important;
+  }
+  .btn1Styles {
+    width: calculatePixels(1200, 137) !important;
+    height: calculatePixels(1200, 52) !important;
+    font-size: calculatePixels(1200, 16) !important;
+    border-radius: calculatePixels(1200, 40) !important;
+  }
+  .btn2Styles {
+    width: calculatePixels(1200, 137) !important;
+    height: calculatePixels(1200, 52) !important;
+    font-size: calculatePixels(1200, 16) !important;
+    border-radius: calculatePixels(1200, 40) !important;
+  }
+  .limitLabel {
+    font-size: calculatePixels(1200, 12) !important;
+  }
+  .timeLabel {
+    font-size: calculatePixels(1200, 16) !important;
+  }
+  .bottomLabel {
+    font-size: calculatePixels(1200, 16) !important;
+  }
+  .currentPlanContainer {
+    height: calculatePixels(1200, 28) !important;
+    width: calculatePixels(1200, 108) !important;
+    border-radius: calculatePixels(1200, 16) !important;
+  }
+  .currentPlanLabel {
+    font-size: calculatePixels(1200, 14) !important;
+  }
+
+  .discountedContainer {
+    height: calculatePixels(1200, 64) !important;
+    top: calculatePixels(1200, 25) !important;
+    right: calculatePixels(1200, -10) !important;
+    .content {
+      height: calculatePixels(1200, 39) !important;
+      label {
+        font-size: calculatePixels(1200, 14) !important;
+      }
+      .bottomCont {
+        height: calculatePixels(1200, 40) !important;
+        top: calculatePixels(1200, 9) !important;
+        width: calculatePixels(1200, 9) !important;
+      }
+    }
+  }
+
+  .leftArrowContainer {
+    height: calculatePixels(1200, 40) !important;
+    width: calculatePixels(1200, 40) !important;
+  }
+  .rightArrowContainer {
+    height: calculatePixels(1200, 40) !important;
+    width: calculatePixels(1200, 40) !important;
+  }
+  .arrowIcon {
+    height: calculatePixels(1200, 28) !important;
+    width: calculatePixels(1200, 28) !important;
+  }
+  .noPromoContainer {
+    width: 100%;
+    min-width: calculatePixels(1200, 405) !important;
+    height: calculatePixels(1200, 370) !important;
+    border-radius: calculatePixels(1200, 20) !important;
+    img {
+      width: calculatePixels(1200, 208) !important;
+      height: calculatePixels(1200, 182) !important;
+    }
+    label {
+      font-size: calculatePixels(1200, 18) !important;
+      padding-top: calculatePixels(1200, 20) !important;
+    }
+  }
+}

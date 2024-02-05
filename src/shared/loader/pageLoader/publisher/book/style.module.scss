@@ -1,0 +1,26 @@
+@import "shared/components/publisher/bookTable/style.module.scss";
+.bookNameItem {
+  .imgLoader {
+    width: 37px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+
+  .span {
+    margin-left: 9px;
+    width: 84px;
+    height: 10px;
+  }
+}
+.textLoad {
+  height: 10px;
+  margin-top: 10px;
+  width: 58px;
+}
+
+.iconStyle {
+  height: 36px;
+  width: 36px;
+  border-radius: 100%;
+}

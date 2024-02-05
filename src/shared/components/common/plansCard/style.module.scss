@@ -1,0 +1,355 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.planContainer {
+  height: auto !important;
+  display: flex;
+  align-self: center;
+  @include responsiveProperty(
+    (
+      "border-radius": 24,
+    )
+  );
+  background-color: white;
+  border: 1px solid #efefef;
+  width: 100%;
+}
+
+.annualContainer {
+  background-color: $Secondary;
+}
+
+.planTitle {
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+  font-family: PoppinsMedium;
+  color: $DARK_GREEN;
+}
+
+.iconStyle {
+  @include responsiveProperty(
+    (
+      "min-width": 22,
+      "min-height": 22,
+      "max-height": 22,
+      "max-width": 22,
+    )
+  );
+  height: 100%;
+  width: 100%;
+}
+
+.planPrice {
+  @include responsiveProperty(
+    (
+      "font-size": 32,
+    )
+  );
+  font-family: BitterBold;
+  color: $Secondary;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.planSubtitle {
+  @include responsiveProperty(
+    (
+      "font-size": 12,
+    )
+  );
+  font-family: BitterMedium;
+  text-align: left;
+  color: $LIGHT_GREY;
+  span {
+    text-decoration: line-through;
+  }
+}
+
+.pointsList {
+  @include responsiveProperty(
+    (
+      "gap": 24,
+    )
+  );
+}
+
+.planBulletLabel {
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  font-family: PoppinsRegular;
+  color: $Gray;
+}
+
+.planBulletIcon {
+  @include responsiveProperty(
+    (
+      "min-width": 24,
+      "min-height": 24,
+      "max-height": 24,
+      "max-width": 24,
+    )
+  );
+  height: 100%;
+  width: 100%;
+}
+
+.btn1Styles {
+  @include responsiveProperty(
+    (
+      "width": 137,
+      "height": 52,
+      "font-size": 16,
+      "border-radius": 40,
+    )
+  );
+  background-color: $Secondary !important;
+  font-family: PoppinsMedium;
+  color: white;
+}
+
+.btn2Styles {
+  @include responsiveProperty(
+    (
+      "width": 137,
+      "height": 52,
+      "font-size": 16,
+      "border-radius": 40,
+    )
+  );
+  background-color: white !important;
+  font-family: PoppinsMedium !important;
+  color: $Secondary !important;
+}
+
+.diabledBtn {
+  background-color: $DISABLE_BTN !important;
+  color: white !important;
+}
+
+.currentPlanContainer {
+  @include responsiveProperty(
+    (
+      "width": 108,
+      "height": 28,
+      "border-radius": 16,
+    )
+  );
+  background-color: #ecfdf3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.currentPlanLabel {
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+  color: #027a48;
+  text-align: center;
+}
+
+.discountedContainer {
+  position: absolute;
+  @include responsiveProperty(
+    (
+      "height": 64,
+      "top": 25,
+      "right": -10,
+    )
+  );
+
+  .content {
+    @include responsiveProperty(
+      (
+        "height": 39,
+      )
+    );
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: $PRIMARY;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    label {
+      font-family: BitterMedium;
+      @include responsiveProperty(
+        (
+          "font-size": 14,
+        )
+      );
+      color: white !important;
+    }
+    .bottomCont {
+      @include responsiveProperty(
+        (
+          "top": 9,
+          "height": 40,
+          "width": 9,
+        )
+      );
+      right: 0px;
+      position: absolute;
+      background-color: $PRIMARY;
+      transform: skewY(120deg);
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .dialog {
+    width: 90vw;
+    margin: auto;
+    max-width: 90vw;
+    height: 80vh;
+    overflow-y: scroll;
+  }
+
+  .planDetails {
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 1rem;
+  }
+
+  .bankDetailInfo {
+    grid-template-columns: 1fr;
+  }
+
+  .uploadFile {
+    grid-template-columns: 1fr;
+  }
+
+  .planTitle {
+    font-size: calculatePixels(992, 14) !important;
+  }
+  .iconStyle {
+    min-width: calculatePixels(992, 22) !important;
+    min-width: calculatePixels(992, 22) !important;
+    min-height: calculatePixels(992, 22) !important;
+    max-height: calculatePixels(992, 22) !important;
+    max-width: calculatePixels(992, 22) !important;
+  }
+  .planPrice {
+    font-size: calculatePixels(992, 32) !important;
+  }
+  .planSubtitle {
+    font-size: calculatePixels(992, 12) !important;
+  }
+  .pointsList {
+    gap: calculatePixels(992, 24) !important;
+  }
+  .planBulletLabel {
+    font-size: calculatePixels(992, 16) !important;
+  }
+  .planBulletIcon {
+    min-width: calculatePixels(992, 22) !important;
+    min-height: calculatePixels(992, 22) !important;
+    max-height: calculatePixels(992, 22) !important;
+    max-width: calculatePixels(992, 22) !important;
+  }
+  .btn1Styles {
+    width: calculatePixels(992, 137) !important;
+    height: calculatePixels(992, 52) !important;
+    font-size: calculatePixels(992, 16) !important;
+    border-radius: calculatePixels(992, 40) !important;
+  }
+  .btn2Styles {
+    width: calculatePixels(992, 137) !important;
+    height: calculatePixels(992, 52) !important;
+    font-size: calculatePixels(992, 16) !important;
+    border-radius: calculatePixels(992, 40) !important;
+  }
+  .currentPlanContainer {
+    height: calculatePixels(992, 28) !important;
+    width: calculatePixels(992, 108) !important;
+    border-radius: calculatePixels(992, 16) !important;
+  }
+  .currentPlanLabel {
+    font-size: calculatePixels(992, 14) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 700px) {
+  .planContainer {
+    width: calculatePixels(1600, 363) !important;
+    border-radius: calculatePixels(992, 24) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .planContainer {
+    border-radius: calculatePixels(1200, 24) !important;
+  }
+  .planTitle {
+    font-size: calculatePixels(1200, 14) !important;
+  }
+  .iconStyle {
+    min-width: calculatePixels(1200, 22) !important;
+    min-width: calculatePixels(1200, 22) !important;
+    min-height: calculatePixels(1200, 22) !important;
+    max-height: calculatePixels(1200, 22) !important;
+    max-width: calculatePixels(1200, 22) !important;
+  }
+  .planPrice {
+    font-size: calculatePixels(1200, 32) !important;
+  }
+  .planSubtitle {
+    font-size: calculatePixels(1200, 12) !important;
+  }
+  .pointsList {
+    gap: calculatePixels(1200, 24) !important;
+  }
+  .planBulletLabel {
+    font-size: calculatePixels(1200, 16) !important;
+  }
+  .planBulletIcon {
+    min-width: calculatePixels(1200, 22) !important;
+    min-height: calculatePixels(1200, 22) !important;
+    max-height: calculatePixels(1200, 22) !important;
+    max-width: calculatePixels(1200, 22) !important;
+  }
+  .btn1Styles {
+    width: calculatePixels(1200, 137) !important;
+    height: calculatePixels(1200, 52) !important;
+    font-size: calculatePixels(1200, 16) !important;
+    border-radius: calculatePixels(1200, 40) !important;
+  }
+  .btn2Styles {
+    width: calculatePixels(1200, 137) !important;
+    height: calculatePixels(1200, 52) !important;
+    font-size: calculatePixels(1200, 16) !important;
+    border-radius: calculatePixels(1200, 40) !important;
+  }
+  .currentPlanContainer {
+    height: calculatePixels(1200, 28) !important;
+    width: calculatePixels(1200, 108) !important;
+    border-radius: calculatePixels(1200, 16) !important;
+  }
+  .currentPlanLabel {
+    font-size: calculatePixels(1200, 14) !important;
+  }
+  .discountedContainer {
+    height: calculatePixels(1200, 64) !important;
+    top: calculatePixels(1200, 25) !important;
+    right: calculatePixels(1200, -10) !important;
+    .content {
+      height: calculatePixels(1200, 39) !important;
+      label {
+        font-size: calculatePixels(1200, 14) !important;
+      }
+      .bottomCont {
+        height: calculatePixels(1200, 40) !important;
+        top: calculatePixels(1200, 9) !important;
+        width: calculatePixels(1200, 9) !important;
+      }
+    }
+  }
+}

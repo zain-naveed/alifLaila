@@ -1,0 +1,71 @@
+@import "shared/utils/colors.scss";
+
+@mixin optionsContainer {
+  position: absolute;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  width: 225px;
+  background-color: $LightPrimary;
+  filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.1));
+}
+
+.cont1 {
+  @include optionsContainer();
+  top: 40px;
+  z-index: 999;
+  right: 0px;
+}
+
+.cont2 {
+  @include optionsContainer();
+  top: -70px;
+  z-index: 999;
+  right: 20px;
+}
+
+.cont3 {
+  @include optionsContainer();
+  top: -55px;
+  z-index: 999;
+  right: 20px;
+}
+
+.labelStyle {
+  font-size: 14px;
+  font-family: BitterMedium;
+  color: $BLACK;
+}
+
+.imgStyle {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.topradius {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.btmradius {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.time {
+  font-family: PoppinsRegular;
+  font-size: 12px;
+  color: $GRAY2;
+  span {
+    font-size: 11px;
+    font-family: PoppinsMedium;
+    color: $BLACK;
+  }
+}
+
+.newIcon {
+  height: 30px;
+  width: 29px;
+}

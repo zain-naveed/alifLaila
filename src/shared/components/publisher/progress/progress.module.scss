@@ -1,0 +1,54 @@
+@import "shared/utils/colors.scss";
+
+.progress,
+.maiMprogress {
+  height: 6px !important;
+  margin-right: 9px;
+}
+
+
+
+.tooltipText {
+  padding: 0 19px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+// .tooltips {
+//   position: relative;
+//   display: inline-block;
+//   width: 100%;
+// }
+
+// .tooltips .tooltiptext {
+//   visibility: hidden;
+//   width: 60px;
+//   background-color: black;
+//   color: #fff;
+//   text-align: center;
+//   border-radius: 6px;
+//   padding: 5px 0;
+//   position: absolute;
+//   z-index: 1;
+//   bottom: 250%;
+//   left: 28%;
+//   margin-left: -60px;
+//   transition: left 0.6s;
+// }
+
+// .tooltips .tooltiptext::after {
+//   content: "";
+//   position: absolute;
+//   top: 100%;
+//   left: 50%;
+//   margin-left: -5px;
+//   border-width: 5px;
+//   border-style: solid;
+//   border-color: black transparent transparent transparent;
+// }
+
+// .tooltips .tooltiptext {
+//   visibility: visible;
+// }

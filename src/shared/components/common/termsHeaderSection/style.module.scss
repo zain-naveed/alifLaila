@@ -1,0 +1,76 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.headerContainer {
+  background-color: #fff8ee;
+  @include responsiveProperty(
+    (
+      "min-height": 310,
+    )
+  );
+}
+
+.contentContainer {
+  @include responsiveProperty(
+    (
+      "max-width": 722,
+      "margin-top": 60,
+    )
+  );
+  height: 100%;
+  margin: auto;
+}
+
+.mainHeading {
+  color: $DARK_GREEN;
+  font-family: BitterSemiBold;
+  @include responsiveProperty(
+    (
+      "font-size": 38,
+    )
+  );
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.subTitle {
+  color: $BLACK;
+  font-family: PoppinsRegular;
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+  .headerContainer {
+    min-height: calculatePixels(768, 310) !important;
+  }
+  .contentContainer {
+    max-width: calculatePixels(768, 722) !important;
+    margin-top: calculatePixels(768, 60) !important;
+  }
+  .mainHeading {
+    font-size: calculatePixels(768, 38) !important;
+  }
+  .subTitle {
+    font-size: calculatePixels(768, 16) !important;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .headerContainer {
+    min-height: calculatePixels(768, 310) !important;
+  }
+  .contentContainer {
+    max-width: calculatePixels(768, 722) !important;
+    margin-top: calculatePixels(768, 60) !important;
+  }
+  .mainHeading {
+    font-size: calculatePixels(768, 38) !important;
+  }
+  .subTitle {
+    font-size: calculatePixels(768, 16) !important;
+  }
+}

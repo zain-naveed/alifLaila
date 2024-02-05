@@ -1,0 +1,78 @@
+@import "shared/utils/colors.scss";
+.ratingActive2 path {
+  fill: #fda504;
+}
+.ratingActive path {
+  fill: #ffda1c;
+}
+.ratingNotHover path {
+  fill: #ced4da;
+}
+.rating:hover path {
+  fill: $Yellow;
+}
+
+.size {
+  height: 18px;
+  width: 18px;
+}
+
+@media screen and (max-width: 576px) {
+  .size {
+    height: 10px;
+    width: 10px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .size {
+    height: 10px;
+    width: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .size {
+    height: 12px;
+    width: 12px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .size {
+    height: 14px;
+    width: 14px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .size {
+    height: 16px;
+    width: 16px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .size {
+    height: 18px;
+    width: 18px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .size {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .size {
+    height: 22px;
+    width: 22px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .size {
+    height: 24px;
+    width: 24px;
+  }
+}

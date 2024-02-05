@@ -1,0 +1,44 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.optionsContainer {
+  position: absolute;
+  top: 44px;
+  left: 0px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+  filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.1));
+  max-height: 300px;
+  overflow: auto;
+
+  // height: 100%;
+}
+
+.labelStyle {
+  font-size: 16px;
+  font-family: PoppinsRegular;
+  color: $BLACK;
+}
+
+.optionContainer {
+  border-bottom: 1px solid $Light_Grey_1;
+  &:hover,
+  &:hover > .labelStyle {
+    background-color: $LightPrimary;
+    color: $PRIMARY;
+    fill: $PRIMARY;
+  }
+}
+
+.topradius {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.btmradius {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}

@@ -1,0 +1,41 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.topLevelContainer {
+  height: calc(100vh - 94px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.title {
+  font-family: BitterSemiBold;
+  @include responsiveProperty(
+    (
+      "font-size": 48,
+    )
+  );
+  color: $DARK_GREEN;
+  text-align: center;
+  text-transform: capitalize;
+  span {
+    color: $Secondary;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .title {
+    font-size: calculatePixels(576, 48) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .title {
+    font-size: calculatePixels(768, 48) !important;
+  }
+}

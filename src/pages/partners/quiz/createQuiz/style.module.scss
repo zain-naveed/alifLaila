@@ -1,0 +1,31 @@
+@import "shared/utils/colors.scss";
+@import "shared/components/common/heading/style.module.scss";
+@import "pages/partners/addBook/form/form2/style.module.scss";
+
+.quizContainer {
+  padding: 31px 37px;
+  max-width: 801px;
+  background: #ffffff;
+  border: 1px solid #e2ebfa;
+  border-radius: 8px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 460px) {
+    padding: 31px 15px;
+  }
+
+  .quizMain {
+    border: 1px solid $LIGHT_GREY;
+    border-radius: 14px;
+    padding: 27px 18px;
+    margin-bottom: 29px;
+  }
+
+  .bookHeading {
+    @extend .heading;
+    margin-bottom: 14px;
+    font-weight: 600;
+    font-size: 24px;
+    color: $PRIMARY;
+  }
+}

@@ -1,0 +1,50 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.header {
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.dailogContent {
+  max-width: 520px;
+  margin: auto !important;
+}
+
+.contentClass {
+  border-radius: 8px !important;
+}
+
+.deleteHeading {
+  font-family: PoppinsSemiBold;
+  font-size: 28px;
+  text-align: center;
+  color: $BLACK;
+}
+.desc {
+  font-family: PoppinsRegular;
+  font-size: 16px;
+  text-align: center;
+  color: $Gray;
+}
+.icon {
+  height: 102px;
+  width: 102px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+
+  .actionButton,
+  .defaultButton {
+    width: 126px;
+  }
+
+  .defaultButton {
+    background: transparent;
+    border: 1px solid $PRIMARY;
+    color: $PRIMARY;
+    margin-left: 0;
+  }
+}

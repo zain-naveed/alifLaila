@@ -1,0 +1,180 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.header {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+
+.heading {
+  @include MRP(
+    (
+      "font-size": 32,
+    )
+  );
+  font-family: BitterSemiBold;
+  color: $BLACK;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.inputLabel {
+  font-family: PoppinsMedium;
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+}
+
+.inputStyle {
+  font-family: PoppinsRegular;
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+  color: $BLACK;
+}
+
+.btnStyle {
+  font-family: PoppinsMedium;
+  @include MRP(
+    (
+      "font-size": 16,
+      "height": 52,
+      "width": 360,
+      "border-radius": 32,
+    )
+  );
+}
+
+.termsText {
+  @include MRP(
+    (
+      "font-size": 14,
+    )
+  );
+  font-family: PoppinsRegular;
+  color: $Gray;
+}
+
+.forgot {
+  @include MRP(
+    (
+      "font-size": 14,
+    )
+  );
+  color: $DARK_GREEN;
+  font-family: PoppinsMedium;
+  cursor: pointer;
+}
+
+.signupContnr {
+  text-align: center;
+}
+
+.signupText {
+  @include MRP(
+    (
+      "font-size": 14,
+    )
+  );
+  font-family: PoppinsRegular;
+  color: $Gray;
+  span {
+    @include MRP(
+      (
+        "font-size": 14,
+      )
+    );
+    font-family: PoppinsMedium;
+    text-align: center;
+    color: $DARK_GREEN;
+    cursor: pointer;
+  }
+}
+
+.inputContainer {
+  @include MRP(
+    (
+      "height": 52,
+      "width": 360,
+      "padding": 10,
+    )
+  );
+}
+
+.divider {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
+
+.divider::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  margin-top: 1px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #e5eaf4;
+  content: "";
+}
+
+.dividerTxt {
+  position: relative;
+  z-index: 2;
+  padding: 0 10px;
+  background: #fff;
+  font-weight: 500;
+  color: $Gray;
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+  font-family: PoppinsRegular;
+}
+
+@media screen and (max-width: 576px) {
+  .heading {
+    font-size: calculatePixels(992, 32) !important;
+  }
+  .inputContainer {
+    height: calculatePixels(992, 52) !important;
+    width: calculatePixels(992, 360) !important;
+    padding: calculatePixels(992, 10) !important;
+  }
+  .inputLabel {
+    font-size: calculatePixels(992, 16) !important;
+  }
+  .inputStyle {
+    font-size: calculatePixels(992, 16) !important;
+  }
+  .btnStyle {
+    font-size: calculatePixels(992, 16) !important;
+    height: calculatePixels(992, 52) !important;
+    width: calculatePixels(992, 360) !important;
+    border-radius: calculatePixels(992, 32) !important;
+  }
+  .termsText {
+    font-size: calculatePixels(992, 14) !important;
+  }
+  .forgot {
+    font-size: calculatePixels(992, 14) !important;
+  }
+  .signupText {
+    font-size: calculatePixels(992, 14) !important;
+    span {
+      font-size: calculatePixels(992, 14) !important;
+    }
+  }
+  .dividerTxt {
+    font-size: calculatePixels(992, 16) !important;
+  }
+}

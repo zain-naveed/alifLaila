@@ -1,0 +1,267 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.dailogContent {
+  @include MRP(
+    (
+      "max-width": 630,
+    )
+  );
+}
+
+.header {
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+.title {
+  font-family: PoppinsMedium;
+  @include MRP(
+    (
+      "font-size": 24,
+    )
+  );
+  color: $BLACK;
+  text-align: center;
+}
+
+.nextBtn {
+  @include MRP(
+    (
+      "height": 52,
+      "width": 346,
+      "font-size": 16,
+    )
+  );
+}
+
+.kidsCount {
+  font-family: PoppinsRegular;
+  @include MRP(
+    (
+      "font-size": 14,
+    )
+  );
+  color: $BLACK;
+  text-align: center;
+}
+
+.kidsCountLoader {
+  @include MRP(
+    (
+      "height": 24,
+      "width": 129,
+    )
+  );
+}
+
+.selectAll {
+  font-family: PoppinsSemiBold;
+  @include MRP(
+    (
+      "font-size": 14,
+    )
+  );
+  color: $PRIMARY;
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.selectAllLoader {
+  @include MRP(
+    (
+      "height": 24,
+      "width": 65,
+    )
+  );
+}
+
+.seperator {
+  height: 1px;
+  width: 100%;
+  background-color: #e7e7e7;
+}
+
+.kidAvt {
+  @include MRP(
+    (
+      "height": 60,
+      "width": 60,
+    )
+  );
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.kidName {
+  font-family: PoppinsMedium;
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+  color: $BLACK;
+  text-align: left;
+}
+.kidNameLoader {
+  @include MRP(
+    (
+      "height": 20,
+      "width": 112,
+    )
+  );
+}
+
+.checkContainer {
+  @include MRP(
+    (
+      "height": 24,
+      "width": 24,
+    )
+  );
+  background-color: white;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #597e8d;
+  &:hover {
+    cursor: pointer;
+  }
+  svg {
+    @include MRP(
+      (
+        "height": 13,
+        "width": 13,
+      )
+    );
+  }
+}
+
+.checkContainerLoader {
+  @include MRP(
+    (
+      "height": 24,
+      "width": 24,
+    )
+  );
+}
+
+.active {
+  background-color: $PRIMARY !important;
+  border-color: $PRIMARY !important ;
+}
+
+.inputContainer {
+  @include MRP(
+    (
+      "height": 48,
+      "padding": 10,
+      "border-radius": 26,
+    )
+  );
+}
+
+.inputLabel {
+  font-family: PoppinsMedium;
+  @include MRP(
+    (
+      "font-size": 14,
+    )
+  );
+}
+
+.inputStyle {
+  font-family: PoppinsRegular;
+  @include MRP(
+    (
+      "font-size": 14,
+    )
+  );
+  color: $BLACK;
+}
+
+.noFounIconContianer {
+  @include MRP(
+    (
+      "height": 187,
+      "width": 275,
+    )
+  );
+}
+
+@media screen and (max-width: 576px) {
+  .dailogContent {
+    max-width: 100% !important;
+  }
+  .title {
+    font-size: calculatePixels(1200, 24) !important;
+  }
+  .heading {
+    font-size: calculatePixels(1200, 18) !important;
+  }
+  .desc {
+    font-size: calculatePixels(1200, 14) !important;
+  }
+  .nextBtn {
+    height: calculatePixels(1200, 52) !important;
+    width: 100%;
+    font-size: calculatePixels(1200, 16) !important;
+  }
+  .kidsCount {
+    font-size: calculatePixels(1200, 14) !important;
+  }
+  .kidsCountLoader {
+    height: calculatePixels(1200, 24) !important;
+    width: calculatePixels(1200, 129) !important;
+  }
+  .selectAll {
+    font-size: calculatePixels(1200, 14) !important;
+  }
+  .selectAllLoader {
+    height: calculatePixels(1200, 24) !important;
+    width: calculatePixels(1200, 65) !important;
+  }
+  .kidAvt {
+    height: calculatePixels(1200, 60) !important;
+    width: calculatePixels(1200, 60) !important;
+  }
+  .kidName {
+    font-size: calculatePixels(1200, 16) !important;
+  }
+  .kidNameLoader {
+    height: calculatePixels(1200, 20) !important;
+    width: calculatePixels(1200, 112) !important;
+  }
+  .checkContainer {
+    height: calculatePixels(1200, 24) !important;
+    width: calculatePixels(1200, 24) !important;
+    svg {
+      height: calculatePixels(1200, 13) !important;
+      width: calculatePixels(1200, 13) !important;
+    }
+  }
+  .checkContainerLoader {
+    height: calculatePixels(1200, 24) !important;
+    width: calculatePixels(1200, 24) !important;
+  }
+  .inputContainer {
+    height: calculatePixels(1200, 48) !important;
+    padding: calculatePixels(1200, 10) !important;
+    border-radius: calculatePixels(1200, 26) !important;
+  }
+
+  .inputLabel {
+    font-size: calculatePixels(1200, 14) !important;
+  }
+
+  .inputStyle {
+    font-size: calculatePixels(1200, 14) !important;
+  }
+  .noFounIconContianer {
+    height: calculatePixels(1200, 187) !important;
+    width: calculatePixels(1200, 275) !important;
+  }
+}

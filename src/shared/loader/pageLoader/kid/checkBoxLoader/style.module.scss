@@ -1,0 +1,105 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.checkContainer {
+  height: 16px !important;
+  width: 16px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px !important;
+}
+
+
+
+.labelStyle {
+  height: 10px;
+  width: 80px;
+}
+
+@media screen and (min-width: 768px) {
+  .checkContainer {
+    height: calcultn(0.7, 16) !important;
+    width: calcultn(0.7, 16) !important;
+  }
+
+  
+  .labelStyle {
+    height: calcultn(0.7, 11) !important;
+    width: calcultn(0.7, 80) !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .checkContainer {
+    height: calcultn(0.7, 16) !important;
+    width: calcultn(0.7, 16) !important;
+  }
+  .labelStyle {
+    height: calcultn(0.7, 11) !important;
+    width: calcultn(0.7, 80) !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .checkContainer {
+    height: calcultn(0.85, 16) !important;
+    width: calcultn(0.85, 16) !important;
+  }
+
+  .labelStyle {
+    height: calcultn(0.85, 11) !important;
+    width: calcultn(0.85, 80) !important;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .checkContainer {
+    height: calcultn(1, 16) !important;
+    width: calcultn(1, 16) !important;
+  }
+
+  
+  .labelStyle {
+    height: calcultn(1, 11) !important;
+    width: calcultn(1, 80) !important;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .checkContainer {
+    height: calcultn(1.14, 16) !important;
+    width: calcultn(1.14, 16) !important;
+  }
+
+  
+  .labelStyle {
+    height: calcultn(1.14, 11) !important;
+    width: calcultn(1.14, 80) !important;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .checkContainer {
+    height: calcultn(1.28, 16) !important;
+    width: calcultn(1.28, 16) !important;
+  }
+
+  
+
+  .labelStyle {
+    height: calcultn(1.28, 11) !important;
+    width: calcultn(1.28, 80) !important;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .checkContainer {
+    height: calcultn(1.42, 16) !important;
+    width: calcultn(1.42, 16) !important;
+  }
+  .labelStyle {
+    height: calcultn(1.42, 11) !important;
+    width: calcultn(1.42, 80) !important;
+  }
+}

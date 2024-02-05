@@ -1,0 +1,16 @@
+@import "pages/partners/addBook/form/form2/style.module.scss";
+@import "shared/components/common/heading/style.module.scss";
+
+.accountDetailContainer {
+  max-width: 527px;
+  margin: 0 auto;
+  margin-top: 45px;
+
+  .accountHeading {
+    @extend .heading;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: $PRIMARY;
+  }
+}

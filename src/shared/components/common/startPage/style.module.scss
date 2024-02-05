@@ -1,0 +1,326 @@
+@import "shared/utils/book-responsive.module.scss";
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.bookDetailWrapper {
+  width: 100%;
+  @include BRP(
+    (
+      "border-radius": 20,
+      "padding-left": 24,
+      "padding-right": 24,
+    )
+  );
+  background-color: white;
+}
+
+.bookDetailContainer {
+  @include BRP(
+    (
+      "padding-top": 24,
+      "padding-bottom": 24,
+      "gap": 10,
+    )
+  );
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.bookStatsInfoContainer {
+  background-color: white;
+  @include BRP(
+    (
+      "max-height": 198,
+      "min-height": 198,
+      "border-radius": 20,
+      "padding": 24,
+      "gap": 30,
+    )
+  );
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.publisherInfoContainer {
+  @include BRP(
+    (
+      "max-height": 83,
+      "min-height": 83,
+      "border-radius": 20,
+      "padding": 24,
+      "gap": 10,
+    )
+  );
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.flagIcon {
+  @include BRP(
+    (
+      "height": 22,
+      "width": 22,
+    )
+  );
+  path {
+    stroke-width: 1.5px;
+  }
+}
+
+.heartIcon {
+  @include BRP(
+    (
+      "height": 24,
+      "width": 24,
+    )
+  );
+}
+
+.bookTitle {
+  font-family: PoppinsSemiBold;
+  @include BRP(
+    (
+      "font-size": 24,
+    )
+  );
+  color: $PRIMARY;
+  text-align: left;
+}
+
+.authorName {
+  font-family: PoppinsMedium;
+  @include BRP(
+    (
+      "font-size": 14,
+    )
+  );
+  text-align: left;
+  color: $Secondary;
+}
+
+.primary {
+  color: $PRIMARY !important;
+}
+
+.ratingTitle {
+  font-family: BitterMedium !important;
+}
+
+.starIcon {
+  @include BRP(
+    (
+      "height": 16,
+      "width": 16,
+    )
+  );
+}
+
+.ratingLabel {
+  font-family: PoppinsRegular;
+  @include BRP(
+    (
+      "font-size": 12,
+    )
+  );
+  color: $Yellow;
+  text-align: left;
+}
+
+.ratingCount {
+  font-family: PoppinsRegular;
+  @include BRP(
+    (
+      "font-size": 12,
+    )
+  );
+  color: $LIGHT_GREY;
+  text-align: left;
+}
+
+.descriptionContainer {
+  @include BRP(
+    (
+      "min-height": 100,
+      "max-height": 100,
+    )
+  );
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  &::-webkit-scrollbar-track {
+    @include BRP(
+      (
+        "border-width": 7,
+      )
+    );
+    border-color: rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: #f2f2f2;
+  }
+
+  &::-webkit-scrollbar {
+    @include BRP(
+      (
+        "width": 5,
+      )
+    );
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @include BRP(
+      (
+        "border-width": 7,
+      )
+    );
+    border-color: rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: $GREEN;
+  }
+}
+
+.descriptionLabel {
+  font-family: PoppinsRegular;
+  @include BRP(
+    (
+      "font-size": 16,
+    )
+  );
+  color: $BLACK;
+  text-align: left;
+}
+
+.urduDesc {
+  width: 100%;
+  text-align: right;
+  color: $BLACK;
+  font-family: JNRegular !important;
+  @include BRP(
+    (
+      "font-size": 22,
+    )
+  );
+}
+
+.btnContainer {
+  @include BRP(
+    (
+      "height": 57,
+      "font-size": 16,
+      "border-radius": 32,
+      "gap": 10,
+    )
+  );
+  background-color: $Secondary !important;
+  color: white !important;
+}
+
+.assignBtnContainer {
+  @include BRP(
+    (
+      "max-height": 57,
+      "min-height": 57,
+      "border-radius": 32,
+      "font-size": 16,
+      "gap": 10,
+    )
+  );
+  height: 100%;
+  width: 100% !important;
+  color: white;
+}
+
+.btnIcon {
+  @include BRP(
+    (
+      "height": 24,
+      "width": 24,
+    )
+  );
+}
+
+.greenBtn {
+  background-color: $DARK_GREEN !important;
+}
+
+.stateTitle {
+  font-family: PoppinsSemiBold;
+  @include BRP(
+    (
+      "font-size": 18,
+    )
+  );
+  color: $PRIMARY;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.secondary {
+  color: $Secondary;
+}
+
+.yellow {
+  color: $Yellow;
+}
+
+.green {
+  color: $DARK_GREEN;
+}
+
+.avatar {
+  @include BRP(
+    (
+      "height": 40,
+      "width": 40,
+    )
+  );
+  border-radius: 100%;
+}
+
+.publisherName {
+  font-family: PoppinsSemiBold;
+  @include BRP(
+    (
+      "font-size": 18,
+    )
+  );
+  color: $BLACK;
+  text-align: left;
+}
+
+.publisherTag {
+  font-family: PoppinsRegular;
+  @include BRP(
+    (
+      "font-size": 12,
+    )
+  );
+  color: $DARK_GREEN;
+  text-align: left;
+}
+
+.hardCopyLabel {
+  @include BRP(
+    (
+      "font-size": 16,
+    )
+  );
+  font-family: PoppinsMedium;
+  text-align: center;
+  color: $PRIMARY;
+}

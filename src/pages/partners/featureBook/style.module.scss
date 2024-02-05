@@ -1,0 +1,92 @@
+@import "pages/partners/book/style.module.scss";
+
+.btnStyle {
+  height: 44px !important;
+  width: 201px !important;
+}
+
+.scheduled {
+  background-color: $lightBlue_01;
+  font-size: 12px;
+  border-radius: 16px;
+  text-align: center;
+  color: $Blue;
+  font-weight: 500;
+  min-height: 22px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.optionsContainer {
+  top: 44px;
+  min-width: 120px;
+  z-index: 2;
+}
+
+//  -------------------------------table styling-------------------------
+.tableMain {
+  background-color: white;
+  border: 1px solid #e4e7ec;
+  box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1),
+    0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+  border-radius: 8px;
+}
+
+.tableContentLabel {
+  font-size: 14px;
+  font-family: PoppinsRegular;
+  color: $BLACK;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.bookCover {
+  height: 40px;
+  width: 37px;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+.bookTitle {
+  font-family: PoppinsRegular;
+  font-size: 14px;
+  color: $BLACK;
+}
+
+.bookTitleLoader {
+  height: 20px;
+  width: 88px;
+}
+
+.statusLoader {
+  height: 20px;
+  width: 63px;
+  border-radius: 16px;
+}
+
+.actionContainer {
+  height: 36px;
+  width: 36px;
+  border-radius: 100%;
+  background-color: $Ultra_Light_Grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.actionIcon {
+  height: 20px;
+  width: 20px;
+  path {
+    stroke-width: 1.5px;
+    stroke: $Gray;
+  }
+}

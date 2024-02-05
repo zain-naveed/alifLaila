@@ -1,0 +1,45 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.cardContainer {
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1),
+    0px 1px 2px rgba(16, 24, 40, 0.06);
+  border-radius: 8px;
+  padding: 20px 16px;
+}
+
+.chart {
+  height: 100% !important;
+  width: fit-content !important;
+  max-width: 99% !important;
+}
+
+.title {
+  font-size: 14px;
+  font-family: PoppinsMedium;
+  color: $BLACK;
+  text-align: left;
+}
+
+.datePicker {
+  display: none;
+}
+
+.dateLabel {
+  font-size: 14px;
+  font-family: PoppinsRegular;
+  color: $GRAY2;
+  text-align: left;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.chevIcon {
+  height: 18px;
+  width: 18px;
+  path {
+    stroke: $LIGHT_GREY;
+  }
+}

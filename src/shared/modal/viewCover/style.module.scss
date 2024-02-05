@@ -1,0 +1,82 @@
+@import "shared/utils/responsive.module.scss";
+
+.dailogContent {
+  @include MRP(
+    (
+      "max-width": 1100,
+    )
+  );
+  margin: auto;
+}
+
+.header {
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+.coverStyle {
+  @include MRP(
+    (
+      "height": 420,
+      "border-radius": 12,
+    )
+  );
+  width: 100%;
+  object-fit: fill;
+}
+
+.closeImageContainer {
+  border-radius: 100%;
+  border: 1px solid #e6ecf3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include MRP(
+    (
+      "width": 30,
+      "height": 30,
+    )
+  );
+  text-align: center;
+  img {
+    @include MRP(
+      (
+        "width": 9,
+        "height": 10,
+      )
+    );
+  }
+}
+
+.coverLabel {
+  font-family: PoppinsSemiBold;
+  @include MRP(
+    (
+      "font-size": 24,
+    )
+  );
+  color: black;
+  text-align: left;
+}
+
+@media screen and (max-width: 576px) {
+  .dailogContent {
+    max-width: 100% !important;
+    margin: auto !important;
+  }
+  .coverStyle {
+    height: calculatePixels(768, 420) !important;
+    border-radius: calculatePixels(768, 12) !important;
+  }
+  .closeImageContainer {
+    height: calculatePixels(992, 30) !important;
+    width: calculatePixels(992, 30) !important;
+    img {
+      height: calculatePixels(992, 9) !important;
+      width: calculatePixels(992, 10) !important;
+    }
+  }
+  .coverLabel {
+    font-size: calculatePixels(768, 24) !important;
+  }
+}

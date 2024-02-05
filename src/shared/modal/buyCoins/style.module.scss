@@ -1,0 +1,327 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.header {
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+.dailogContent {
+  @include MRP(
+    (
+      "max-width": 530,
+    )
+  );
+}
+
+.heading {
+  font-family: PoppinsSemiBold;
+  @include MRP(
+    (
+      "font-size": 32,
+    )
+  );
+  text-align: center;
+  color: $BLACK;
+}
+
+.paragraph {
+  font-family: PoppinsRegular;
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+  text-align: center;
+  color: $Gray;
+}
+
+.buttonContainer {
+  @include MRP(
+    (
+      "height": 52,
+      "border-radius": 32,
+      "font-size": 16,
+    )
+  );
+}
+
+.topUpContainer {
+  @include MRP(
+    (
+      "max-height": 376,
+    )
+  );
+  overflow-y: auto;
+  &::-webkit-scrollbar-track {
+    border: 7px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: #f2f2f2;
+  }
+
+  &::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 7px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: $Secondary;
+  }
+}
+
+.singleTopUpContainer {
+  @include MRP(
+    (
+      "height": 108,
+      "border-radius": 16,
+    )
+  );
+  width: 100%;
+  border: 1px solid #ced4da;
+  background-color: white;
+  transition: all 0.3s;
+
+  .priceLabel {
+    font-family: PoppinsMedium;
+    @include MRP(
+      (
+        "font-size": 22,
+      )
+    );
+    text-align: left;
+    color: $BLACK;
+  }
+
+  .iconContainer {
+    @include MRP(
+      (
+        "height": 38,
+        "width": 38,
+      )
+    );
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $Ultra_Light_Grey;
+    border: 1px solid #ced4da;
+    svg {
+      @include MRP(
+        (
+          "height": 24,
+          "width": 24,
+        )
+      );
+      path {
+        stroke: $Yellow;
+      }
+    }
+  }
+
+  .coinsLabel {
+    font-family: PoppinsMedium;
+    @include MRP(
+      (
+        "font-size": 18,
+      )
+    );
+    text-align: left;
+    color: $BLACK;
+  }
+
+  .actionContainer {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    @include MRP(
+      (
+        "height": 16,
+        "width": 16,
+      )
+    );
+    border: 1px solid $GRAY_300;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      @include MRP(
+        (
+          "height": 10,
+          "width": 10,
+        )
+      );
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    border: 1px solid $Secondary;
+    background-color: rgba(239, 67, 123, 0.05);
+    .iconContainer {
+      background-color: white;
+      border: 1px solid white;
+      svg {
+        path {
+          stroke: $Yellow;
+        }
+      }
+    }
+    .actionContainer {
+      background-color: $Secondary;
+      border: 1px solid $Secondary;
+    }
+  }
+}
+
+.activeTopUp {
+  border: 1px solid $Secondary;
+  background-color: rgba(239, 67, 123, 0.05);
+  .iconContainer {
+    background-color: white;
+    border: 1px solid white;
+    svg {
+      path {
+        stroke: $Yellow;
+      }
+    }
+  }
+  .actionContainer {
+    background-color: $Secondary;
+    border: 1px solid $Secondary;
+  }
+}
+
+.loader {
+  .priceLabelLoader {
+    @include MRP(
+      (
+        "min-height": 24,
+        "max-height": 24,
+        "min-width": 139,
+        "max-width": 139,
+      )
+    );
+    height: 100%;
+    width: 100%;
+  }
+  .iconContainerLoader {
+    @include MRP(
+      (
+        "min-height": 38,
+        "max-height": 38,
+        "min-width": 38,
+        "max-width": 38,
+      )
+    );
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+  }
+  .coinsLabelLoader {
+    @include MRP(
+      (
+        "min-height": 27,
+        "max-height": 27,
+        "min-width": 98,
+        "max-width": 98,
+      )
+    );
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.noFoundIconStyle {
+  @include MRP(
+    (
+      "height": 187,
+      "width": 275,
+    )
+  );
+}
+
+.noFoundLabel1 {
+  @include MRP(
+    (
+      "font-size": 20,
+    )
+  );
+}
+
+.noFoundLabel2 {
+  @include MRP(
+    (
+      "font-size": 17,
+    )
+  );
+}
+
+@media screen and (max-width: 576px) {
+  .dailogContent {
+    max-width: 400px !important;
+    margin: auto !important;
+  }
+  .heading {
+    font-size: calculatePixels(768, 28) !important;
+  }
+  .paragraph {
+    font-size: calculatePixels(768, 16) !important;
+  }
+  .buttonContainer {
+    height: calculatePixels(768, 52) !important;
+    border-radius: calculatePixels(768, 32) !important;
+    font-size: calculatePixels(768, 16) !important;
+  }
+  .singleTopUpContainer {
+    height: calculatePixels(768, 108) !important;
+    border-radius: calculatePixels(768, 16) !important;
+    .priceLabel {
+      font-size: calculatePixels(768, 22) !important;
+    }
+    .iconContainer {
+      height: calculatePixels(768, 38) !important;
+      width: calculatePixels(768, 38) !important;
+      svg {
+        height: calculatePixels(768, 24) !important;
+        width: calculatePixels(768, 24) !important;
+      }
+    }
+    .coinsLabel {
+      font-size: calculatePixels(768, 18) !important;
+    }
+  }
+  .loader {
+    .priceLabelLoader {
+      min-height: calculatePixels(768, 24) !important;
+      max-height: calculatePixels(768, 24) !important;
+      min-width: calculatePixels(768, 139) !important;
+      max-width: calculatePixels(768, 139) !important;
+    }
+    .iconContainerLoader {
+      min-height: calculatePixels(768, 38) !important;
+      max-height: calculatePixels(768, 38) !important;
+      min-width: calculatePixels(768, 38) !important;
+      max-width: calculatePixels(768, 38) !important;
+    }
+    .coinsLabelLoader {
+      min-height: calculatePixels(768, 27) !important;
+      max-height: calculatePixels(768, 27) !important;
+      min-width: calculatePixels(768, 98) !important;
+      max-width: calculatePixels(768, 98) !important;
+    }
+  }
+  .noFoundIconStyle {
+    height: calculatePixels(768, 187) !important;
+    width: calculatePixels(768, 275) !important;
+  }
+  .noFoundLabel1 {
+    font-size: calculatePixels(768, 20) !important;
+  }
+  .noFoundLabel2 {
+    font-size: calculatePixels(768, 17) !important;
+  }
+}

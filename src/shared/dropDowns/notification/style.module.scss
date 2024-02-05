@@ -1,0 +1,83 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.optionsContainer {
+  position: absolute;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 9px 12px 16px 2px rgba(16, 24, 40, 0.1),
+    0px 4px 6px 6px rgba(16, 24, 40, 0.05);
+  top: 30px;
+  right: 0px;
+  width: 347px !important;
+}
+.optionContainer {
+  &:hover {
+    background-color: $BG;
+  }
+}
+
+.title {
+  font-family: PoppinsMedium;
+  font-size: 14px;
+  color: $PRIMARY;
+  text-align: left;
+}
+
+.countContaier {
+  height: 18px;
+  width: 18px;
+  background-color: $Secondary;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.countLabel {
+  font-family: PoppinsMedium;
+  font-size: 12px;
+  color: white;
+  text-align: left;
+}
+
+.seperator {
+  height: 2px;
+  width: 100%;
+  background-color: #e2ebfa;
+}
+
+.avatar {
+  height: 42px;
+  width: 42px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.name {
+  font-family: PoppinsSemiBold;
+  font-size: 13px;
+  color: $BLACK;
+  text-align: left;
+}
+
+.content {
+  font-family: PoppinsRegular;
+  font-size: 13px;
+  color: $BLACK;
+  text-align: left;
+}
+
+.time {
+  font-family: PoppinsMedium;
+  font-size: 10px;
+  color: $Gray;
+  text-align: left;
+}
+
+@media screen and (max-width: 576px) {
+  .optionsContainer {
+    width: 247px !important;
+  }
+}

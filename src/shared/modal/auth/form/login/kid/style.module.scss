@@ -1,0 +1,105 @@
+@import "../general/style.module.scss";
+
+.dotContainer {
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border: 1px solid $PRIMARY;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  background-color: $PRIMARY;
+}
+
+.optionLabel {
+  font-family: PoppinsRegular;
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+  color: #1a1a1a;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 576px) {
+  .dotContainer {
+    height: calculatePixels(768, 20) !important;
+    width: calculatePixels(768, 20) !important;
+  }
+  .dot {
+    height: calculatePixels(768, 10) !important;
+    width: calculatePixels(768, 10) !important;
+  }
+  .optionLabel {
+    font-size: calculatePixels(768, 18) !important;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .dotContainer {
+    height: calculatePixels(768, 20) !important;
+    width: calculatePixels(768, 20) !important;
+  }
+  .dot {
+    height: calculatePixels(768, 10) !important;
+    width: calculatePixels(768, 10) !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .dotContainer {
+    height: calculatePixels(768, 20) !important;
+    width: calculatePixels(768, 20) !important;
+  }
+  .dot {
+    height: calculatePixels(768, 10) !important;
+    width: calculatePixels(768, 10) !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  .dotContainer {
+    height: calculatePixels(768, 20) !important;
+    width: calculatePixels(768, 20) !important;
+  }
+  .dot {
+    height: calculatePixels(768, 10) !important;
+    width: calculatePixels(768, 10) !important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .dotContainer {
+    height: calculatePixels(992, 20) !important;
+    width: calculatePixels(992, 20) !important;
+  }
+  .dot {
+    height: calculatePixels(992, 10) !important;
+    width: calculatePixels(992, 10) !important;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .dotContainer {
+    height: calculatePixels(1200, 20) !important;
+    width: calculatePixels(1200, 20) !important;
+  }
+  .dot {
+    height: calculatePixels(1200, 10) !important;
+    width: calculatePixels(1200, 10) !important;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .dotContainer {
+    height: calculatePixels(1400, 20) !important;
+    width: calculatePixels(1400, 20) !important;
+  }
+  .dot {
+    height: calculatePixels(1400, 10) !important;
+    width: calculatePixels(1400, 10) !important;
+  }
+}

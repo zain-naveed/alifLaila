@@ -1,0 +1,78 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.title {
+  font-family: BitterSemiBold;
+  @include responsiveProperty(
+    (
+      "font-size": 44,
+      "max-width": 847,
+    )
+  );
+  color: $DARK_GREEN;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.primary {
+  color: $PRIMARY !important;
+}
+
+.secondary {
+  color: $Secondary !important;
+}
+
+.subTitle {
+  font-family: PoppinsRegular;
+  @include responsiveProperty(
+    (
+      "font-size": 18,
+    )
+  );
+  color: $Gray;
+  text-align: center;
+}
+
+.cardsFlowImg {
+  @include responsiveProperty(
+    (
+      "height": 534,
+    )
+  );
+  overflow-y: visible;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: calculatePixels(576, 48) !important;
+    max-width: 100% !important;
+  }
+  .subTitle {
+    font-size: calculatePixels(576, 18) !important;
+  }
+  .cardsFlowImg {
+    height: calculatePixels(576, 534) !important;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .title {
+    font-size: calculatePixels(768, 48) !important;
+    max-width: calculatePixels(768, 847) !important;
+  }
+  .subTitle {
+    font-size: calculatePixels(768, 18) !important;
+  }
+  .cardsFlowImg {
+    height: calculatePixels(768, 534) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .cardsFlowImg {
+    object-fit: contain;
+  }
+}

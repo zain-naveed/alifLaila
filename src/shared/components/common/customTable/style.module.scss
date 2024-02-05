@@ -1,0 +1,13 @@
+@import "shared/utils/colors.scss";
+
+.tableHead {
+  font-family: PoppinsMedium !important;
+  font-size: 12px;
+  text-align: left;
+  background-color: #f9fafb !important;
+  color: $GRAY2 !important;
+  vertical-align: middle;
+  border-bottom: 0px;
+  border-top: 1px solid $Light_Grey_1;
+  font-weight: 500 !important;
+}

@@ -1,0 +1,142 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.content {
+  border-radius: 8px !important;
+}
+
+.dailogContent {
+  @include MRP(
+    (
+      "max-width": 530,
+    )
+  );
+}
+
+.heading {
+  font-family: PoppinsMedium;
+  @include MRP(
+    (
+      "font-size": 18,
+    )
+  );
+  text-align: center;
+  color: $BLACK;
+}
+
+.closeImageContainer {
+  border-radius: 100%;
+  border: 1px solid #e6ecf3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include MRP(
+    (
+      "width": 30,
+      "height": 30,
+    )
+  );
+  text-align: center;
+  img {
+    @include MRP(
+      (
+        "width": 9,
+        "height": 10,
+      )
+    );
+  }
+}
+
+.avtStyle {
+  @include MRP(
+    (
+      "width": 60,
+      "height": 60,
+    )
+  );
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.kidName {
+  font-family: PoppinsMedium;
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+  text-align: center;
+  color: $BLACK;
+}
+
+.inputContainer {
+  @include MRP(
+    (
+      "width": 104,
+      "height": 46,
+      "border-radius": 26,
+      "font-size": 14,
+    )
+  );
+  border: 1px solid $Light_Grey_1;
+  outline: 0;
+  font-family: "PoppinsMedium";
+  padding: 10px;
+}
+
+.seperator {
+  background-color: $Ultra_Light_Grey;
+  height: 3px;
+  width: 100%;
+}
+
+.btn {
+  @include MRP(
+    (
+      "height": 52,
+      "font-size": 16,
+    )
+  );
+}
+
+.seperator {
+  height: 1px;
+  width: 100%;
+  background-color: #e7e7e7;
+}
+
+@media screen and (max-width: 576px) {
+  .dailogContent {
+    max-width: 300px !important;
+    margin: auto !important;
+  }
+  .heading {
+    font-size: calculatePixels(768, 18) !important;
+  }
+  .closeImageContainer {
+    height: calculatePixels(992, 30) !important;
+    width: calculatePixels(992, 30) !important;
+    img {
+      height: calculatePixels(992, 9) !important;
+      width: calculatePixels(992, 10) !important;
+    }
+  }
+  .avtStyle {
+    height: calculatePixels(992, 60) !important;
+    width: calculatePixels(992, 60) !important;
+  }
+  .kidName {
+    font-size: calculatePixels(768, 16) !important;
+  }
+  .inputContainer {
+    height: calculatePixels(992, 46) !important;
+    width: calculatePixels(992, 104) !important;
+    border-radius: calculatePixels(992, 26) !important;
+    font-size: calculatePixels(768, 14) !important;
+    padding: calculatePixels(768, 10) !important;
+  }
+  .btn {
+    height: calculatePixels(992, 52) !important;
+    font-size: calculatePixels(768, 16) !important;
+  }
+}

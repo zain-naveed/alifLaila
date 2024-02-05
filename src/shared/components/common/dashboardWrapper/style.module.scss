@@ -1,0 +1,139 @@
+@import "shared/utils/colors.scss";
+
+.topLevelContainer {
+  height: 100vh;
+  display: flex;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.mainContainer {
+  background-color: $OffWhite;
+  overflow-y: auto;
+  height: 100vh;
+  width: 100vw;
+}
+
+.containerPadding {
+  padding: 0 44px;
+  text-align: left;
+  padding-top: 24px;
+
+  @media screen and (max-width: 576px) {
+    padding: 0 14px;
+    padding-top: 20px;
+  }
+
+  @media (min-width: 576px) and (max-width: 768px) {
+    padding: 0 14px;
+    padding-top: 20px;
+  }
+}
+
+.sideNavContainer {
+  background-color: white;
+  border-right: 1px solid #e4e4e4;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.sideNavFull {
+  min-width: 256px;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
+
+.sideNavHalf {
+  min-width: 96px;
+  max-width: 96px;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  overflow-x: hidden;
+}
+
+.sideNavContainer::-webkit-scrollbar {
+  width: 6px;
+  display: none;
+}
+
+.mainContainer::-webkit-scrollbar {
+  width: 6px;
+  display: none;
+}
+
+.sideNavContainer::-webkit-scrollbar-thumb {
+  background-color: #ff754c;
+  border-radius: 100px;
+  visibility: hidden;
+}
+
+.sideNavContainer::-webkit-scrollbar-track {
+  /* background-color: #818b99; */
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background-clip: content-box;
+  background-color: #f0f3f6;
+  visibility: hidden;
+  /* border-radius: 100px; */
+}
+
+.showSideNavContainer::-webkit-scrollbar-thumb {
+  visibility: visible !important;
+}
+
+.showSideNavContainer::-webkit-scrollbar-track {
+  visibility: visible !important;
+}
+
+@media screen and (max-width: 992px) {
+  .showSideNavContainer::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .sideNavContainer {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .sideNavFull {
+    min-width: 96px;
+  }
+  .sideNavContainer {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sideNavFull {
+    min-width: 96px;
+  }
+  .sideNavContainer {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .sideNavFull {
+    min-width: 96px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sideNavFull {
+    min-width: 256px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .sideNavFull {
+    min-width: 256px;
+  }
+}

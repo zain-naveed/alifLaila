@@ -1,0 +1,22 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+@import "shared/components/common/customButton/style.module.scss";
+@import "shared/components/socialButton/style.module.scss";
+
+.downloadContainer {
+    background-image: url("../../../../assets/images/downloadImg.png");
+    height: 357px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    margin-top: 62px;
+  }
+  .socialButtonContainer{
+    justify-content: center;
+      margin-top: 30px !important;
+  }
+  .appStoreMargin{
+    @extend .button;
+    margin-right: 20px;
+  }

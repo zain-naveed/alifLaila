@@ -1,0 +1,120 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.topLevelContainer {
+  height: calc(100vh - 94px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.highlighted1 {
+  color: $Secondary;
+}
+
+.highlighted2 {
+  color: $DARK_GREEN;
+}
+
+.highlighted3 {
+  color: $PRIMARY;
+}
+
+.aboutImg {
+  @include responsiveProperty(
+    (
+      "height": 483.866,
+      "width": 624.001,
+    )
+  );
+}
+
+.subLabel {
+  color: $Secondary;
+  font-family: PoppinsRegular;
+  font-style: normal;
+  line-height: 32px;
+
+  @include responsiveProperty(
+    (
+      "font-size": 24,
+    )
+  );
+}
+
+.aboutDescription {
+  color: var(--Gray-Gray-08, $BLACK);
+  font-family: PoppinsRegular;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+
+  @include responsiveProperty(
+    (
+      "font-size": 18,
+      "padding-top": 24
+    )
+  );
+}
+
+.label {
+  text-align: center;
+  font-family: BitterSemiBold;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  text-transform: capitalize;
+
+  @include responsiveProperty(
+    (
+      "font-size": 40,
+    )
+  );
+}
+
+@media screen and (max-width: 576px) {
+  .subLabel {
+    font-size: calculatePixels(768, 24) !important;
+  }
+
+  .label {
+    font-size: calculatePixels(768, 40) !important;
+  }
+
+  .aboutDescription {
+    font-size: calculatePixels(768, 18) !important;
+    padding-top: calculatePixels(768, 24) !important;
+  }
+
+  .aboutImg {
+    height: calculatePixels(768, 483.8666) !important;
+    width: calculatePixels(768,624.001) !important
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .subLabel {
+    font-size: calculatePixels(768, 24) !important;
+  }
+
+  .label {
+    font-size: calculatePixels(768, 40) !important;
+  }
+
+  .aboutDescription {
+    font-size: calculatePixels(768, 18) !important;
+    padding-top: calculatePixels(768, 24) !important;
+  }
+
+  .aboutImg {
+    height: calculatePixels(768, 483.8666) !important;
+    width: calculatePixels(768,624.001) !important
+  }
+}

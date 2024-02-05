@@ -1,0 +1,219 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.newsLetterContainer {
+  .logoArea {
+    background-color: $Light_Blue;
+    @include responsiveProperty(
+      (
+        "max-width": 456,
+        "max-height": 284,
+        "border-radius": 30,
+      )
+    );
+
+    width: 100%;
+    height: 100%;
+
+    .logo {
+      @include responsiveProperty(
+        (
+          "max-width": 251,
+          "max-height": 164,
+          "margin-top": 60,
+          "margin-bottom": 60,
+          "margin-left": 102,
+          "margin-right": 102,
+        )
+      );
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .subscribeContainer {
+    @include responsiveProperty(
+      (
+        "max-width": 618,
+        "max-height": 284,
+      )
+    );
+
+    .label1 {
+      font-family: BitterSemiBold;
+      text-transform: capitalize;
+      text-align: left;
+      @include responsiveProperty(
+        (
+          "font-size": 40,
+        )
+      );
+      color: $DARK_GREEN;
+    }
+
+    .label2 {
+      font-family: PoppinsRegular;
+      text-align: left;
+      @include responsiveProperty(
+        (
+          "font-size": 18,
+        )
+      );
+      color: $Gray;
+    }
+
+    .inputArea {
+      width: 100%;
+      .inputContainer {
+        border: 1px solid #e4e6f1;
+        @include responsiveProperty(
+          (
+            "width": 343,
+            "height": 48,
+            "border-radius": 28,
+            "padding": 5,
+          )
+        );
+      }
+      .inputStyle {
+        @include responsiveProperty(
+          (
+            "font-size": 16,
+          )
+        );
+        background-color: transparent;
+      }
+      .inputStyle::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        font-family: PoppinsRegular;
+        color: #b6b9ce;
+        opacity: 1; /* Firefox */
+      }
+      .inputStyle:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        font-family: PoppinsRegular;
+        color: #b6b9ce;
+      }
+      .inputStyle::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: #b6b9ce;
+      }
+      .btnStyle {
+        @include responsiveProperty(
+          (
+            "width": 136,
+            "height": 48,
+            "border-radius": 48,
+            "font-size": 16,
+          )
+        );
+      }
+    }
+  }
+}
+
+.primary {
+  color: $PRIMARY;
+}
+.secondary {
+  color: $Secondary;
+}
+.yellow {
+  color: $Yellow;
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .newsLetterContainer {
+    .logoArea {
+      max-width: calculatePixels(767, 456) !important;
+      max-height: calculatePixels(767, 284) !important;
+      border-radius: calculatePixels(767, 30) !important;
+
+      .logo {
+        max-width: calculatePixels(767, 251) !important;
+        max-height: calculatePixels(767, 164) !important;
+        margin-top: calculatePixels(767, 60) !important;
+        margin-bottom: calculatePixels(767, 60) !important;
+        margin-left: calculatePixels(767, 102) !important;
+        margin-right: calculatePixels(767, 102) !important;
+      }
+    }
+
+    .subscribeContainer {
+      max-width: calculatePixels(767, 618) !important;
+      max-height: calculatePixels(767, 284) !important;
+
+      .label1 {
+        font-size: calculatePixels(767, 40) !important;
+      }
+      .label2 {
+        font-size: calculatePixels(767, 18) !important;
+      }
+      .inputArea {
+        .inputContainer {
+          width: calculatePixels(767, 343) !important;
+          height: calculatePixels(767, 48) !important;
+          border-radius: calculatePixels(767, 28) !important;
+          padding: calculatePixels(767, 10) !important;
+        }
+        .inputStyle {
+          font-size: calculatePixels(767, 16) !important;
+        }
+        .btnStyle {
+          max-width: calculatePixels(767, 136) !important;
+          max-height: calculatePixels(767, 48) !important;
+          border-radius: calculatePixels(767, 48) !important;
+          font-size: calculatePixels(992, 16) !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .newsLetterContainer {
+    .logoArea {
+      max-width: calculatePixels(576, 456) !important;
+      max-height: calculatePixels(576, 284) !important;
+      border-radius: calculatePixels(576, 30) !important;
+
+      .logo {
+        max-width: calculatePixels(576, 251) !important;
+        max-height: calculatePixels(576, 164) !important;
+        margin-top: calculatePixels(576, 60) !important;
+        margin-bottom: calculatePixels(576, 60) !important;
+        margin-left: calculatePixels(576, 102) !important;
+        margin-right: calculatePixels(576, 102) !important;
+      }
+    }
+    .subscribeContainer {
+      max-width: calculatePixels(767, 618) !important;
+      max-height: calculatePixels(767, 284) !important;
+
+      .label1 {
+        font-size: calculatePixels(576, 40) !important;
+      }
+      .label2 {
+        font-size: calculatePixels(767, 18) !important;
+      }
+      .inputArea {
+        .inputContainer {
+          width: 100% !important;
+          max-width: calculatePixels(767, 343) !important;
+          max-height: calculatePixels(767, 48) !important;
+          border-radius: calculatePixels(767, 28) !important;
+          padding: calculatePixels(767, 10) !important;
+        }
+        .inputStyle {
+          font-size: calculatePixels(767, 16) !important;
+        }
+        .btnStyle {
+          max-width: calculatePixels(767, 136) !important;
+          max-height: calculatePixels(767, 48) !important;
+          border-radius: calculatePixels(767, 48) !important;
+          font-size: calculatePixels(992, 16) !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,163 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.reportDialog {
+  @include MRP(
+    (
+      "max-width": 530,
+    )
+  );
+}
+
+.labelText {
+  @include MRP(
+    (
+      "font-size": 24,
+    )
+  );
+  font-family: PoppinsSemiBold;
+  color: #0f1106;
+}
+
+.reportIcon {
+  @include MRP(
+    (
+      "height": 79,
+      "width": 79,
+    )
+  );
+}
+
+.textAreaComp {
+  @include MRP(
+    (
+      "font-size": 16,
+      "height": 148,
+      "padding": 14,
+      "border-radius": 24,
+      "line-height": 24,
+    )
+  );
+  background: #f9fafb;
+  border: 1px solid #d0d5dd;
+  width: 100%;
+  color: $BLACK;
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.optionLabel {
+  font-family: PoppinsRegular;
+  @include MRP(
+    (
+      "font-size": 18,
+    )
+  );
+  color: #1a1a1a;
+  text-transform: capitalize;
+  span {
+    color: $PRIMARY;
+  }
+}
+
+.cancelButton {
+  width: 100%;
+  @include MRP(
+    (
+      "font-size": 16,
+      "height": 52,
+      "border-radius": 32,
+    )
+  );
+  font-family: PoppinsMedium !important;
+  background: #ffffff !important;
+  border: 1px solid #d0d5dd !important;
+  color: #344054 !important;
+}
+
+.reportButton {
+  width: 100%;
+  @include MRP(
+    (
+      "font-size": 16,
+      "height": 52,
+      "border-radius": 32,
+    )
+  );
+  font-family: PoppinsMedium;
+  color: #ffffff;
+}
+
+.closeImageContainer {
+  border-radius: 100%;
+  border: 1px solid #e6ecf3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include MRP(
+    (
+      "width": 30,
+      "height": 30,
+    )
+  );
+  text-align: center;
+  img {
+    @include MRP(
+      (
+        "width": 9,
+        "height": 10,
+      )
+    );
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .reportDialog {
+    max-width: 300px !important;
+    margin: auto !important;
+  }
+  .labelText {
+    font-size: calculatePixels(768, 28) !important;
+  }
+  .reportIcon {
+    height: calculatePixels(768, 79) !important;
+    width: calculatePixels(768, 79) !important;
+  }
+  .textAreaComp {
+    font-size: calculatePixels(768, 16) !important;
+    height: calculatePixels(768, 148) !important;
+    padding: calculatePixels(768, 14) !important;
+    border-radius: calculatePixels(768, 24) !important;
+    line-height: calculatePixels(768, 24) !important;
+  }
+  .dotContainer {
+    height: calculatePixels(768, 20) !important;
+    width: calculatePixels(768, 20) !important;
+  }
+  .dot {
+    height: calculatePixels(768, 10) !important;
+    width: calculatePixels(768, 10) !important;
+  }
+  .optionLabel {
+    font-size: calculatePixels(768, 18) !important;
+  }
+  .cancelButton {
+    font-size: calculatePixels(768, 16) !important;
+    height: calculatePixels(768, 52) !important;
+    border-radius: calculatePixels(768, 32) !important;
+  }
+  .reportButton {
+    font-size: calculatePixels(768, 16) !important;
+    height: calculatePixels(768, 52) !important;
+    border-radius: calculatePixels(768, 32) !important;
+  }
+  .closeImageContainer {
+    height: calculatePixels(768, 30) !important;
+    width: calculatePixels(768, 30) !important;
+    img {
+      height: calculatePixels(768, 9) !important;
+      width: calculatePixels(768, 10) !important;
+    }
+  }
+}

@@ -1,0 +1,137 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+$breakpointMedium: 1199px;
+
+@mixin maxWidth($breakpoint) {
+  @if ($breakpoint == "medium") {
+    @media (max-width: $breakpointMedium) {
+      @content;
+    }
+  }
+}
+
+.navbrand {
+  margin-top: 12px;
+  margin-bottom: 49px;
+
+  @include maxWidth("medium") {
+    width: 60%;
+    margin-bottom: 49px;
+  }
+}
+
+.navBrandHalf {
+  margin-top: 12px;
+  margin-bottom: 49px;
+  width: 60%;
+}
+
+.logout {
+  color: $Secondary;
+}
+
+.navItemContainer,
+.activeNavItemContainer {
+  display: flex;
+  align-items: center;
+  padding-left: 33px;
+  height: 44px;
+  justify-content: flex-start;
+
+  .icon {
+    margin-right: 12px;
+    min-height: 24px;
+    max-height: 24px;
+    min-width: 24px;
+    max-width: 24px;
+    height: 100%;
+    width: 100%;
+    filter: invert(62%) sepia(0%) saturate(4517%) hue-rotate(238deg)
+      brightness(90%) contrast(83%);
+  }
+
+  .heading,
+  .logout {
+    color: $Gray;
+    font-family: "PoppinsRegular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    @include elipsis(1);
+    transition: width 0.4s ease;
+    -webkit-transition: width 0.4s;
+    -moz-transition: width 0.4s;
+
+    @include maxWidth("medium") {
+      display: none;
+    }
+  }
+
+  &:hover {
+    .icon {
+      filter: invert(40%) sepia(10%) saturate(3392%) hue-rotate(251deg)
+        brightness(86%) contrast(90%);
+    }
+    background-color: #fff3ff;
+    cursor: pointer;
+  }
+}
+
+.activeNavItemContainer {
+  background-color: $LightPrimary;
+  border-right: 3px solid $PRIMARY;
+
+  .heading {
+    font-weight: 600;
+    color: $PRIMARY;
+  }
+
+  .icon {
+    filter: invert(40%) sepia(10%) saturate(3392%) hue-rotate(251deg)
+      brightness(86%) contrast(90%);
+  }
+}
+
+.sideNavFull {
+  width: 256px;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
+
+.sideNavHalf {
+  width: 96px;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
+
+@media screen and (min-width: 576px) {
+  .sideNavFull {
+    width: 96px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sideNavFull {
+    width: 96px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .sideNavFull {
+    width: 96px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sideNavFull {
+    width: 256px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .sideNavFull {
+    width: 256px;
+  }
+}

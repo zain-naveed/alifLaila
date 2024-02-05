@@ -1,0 +1,33 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.circleIcon {
+  @include responsiveProperty(
+    (
+      "height": 24,
+      "width": 24,
+    )
+  );
+}
+
+.daysLabel {
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  color: $BLACK;
+  text-align: left;
+}
+
+.packageNameLabel {
+  font-family: PoppinsRegular;
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  color: $Gray;
+  text-align: left;
+}

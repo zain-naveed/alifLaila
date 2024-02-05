@@ -1,0 +1,157 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.headerContainer {
+  background-image: url("../../../../assets/images/background_parents.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include responsiveProperty(
+    (
+      "min-height": 350,
+    )
+  );
+  display: flex;
+  align-items: flex-end;
+}
+
+.headerContainer2 {
+  background-image: url("../../../../assets/images/background_school.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include responsiveProperty(
+    (
+      "min-height": 350,
+    )
+  );
+  display: flex;
+  align-items: flex-end;
+}
+
+.mainHeading {
+  color: $DARK_GREEN;
+  font-family: BitterSemiBold;
+  @include responsiveProperty(
+    (
+      "font-size": 38,
+      "max-width": 594,
+    )
+  );
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.highlighted1 {
+  color: $PRIMARY;
+}
+
+.highlighted2 {
+  color: $Secondary;
+}
+
+.highlighted3 {
+  color: $Yellow;
+}
+
+.highlighted4 {
+  color: $DARK_GREEN;
+}
+
+.btnStyle {
+  @include responsiveProperty(
+    (
+      "height": 48,
+      "font-size": 16,
+      "width": 156,
+      "border-radius": 24,
+      "margin-top": 20,
+    )
+  );
+  background-color: $DARK_GREEN !important;
+}
+
+.vector {
+  @include responsiveProperty(
+    (
+      "height": 324,
+      "width": 252,
+    )
+  );
+}
+
+.vector2 {
+  @include responsiveProperty(
+    (
+      "height": 301,
+      "width": 514,
+    )
+  );
+}
+
+@media screen and (max-width: 576px) {
+  .headerContainer {
+    min-height: calculatePixels(768, 350) !important;
+  }
+
+  .headerContainer2 {
+    min-height: calculatePixels(768, 350) !important;
+  }
+
+  .mainHeading {
+    font-size: calculatePixels(768, 38) !important;
+    max-width: calculatePixels(768, 594) !important;
+  }
+
+  .btnStyle {
+    height: calculatePixels(768, 48) !important;
+    font-size: calculatePixels(768, 16) !important;
+    width: calculatePixels(768, 156) !important;
+    border-radius: calculatePixels(768, 24) !important;
+    margin-top: calculatePixels(768, 20) !important;
+  }
+
+  .vector {
+    height: calculatePixels(768, 324) !important;
+    width: calculatePixels(768, 252) !important;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .headerContainer {
+    min-height: calculatePixels(768, 350) !important;
+  }
+
+  .headerContainer2 {
+    min-height: calculatePixels(768, 350) !important;
+  }
+
+  .mainHeading {
+    font-size: calculatePixels(768, 38) !important;
+    max-width: calculatePixels(768, 594) !important;
+  }
+
+  .btnStyle {
+    height: calculatePixels(768, 48) !important;
+    font-size: calculatePixels(768, 16) !important;
+    width: calculatePixels(768, 156) !important;
+    border-radius: calculatePixels(768, 24) !important;
+    margin-top: calculatePixels(768, 20) !important;
+  }
+
+  .vector {
+    height: calculatePixels(768, 324) !important;
+    width: calculatePixels(768, 252) !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .parentTextContainer {
+    margin-top: -150px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .parentTextContainer {
+    margin-top: -120px;
+  }
+}

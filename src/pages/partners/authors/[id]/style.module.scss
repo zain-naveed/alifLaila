@@ -1,0 +1,75 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+@import "pages/partners/book/style.module.scss";
+
+.infoContainer {
+  border: 1px solid $LightBlueWhite;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0px 24px;
+  .contentContainer {
+    width: 100%;
+    padding: 24px 0px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $LightBlueWhite;
+    .avt {
+      height: 56px;
+      width: 56px;
+    }
+    .title {
+      font-family: PoppinsMedium;
+      font-size: 18px;
+      color: $BLACK;
+    }
+    .editIcon {
+      height: 16px;
+      width: 16px;
+      &:hover {
+        cursor: pointer;
+      }
+      path {
+        stroke: $Secondary;
+      }
+    }
+    .markerIcon {
+      min-height: 20px;
+      max-height: 20px;
+      min-width: 20px;
+      max-width: 20px;
+      height: 100%;
+      width: 100%;
+    }
+    .address {
+      font-family: PoppinsRegular;
+      font-size: 14px;
+      color: $BLACK;
+    }
+  }
+  .detailsContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 24px 0px;
+    .detailIcon {
+      min-height: 20px;
+      max-height: 20px;
+      min-width: 20px;
+      max-width: 20px;
+      height: 100%;
+      width: 100%;
+      path {
+        stroke: $PRIMARY;
+      }
+    }
+    .detailLabel {
+      font-family: PoppinsRegular;
+      font-size: 14px;
+      color: $Gray;
+    }
+  }
+}

@@ -1,0 +1,259 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.header {
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.title {
+  font-family: PoppinsSemiBold;
+  @include MRP(
+    (
+      "font-size": 24,
+    )
+  );
+  color: $BLACK;
+  text-align: left;
+}
+
+.checkContainer {
+  @include MRP(
+    (
+      "height": 24,
+      "width": 24,
+    )
+  );
+  border: 2px solid $LIGHT_GREY;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+
+.labelStyle {
+  font-family: PoppinsRegular;
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+  color: $Gray;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.dotStyle {
+  @include MRP(
+    (
+      "height": 13,
+      "width": 13,
+    )
+  );
+  background-color: $PRIMARY;
+  border-radius: 100%;
+}
+
+.bookCover {
+  @include MRP(
+    (
+      "height": 194,
+      "width": 154,
+      "border-radius": 12,
+    )
+  );
+  object-fit: cover;
+}
+
+.bookTitle {
+  font-family: PoppinsMedium;
+  @include MRP(
+    (
+      "font-size": 26,
+    )
+  );
+  color: $BLACK;
+  text-align: left;
+}
+
+.authorName {
+  font-family: PoppinsMedium;
+  @include MRP(
+    (
+      "font-size": 14,
+    )
+  );
+  color: $PRIMARY;
+  text-align: left;
+}
+
+.desc {
+  font-family: PoppinsRegular;
+  @include MRP(
+    (
+      "font-size": 14,
+    )
+  );
+  color: $Gray;
+  text-align: left;
+}
+
+.inputContainer {
+  @include MRP(
+    (
+      "height": 44,
+    )
+  );
+}
+
+.btn {
+  @include MRP(
+    (
+      "height": 48,
+      "width": 221,
+    )
+  );
+}
+
+.recentCover {
+  @include MRP(
+    (
+      "height": 100,
+      "width": 250,
+      "border-radius": 12,
+    )
+  );
+  border: 1px soild transparent;
+  object-fit: cover;
+}
+
+.activeContainer {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  @include MRP(
+    (
+      "border-radius": 12,
+    )
+  );
+  border: 1px solid $PRIMARY !important;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tickContianer {
+  @include MRP(
+    (
+      "height": 58,
+      "width": 58,
+    )
+  );
+  background-color: $Secondary;
+  border-radius: 100%;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    @include MRP(
+      (
+        "height": 32,
+        "width": 32,
+      )
+    );
+  }
+}
+
+.uploadContainer {
+  @include MRP(
+    (
+      "height": 200,
+      "border-radius": 20,
+    )
+  );
+
+  width: 100%;
+  border: 1px solid $LIGHT_GREY;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    @include MRP(
+      (
+        "height": 46,
+        "width": 46,
+      )
+    );
+  }
+}
+
+.bookUploadContent {
+  span {
+    font-family: PoppinsRegular;
+    @include MRP(
+      (
+        "font-size": 16,
+      )
+    );
+    color: $Gray;
+  }
+  p {
+    font-family: PoppinsRegular;
+    @include MRP(
+      (
+        "font-size": 14,
+      )
+    );
+    color: $Gray;
+    margin: 0px !important;
+  }
+}
+
+.bookUploadActivePreview {
+  border: 1px solid $PRIMARY;
+  display: flex;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 96px;
+  width: 100%;
+  border-radius: 8px;
+
+  div {
+    width: 100%;
+
+    .coverHeading {
+      font-size: 14px;
+      color: #344054;
+      font-weight: 500;
+      margin-bottom: 0px;
+      font-family: "Inter";
+    }
+
+    .coverTitle {
+      font-family: "Inter";
+      font-weight: 400;
+      font-size: 14px;
+      color: #667085;
+    }
+
+    .closeImageContainer {
+      border-radius: 100%;
+      border: 1px solid #e6ecf3;
+      width: 28px;
+      height: 26px;
+      text-align: center;
+
+      img {
+        width: 9px;
+        height: 9px;
+        margin-bottom: 2px;
+      }
+    }
+  }
+}

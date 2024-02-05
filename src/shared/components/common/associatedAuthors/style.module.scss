@@ -1,0 +1,188 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/mixin.module.scss";
+
+.progressBookList {
+  overflow-x: auto;
+  background-color: transparent;
+  scroll-behavior: smooth;
+  @include hideScrollBar();
+}
+
+.leftArrowContainer {
+  height: 60px;
+  width: 60px;
+  left: -30px;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  background-color: white;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $BorderGray;
+  cursor: pointer;
+  box-shadow: 0px 5.14286px 24.42857px 0px rgba(0, 0, 0, 0.16);
+}
+
+.rightArrowContainer {
+  height: 60px;
+  width: 60px;
+  right: -30px;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  background-color: white;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $BorderGray;
+  cursor: pointer;
+  box-shadow: 0px 5.14286px 24.42857px 0px rgba(0, 0, 0, 0.16);
+}
+
+.arrowIcon {
+  height: 28px;
+  width: 28px;
+  path {
+    fill: black;
+  }
+}
+
+.active {
+  background-color: $DARK_GREEN;
+  border-color: $DARK_GREEN;
+  .arrowIcon path {
+    fill: white;
+  }
+}
+
+.userCard {
+  width: 14.2857%;
+  flex: 0 0 14.2857%;
+  max-width: 14.2857%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div {
+    height: 164px;
+    border-radius: 32px;
+    border: 1px solid $GRAY_300;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 32px;
+    width: fit-content;
+    cursor: pointer;
+    img {
+      height: 72px;
+      width: 72px;
+      border-radius: 100%;
+      object-fit: cover;
+    }
+    label {
+      padding-top: 16px;
+      font-family: PoppinsMedium;
+      font-size: 13px;
+      color: $BLACK;
+      padding-bottom: 6px;
+      cursor: pointer;
+    }
+    span {
+      font-family: PoppinsMedium;
+      font-size: 12px;
+      color: $Gray;
+    }
+  }
+}
+
+.seperator {
+  height: 1px;
+  width: 100%;
+  background-color: $GRAY_300;
+}
+
+@media screen and (max-width: 400px) {
+  .userCard {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .userCard {
+    width: 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .userCard {
+    width: 33.333%;
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .userCard {
+    width: 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .userCard {
+    width: 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .userCard {
+    width: 16.6667%;
+    flex: 0 0 16.6667%;
+    max-width: 16.6667%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .userCard {
+    width: 14.2857%;
+    flex: 0 0 14.2857%;
+    max-width: 14.2857%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .userCard {
+    width: 12.5%;
+    flex: 0 0 12.5%;
+    max-width: 12.5%;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .userCard {
+    width: 12.5%;
+    flex: 0 0 12.5%;
+    max-width: 12.5%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .userCard {
+    width: 11.1111%;
+    flex: 0 0 11.1111%;
+    max-width: 11.1111%;
+  }
+}

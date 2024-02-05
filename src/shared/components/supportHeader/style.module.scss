@@ -1,0 +1,22 @@
+@import "shared/utils/colors.scss";
+@import "shared/components/common/heading/style.module.scss";
+@import "shared/components/common/title/style.module.scss";
+.supportHeader {
+  background: white;
+  border: 1px solid $LightBlueWhite;
+  gap: 10px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+
+  .supportHeading {
+    @extend .heading;
+    font-weight: 600;
+    font-size: 22px;
+    color: $PRIMARY;
+  }
+
+  .supportTitle {
+    @extend .title;
+    font-size: 13px;
+  }
+}

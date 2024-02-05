@@ -1,0 +1,193 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.dailogContent {
+  @include MRP(
+    (
+      "max-width": 744,
+    )
+  );
+  margin: auto;
+}
+
+
+
+.labelTable {
+  @include MRP(
+    (
+      "font-size": 14,
+    )
+  );
+
+  color: var(--Black-900, $BLACK);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: PoppinsRegular;
+  font-weight: 600;
+  padding: 20px 15px;
+  border-bottom: 1px solid $Light_Grey_1;
+}
+
+.borderBottom{
+  border-bottom: 1px solid $Light_Grey_1;
+}
+
+.paginationBar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.tableBody {
+  @include MRP(
+    (
+      "font-size": 14,
+    )
+  );
+  color: var(--Black-600, $BLACK_600);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: PoppinsRegular;
+  padding: 20px 15px;
+}
+
+.header {
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+.orderHeaderContainer {
+  @include MRP(
+    (
+      "min-height": 80,
+      "border-radius": 10,
+    )
+  );
+  height: fit-content;
+  width: 100%;
+  background-color: #fffbf3;
+}
+
+.topUpHistoryContainer {
+  @include MRP(
+    (
+      "border-radius": 16,
+    )
+  );
+  width: 100%;
+  background-color: $Ultra_Light_Grey;
+}
+
+.orderId {
+  @include MRP(
+    (
+      "font-size": 12,
+    )
+  );
+  font-family: PoppinsMedium;
+  color: $Gray;
+  text-align: left;
+  @include elipsis(1);
+}
+
+.orderIdDetail {
+  @include MRP(
+    (
+      "font-size": 14,
+    )
+  );
+  font-family: PoppinsRegular;
+  color: $BLACK;
+  text-align: left;
+}
+
+.statusContainer {
+  @include MRP(
+    (
+      "height": 22,
+      "border-radius": 16,
+      "font-size": 12,
+    )
+  );
+  width: fit-content;
+  padding: 0px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tableTitle {
+  @include MRP(
+    (
+      "font-size": 14,
+    )
+  );
+  font-family: PoppinsMedium;
+  color: $BLACK;
+  @include elipsis(1);
+  width: 33.333%;
+}
+
+.seperator {
+  height: 1px;
+  width: 100%;
+  background-color: #ced4da;
+}
+
+.bookDetail {
+  @include MRP(
+    (
+      "font-size": 14,
+    )
+  );
+  font-family: PoppinsRegular;
+  color: $BLACK_600;
+  text-align: left;
+  width: 33.333%;
+}
+
+.dateLabel {
+  @include MRP(
+    (
+      "font-size": 18,
+    )
+  );
+  font-family: PoppinsMedium;
+  color: $BLACK;
+  text-align: left;
+}
+
+@media screen and (max-width: 576px) {
+  .dailogContent {
+    max-width: 400px !important;
+    margin: auto !important;
+  }
+  .orderHeaderContainer {
+    min-height: calculatePixels(768, 80) !important;
+    border-radius: calculatePixels(768, 10) !important;
+  }
+  .orderId {
+    font-size: calculatePixels(768, 12) !important;
+  }
+  .orderIdDetail {
+    font-size: calculatePixels(768, 14) !important;
+  }
+  .statusContainer {
+    height: calculatePixels(768, 22) !important;
+    border-radius: calculatePixels(768, 16) !important;
+    font-size: calculatePixels(768, 16) !important;
+  }
+  .tableTitle {
+    font-size: calculatePixels(768, 14) !important;
+  }
+  .bookDetail {
+    font-size: calculatePixels(768, 14) !important;
+  }
+  .dateLabel {
+    font-size: calculatePixels(768, 14) !important;
+  }
+  .labelTable {
+    font-size: calculatePixels(768, 14) !important;
+  }
+  .tableBody {
+    font-size: calculatePixels(768, 14) !important;
+  }
+}

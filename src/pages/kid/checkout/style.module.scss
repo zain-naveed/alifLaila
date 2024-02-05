@@ -1,0 +1,642 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.topLevelContainer {
+  height: calc(100vh - 94px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.viewCartHeading {
+  font-family: PoppinsSemiBold;
+  text-align: center;
+
+  @include responsiveProperty(
+    (
+      "font-size": 24,
+    )
+  );
+}
+
+// --------------left section--------------
+
+.leftContainer {
+  @include responsiveProperty(
+    (
+      "width": 762,
+      "border-radius": 28,
+    )
+  );
+  border: 1px solid #adb5bd;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.leftContainerLoader {
+  @include responsiveProperty(
+    (
+      "height": 574,
+      "width": 762,
+      "border-radius": 28,
+    )
+  );
+}
+
+.shippingCostLabel {
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 12,
+    )
+  );
+  color: $PRIMARY;
+  text-align: left;
+}
+
+.label1 {
+  font-family: PoppinsRegular;
+  @include responsiveProperty(
+    (
+      "font-size": 12,
+    )
+  );
+  color: $Gray;
+  text-align: left;
+}
+
+.label1Loader {
+  @include responsiveProperty(
+    (
+      "height": 12,
+      "width": 56,
+    )
+  );
+  border-radius: 0% !important;
+}
+
+.addressLabel {
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 13,
+      "max-width": 210,
+    )
+  );
+  color: $BLACK;
+  text-align: left;
+}
+
+.addressLabelLoader {
+  @include responsiveProperty(
+    (
+      "height": 13,
+      "width": 210,
+    )
+  );
+  border-radius: 0% !important;
+}
+
+.editLabel {
+  font-family: PoppinsRegular;
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  color: $PRIMARY;
+  text-decoration: underline;
+  text-align: left;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.editLabelLoader {
+  @include responsiveProperty(
+    (
+      "height": 16,
+      "width": 30,
+    )
+  );
+  border-radius: 0% !important;
+}
+
+.seperator {
+  height: 1px;
+  background-color: #ced4da;
+  width: 100%;
+}
+
+.orderContainer {
+  &:hover {
+    background-color: #fafafb;
+  }
+}
+
+.pubName {
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+  color: $BLACK;
+  text-align: left;
+  span {
+    color: $Secondary;
+  }
+}
+.chevIcon {
+  @include responsiveProperty(
+    (
+      "height": 20,
+      "width": 20,
+    )
+  );
+}
+
+.btnStyle {
+  @include responsiveProperty(
+    (
+      "height": 52,
+      "width": 153,
+      "border-radius": 32,
+      "font-size": 16,
+    )
+  );
+}
+
+.detailTitle {
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  color: $BLACK;
+}
+
+.firstDetailTitle {
+  width: 40%;
+  text-align: left;
+}
+
+.otherDetailTitle {
+  width: 20%;
+  text-align: center;
+}
+
+.detailPrice {
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+  color: $PRIMARY;
+}
+
+.bookImg {
+  @include responsiveProperty(
+    (
+      "height": 56,
+      "width": 52,
+    )
+  );
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.bookTitle {
+  font-family: PoppinsSemiBold;
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+  color: $BLACK;
+  text-align: left;
+}
+
+// --------------right section--------------
+
+.rightContainer {
+  @include responsiveProperty(
+    (
+      "padding-top": 20,
+      "padding-bottom": 20,
+      "width": 490,
+      "border-radius": 20,
+    )
+  );
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.couponTitle {
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 22,
+    )
+  );
+  color: $BLACK;
+  text-align: left;
+}
+
+.couponSubTitle {
+  font-family: PoppinsRegular;
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  color: $BLACK;
+  text-align: left;
+}
+
+.couponInputContainer {
+  @include responsiveProperty(
+    (
+      "height": 52,
+      "border-radius": 54,
+    )
+  );
+  width: 90%;
+  border: 1px solid #cbcbcb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.couponInput {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  outline: 0px;
+  border: 0px;
+  font-family: PoppinsRegular;
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+}
+
+.applyBtn {
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  color: $BLACK;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.summaryContainer {
+  @include responsiveProperty(
+    (
+      "height": 200,
+      "border-radius": 20,
+    )
+  );
+  width: 100%;
+  background-color: white;
+  border: 1px solid #cbcbcb;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.shipContainer {
+  @include responsiveProperty(
+    (
+      "height": 52,
+      "border-radius": 45,
+    )
+  );
+  width: 100%;
+  border: 1px solid #cbcbcb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subtotalLabel {
+  font-family: PoppinsRegular;
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  color: $BLACK;
+  text-align: left;
+}
+
+.price1 {
+  font-family: PoppinsSemiBold;
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  color: $BLACK;
+  text-align: left;
+}
+
+.price2 {
+  font-family: PoppinsSemiBold;
+  @include responsiveProperty(
+    (
+      "font-size": 18,
+    )
+  );
+  color: $BLACK;
+  text-align: left;
+}
+
+.seperator2 {
+  height: 1px;
+  background-color: #eaeaea;
+  width: 100%;
+}
+
+// --------------responsive section--------------
+
+@media screen and (max-width: 576px) {
+  .viewCartHeading {
+    font-size: calculatePixels(992, 24) !important;
+  }
+
+  .leftContainer {
+    width: 100% !important;
+    border-radius: calculatePixels(992, 28) !important;
+  }
+
+  .leftContainerLoader {
+    height: calculatePixels(992, 574) !important;
+    width: 100% !important;
+    border-radius: calculatePixels(992, 28) !important;
+  }
+
+  .shippingCostLabel {
+    font-size: calculatePixels(992, 12) !important;
+  }
+
+  .label1 {
+    font-size: calculatePixels(992, 12) !important;
+  }
+
+  .label1Loader {
+    height: calculatePixels(992, 12) !important;
+    width: calculatePixels(992, 56) !important;
+  }
+
+  .addressLabel {
+    font-size: calculatePixels(992, 13) !important;
+    max-width: calculatePixels(992, 210) !important;
+  }
+
+  .addressLabelLoader {
+    height: calculatePixels(992, 13) !important;
+    width: calculatePixels(992, 210) !important;
+  }
+
+  .editLabel {
+    font-size: calculatePixels(992, 16) !important;
+  }
+
+  .editLabelLoader {
+    height: calculatePixels(992, 16) !important;
+    width: calculatePixels(992, 30) !important;
+  }
+
+  .pubName {
+    font-size: calculatePixels(992, 14) !important;
+  }
+
+  .chevIcon {
+    height: calculatePixels(992, 20) !important;
+    width: calculatePixels(992, 20) !important;
+  }
+
+  .btnStyle {
+    height: calculatePixels(992, 52) !important;
+    width: calculatePixels(992, 153) !important;
+    font-size: calculatePixels(992, 16) !important;
+  }
+  .detailTitle {
+    font-size: calculatePixels(992, 16) !important;
+  }
+
+  .detailPrice {
+    font-size: calculatePixels(992, 14) !important;
+  }
+
+  .bookImg {
+    height: calculatePixels(992, 56) !important;
+    width: calculatePixels(992, 52) !important;
+  }
+
+  .bookTitle {
+    font-size: calculatePixels(992, 14) !important;
+  }
+
+  .rightContainer {
+    padding-top: calculatePixels(992, 20) !important;
+    padding-bottom: calculatePixels(992, 20) !important;
+    width: 100% !important;
+    border-radius: calculatePixels(992, 20) !important;
+  }
+
+  .couponTitle {
+    font-size: calculatePixels(992, 22) !important;
+  }
+
+  .couponSubTitle {
+    font-size: calculatePixels(992, 16) !important;
+  }
+
+  .couponInputContainer {
+    height: calculatePixels(992, 52) !important;
+    border-radius: calculatePixels(992, 54) !important;
+  }
+
+  .couponInput {
+    font-size: calculatePixels(992, 16) !important;
+  }
+
+  .applyBtn {
+    font-size: calculatePixels(992, 16) !important;
+  }
+
+  .summaryContainer {
+    height: calculatePixels(992, 200) !important;
+    border-radius: calculatePixels(992, 20) !important;
+  }
+
+  .shipContainer {
+    height: calculatePixels(992, 52) !important;
+    border-radius: calculatePixels(992, 45) !important;
+  }
+
+  .subtotalLabel {
+    font-size: calculatePixels(992, 16) !important;
+  }
+
+  .price1 {
+    font-size: calculatePixels(992, 16) !important;
+  }
+
+  .price2 {
+    font-size: calculatePixels(992, 18) !important;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .viewCartHeading {
+    font-size: calculatePixels(1200, 24) !important;
+  }
+
+  .leftContainer {
+    width: 100% !important;
+    border-radius: calculatePixels(1200, 28) !important;
+  }
+
+  .leftContainerLoader {
+    height: calculatePixels(1200, 574) !important;
+    width: 100% !important;
+    border-radius: calculatePixels(1200, 28) !important;
+  }
+
+  .shippingCostLabel {
+    font-size: calculatePixels(1200, 12) !important;
+  }
+
+  .label1 {
+    font-size: calculatePixels(1200, 12) !important;
+  }
+
+  .label1Loader {
+    height: calculatePixels(1200, 12) !important;
+    width: calculatePixels(1200, 56) !important;
+  }
+
+  .addressLabel {
+    font-size: calculatePixels(1200, 13) !important;
+    max-width: calculatePixels(1200, 210) !important;
+  }
+
+  .addressLabelLoader {
+    height: calculatePixels(1200, 13) !important;
+    width: calculatePixels(1200, 210) !important;
+  }
+
+  .editLabel {
+    font-size: calculatePixels(1200, 16) !important;
+  }
+
+  .editLabelLoader {
+    height: calculatePixels(992, 16) !important;
+    width: calculatePixels(992, 30) !important;
+  }
+
+  .pubName {
+    font-size: calculatePixels(1200, 14) !important;
+  }
+
+  .chevIcon {
+    height: calculatePixels(1200, 20) !important;
+    width: calculatePixels(1200, 20) !important;
+  }
+
+  .btnStyle {
+    height: calculatePixels(1200, 52) !important;
+    width: calculatePixels(1200, 153) !important;
+    font-size: calculatePixels(1200, 16) !important;
+  }
+
+  .detailTitle {
+    font-size: calculatePixels(1200, 16) !important;
+  }
+
+  .detailPrice {
+    font-size: calculatePixels(1200, 14) !important;
+  }
+
+  .bookImg {
+    height: calculatePixels(1200, 56) !important;
+    width: calculatePixels(1200, 52) !important;
+  }
+
+  .bookTitle {
+    font-size: calculatePixels(1200, 14) !important;
+  }
+
+  .rightContainer {
+    padding-top: calculatePixels(1200, 20) !important;
+    padding-bottom: calculatePixels(1200, 20) !important;
+    width: 100% !important;
+    border-radius: calculatePixels(1200, 20) !important;
+  }
+
+  .couponTitle {
+    font-size: calculatePixels(1200, 22) !important;
+  }
+
+  .couponSubTitle {
+    font-size: calculatePixels(1200, 16) !important;
+  }
+
+  .couponInputContainer {
+    height: calculatePixels(1200, 52) !important;
+    border-radius: calculatePixels(1200, 54) !important;
+  }
+
+  .couponInput {
+    font-size: calculatePixels(1200, 16) !important;
+  }
+
+  .applyBtn {
+    font-size: calculatePixels(1200, 16) !important;
+  }
+
+  .summaryContainer {
+    height: calculatePixels(1200, 200) !important;
+    border-radius: calculatePixels(1200, 20) !important;
+  }
+
+  .shipContainer {
+    height: calculatePixels(1200, 52) !important;
+    border-radius: calculatePixels(1200, 45) !important;
+  }
+
+  .subtotalLabel {
+    font-size: calculatePixels(1200, 16) !important;
+  }
+
+  .price1 {
+    font-size: calculatePixels(1200, 16) !important;
+  }
+
+  .price2 {
+    font-size: calculatePixels(1200, 18) !important;
+  }
+}

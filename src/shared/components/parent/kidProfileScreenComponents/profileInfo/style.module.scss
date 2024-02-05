@@ -1,0 +1,56 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.avtStyle {
+  height: 80px;
+  width: 80px;
+  border-radius: 100%;
+  object-fit: cover;
+  border: 6px solid $Light_Blue;
+}
+
+.name {
+  font-family: PoppinsSemiBold;
+  font-size: 16px;
+  text-align: left;
+  color: $BLACK;
+}
+
+.editIcon {
+  height: 16px;
+  width: 16px;
+  path {
+    stroke: $Secondary;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.statTitle {
+  font-family: PoppinsRegular;
+  font-size: 12px;
+  text-align: left;
+  color: $BLACK;
+}
+
+.statIcon {
+  height: 22px;
+  width: 22px;
+  path {
+    stroke: $Gray;
+  }
+}
+
+.statLabel {
+  font-family: PoppinsRegular;
+  font-size: 14px;
+  text-align: left;
+  color: $Gray;
+}
+
+.seperator {
+  height: 1px;
+  width: 100%;
+  background-color: $Light_Grey_2;
+}

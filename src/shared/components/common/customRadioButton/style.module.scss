@@ -1,0 +1,135 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.checkContainer {
+  height: 20px;
+  width: 20px;
+  border: 2px solid $LIGHT_GREY;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+
+.activeCheckContainer {
+  border-color: $PRIMARY;
+}
+
+.labelStyle {
+  font-family: PoppinsRegular;
+  font-size: 16px;
+  color: $Gray;
+  text-align: left;
+  text-transform: capitalize;
+}
+.dotStyle {
+  height: 10px;
+  width: 10px;
+  background-color: $PRIMARY;
+  border-radius: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .checkContainer {
+    height: calculatePixels(992, 20) !important;
+    width: calculatePixels(992, 20) !important;
+  }
+
+  .labelStyle {
+    font-size: calculatePixels(992, 16) !important;
+  }
+  .dotStyle {
+    height: calculatePixels(992, 10) !important;
+    width: calculatePixels(992, 10) !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .checkContainer {
+    height: calculatePixels(992, 20) !important;
+    width: calculatePixels(992, 20) !important;
+  }
+
+  .labelStyle {
+    font-size: calculatePixels(992, 16) !important;
+  }
+  .dotStyle {
+    height: calculatePixels(992, 10) !important;
+    width: calculatePixels(992, 10) !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .checkContainer {
+    height: calculatePixels(1200, 20) !important;
+    width: calculatePixels(1200, 20) !important;
+  }
+
+  .labelStyle {
+    font-size: calculatePixels(1200, 16) !important;
+  }
+  .dotStyle {
+    height: calculatePixels(1200, 10) !important;
+    width: calculatePixels(1200, 10) !important;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .checkContainer {
+    height: calculatePixels(1400, 20) !important;
+    width: calculatePixels(1400, 20) !important;
+  }
+
+  .labelStyle {
+    font-size: calculatePixels(1400, 16) !important;
+  }
+  .dotStyle {
+    height: calculatePixels(1400, 10) !important;
+    width: calculatePixels(1400, 10) !important;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .checkContainer {
+    height: calculatePixels(1600, 20) !important;
+    width: calculatePixels(1600, 20) !important;
+  }
+
+  .labelStyle {
+    font-size: calculatePixels(1600, 16) !important;
+  }
+  .dotStyle {
+    height: calculatePixels(1600, 10) !important;
+    width: calculatePixels(1600, 10) !important;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .checkContainer {
+    height: calculatePixels(1800, 20) !important;
+    width: calculatePixels(1800, 20) !important;
+  }
+
+  .labelStyle {
+    font-size: calculatePixels(1800, 16) !important;
+  }
+  .dotStyle {
+    height: calculatePixels(1800, 10) !important;
+    width: calculatePixels(1800, 10) !important;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .checkContainer {
+    height: calculatePixels(2000, 20) !important;
+    width: calculatePixels(2000, 20) !important;
+  }
+
+  .labelStyle {
+    font-size: calculatePixels(2000, 16) !important;
+  }
+  .dotStyle {
+    height: calculatePixels(2000, 10) !important;
+    width: calculatePixels(2000, 10) !important;
+  }
+}

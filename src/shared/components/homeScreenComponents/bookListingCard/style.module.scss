@@ -1,0 +1,217 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.title {
+  font-family: BitterSemiBold;
+  @include responsiveProperty(
+    (
+      "font-size": 48,
+    )
+  );
+  color: $DARK_GREEN;
+  text-align: center;
+  text-transform: capitalize;
+  span {
+    color: $PRIMARY;
+  }
+}
+
+.titleLoader {
+  @include responsiveProperty(
+    (
+      "height": 40,
+      "width": 300,
+    )
+  );
+  border-radius: 0% !important;
+}
+
+.waveStyle {
+  @include responsiveProperty(
+    (
+      "height": 134,
+    )
+  );
+  width: 100%;
+  object-fit: fill;
+}
+
+.whiteBg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.genreFilterContainer {
+  @include responsiveProperty(
+    (
+      "width": 960,
+    )
+  );
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.filterContainer {
+  @include responsiveProperty(
+    (
+      "width": 820,
+    )
+  );
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.chevIconStyle {
+  @include responsiveProperty(
+    (
+      "height": 24,
+      "width": 24,
+    )
+  );
+}
+
+.filter {
+  @include responsiveProperty(
+    (
+      "height": 44,
+      "padding-left": 15,
+      "padding-right": 15,
+      "border-top-left-radius": 20,
+      "border-top-right-radius": 20,
+      "margin-right": -10,
+    )
+  );
+  width: auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.filter:hover .filterLabel {
+  font-family: PoppinsMedium;
+}
+
+.filterLabel {
+  text-align: center;
+  font-family: PoppinsRegular;
+  white-space: nowrap;
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+      "min-width": 145,
+    )
+  );
+}
+
+.filterLabelActive {
+  font-family: PoppinsMedium;
+  color: white;
+}
+
+.viewAllBooksBtn {
+  @include responsiveProperty(
+    (
+      "height": 47,
+      "width": 248,
+      "border-radius": 91,
+      "font-size": 14,
+    )
+  );
+  background-color: $Secondary !important;
+  font-family: PoppinsMedium !important;
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: calculatePixels(576, 48) !important;
+  }
+  .titleLoader {
+    height: calculatePixels(576, 40) !important;
+    width: calculatePixels(576, 300) !important;
+  }
+  .genreFilterContainer {
+    width: 100% !important;
+    gap: 15px;
+  }
+  .filterContainer {
+    width: calculatePixels(576, 820) !important;
+    height: 50px;
+  }
+  .chevIconStyle {
+    height: calculatePixels(576, 24) !important;
+    width: calculatePixels(576, 24) !important;
+  }
+  .filter {
+    height: calculatePixels(576, 44) !important;
+    padding-left: calculatePixels(576, 15) !important;
+    padding-right: calculatePixels(576, 15) !important;
+    border-top-left-radius: calculatePixels(576, 20) !important;
+    border-top-right-radius: calculatePixels(576, 20) !important;
+    margin-right: calculatePixels(576, -10) !important;
+  }
+  .filterLabel {
+    font-size: calculatePixels(576, 16) !important;
+    min-width: calculatePixels(576, 145) !important;
+  }
+  .viewAllBooksBtn {
+    height: calculatePixels(576, 47) !important;
+    width: calculatePixels(576, 248) !important;
+    border-radius: calculatePixels(576, 91) !important;
+    font-size: calculatePixels(576, 14) !important;
+  }
+  .waveStyle {
+    height: calculatePixels(576, 134) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .title {
+    font-size: calculatePixels(768, 48) !important;
+  }
+  .titleLoader {
+    height: calculatePixels(768, 40) !important;
+    width: calculatePixels(768, 300) !important;
+  }
+  .genreFilterContainer {
+    width: calculatePixels(768, 960) !important;
+  }
+  .filterContainer {
+    width: calculatePixels(768, 820) !important;
+    height: 50px;
+  }
+  .chevIconStyle {
+    height: calculatePixels(768, 24) !important;
+    width: calculatePixels(768, 24) !important;
+  }
+  .filter {
+    height: calculatePixels(768, 44) !important;
+    padding-left: calculatePixels(576, 15) !important;
+    padding-right: calculatePixels(576, 15) !important;
+    border-top-left-radius: calculatePixels(768, 20) !important;
+    border-top-right-radius: calculatePixels(768, 20) !important;
+    margin-right: calculatePixels(768, -10) !important;
+  }
+  .filterLabel {
+    font-size: calculatePixels(768, 16) !important;
+    min-width: calculatePixels(768, 145) !important;
+  }
+  .viewAllBooksBtn {
+    height: calculatePixels(768, 47) !important;
+    width: calculatePixels(768, 248) !important;
+    border-radius: calculatePixels(768, 91) !important;
+    font-size: calculatePixels(768, 14) !important;
+  }
+  .waveStyle {
+    height: calculatePixels(768, 134) !important;
+  }
+}

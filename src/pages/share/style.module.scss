@@ -1,0 +1,141 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.topContainer {
+  height: calc(100vh - 94px);
+  background-color: #f6f9fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 28,
+    )
+  );
+  color: $BLACK;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.badgeContainer {
+  @include responsiveProperty(
+    (
+      "width": 548,
+      "border-radius": 24,
+    )
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+.badgeInfoContainer {
+  @include responsiveProperty(
+    (
+      "border-radius": 16,
+    )
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $lightYellow;
+}
+
+.badge {
+  @include responsiveProperty(
+    (
+      "height": 224,
+      "width": 224,
+    )
+  );
+}
+
+.level {
+  font-family: PoppinsSemiBold;
+  @include responsiveProperty(
+    (
+      "font-size": 18,
+    )
+  );
+  color: $Gray;
+  text-align: left;
+}
+
+.badgeName {
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 32,
+    )
+  );
+  color: $Secondary;
+  text-align: left;
+}
+
+.badgeDesc {
+  font-family: PoppinsRegular;
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+  color: #6b7280;
+  text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+  .title {
+    font-size: calculatePixels(768, 28) !important;
+  }
+  .badgeContainer {
+    width: calculatePixels(768, 548) !important;
+    border-radius: calculatePixels(768, 24) !important;
+  }
+  .badgeInfoContainer {
+    border-radius: calculatePixels(768, 16) !important;
+  }
+  .badge {
+    height: calculatePixels(768, 224) !important;
+    width: calculatePixels(768, 224) !important;
+  }
+  .level {
+    font-size: calculatePixels(768, 18) !important;
+  }
+  .badgeName {
+    font-size: calculatePixels(768, 32) !important;
+  }
+  .badgeDesc {
+    font-size: calculatePixels(768, 14) !important;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .title {
+    font-size: calculatePixels(992, 28) !important;
+  }
+  .badgeContainer {
+    width: calculatePixels(992, 548) !important;
+    border-radius: calculatePixels(992, 24) !important;
+  }
+  .badgeInfoContainer {
+    border-radius: calculatePixels(992, 16) !important;
+  }
+  .badge {
+    height: calculatePixels(992, 224) !important;
+    width: calculatePixels(992, 224) !important;
+  }
+  .level {
+    font-size: calculatePixels(992, 18) !important;
+  }
+  .badgeName {
+    font-size: calculatePixels(992, 32) !important;
+  }
+  .badgeDesc {
+    font-size: calculatePixels(992, 14) !important;
+  }
+}

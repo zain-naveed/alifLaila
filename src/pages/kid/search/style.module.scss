@@ -1,0 +1,59 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.topLevelContainer {
+  height: calc(100vh - 94px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.title {
+  font-family: BitterSemiBold;
+  color: $DARK_GREEN;
+  @include responsiveProperty(
+    (
+      "font-size": 40,
+    )
+  );
+  text-align: left;
+  text-transform: capitalize;
+  span {
+    color: $Secondary;
+  }
+}
+
+.resultLabel {
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 20,
+    )
+  );
+  color: $Gray;
+  text-align: left;
+}
+
+@media screen and (max-width: 576px) {
+  .title {
+    font-size: calculatePixels(768, 40) !important;
+  }
+  .resultLabel {
+    font-size: calculatePixels(768, 20) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .title {
+    font-size: calculatePixels(1200, 40) !important;
+  }
+  .resultLabel {
+    font-size: calculatePixels(1200, 20) !important;
+  }
+}

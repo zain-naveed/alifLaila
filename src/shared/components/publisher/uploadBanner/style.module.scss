@@ -1,0 +1,150 @@
+@import "shared/utils/colors.scss";
+@import "shared/components/common/heading/style.module.scss";
+@import "shared/components/common/title/style.module.scss";
+
+.inputLabel {
+  font-size: 14px;
+  font-family: "PoppinsMedium";
+  margin-bottom: 5px;
+  color: #11142d;
+  font-weight: 500;
+}
+
+.asterik {
+  color: $PRIMARY;
+}
+
+.error {
+  color: #ea5b5b;
+  font-size: 11px;
+  text-align: left;
+  z-index: 1;
+  margin-left: 5px;
+}
+
+.bookUploadContainer,
+.bookUploadActivePreview {
+  height: 126px;
+  background: #ffffff;
+  border: 1px solid #adb5bd;
+  border-radius: 20px;
+  margin-top: 10px;
+
+  div {
+    .bookUploadContent {
+      .uploadText {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: $PRIMARY;
+        font-family: PoppinsMedium;
+      }
+
+      .dragText {
+        font-weight: 400;
+        font-size: 13px;
+        font-family: "PoppinsRegular";
+        color: $Gray;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 12px;
+        color: $Gray;
+      }
+    }
+  }
+
+  @media screen and (max-width: 409px) {
+    height: 112px;
+
+    div {
+      .bookUploadContent {
+        .uploadText,
+        .dragText,
+        p {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}
+
+.bookUploadActivePreview {
+  border: 1px solid $PRIMARY;
+  display: flex;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 96px;
+  width: 100%;
+
+  div {
+    width: 100%;
+
+    .coverHeading {
+      @extend .heading;
+      font-size: 14px;
+      color: #344054;
+      font-weight: 500;
+      /* line-height: 20px; */
+      margin-bottom: 0px;
+      font-family: "Inter";
+    }
+
+    .coverTitle {
+      @extend .title;
+      font-family: "Inter";
+      font-weight: 400;
+      font-size: 14px;
+      color: #667085;
+    }
+
+    .closeImageContainer {
+      border-radius: 100%;
+      border: 1px solid #e6ecf3;
+      /* padding: 10px; */
+      width: 30px;
+      height: 30px;
+      text-align: center;
+
+      img {
+        width: 9px;
+        height: auto;
+      }
+    }
+  }
+}
+
+.bookCover {
+  height: 126px;
+  width: 100%;
+  border-radius: 20px;
+  background-color: white;
+  object-fit: cover;
+}
+
+.crossContainer {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 1px solid $Secondary;
+  svg {
+    height: 18px;
+    width: 18px;
+    path {
+      stroke: $Secondary;
+      stroke-width: 1px;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}

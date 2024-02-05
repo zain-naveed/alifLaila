@@ -1,0 +1,51 @@
+@import "shared/utils/responsive.module.scss";
+
+.heading {
+    @include responsiveProperty(("height": 17, "width":376));
+    border-radius: 0 !important;
+}
+
+.smallLine {
+    @include responsiveProperty(("height": 17, "width":168));
+    margin-top: 9px;
+    border-radius: 0 !important;
+}
+
+@media screen and (max-width: 570px) {
+    .heading {
+        height: calculatePixels(992, 17) !important;
+        width: calculatePixels(768, 376) !important;
+    }
+
+    .smallLine {
+        height: calculatePixels(992, 17) !important;
+        width: calculatePixels(768, 168) !important;
+
+    }
+}
+
+@media screen and (min-width: 570px) {
+    .heading {
+        height: calculatePixels(992, 17) !important;
+        width: calculatePixels(992, 376) !important;
+    }
+
+    .smallLine {
+        height: calculatePixels(992, 17) !important;
+        width: calculatePixels(992, 168) !important;
+
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .heading {
+        height: calculatePixels(1200, 17) !important;
+        width: calculatePixels(1200, 376) !important;
+    }
+
+    .smallLine {
+        height: calculatePixels(1200, 17) !important;
+        width: calculatePixels(1200, 168) !important;
+
+    }
+}

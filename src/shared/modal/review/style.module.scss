@@ -1,0 +1,100 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.dailogContent {
+  @include MRP(
+    (
+      "max-width": 1000,
+    )
+  );
+}
+.ratingHeading {
+  @include MRP(
+    (
+      "font-size": 28,
+    )
+  );
+  font-family: PoppinsMedium;
+  color: $BLACK;
+  span {
+    color: $PRIMARY;
+  }
+}
+
+.inputLabel {
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+  font-family: PoppinsMedium !important;
+  color: #11142d !important;
+}
+
+.ratingSize {
+  @include MRP(
+    (
+      "height": 41,
+      "width": 41,
+    )
+  );
+}
+
+.buttonContainer {
+  @include MRP(
+    (
+      "height": 48,
+      "width": 180,
+      "border-radius": 32,
+      "font-size": 16,
+    )
+  );
+  margin-left: auto;
+}
+
+.inputContainer {
+  @include MRP(
+    (
+      "height": 140,
+      "border-radius": 32,
+    )
+  );
+}
+
+.inputStyle {
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+}
+
+@media screen and (max-width: 576px) {
+  .dailogContent {
+    max-width: 100% !important;
+    margin: auto !important;
+  }
+  .ratingHeading {
+    font-size: calculatePixels(768, 28) !important;
+  }
+  .inputLabel {
+    font-size: calculatePixels(768, 16) !important;
+  }
+  .ratingSize {
+    height: calculatePixels(768, 41) !important;
+    width: calculatePixels(768, 41) !important;
+  }
+  .buttonContainer {
+    height: calculatePixels(768, 48) !important;
+    width: calculatePixels(768, 180) !important;
+    border-radius: calculatePixels(768, 32) !important;
+    font-size: calculatePixels(768, 16) !important;
+  }
+  .inputContainer {
+    height: calculatePixels(768, 140) !important;
+    border-radius: calculatePixels(768, 32) !important;
+  }
+  .inputStyle {
+    font-size: calculatePixels(768, 16) !important;
+  }
+}

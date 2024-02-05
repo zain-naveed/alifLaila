@@ -1,0 +1,39 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.membershipTitle {
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 28,
+    )
+  );
+  color: $PRIMARY;
+  text-align: left;
+}
+
+.title {
+  font-family: BitterSemiBold;
+  @include responsiveProperty(
+    (
+      "font-size": 32,
+    )
+  );
+  color: $DARK_GREEN;
+  text-align: center;
+  span {
+    color: $Secondary;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .title {
+    font-size: calculatePixels(992, 32) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .title {
+    font-size: calculatePixels(1200, 32) !important;
+  }
+}

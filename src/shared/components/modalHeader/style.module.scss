@@ -1,0 +1,66 @@
+@import "shared/utils/responsive.module.scss";
+
+.headerContainer {
+  padding-left: 58px;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+
+.backIcon {
+  @include MRP(
+    (
+      "width": 18,
+    )
+  );
+}
+
+.modalHeaderHeaing {
+  font-weight: 600;
+  @include MRP(
+    (
+      "font-size": 18,
+    )
+  );
+  font-family: "PoppinsSemiBold";
+  margin-bottom: 0;
+}
+
+.closeImageContainer {
+  border-radius: 100%;
+  border: 1px solid #e6ecf3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include MRP(
+    (
+      "width": 30,
+      "height": 30,
+    )
+  );
+  text-align: center;
+  img {
+    @include MRP(
+      (
+        "width": 9,
+        "height": 10,
+      )
+    );
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .modalHeaderHeaing {
+    font-size: calculatePixels(992, 18) !important;
+  }
+  .closeImageContainer {
+    height: calculatePixels(992, 30) !important;
+    width: calculatePixels(992, 30) !important;
+    img {
+      height: calculatePixels(992, 9) !important;
+      width: calculatePixels(992, 10) !important;
+    }
+  }
+  .backIcon {
+    width: calculatePixels(992, 18) !important;
+  }
+}

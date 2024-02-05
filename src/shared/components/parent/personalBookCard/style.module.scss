@@ -1,0 +1,385 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.cardContainer {
+  height: 100%;
+  @include responsiveProperty(
+    (
+      "max-height": 300,
+    )
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  overflow-y: hidden;
+}
+
+.bookThumbailWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include responsiveProperty(
+    (
+      "width": 216,
+    )
+  );
+}
+
+.img {
+  @include responsiveProperty(
+    (
+      "height": 300,
+      "width": 206,
+      "border-radius": 12,
+    )
+  );
+  object-fit: contain;
+  background-color: $CARD_BG;
+}
+
+.infoImg {
+  @include responsiveProperty(
+    (
+      "height": 300,
+      "width": 216,
+      "border-radius": 12,
+    )
+  );
+  object-fit: contain;
+  background-color: $CARD_BG;
+  .imgStyle {
+    object-fit: cover !important;
+  }
+}
+
+.completeContainer {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  @include responsiveProperty(
+    (
+      "height": 24,
+      "width": 101,
+    )
+  );
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background-color: $PRIMARY;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  label {
+    @include responsiveProperty(
+      (
+        "font-size": 10,
+      )
+    );
+    font-family: PoppinsSemiBold;
+    text-align: left;
+    color: white;
+  }
+  .iconContainer {
+    @include responsiveProperty(
+      (
+        "height": 15,
+        "width": 15,
+      )
+    );
+    border-radius: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      @include responsiveProperty(
+        (
+          "height": 10,
+          "width": 10,
+        )
+      );
+      path {
+        fill: $PRIMARY;
+      }
+    }
+  }
+}
+
+.imgStyle {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  @include responsiveProperty(
+    (
+      "border-radius": 12,
+    )
+  );
+}
+
+.infoContainer {
+  @include responsiveProperty(
+    (
+      "max-height": 300,
+      "max-width": 216,
+      "border-radius": 12,
+    )
+  );
+  height: 100% !important;
+  background-color: white;
+  position: absolute;
+  transition: max-height 0.6s ease-in-out;
+  width: 0px !important;
+  overflow: hidden;
+  transition-delay: 0.1s;
+}
+
+.cardContainer:hover .infoContainer {
+  @include responsiveProperty(
+    (
+      "max-height": 1000,
+    )
+  );
+  height: fit-content !important;
+  width: 100% !important;
+  z-index: 2;
+  box-shadow: 0px 5.14286px 24.42857px 0px rgba(0, 0, 0, 0.16);
+}
+
+.title {
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  font-family: BitterSemiBold;
+  text-align: left;
+  color: $BLACK;
+}
+
+.infoCardIcon {
+  @include responsiveProperty(
+    (
+      "height": 18,
+      "width": 18,
+    )
+  );
+}
+
+.languageLabel {
+  @include responsiveProperty(
+    (
+      "font-size": 12,
+    )
+  );
+  font-family: PoppinsRegular;
+  text-align: left;
+  color: $DARK_GREEN;
+}
+
+.starIcon {
+  @include responsiveProperty(
+    (
+      "height": 16,
+      "width": 16,
+    )
+  );
+}
+
+.starLabel {
+  @include responsiveProperty(
+    (
+      "font-size": 12,
+    )
+  );
+  font-family: PoppinsRegular;
+  color: $Yellow;
+  text-align: left;
+}
+
+.timerContainer {
+  @include responsiveProperty(
+    (
+      "height": 19,
+      "border-radius": 16,
+      "padding-left": 10,
+      "padding-right": 10,
+    )
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $Ultra_Light_Grey;
+}
+
+.timeLabel {
+  @include responsiveProperty(
+    (
+      "font-size": 12,
+    )
+  );
+  font-family: PoppinsMedium;
+  color: $brown;
+  text-align: center;
+}
+
+.green {
+  font-family: PoppinsMedium !important;
+}
+
+.iconGreen {
+  path {
+    stroke: $DARK_GREEN;
+  }
+}
+
+.shareLabel {
+  @include responsiveProperty(
+    (
+      "font-size": 10,
+    )
+  );
+  font-family: PoppinsRegular;
+  color: $Gray;
+  text-align: left;
+}
+
+@media (max-width: 576px) {
+  .cardContainer {
+    max-height: calculatePixels(576, 300) !important;
+  }
+  .infoContainer {
+    max-width: calculatePixels(576, 216) !important;
+    border-radius: calculatePixels(576, 12) !important;
+  }
+  .bookThumbailWrapper {
+    width: calculatePixels(576, 216) !important;
+  }
+  .img {
+    height: calculatePixels(576, 300) !important;
+    width: calculatePixels(576, 206) !important;
+    border-radius: calculatePixels(576, 12) !important;
+  }
+  .infoImg {
+    height: calculatePixels(576, 300) !important;
+    width: calculatePixels(576, 216) !important;
+    border-radius: calculatePixels(576, 12) !important;
+  }
+  .completeContainer {
+    height: calculatePixels(576, 24) !important;
+    width: calculatePixels(576, 101) !important;
+    label {
+      font-size: calculatePixels(576, 10) !important;
+    }
+    .iconContainer {
+      height: calculatePixels(576, 15) !important;
+      width: calculatePixels(576, 15) !important;
+      svg {
+        height: calculatePixels(576, 10) !important;
+        width: calculatePixels(576, 10) !important;
+      }
+    }
+  }
+  .imgStyle {
+    border-radius: calculatePixels(576, 12) !important;
+  }
+  .title {
+    font-size: calculatePixels(576, 18) !important;
+  }
+  .infoCardIcon {
+    height: calculatePixels(576, 20) !important;
+    width: calculatePixels(576, 20) !important;
+  }
+  .languageLabel {
+    font-size: calculatePixels(576, 14) !important;
+  }
+  .starIcon {
+    height: calculatePixels(576, 16) !important;
+    width: calculatePixels(576, 16) !important;
+  }
+  .starLabel {
+    font-size: calculatePixels(576, 12) !important;
+  }
+  .timerContainer {
+    height: calculatePixels(576, 19) !important;
+    border-radius: calculatePixels(576, 16) !important;
+    padding-left: calculatePixels(576, 10) !important;
+    padding-right: calculatePixels(576, 10) !important;
+  }
+  .timeLabel {
+    font-size: calculatePixels(576, 12) !important;
+  }
+  .shareLabel {
+    font-size: calculatePixels(576, 10) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .cardContainer {
+    max-height: calculatePixels(768, 300) !important;
+  }
+  .infoContainer {
+    max-width: calculatePixels(768, 216) !important;
+    border-radius: calculatePixels(768, 12) !important;
+  }
+  .bookThumbailWrapper {
+    width: calculatePixels(768, 216) !important;
+  }
+  .img {
+    height: calculatePixels(768, 300) !important;
+    width: calculatePixels(768, 206) !important;
+    border-radius: calculatePixels(768, 12) !important;
+  }
+  .infoImg {
+    height: calculatePixels(768, 300) !important;
+    width: calculatePixels(768, 216) !important;
+    border-radius: calculatePixels(768, 12) !important;
+  }
+  .completeContainer {
+    height: calculatePixels(768, 24) !important;
+    width: calculatePixels(768, 101) !important;
+    label {
+      font-size: calculatePixels(768, 10) !important;
+    }
+    .iconContainer {
+      height: calculatePixels(768, 15) !important;
+      width: calculatePixels(768, 15) !important;
+      svg {
+        height: calculatePixels(768, 10) !important;
+        width: calculatePixels(768, 10) !important;
+      }
+    }
+  }
+  .imgStyle {
+    border-radius: calculatePixels(768, 12) !important;
+  }
+  .title {
+    font-size: calculatePixels(768, 18) !important;
+  }
+  .infoCardIcon {
+    height: calculatePixels(768, 20) !important;
+    width: calculatePixels(768, 20) !important;
+  }
+  .languageLabel {
+    font-size: calculatePixels(768, 14) !important;
+  }
+  .starIcon {
+    height: calculatePixels(768, 16) !important;
+    width: calculatePixels(768, 16) !important;
+  }
+  .starLabel {
+    font-size: calculatePixels(768, 12) !important;
+  }
+  .timerContainer {
+    height: calculatePixels(768, 19) !important;
+    border-radius: calculatePixels(768, 16) !important;
+    padding-left: calculatePixels(768, 10) !important;
+    padding-right: calculatePixels(768, 10) !important;
+  }
+  .timeLabel {
+    font-size: calculatePixels(768, 12) !important;
+  }
+  .shareLabel {
+    font-size: calculatePixels(768, 10) !important;
+  }
+}

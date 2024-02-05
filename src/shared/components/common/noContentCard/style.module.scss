@@ -1,0 +1,60 @@
+@import "shared/utils/colors.scss";
+.noContentImg {
+  width: 275px;
+  height: 187px;
+}
+
+.labalContainer {
+  max-width: 263px;
+}
+
+.label1 {
+  font-family: PoppinsMedium;
+  font-size: 20px;
+  color: $BLACK;
+}
+
+.label2 {
+  font-family: PoppinsRegular;
+  font-size: 17px;
+  color: $Gray;
+  text-align: center;
+}
+
+@media screen and (max-width: 455px) {
+  .noContentImg {
+    width: 198px;
+    height: 144px;
+  }
+
+  .labalContainer {
+    max-width: 275px;
+  }
+
+  .label1 {
+    font-size: 15px;
+  }
+
+  .label2 {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 455px) and (max-width: 576px) {
+  .noContentImg {
+    width: 237px;
+    height: 172px;
+  }
+
+  .labalContainer {
+    max-width: 330px;
+  }
+
+  .label1 {
+    font-size: 17px;
+  }
+
+  .label2 {
+    font-size: 15px;
+  }
+}

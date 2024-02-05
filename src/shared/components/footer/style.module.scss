@@ -1,0 +1,271 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.marginTop {
+  @include responsiveProperty(
+    (
+      "margin-top": 30,
+    )
+  );
+}
+
+.marginTopDownload {
+  @include responsiveProperty(
+    (
+      "margin-top": 205,
+    )
+  );
+}
+
+.waveStyle {
+  @include responsiveProperty(
+    (
+      "height": 90,
+    )
+  );
+  width: 100%;
+  object-fit: fill;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.listItemtext {
+  font-family: PoppinsRegular;
+  color: #6e7c87;
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  &:hover {
+    cursor: pointer;
+    color: $PRIMARY;
+  }
+}
+
+.activeItem {
+  color: $PRIMARY !important;
+}
+
+.logo {
+  @include responsiveProperty(
+    (
+      "height": 58,
+      "width": 88,
+    )
+  );
+}
+
+.footerLabel {
+  font-family: PoppinsRegular;
+  color: #6e7c87;
+  @include responsiveProperty(
+    (
+      "font-size": 18,
+    )
+  );
+}
+
+.footerLabel2 {
+  font-family: PoppinsRegular;
+  color: #6e7c87;
+  @include responsiveProperty(
+    (
+      "font-size": 18,
+    )
+  );
+  &:hover {
+    cursor: pointer;
+    color: $PRIMARY;
+  }
+}
+
+.seperator {
+  height: 1px;
+  background-color: #d4d4d8;
+  width: 100%;
+}
+
+@mixin footerContainerBg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include responsiveProperty(
+    (
+      "min-height": 200,
+    )
+  );
+}
+
+.footerContainer {
+}
+
+.downloadContainer {
+  position: absolute;
+  @include responsiveProperty(
+    (
+      "top": -170,
+    )
+  );
+  width: 100%;
+}
+
+.downloadSubContainer {
+  @include footerContainerBg();
+  background-image: url("../../../assets/images/doodleBackground.jpeg");
+  border-radius: 16px;
+  margin-bottom: 40px;
+  width: 100%;
+  background-color: white;
+  @include responsiveProperty(
+    (
+      "height": 242,
+      "border-radius": 20,
+    )
+  );
+  border: 1px solid #e3e3e3;
+}
+
+.downloadTitle {
+  font-family: BitterSemiBold;
+  @include responsiveProperty(
+    (
+      "font-size": 45,
+    )
+  );
+  color: $DARK_GREEN;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.downloadSubTitle {
+  font-family: PoppinsRegular;
+  text-align: center;
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+      "max-width": 800,
+    )
+  );
+  color: #6e7c87;
+}
+
+.secondaryTitle {
+  color: $Secondary;
+  font-family: BitterMedium;
+  text-align: center;
+  @include responsiveProperty(
+    (
+      "font-size": 24,
+    )
+  );
+}
+
+.btn {
+  @include responsiveProperty(
+    (
+      "height": 61,
+      "width": 193,
+    )
+  );
+}
+
+@media (max-width: 576px) {
+  .marginTop {
+    margin-top: calculatePixels(576, 30) !important;
+  }
+  .marginTopDownload {
+    margin-top: calculatePixels(576, 205) !important;
+  }
+  .waveStyle {
+    height: calculatePixels(576, 90) !important;
+  }
+  .listItemtext {
+    font-size: calculatePixels(576, 16) !important;
+  }
+  .logo {
+    height: calculatePixels(576, 58) !important;
+    width: calculatePixels(576, 88) !important;
+  }
+  .footerLabel {
+    font-size: calculatePixels(576, 18) !important;
+  }
+  .footerLabel2 {
+    font-size: calculatePixels(576, 18) !important;
+  }
+  .downloadContainer {
+    top: calculatePixels(576, -170) !important;
+  }
+  .downloadSubContainer {
+    height: calculatePixels(576, 242) !important;
+    border-radius: calculatePixels(576, 20) !important;
+  }
+  .downloadTitle {
+    font-size: calculatePixels(576, 45) !important;
+    text-align: center;
+  }
+  .downloadSubTitle {
+    font-size: calculatePixels(576, 16) !important;
+    max-width: calculatePixels(576, 435) !important;
+    text-align: center;
+  }
+  .btn {
+    height: calculatePixels(576, 61) !important;
+    width: calculatePixels(576, 193) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .downloadTitle {
+    text-align: center;
+  }
+  .downloadSubTitle {
+    text-align: center;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .marginTop {
+    margin-top: calculatePixels(768, 30) !important;
+  }
+  .marginTopDownload {
+    margin-top: calculatePixels(768, 205) !important;
+  }
+  .waveStyle {
+    height: calculatePixels(768, 90) !important;
+  }
+  .listItemtext {
+    font-size: calculatePixels(768, 16) !important;
+  }
+  .logo {
+    height: calculatePixels(768, 58) !important;
+    width: calculatePixels(768, 88) !important;
+  }
+  .footerLabel {
+    font-size: calculatePixels(768, 18) !important;
+  }
+  .footerLabel2 {
+    font-size: calculatePixels(768, 18) !important;
+  }
+  .downloadContainer {
+    top: calculatePixels(768, -170) !important;
+  }
+  .downloadSubContainer {
+    height: calculatePixels(768, 242) !important;
+    border-radius: calculatePixels(768, 20) !important;
+  }
+  .downloadTitle {
+    font-size: calculatePixels(768, 45) !important;
+  }
+  .downloadSubTitle {
+    font-size: calculatePixels(768, 16) !important;
+    max-width: calculatePixels(768, 435) !important;
+  }
+  .btn {
+    height: calculatePixels(768, 61) !important;
+    width: calculatePixels(768, 193) !important;
+  }
+  .secondaryTitle {
+    font-size: calculatePixels(768, 24) !important;
+  }
+}

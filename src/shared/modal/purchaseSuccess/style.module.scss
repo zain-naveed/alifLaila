@@ -1,0 +1,141 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.dailogContent {
+  @include MRP(
+    (
+      "max-width": 530,
+    )
+  );
+}
+
+.successContainer {
+  background-image: url("../../../assets/images/quizResult.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include MRP(
+    (
+      "min-height": 490,
+      "max-height": 490,
+    )
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.title {
+  font-family: PoppinsSemiBold;
+  @include MRP(
+    (
+      "font-size": 28,
+    )
+  );
+  color: $DARK_GREEN;
+  text-align: center;
+}
+
+.subTitle {
+  font-family: PoppinsRegular;
+  @include MRP(
+    (
+      "font-size": 16,
+      "max-width": 432,
+    )
+  );
+  color: $BLACK;
+  max-width: 432px;
+  text-align: center;
+}
+
+.closeImage {
+  @include MRP(
+    (
+      "height": 40,
+      "width": 40,
+    )
+  );
+  img {
+    @include MRP(
+      (
+        "height": 40,
+        "width": 40,
+      )
+    );
+  }
+}
+
+.header {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.successIcon {
+  @include MRP(
+    (
+      "height": 201,
+      "width": 215,
+    )
+  );
+}
+
+.successLabel {
+  font-family: PoppinsSemiBold;
+  @include MRP(
+    (
+      "font-size": 40,
+    )
+  );
+  color: #34b715;
+  text-align: center;
+}
+
+.enjoyLabel {
+  font-family: PoppinsMedium;
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+  color: $PRIMARY;
+}
+
+@media screen and (max-width: 576px) {
+  .dailogContent {
+    max-width: 300px !important;
+    margin: auto !important;
+  }
+  .successContainer {
+    min-height: calculatePixels(768, 490) !important;
+    max-height: calculatePixels(768, 490) !important;
+  }
+  .title {
+    font-size: calculatePixels(768, 28) !important;
+  }
+  .subTitle {
+    font-size: calculatePixels(768, 16) !important;
+    max-width: calculatePixels(768, 432) !important;
+  }
+  .closeImage {
+    height: calculatePixels(768, 40) !important;
+    width: calculatePixels(768, 40) !important;
+    img {
+      height: calculatePixels(768, 40) !important;
+      width: calculatePixels(768, 40) !important;
+    }
+  }
+  .successIcon {
+    height: calculatePixels(768, 201) !important;
+    width: calculatePixels(768, 215) !important;
+  }
+  .successLabel {
+    font-size: calculatePixels(768, 40) !important;
+  }
+  .enjoyLabel {
+    font-size: calculatePixels(768, 16) !important;
+  }
+}

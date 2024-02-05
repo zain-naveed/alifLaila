@@ -1,0 +1,175 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.header {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.heading {
+  @include MRP(
+    (
+      "font-size": 32,
+    )
+  );
+  font-family: BitterSemiBold;
+  color: $BLACK;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.formContainer {
+  max-width: 470px;
+  margin: auto;
+  width: 100%;
+}
+
+.subTitle {
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+  font-family: PoppinsRegular;
+  color: $Gray;
+  text-align: center;
+}
+
+.highlighted {
+  color: $PRIMARY;
+}
+
+.inputStyle {
+  @include MRP(
+    (
+      "font-size": 14,
+      "min-height": 56,
+      "max-height": 56,
+      "min-width": 68,
+      "max-width": 68,
+      "border-radius": 12,
+      "padding": 20,
+    )
+  );
+  height: 100%;
+  width: 100%;
+  background-color: $Ultra_Light_Grey;
+  border: 0px;
+  font-family: PoppinsMedium;
+  &:focus {
+    outline-color: $PRIMARY;
+  }
+}
+
+.error {
+  color: #ea5b5b;
+  @include MRP(
+    (
+      "font-size": 11,
+      "top": 65,
+    )
+  );
+  text-align: left;
+  position: absolute;
+  z-index: 1;
+  margin-left: 5px;
+  /* margin: 10px 0; */
+}
+
+.resendOtp {
+  font-family: PoppinsRegular;
+  @include MRP(
+    (
+      "font-size": 14,
+    )
+  );
+  text-align: center;
+  color: $BLACK;
+  span {
+    color: #ef437b;
+    font-family: PoppinsMedium;
+    margin-left: 7px;
+  }
+}
+
+.reset {
+  @include MRP(
+    (
+      "font-size": 16,
+      "height": 52,
+      "border-radius": 32,
+    )
+  );
+  background-color: white;
+  color: $PRIMARY;
+  font-family: PoppinsMedium;
+  border: 1px solid $PRIMARY;
+}
+
+.disableReset {
+  @include MRP(
+    (
+      "font-size": 16,
+      "height": 52,
+      "border-radius": 32,
+    )
+  );
+  background-color: white;
+  color: $Gray;
+  font-family: PoppinsMedium;
+  border: 1px solid $Gray;
+}
+
+.confirmBtn {
+  @include MRP(
+    (
+      "font-size": 16,
+      "height": 52,
+      "border-radius": 32,
+    )
+  );
+  font-family: PoppinsMedium;
+  border: 1px solid $PRIMARY;
+}
+
+@media screen and (max-width: 576px) {
+  .heading {
+    font-size: calculatePixels(992, 32) !important;
+  }
+  .subTitle {
+    font-size: calculatePixels(992, 16) !important;
+  }
+  .inputStyle {
+    font-size: calculatePixels(992, 14) !important;
+    min-height: calculatePixels(992, 56) !important;
+    max-height: calculatePixels(992, 56) !important;
+    min-width: calculatePixels(992, 68) !important;
+    max-width: calculatePixels(992, 68) !important;
+    border-radius: calculatePixels(992, 12) !important;
+    padding: calculatePixels(992, 20) !important;
+  }
+  .error {
+    color: #ea5b5b;
+    font-size: calculatePixels(992, 11) !important;
+    top: calculatePixels(992, 65) !important;
+  }
+  .resendOtp {
+    font-size: calculatePixels(992, 14) !important;
+  }
+  .reset {
+    font-size: calculatePixels(992, 16) !important;
+    height: calculatePixels(992, 52) !important;
+    border-radius: calculatePixels(992, 32) !important;
+  }
+  .disableReset {
+    font-size: calculatePixels(992, 16) !important;
+    height: calculatePixels(992, 52) !important;
+    border-radius: calculatePixels(992, 32) !important;
+  }
+  .confirmBtn {
+    font-size: calculatePixels(992, 16) !important;
+    height: calculatePixels(992, 52) !important;
+    border-radius: calculatePixels(992, 32) !important;
+  }
+}

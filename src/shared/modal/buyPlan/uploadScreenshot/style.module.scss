@@ -1,0 +1,209 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.customLabelStyle {
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+  font-family: PoppinsRegular !important;
+  color: $Gray !important;
+}
+
+.customInputContainerStyle {
+  @include MRP(
+    (
+      "height": 52,
+      "border-radius": 26,
+      "padding": 10,
+    )
+  );
+}
+
+.customInputStyle {
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+}
+
+.customInputIconStyle {
+  @include MRP(
+    (
+      "height": 24,
+      "width": 24,
+    )
+  );
+  path {
+    stroke: $PRIMARY;
+  }
+}
+
+.btnStyle {
+  @include MRP(
+    (
+      "height": 52,
+      "border-radius": 32,
+      "font-size": 16,
+    )
+  );
+}
+
+.error {
+  color: #ea5b5b;
+  font-size: 11px;
+  text-align: left;
+  z-index: 1;
+  margin-left: 5px;
+}
+
+.bookUploadContainer {
+  @include MRP(
+    (
+      "height": 335,
+      "border-radius": 20,
+    )
+  );
+  border: 1px solid #adb5bd;
+  border-style: dashed;
+  .bookUploadContent {
+    .uploadText {
+      @include MRP(
+        (
+          "font-size": 16,
+        )
+      );
+      color: $PRIMARY;
+      font-family: PoppinsMedium;
+    }
+
+    .dragText {
+      @include MRP(
+        (
+          "font-size": 14,
+        )
+      );
+      font-family: "PoppinsRegular";
+      color: $Gray;
+    }
+  }
+}
+
+.bookUploadActivePreview {
+  border: 1px solid $PRIMARY;
+  display: flex;
+  @include MRP(
+    (
+      "padding": 10,
+      "min-height": 96,
+      "border-radius": 20,
+    )
+  );
+  width: 100%;
+
+  div {
+    width: 100%;
+
+    .coverHeading {
+      @include MRP(
+        (
+          "font-size": 16,
+        )
+      );
+      color: #344054;
+      margin-bottom: 0px;
+      font-family: PoppinsRegular;
+    }
+
+    .coverTitle {
+      font-family: PoppinsRegular;
+      @include MRP(
+        (
+          "font-size": 16,
+        )
+      );
+      color: #667085;
+    }
+
+    .closeImageContainer {
+      @include MRP(
+        (
+          "width": 28,
+          "height": 26,
+        )
+      );
+      border-radius: 100%;
+      border: 1px solid #e6ecf3;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        @include MRP(
+          (
+            "width": 9,
+            "height": 9,
+          )
+        );
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .customLabelStyle {
+    font-size: calculatePixels(992, 16) !important;
+  }
+  .customInputContainerStyle {
+    height: calculatePixels(992, 52) !important;
+    border-radius: calculatePixels(992, 26) !important;
+    padding: calculatePixels(992, 10) !important;
+  }
+  .customInputStyle {
+    font-size: calculatePixels(992, 16) !important;
+  }
+  .customInputIconStyle {
+    height: calculatePixels(992, 24) !important;
+    width: calculatePixels(992, 24) !important;
+  }
+  .btnStyle {
+    height: calculatePixels(992, 52) !important;
+    border-radius: calculatePixels(992, 32) !important;
+    font-size: calculatePixels(992, 16) !important;
+  }
+  .bookUploadContainer {
+    height: calculatePixels(992, 335) !important;
+    border-radius: calculatePixels(992, 20) !important;
+    .bookUploadContent {
+      .uploadText {
+        font-size: calculatePixels(992, 16) !important;
+      }
+      .dragText {
+        font-size: calculatePixels(992, 14) !important;
+      }
+    }
+  }
+  .bookUploadActivePreview {
+    padding: calculatePixels(992, 10) !important;
+    min-height: calculatePixels(992, 96) !important;
+    border-radius: calculatePixels(992, 20) !important;
+    div {
+      .coverHeading {
+        font-size: calculatePixels(992, 16) !important;
+      }
+      .coverTitle {
+        font-size: calculatePixels(992, 16) !important;
+      }
+      .closeImageContainer {
+        width: calculatePixels(992, 28) !important;
+        height: calculatePixels(992, 26) !important;
+        img {
+          width: calculatePixels(992, 9) !important;
+          height: calculatePixels(992, 9) !important;
+        }
+      }
+    }
+  }
+}

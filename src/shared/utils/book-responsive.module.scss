@@ -1,0 +1,189 @@
+@function CP($screenSize, $value) {
+  $ratio: $screenSize/1400;
+  $result: $value * $ratio;
+  @return $result + px;
+}
+
+@mixin BRP($properties) {
+  @each $name, $value in $properties {
+    $key: $name;
+    $value: $value;
+    #{$key}: $value !important;
+  }
+
+  @media screen and (max-height: 400px) {
+    @each $name, $value in $properties {
+      $key: $name;
+      $value: CP(576, $value);
+      #{$key}: $value !important;
+    }
+  }
+
+  @media screen and (min-height: 400px) {
+    @each $name, $value in $properties {
+      $key: $name;
+      $value: CP(576, $value);
+      #{$key}: $value !important;
+    }
+  }
+
+  @media (max-width: 768px) and (min-height: 576px) {
+    @each $name, $value in $properties {
+      $key: $name;
+      $value: CP(576, $value);
+      #{$key}: $value !important;
+    }
+  }
+
+  @media (max-width: 768px) and (min-height: 700px) {
+    @each $name, $value in $properties {
+      $key: $name;
+      $value: CP(600, $value);
+      #{$key}: $value !important;
+    }
+  }
+
+  @media (max-width: 768px) and (min-height: 768px) {
+    @each $name, $value in $properties {
+      $key: $name;
+      $value: CP(650, $value);
+      #{$key}: $value !important;
+    }
+  }
+
+  @media (min-width: 992px) and (min-height: 576px) {
+    @each $name, $value in $properties {
+      $key: $name;
+      $value: CP(868, $value);
+      #{$key}: $value !important;
+    }
+  }
+
+  @media (min-width: 992px) and (min-height: 700px) {
+    @each $name, $value in $properties {
+      $key: $name;
+      $value: CP(992, $value);
+      #{$key}: $value !important;
+    }
+  }
+
+  @media (min-width: 992px) and (min-height: 768px) {
+    @each $name, $value in $properties {
+      $key: $name;
+      $value: CP(1100, $value);
+      #{$key}: $value !important;
+    }
+  }
+
+  @media (min-width: 992px) and (min-height: 576px) {
+    @each $name, $value in $properties {
+      $key: $name;
+      $value: CP(868, $value);
+      #{$key}: $value !important;
+    }
+  }
+
+  @media (min-width: 992px) and (min-height: 700px) {
+    @each $name, $value in $properties {
+      $key: $name;
+      $value: CP(992, $value);
+      #{$key}: $value !important;
+    }
+  }
+
+  @media (min-width: 992px) and (min-height: 768px) {
+    @each $name, $value in $properties {
+      $key: $name;
+      $value: CP(1100, $value);
+      #{$key}: $value !important;
+    }
+  }
+
+  @media screen and (min-height: 868px) {
+    @each $name, $value in $properties {
+      $key: $name;
+      $value: CP(1250, $value);
+      #{$key}: $value !important;
+    }
+  }
+
+  @media screen and (min-height: 950px) {
+    @each $name, $value in $properties {
+      $key: $name;
+      $value: CP(1400, $value);
+      #{$key}: $value !important;
+    }
+  }
+
+  @media (max-width: 576px) and (min-height: 868px) {
+    @each $name, $value in $properties {
+      $key: $name;
+      $value: CP(576, $value);
+      #{$key}: $value !important;
+    }
+  }
+
+  @media (min-width: 576px) and (min-height: 868px) {
+    @each $name, $value in $properties {
+      $key: $name;
+      $value: CP(576, $value);
+      #{$key}: $value !important;
+    }
+  }
+
+  @media (min-width: 768px) and (min-height: 868px) {
+    @each $name, $value in $properties {
+      $key: $name;
+      $value: CP(768, $value);
+      #{$key}: $value !important;
+    }
+  }
+
+  @media (min-width: 992px) and (min-height: 868px) {
+    @each $name, $value in $properties {
+      $key: $name;
+      $value: CP(992, $value);
+      #{$key}: $value !important;
+    }
+  }
+
+  @media (min-width: 1200px) and (min-height: 868px) {
+    @each $name, $value in $properties {
+      $key: $name;
+      $value: CP(1200, $value);
+      #{$key}: $value !important;
+    }
+  }
+
+  @media (min-width: 1400px) and (min-height: 868px) {
+    @each $name, $value in $properties {
+      $key: $name;
+      $value: CP(1400, $value);
+      #{$key}: $value !important;
+    }
+  }
+
+  @media (min-width: 1600px) and (min-height: 868px) {
+    @each $name, $value in $properties {
+      $key: $name;
+      $value: CP(1400, $value);
+      #{$key}: $value !important;
+    }
+  }
+
+  @media (min-width: 1800px) and (min-height: 868px) {
+    @each $name, $value in $properties {
+      $key: $name;
+      $value: CP(1400, $value);
+      #{$key}: $value !important;
+    }
+  }
+
+  @media (min-width: 2000px) and (min-height: 868px) {
+    @each $name, $value in $properties {
+      $key: $name;
+      $value: CP(1400, $value);
+      #{$key}: $value !important;
+    }
+  }
+}

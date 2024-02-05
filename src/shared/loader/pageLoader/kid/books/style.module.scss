@@ -1,0 +1,271 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.cardContainer {
+  height: 100%;
+  @include responsiveProperty(
+    (
+      "max-height": 335,
+    )
+  );
+  width: 20%;
+  flex: 0 0 20%;
+  max-width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quartorCardContainer {
+  height: 100%;
+  @include responsiveProperty(
+    (
+      "max-height": 335,
+    )
+  );
+  width: 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parentCardContainer {
+  height: 100%;
+  @include responsiveProperty(
+    (
+      "max-height": 310,
+    )
+  );
+  width: 20%;
+  flex: 0 0 20%;
+  max-width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parentCardContainer2 {
+  height: 100%;
+  @include responsiveProperty(
+    (
+      "max-height": 310,
+    )
+  );
+  width: 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.noFixWidthCardContainer {
+  height: 100%;
+  @include responsiveProperty(
+    (
+      "max-height": 335,
+    )
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
+  @include responsiveProperty(
+    (
+      "height": 335,
+      "width": 230,
+      "border-radius": 12,
+    )
+  );
+  object-fit: contain;
+  background-color: $CARD_BG;
+}
+
+.img2 {
+  @include responsiveProperty(
+    (
+      "height": 310,
+      "width": 213,
+      "border-radius": 12,
+    )
+  );
+  object-fit: contain;
+  background-color: $CARD_BG;
+}
+
+.imgStyle {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  @include responsiveProperty(
+    (
+      "border-radius": 12,
+    )
+  );
+}
+
+@media (max-width: 480px) {
+  .cardContainer {
+    max-height: calculatePixels(576, 365) !important;
+    width: 33.333%;
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+  .quartorCardContainer {
+    max-height: calculatePixels(576, 335) !important;
+    width: 33.333%;
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+  .parentCardContainer {
+    max-height: calculatePixels(576, 365) !important;
+    width: 33.333%;
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+  .parentCardContainer2 {
+    max-height: calculatePixels(576, 365) !important;
+    width: 33.333%;
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+  .noFixWidthCardContainer {
+    max-height: calculatePixels(576, 365) !important;
+  }
+  .img {
+    height: calculatePixels(576, 335) !important;
+    width: calculatePixels(576, 230) !important;
+    border-radius: calculatePixels(576, 12) !important;
+  }
+  .img2 {
+    height: calculatePixels(576, 310) !important;
+    width: calculatePixels(576, 213) !important;
+    border-radius: calculatePixels(576, 12) !important;
+  }
+  .imgStyle {
+    border-radius: calculatePixels(576, 12) !important;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 576px) {
+  .cardContainer {
+    max-height: calculatePixels(576, 365) !important;
+    width: 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .quartorCardContainer {
+    max-height: calculatePixels(576, 335) !important;
+    width: 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .parentCardContainer {
+    max-height: calculatePixels(576, 365) !important;
+    width: 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .parentCardContainer2 {
+    max-height: calculatePixels(576, 365) !important;
+    width: 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .noFixWidthCardContainer {
+    max-height: calculatePixels(576, 365) !important;
+  }
+  .img {
+    height: calculatePixels(576, 335) !important;
+    width: calculatePixels(576, 230) !important;
+    border-radius: calculatePixels(576, 12) !important;
+  }
+  .img2 {
+    height: calculatePixels(576, 310) !important;
+    width: calculatePixels(576, 213) !important;
+    border-radius: calculatePixels(576, 12) !important;
+  }
+  .imgStyle {
+    border-radius: calculatePixels(576, 12) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .img {
+    height: calculatePixels(768, 335) !important;
+    width: calculatePixels(768, 230) !important;
+    border-radius: calculatePixels(768, 12) !important;
+  }
+  .img2 {
+    height: calculatePixels(768, 310) !important;
+    width: calculatePixels(768, 213) !important;
+    border-radius: calculatePixels(768, 12) !important;
+  }
+  .imgStyle {
+    border-radius: calculatePixels(768, 12) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .cardContainer {
+    max-height: calculatePixels(768, 365) !important;
+    width: 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .quartorCardContainer {
+    max-height: calculatePixels(768, 335) !important;
+    width: 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .parentCardContainer {
+    max-height: calculatePixels(768, 365) !important;
+    width: 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .parentCardContainer2 {
+    max-height: calculatePixels(768, 365) !important;
+    width: 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .noFixWidthCardContainer {
+    max-height: calculatePixels(768, 365) !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .cardContainer {
+    max-height: calculatePixels(768, 365) !important;
+    width: 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  .quartorCardContainer {
+    max-height: calculatePixels(768, 335) !important;
+    width: 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .parentCardContainer {
+    max-height: calculatePixels(768, 365) !important;
+    width: 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  .parentCardContainer2 {
+    max-height: calculatePixels(768, 365) !important;
+    width: 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .noFixWidthCardContainer {
+    max-height: calculatePixels(768, 365) !important;
+  }
+}

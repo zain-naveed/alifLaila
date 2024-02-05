@@ -1,0 +1,7 @@
+@import "pages/partners/addBook/form/form2/style.module.scss";
+@import "shared/components/common/customButton/style.module.scss";
+.customButton {
+  @extend .customBtnContainer;
+  max-width: 160px;
+  margin-left: auto;
+}

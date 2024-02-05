@@ -1,0 +1,167 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/mixin.module.scss";
+
+.headerStyle {
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+.quizImage {
+  color: transparent;
+  display: block;
+  margin: 0 auto;
+  @include MRP(
+    (
+      "width": 214,
+      "height": 300,
+      "border-radius": 20,
+    )
+  );
+}
+
+.quizHeading {
+  font-family: PoppinsMedium;
+  @include elipsis(1);
+  @include MRP(
+    (
+      "font-size": 24,
+    )
+  );
+}
+
+.quizParagraph {
+  font-family: "PoppinsRegular";
+  @include elipsis(3);
+  @include MRP(
+    (
+      "font-size": 15,
+    )
+  );
+}
+
+.urduDesc {
+  @include elipsis(3);
+  @include MRP(
+    (
+      "font-size": 18,
+    )
+  );
+  width: 100%;
+  text-align: right;
+  font-family: JNRegular !important;
+}
+
+.quizStart {
+  @include MRP(
+    (
+      "border-radius": 32,
+      "font-size": 16,
+      "height": 48,
+    )
+  );
+}
+
+.quizBtnIcon {
+  @include MRP(
+    (
+      "width": 20,
+      "height": 20,
+    )
+  );
+}
+.quizFinish {
+  @include MRP(
+    (
+      "border-radius": 32,
+      "font-size": 16,
+      "height": 48,
+    )
+  );
+  background-color: white !important;
+  border: 1px solid $PRIMARY;
+  color: $PRIMARY;
+}
+
+.badgeIcon {
+  position: absolute;
+  @include MRP(
+    (
+      "width": 123,
+      "height": 170,
+      "bottom": -70,
+      "right": 70,
+    )
+  );
+}
+.badgeIcon2 {
+  @include MRP(
+    (
+      "width": 264,
+      "height": 138,
+      "bottom": -45,
+      "right": -20,
+    )
+  );
+
+  position: absolute;
+}
+.badgeIcon3 {
+  @include MRP(
+    (
+      "width": 240,
+      "height": 161,
+      "bottom": -70,
+    )
+  );
+  right: 0px;
+  position: absolute;
+}
+
+@media screen and (max-width: 576px) {
+  .quizImage {
+    height: calculatePixels(768, 300) !important;
+    width: calculatePixels(768, 214) !important;
+    border-radius: calculatePixels(768, 20) !important;
+  }
+  .quizHeading {
+    font-size: calculatePixels(768, 24) !important;
+  }
+  .quizParagraph {
+    font-size: calculatePixels(768, 15) !important;
+  }
+  .urduDesc {
+    font-size: calculatePixels(768, 18) !important;
+  }
+  .quizStart {
+    font-size: calculatePixels(768, 16) !important;
+    border-radius: calculatePixels(768, 32) !important;
+    height: calculatePixels(768, 48) !important;
+  }
+  .quizBtnIcon {
+    height: calculatePixels(768, 20) !important;
+    width: calculatePixels(768, 20) !important;
+  }
+  .quizFinish {
+    font-size: calculatePixels(768, 16) !important;
+    border-radius: calculatePixels(768, 32) !important;
+    height: calculatePixels(768, 48) !important;
+  }
+  .badgeIcon {
+    height: calculatePixels(768, 170) !important;
+    width: calculatePixels(768, 123) !important;
+    bottom: calculatePixels(768, -70) !important;
+    right: calculatePixels(768, 70) !important;
+  }
+  .badgeIcon2 {
+    height: calculatePixels(768, 138) !important;
+    width: calculatePixels(768, 264) !important;
+    bottom: calculatePixels(768, -45) !important;
+    right: calculatePixels(768, -20) !important;
+  }
+  .badgeIcon3 {
+    height: calculatePixels(768, 161) !important;
+    width: calculatePixels(768, 240) !important;
+    bottom: calculatePixels(768, -70) !important;
+  }
+}

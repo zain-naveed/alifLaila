@@ -1,0 +1,169 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.statsContainer {
+  background-color: $lightYellow;
+  @include MRP(
+    (
+      "border-radius": 10,
+      "width": 540,
+      "padding-top": 10,
+      "padding-bottom": 10,
+    )
+  );
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  border: 1px solid $Light_Grey_4;
+}
+
+.greyLabel {
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+  color: var(--Gray-Gray-07, $Gray);
+  text-align: center;
+  font-family: PoppinsRegular;
+  font-weight: 600;
+}
+
+.descriptionWarning {
+  color: var(--Main-Colors-Secondary, $Secondary);
+  font-family: PoppinsRegular;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.statsTitle {
+  font-family: PoppinsMedium;
+  @include MRP(
+    (
+      "font-size": 12,
+    )
+  );
+  color: $Gray;
+  text-align: left;
+}
+
+.statsValue {
+  font-family: PoppinsRegular;
+  @include MRP(
+    (
+      "font-size": 14,
+    )
+  );
+  color: $BLACK;
+  text-align: left;
+}
+
+.seperator {
+  @include MRP(
+    (
+      "margin-top": 24,
+      "margin-bottom": 24,
+    )
+  );
+  height: 1px;
+  width: 100%;
+  background-color: $BorderGray;
+}
+
+.customLabelStyle {
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+  font-family: PoppinsRegular !important;
+  color: $Gray !important;
+}
+
+.customInputContainerStyle {
+  @include MRP(
+    (
+      "height": 52,
+      "border-radius": 26,
+      "padding": 10,
+    )
+  );
+  background-color: $lightYellow;
+}
+
+.customInputStyle {
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+}
+
+.customInputIconStyle {
+  @include MRP(
+    (
+      "height": 24,
+      "width": 24,
+    )
+  );
+  path {
+    stroke: $PRIMARY;
+  }
+}
+
+.btnStyle {
+  @include MRP(
+    (
+      "height": 52,
+      "border-radius": 32,
+      "font-size": 16,
+    )
+  );
+}
+
+@media screen and (max-width: 576px) {
+  .statsContainer {
+    border-radius: calculatePixels(992, 10) !important;
+    width: 90% !important;
+    padding-top: calculatePixels(992, 10) !important;
+    padding-bottom: calculatePixels(992, 10) !important;
+  }
+  .statsTitle {
+    font-size: calculatePixels(992, 12) !important;
+  }
+  .statsValue {
+    font-size: calculatePixels(992, 14) !important;
+  }
+  .seperator {
+    margin-top: calculatePixels(992, 24) !important;
+    margin-bottom: calculatePixels(992, 24) !important;
+  }
+  .customLabelStyle {
+    font-size: calculatePixels(992, 16) !important;
+  }
+  .customInputContainerStyle {
+    height: calculatePixels(992, 52) !important;
+    border-radius: calculatePixels(992, 26) !important;
+    padding: calculatePixels(992, 10) !important;
+  }
+  .customInputStyle {
+    font-size: calculatePixels(992, 16) !important;
+  }
+  .customInputIconStyle {
+    height: calculatePixels(992, 24) !important;
+    width: calculatePixels(992, 24) !important;
+  }
+  .btnStyle {
+    height: calculatePixels(992, 52) !important;
+    border-radius: calculatePixels(992, 32) !important;
+    font-size: calculatePixels(992, 16) !important;
+  }
+  .greyLabel {
+    font-size: calculatePixels(992, 16) !important;
+  }
+}

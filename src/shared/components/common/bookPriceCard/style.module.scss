@@ -1,0 +1,417 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+.cardContainer {
+  @include responsiveProperty(
+    (
+      "max-height": 368,
+    )
+  );
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  overflow-y: hidden;
+}
+
+.outterTitle {
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+  color: $BLACK;
+  font-family: PoppinsMedium;
+  text-align: left;
+  @include elipsis(1);
+}
+
+.price {
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+  color: $PRIMARY;
+  font-family: PoppinsSemiBold;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.img2 {
+  @include responsiveProperty(
+    (
+      "height": 300,
+      "width": 206,
+      "border-radius": 12,
+    )
+  );
+  object-fit: contain;
+  background-color: $CARD_BG;
+}
+
+.infoImg2 {
+  @include responsiveProperty(
+    (
+      "height": 300,
+      "width": 216,
+      "border-radius": 12,
+    )
+  );
+  object-fit: cover !important;
+  background-color: $CARD_BG;
+  .imgStyle {
+    object-fit: cover !important;
+  }
+}
+
+.img {
+  @include responsiveProperty(
+    (
+      "height": 335,
+      "width": 230,
+      "border-radius": 12,
+    )
+  );
+  object-fit: contain;
+  background-color: $CARD_BG;
+}
+
+.infoImg {
+  @include responsiveProperty(
+    (
+      "height": 335,
+      "width": 240,
+      "border-radius": 12,
+    )
+  );
+  object-fit: cover;
+  background-color: $CARD_BG;
+  .imgStyle {
+    object-fit: cover !important;
+  }
+}
+
+.imgStyle {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  @include responsiveProperty(
+    (
+      "border-radius": 12,
+    )
+  );
+}
+
+.bottomContainer {
+  @include responsiveProperty(
+    (
+      "max-width": 225,
+    )
+  );
+}
+
+.bottomContainer2 {
+  @include responsiveProperty(
+    (
+      "max-width": 200,
+    )
+  );
+}
+
+.bookThumbailWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include responsiveProperty(
+    (
+      "width": 240,
+    )
+  );
+}
+
+.bookThumbailWrapper2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include responsiveProperty(
+    (
+      "width": 216,
+    )
+  );
+}
+
+.infoContainer {
+  @include responsiveProperty(
+    (
+      "max-height": 368,
+      "max-width": 240,
+      "border-radius": 12,
+    )
+  );
+  height: 100% !important;
+  background-color: white;
+  position: absolute;
+  transition: max-height 1s ease;
+  width: 0px !important;
+  overflow: hidden;
+  transition-delay: 0.1s;
+}
+
+.infoContainer2 {
+  @include responsiveProperty(
+    (
+      "max-height": 368,
+      "max-width": 216,
+      "border-radius": 12,
+    )
+  );
+  height: 100% !important;
+  background-color: white;
+  position: absolute;
+  transition: max-height 1s ease;
+  width: 0px !important;
+  overflow: hidden;
+  transition-delay: 0.1s;
+}
+
+.cardContainer:hover .infoContainer {
+  @include responsiveProperty(
+    (
+      "max-height": 1000,
+    )
+  );
+  height: fit-content !important;
+  width: 100% !important;
+  z-index: 2;
+  box-shadow: 0px 5.14286px 24.42857px 0px rgba(0, 0, 0, 0.16);
+}
+
+.cardContainer:hover .infoContainer2 {
+  @include responsiveProperty(
+    (
+      "max-height": 1000,
+    )
+  );
+  height: fit-content !important;
+  width: 100% !important;
+  z-index: 2;
+  box-shadow: 0px 5.14286px 24.42857px 0px rgba(0, 0, 0, 0.16);
+}
+
+.title {
+  @include responsiveProperty(
+    (
+      "font-size": 18,
+    )
+  );
+  font-family: BitterSemiBold;
+  text-align: left;
+  color: $BLACK;
+}
+
+.infoCardIcon {
+  @include responsiveProperty(
+    (
+      "height": 20,
+      "width": 20,
+    )
+  );
+}
+
+.languageLabel {
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+  font-family: PoppinsRegular;
+  text-align: left;
+  color: $DARK_GREEN;
+}
+
+.coinsLabel {
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+  font-family: PoppinsMedium;
+  text-align: left;
+}
+
+.primary {
+  color: $PRIMARY !important;
+}
+
+.secondary {
+  color: $Secondary !important;
+}
+
+.parrot {
+  color: #c2d52e;
+}
+
+.starIcon {
+  @include responsiveProperty(
+    (
+      "height": 16,
+      "width": 16,
+    )
+  );
+}
+
+.starLabel {
+  @include responsiveProperty(
+    (
+      "font-size": 12,
+    )
+  );
+  font-family: PoppinsRegular;
+  color: $Yellow;
+  text-align: left;
+}
+
+@media screen and (max-width: 576px) {
+  .cardContainer {
+    max-height: calculatePixels(576, 368) !important;
+  }
+  .infoContainer {
+    max-width: calculatePixels(576, 240) !important;
+    border-radius: calculatePixels(576, 12) !important;
+  }
+  .infoContainer2 {
+    max-width: calculatePixels(576, 216) !important;
+    border-radius: calculatePixels(576, 12) !important;
+  }
+  .outterTitle {
+    font-size: calculatePixels(992, 14) !important;
+  }
+  .price {
+    font-size: calculatePixels(992, 14) !important;
+  }
+  .img {
+    width: calculatePixels(576, 230) !important;
+    height: calculatePixels(576, 335) !important;
+    border-radius: calculatePixels(576, 12) !important;
+  }
+  .infoImg {
+    width: calculatePixels(576, 240) !important;
+    height: calculatePixels(576, 335) !important;
+    border-radius: calculatePixels(576, 12) !important;
+  }
+  .img2 {
+    width: calculatePixels(576, 206) !important;
+    height: calculatePixels(576, 300) !important;
+    border-radius: calculatePixels(576, 12) !important;
+  }
+  .infoImg2 {
+    width: calculatePixels(576, 216) !important;
+    height: calculatePixels(576, 300) !important;
+    border-radius: calculatePixels(576, 12) !important;
+  }
+  .bottomContainer {
+    max-width: calculatePixels(576, 225) !important;
+  }
+  .bottomContainer2 {
+    max-width: calculatePixels(576, 200) !important;
+  }
+  .bookThumbailWrapper {
+    max-width: calculatePixels(576, 240) !important;
+  }
+  .bookThumbailWrapper2 {
+    max-width: calculatePixels(576, 216) !important;
+  }
+  .title {
+    font-size: calculatePixels(768, 18) !important;
+  }
+  .infoCardIcon {
+    height: calculatePixels(768, 20) !important;
+    width: calculatePixels(768, 20) !important;
+  }
+  .languageLabel {
+    font-size: calculatePixels(768, 14) !important;
+  }
+  .coinsLabel {
+    font-size: calculatePixels(768, 14) !important;
+  }
+  .starIcon {
+    height: calculatePixels(768, 16) !important;
+    width: calculatePixels(768, 16) !important;
+  }
+  .starLabel {
+    font-size: calculatePixels(768, 12) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .cardContainer {
+    max-height: calculatePixels(768, 368) !important;
+  }
+  .infoContainer {
+    max-width: calculatePixels(768, 240) !important;
+    border-radius: calculatePixels(768, 12) !important;
+  }
+  .infoContainer2 {
+    max-width: calculatePixels(768, 216) !important;
+    border-radius: calculatePixels(768, 12) !important;
+  }
+  .outterTitle {
+    font-size: calculatePixels(1200, 14) !important;
+  }
+  .price {
+    font-size: calculatePixels(1200, 14) !important;
+  }
+  .img {
+    height: calculatePixels(768, 335) !important;
+    width: calculatePixels(768, 230) !important;
+    border-radius: calculatePixels(768, 12) !important;
+  }
+  .infoImg {
+    height: calculatePixels(768, 335) !important;
+    width: calculatePixels(768, 240) !important;
+    border-radius: calculatePixels(768, 12) !important;
+  }
+  .img2 {
+    height: calculatePixels(768, 300) !important;
+    width: calculatePixels(768, 206) !important;
+    border-radius: calculatePixels(768, 12) !important;
+  }
+  .infoImg2 {
+    height: calculatePixels(768, 300) !important;
+    width: calculatePixels(768, 216) !important;
+    border-radius: calculatePixels(768, 12) !important;
+  }
+  .bottomContainer {
+    max-width: calculatePixels(768, 225) !important;
+  }
+  .bottomContainer2 {
+    max-width: calculatePixels(768, 200) !important;
+  }
+  .bookThumbailWrapper {
+    max-width: calculatePixels(768, 240) !important;
+  }
+  .bookThumbailWrapper2 {
+    max-width: calculatePixels(768, 216) !important;
+  }
+  .title {
+    font-size: calculatePixels(768, 18) !important;
+  }
+  .infoCardIcon {
+    height: calculatePixels(768, 20) !important;
+    width: calculatePixels(768, 20) !important;
+  }
+  .languageLabel {
+    font-size: calculatePixels(768, 14) !important;
+  }
+  .coinsLabel {
+    font-size: calculatePixels(768, 14) !important;
+  }
+  .starIcon {
+    height: calculatePixels(768, 16) !important;
+    width: calculatePixels(768, 16) !important;
+  }
+  .starLabel {
+    font-size: calculatePixels(768, 12) !important;
+  }
+}

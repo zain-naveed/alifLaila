@@ -1,0 +1,576 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.topLevelContainer {
+  height: calc(100vh - 94px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+// --------------book Details----------------
+
+.bookDetailsContainer {
+  background-color: $lightYellow;
+  @include responsiveProperty(
+    (
+      "height": 602,
+      "width": 486,
+      "border-radius": 10,
+    )
+  );
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.bookImage {
+  @include responsiveProperty(
+    (
+      "height": 558,
+      "width": 442,
+      "border-radius": 20,
+    )
+  );
+  object-fit: cover;
+}
+
+.statContainer {
+  @include responsiveProperty(
+    (
+      "max-width": 584,
+    )
+  );
+}
+
+.detailTitle {
+  font-family: PoppinsSemiBold;
+  @include responsiveProperty(
+    (
+      "font-size": 18,
+    )
+  );
+  color: $BLACK;
+  text-align: left;
+}
+
+.statLabel {
+  font-family: PoppinsRegular;
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  color: $BLACK;
+  text-align: left;
+}
+
+.bookDetailItemContainer {
+  @include responsiveProperty(
+    (
+      "width": 609,
+    )
+  );
+}
+
+.seperator {
+  border-bottom: 0.5px solid $LIGHT_GREY;
+}
+
+.bookIcon {
+  @include responsiveProperty(
+    (
+      "min-height": 61,
+      "max-height": 61,
+      "min-width": 61,
+      "max-width": 61,
+    )
+  );
+  height: 100%;
+  width: 100%;
+  border-radius: 0% !important;
+}
+
+.bookDetailHeading {
+  font-family: PoppinsSemiBold;
+  color: $BLACK;
+  text-align: left;
+  @include elipsis(2);
+  @include responsiveProperty(
+    (
+      "font-size": 40,
+    )
+  );
+}
+
+.pubAvatar {
+  @include responsiveProperty(
+    (
+      "min-height": 28,
+      "max-height": 28,
+      "min-width": 28,
+      "max-width": 28,
+    )
+  );
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+}
+
+.pubName {
+  font-family: PoppinsMedium;
+  color: $Yellow;
+  text-align: left;
+  @include elipsis(1);
+  @include responsiveProperty(
+    (
+      "font-size": 18,
+    )
+  );
+}
+
+.bookPrice {
+  font-family: PoppinsSemiBold;
+  @include responsiveProperty(
+    (
+      "font-size": 40,
+    )
+  );
+  text-align: left;
+  color: $DARK_GREEN;
+  white-space: nowrap;
+}
+
+.taxDetail {
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  font-family: PoppinsRegular;
+  text-align: left;
+}
+
+.bookCartBtn {
+  background-color: $PRIMARY;
+  font-family: PoppinsMedium;
+  color: white;
+  @include responsiveProperty(
+    (
+      "height": 52,
+      "width": 450,
+      "border-radius": 24,
+      "font-size": 16,
+    )
+  );
+}
+
+.shopIcon {
+  @include responsiveProperty(
+    (
+      "height": 24,
+      "width": 24,
+    )
+  );
+  path {
+    stroke: white;
+  }
+}
+
+// ----------------------review------------------
+
+.reviewMainContainer {
+  background-color: $lightYellow;
+}
+
+.seperator2 {
+  height: 2px;
+  width: 100%;
+  background-color: #e9ecef;
+}
+
+.seperator3 {
+  height: 100%;
+  width: 2px;
+  background-color: #e9ecef;
+}
+
+.reviewHeading {
+  font-family: PoppinsMedium;
+  color: $BLACK;
+  @include responsiveProperty(
+    (
+      "font-size": 24,
+    )
+  );
+  text-align: left;
+}
+
+.ratingStatsContainer {
+  @include responsiveProperty(
+    (
+      "height": 152,
+    )
+  );
+}
+
+.ratings {
+  font-family: PoppinsRegular;
+  color: $Yellow;
+  @include responsiveProperty(
+    (
+      "font-size": 48,
+    )
+  );
+  text-align: left;
+}
+
+.totalRatings {
+  font-family: PoppinsRegular;
+  color: $BLACK;
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  text-align: left;
+}
+
+.chevIcon {
+  @include responsiveProperty(
+    (
+      "height": 18,
+      "width": 18,
+    )
+  );
+}
+
+.ratingLabel {
+  font-family: PoppinsRegular;
+  color: $Gray;
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  text-align: left;
+}
+
+.progressContainer {
+  height: 4px;
+  @include responsiveProperty(
+    (
+      "width": 259,
+    )
+  );
+  background-color: #e9ecef;
+  border-radius: 5px;
+  position: relative;
+}
+
+.achiveContainer {
+  border-radius: 5px;
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  width: 0%;
+  background-color: $Yellow;
+}
+
+.reviewButton {
+  @include responsiveProperty(
+    (
+      "height": 46,
+      "width": 147,
+      "font-size": 16,
+    )
+  );
+  background-color: transparent !important;
+  color: $PRIMARY !important;
+  border: 1px solid $PRIMARY !important;
+}
+
+.loadMore {
+  @include responsiveProperty(
+    (
+      "height": 56,
+      "width": 149,
+      "font-size": 18,
+    )
+  );
+  margin: 0 auto;
+}
+
+.optionsContainer {
+  min-width: 168px;
+  top: 26px;
+  right: 0px;
+  z-index: 1;
+}
+
+//---------------book suggestion----------------
+.bookSuggestedHeading {
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 30,
+    )
+  );
+  color: $BLACK;
+}
+
+.bookListContainer {
+  @include responsiveProperty(
+    (
+      "gap": 40,
+    )
+  );
+}
+
+// -----------------responsive ------------------
+@media screen and (max-width: 576px) {
+  .bookDetailsContainer {
+    width: 100% !important;
+    height: calculatePixels(992, 602) !important;
+  }
+
+  .bookImage {
+    width: 90% !important;
+    height: calculatePixels(992, 558) !important;
+    border-radius: calculatePixels(992, 20) !important;
+  }
+
+  .statContainer {
+    max-width: 90% !important;
+  }
+
+  .detailTitle {
+    font-size: calculatePixels(992, 18) !important;
+  }
+
+  .statLabel {
+    font-size: calculatePixels(992, 16) !important;
+  }
+
+  .bookDetailItemContainer {
+    width: 100% !important;
+  }
+
+  .bookIcon {
+    min-height: calculatePixels(992, 61) !important;
+    max-height: calculatePixels(992, 61) !important;
+    min-width: calculatePixels(992, 61) !important;
+    max-width: calculatePixels(992, 61) !important;
+  }
+
+  .bookDetailHeading {
+    font-size: calculatePixels(992, 40) !important;
+  }
+
+  .pubAvatar {
+    min-height: calculatePixels(992, 28) !important;
+    max-height: calculatePixels(992, 28) !important;
+    min-width: calculatePixels(992, 28) !important;
+    max-width: calculatePixels(992, 28) !important;
+  }
+
+  .pubName {
+    font-size: calculatePixels(992, 18) !important;
+  }
+
+  .bookPrice {
+    font-size: calculatePixels(992, 40) !important;
+  }
+
+  .taxDetail {
+    font-size: calculatePixels(992, 16) !important;
+  }
+
+  .bookCartBtn {
+    height: calculatePixels(992, 52) !important;
+    width: calculatePixels(992, 450) !important;
+    border-radius: calculatePixels(992, 24) !important;
+    font-size: calculatePixels(992, 16) !important;
+  }
+
+  .shopIcon {
+    height: calculatePixels(992, 24) !important;
+    width: calculatePixels(992, 24) !important;
+  }
+
+  .reviewHeading {
+    font-size: calculatePixels(992, 24) !important;
+  }
+
+  .ratingStatsContainer {
+    height: 100% !important;
+  }
+
+  .ratings {
+    font-size: calculatePixels(992, 48) !important;
+  }
+
+  .totalRatings {
+    font-size: calculatePixels(992, 16) !important;
+  }
+
+  .chevIcon {
+    height: calculatePixels(992, 18) !important;
+    width: calculatePixels(992, 18) !important;
+  }
+
+  .ratingLabel {
+    font-size: calculatePixels(992, 16) !important;
+  }
+
+  .progressContainer {
+    width: calculatePixels(1200, 259) !important;
+  }
+
+  .reviewButton {
+    height: calculatePixels(992, 46) !important;
+    width: calculatePixels(992, 147) !important;
+    font-size: calculatePixels(992, 16) !important;
+  }
+
+  .loadMore {
+    height: calculatePixels(992, 56) !important;
+    width: calculatePixels(992, 149) !important;
+    font-size: calculatePixels(992, 18) !important;
+  }
+
+  .bookSuggestedHeading {
+    font-size: calculatePixels(992, 30) !important;
+  }
+
+  .bookListContainer {
+    gap: calculatePixels(576, 40) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .bookDetailsContainer {
+    width: calculatePixels(1200, 486) !important;
+    height: calculatePixels(1200, 602) !important;
+  }
+
+  .bookImage {
+    width: calculatePixels(1200, 442) !important;
+    height: calculatePixels(1200, 558) !important;
+    border-radius: calculatePixels(1200, 20) !important;
+  }
+
+  .statContainer {
+    max-width: calculatePixels(1200, 584) !important;
+  }
+
+  .detailTitle {
+    font-size: calculatePixels(1200, 18) !important;
+  }
+
+  .statLabel {
+    font-size: calculatePixels(1200, 16) !important;
+  }
+
+  .bookDetailItemContainer {
+    width: calculatePixels(1200, 609) !important;
+  }
+
+  .bookIcon {
+    min-height: calculatePixels(1200, 61) !important;
+    max-height: calculatePixels(1200, 61) !important;
+    min-width: calculatePixels(1200, 61) !important;
+    max-width: calculatePixels(1200, 61) !important;
+  }
+
+  .bookDetailHeading {
+    font-size: calculatePixels(1200, 40) !important;
+  }
+
+  .pubAvatar {
+    min-height: calculatePixels(1200, 28) !important;
+    max-height: calculatePixels(1200, 28) !important;
+    min-width: calculatePixels(1200, 28) !important;
+    max-width: calculatePixels(1200, 28) !important;
+  }
+
+  .pubName {
+    font-size: calculatePixels(1200, 18) !important;
+  }
+
+  .bookPrice {
+    font-size: calculatePixels(1200, 40) !important;
+  }
+
+  .taxDetail {
+    font-size: calculatePixels(1200, 16) !important;
+  }
+
+  .bookCartBtn {
+    height: calculatePixels(1200, 52) !important;
+    width: calculatePixels(1200, 450) !important;
+    border-radius: calculatePixels(1200, 24) !important;
+    font-size: calculatePixels(1200, 16) !important;
+  }
+
+  .shopIcon {
+    height: calculatePixels(1200, 24) !important;
+    width: calculatePixels(1200, 24) !important;
+  }
+
+  .reviewHeading {
+    font-size: calculatePixels(1200, 24) !important;
+  }
+
+  .ratingStatsContainer {
+    height: calculatePixels(1200, 152) !important;
+  }
+
+  .ratings {
+    font-size: calculatePixels(1200, 48) !important;
+  }
+
+  .totalRatings {
+    font-size: calculatePixels(1200, 16) !important;
+  }
+
+  .chevIcon {
+    height: calculatePixels(1200, 18) !important;
+    width: calculatePixels(1200, 18) !important;
+  }
+
+  .ratingLabel {
+    font-size: calculatePixels(1200, 16) !important;
+  }
+
+  .progressContainer {
+    width: calculatePixels(1200, 259) !important;
+  }
+
+  .reviewButton {
+    height: calculatePixels(1200, 46) !important;
+    width: calculatePixels(1200, 147) !important;
+    font-size: calculatePixels(1200, 16) !important;
+  }
+
+  .loadMore {
+    height: calculatePixels(1200, 56) !important;
+    width: calculatePixels(1200, 149) !important;
+    font-size: calculatePixels(1200, 18) !important;
+  }
+
+  .bookSuggestedHeading {
+    font-size: calculatePixels(1200, 30) !important;
+  }
+
+  .bookListContainer {
+    gap: calculatePixels(768, 40) !important;
+  }
+}

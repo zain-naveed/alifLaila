@@ -1,0 +1,14 @@
+@import "shared/utils/colors.scss";
+.breadCrumbActive,
+.breadCrumbDefault {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  font-family: "PoppinsSemiBold";
+  margin-left: 10px;
+}
+
+.breadCrumbDefault {
+  color: $Gray;
+  margin-right: 10px;
+}

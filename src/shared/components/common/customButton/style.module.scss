@@ -1,0 +1,28 @@
+@import "shared/utils/colors.scss";
+.customBtnContainer {
+  background-color: $PRIMARY;
+  color: white;
+  height: 45px;
+  border: 0px;
+  border-radius: 32px;
+  font-family: PoppinsMedium;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  font-size: 14px;
+  outline: 0px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    opacity: 0.9;
+  }
+  svg {
+    path {
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+.noAction {
+  cursor: not-allowed;
+}

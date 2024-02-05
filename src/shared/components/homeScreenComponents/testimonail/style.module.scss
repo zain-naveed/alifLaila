@@ -1,0 +1,152 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.title {
+  font-family: BitterSemiBold;
+  color: $DARK_GREEN;
+  @include responsiveProperty(
+    (
+      "font-size": 48,
+    )
+  );
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.subTitle {
+  font-family: PoppinsRegular;
+  @include responsiveProperty(
+    (
+      "font-size": 18,
+    )
+  );
+  text-align: center;
+  color: $GRAY2;
+}
+
+.inActiveArrowContainer {
+  @include responsiveProperty(
+    (
+      "min-height": 40,
+      "min-width": 40,
+      "max-height": 40,
+      "max-width": 40,
+    )
+  );
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  border: 1px solid $BorderGray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  &:hover {
+    cursor: not-allowed;
+  }
+}
+
+.inActiveArrowIcon {
+  @include responsiveProperty(
+    (
+      "height": 24,
+      "width": 24,
+    )
+  );
+}
+
+.inActiveArrowIcon path {
+  fill: black;
+}
+
+.activeArrowContainer {
+  @include responsiveProperty(
+    (
+      "min-height": 40,
+      "min-width": 40,
+      "max-height": 40,
+      "max-width": 40,
+    )
+  );
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  border: 1px solid $DARK_GREEN;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $DARK_GREEN;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.activeArrowIcon {
+  @include responsiveProperty(
+    (
+      "height": 24,
+      "width": 24,
+    )
+  );
+}
+
+.activeArrowIcon path {
+  fill: white;
+}
+
+@media screen and (max-width: 576px) {
+  .title {
+    font-size: calculatePixels(576, 48) !important;
+  }
+  .subTitle {
+    font-size: calculatePixels(576, 18) !important;
+  }
+  .inActiveArrowContainer {
+    min-height: calculatePixels(576, 40) !important;
+    max-height: calculatePixels(576, 40) !important;
+    min-width: calculatePixels(576, 40) !important;
+    max-width: calculatePixels(576, 40) !important;
+  }
+  .inActiveArrowIcon {
+    height: calculatePixels(576, 24) !important;
+    width: calculatePixels(576, 24) !important;
+  }
+  .activeArrowContainer {
+    min-height: calculatePixels(576, 40) !important;
+    max-height: calculatePixels(576, 40) !important;
+    min-width: calculatePixels(576, 40) !important;
+    max-width: calculatePixels(576, 40) !important;
+  }
+  .activeArrowIcon {
+    height: calculatePixels(576, 24) !important;
+    width: calculatePixels(576, 24) !important;
+  }
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  .title {
+    font-size: calculatePixels(768, 48) !important;
+  }
+  .subTitle {
+    font-size: calculatePixels(768, 18) !important;
+  }
+  .inActiveArrowContainer {
+    min-height: calculatePixels(768, 40) !important;
+    max-height: calculatePixels(768, 40) !important;
+    min-width: calculatePixels(768, 40) !important;
+    max-width: calculatePixels(768, 40) !important;
+  }
+  .inActiveArrowIcon {
+    height: calculatePixels(768, 24) !important;
+    width: calculatePixels(768, 24) !important;
+  }
+  .activeArrowContainer {
+    min-height: calculatePixels(768, 40) !important;
+    max-height: calculatePixels(768, 40) !important;
+    min-width: calculatePixels(768, 40) !important;
+    max-width: calculatePixels(768, 40) !important;
+  }
+  .activeArrowIcon {
+    height: calculatePixels(768, 24) !important;
+    width: calculatePixels(768, 24) !important;
+  }
+}

@@ -1,0 +1,82 @@
+@import "shared/utils/responsive.module.scss";
+
+.collapseHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: #f5f5f5;
+  @include responsiveProperty(
+    (
+      "height": 54,
+      "border-radius": 24,
+      "padding-left": 14,
+      "padding-right": 14,
+    )
+  );
+  cursor: pointer;
+  span {
+    @include responsiveProperty(
+      (
+        "font-size": 16,
+      )
+    );
+    font-family: PoppinsMedium;
+    text-transform: uppercase;
+  }
+}
+
+.collapseItem {
+  font-family: PoppinsRegular;
+  color: #868e96;
+  text-align: left;
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+      "margin-left": 12,
+      "margin-right": 12,
+    )
+  );
+  overflow: hidden;
+  transition: height 200ms;
+  display: flex;
+  align-items: center;
+}
+
+.hide {
+  height: 0 !important;
+}
+
+@media screen and (max-width: 576px) {
+  .collapseHeading {
+    height: calculatePixels(992, 54) !important;
+    border-radius: calculatePixels(992, 24) !important;
+    padding-left: calculatePixels(992, 14) !important;
+    padding-right: calculatePixels(992, 14) !important;
+    span {
+      font-size: calculatePixels(992, 16) !important;
+    }
+  }
+  .collapseItem {
+    font-size: calculatePixels(992, 16) !important;
+    margin-left: calculatePixels(992, 12) !important;
+    margin-right: calculatePixels(992, 12) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .collapseHeading {
+    height: calculatePixels(1200, 54) !important;
+    border-radius: calculatePixels(1200, 24) !important;
+    padding-left: calculatePixels(1200, 14) !important;
+    padding-right: calculatePixels(1200, 14) !important;
+    span {
+      font-size: calculatePixels(1200, 16) !important;
+    }
+  }
+  .collapseItem {
+    font-size: calculatePixels(1200, 16) !important;
+    margin-left: calculatePixels(1200, 12) !important;
+    margin-right: calculatePixels(1200, 12) !important;
+  }
+}

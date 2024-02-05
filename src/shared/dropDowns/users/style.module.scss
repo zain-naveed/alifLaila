@@ -1,0 +1,46 @@
+@import "shared/utils/colors.scss";
+
+.optionsContainer {
+  position: absolute;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+  filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.1));
+  width: 240px;
+  top: 15px;
+  right: 10px;
+}
+
+.labelStyle {
+  font-size: 12px;
+  font-family: PoppinsRegular;
+  color: $BLACK;
+}
+
+.avtStyle {
+  height: 32px;
+  width: 32px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.optionContainer {
+  border-bottom: 1px solid $Light_Grey_1;
+  &:hover,
+  &:hover > .labelStyle {
+    background-color: $LightPrimary;
+    color: $PRIMARY;
+  }
+}
+
+.topradius {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.btmradius {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}

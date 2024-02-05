@@ -1,0 +1,605 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.coinsContainer {
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.06),
+    0px 1px 3px 0px rgba(16, 24, 40, 0.1);
+  width: 50% !important;
+  @include responsiveProperty(
+    (
+      "height": 146,
+      "border-radius": 8,
+    )
+  );
+}
+
+.coinAsset {
+  @include responsiveProperty(
+    (
+      "height": 48,
+      "width": 48,
+    )
+  );
+}
+
+.coinTitle {
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+  color: $BLACK;
+}
+
+.expireTitle {
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  color: $BLACK;
+}
+
+.infoIcon {
+  @include responsiveProperty(
+    (
+      "height": 21,
+      "width": 21,
+    )
+  );
+}
+
+.coinCount {
+  font-family: PoppinsSemiBold;
+  @include responsiveProperty(
+    (
+      "font-size": 30,
+    )
+  );
+  color: $BLACK;
+}
+
+.tableContainer {
+  border: 1px solid $Light_Grey_1;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px -2px rgba(16, 24, 40, 0.06),
+    0px 4px 8px -2px rgba(16, 24, 40, 0.1);
+}
+
+.tableTitle {
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 18,
+    )
+  );
+  color: $BLACK;
+}
+
+.tableSubtitle {
+  font-family: PoppinsRegular;
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+  color: $Gray;
+}
+
+.searchContainer {
+  @include responsiveProperty(
+    (
+      "height": 44,
+      "width": 225,
+      "border-radius": 32,
+    )
+  );
+  border: 1px solid $LIGHT_GREY;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.searchInput {
+  outline: 0px;
+  border: 0px;
+  background: transparent;
+  width: 100%;
+  font-family: PoppinsRegular;
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+}
+
+.searchIcon {
+  @include responsiveProperty(
+    (
+      "height": 20,
+      "width": 20,
+    )
+  );
+}
+
+.searchInput::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: PoppinsRegular;
+  color: $Gray;
+  opacity: 1; /* Firefox */
+}
+
+.searchInput:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-family: PoppinsRegular;
+  color: $Gray;
+}
+
+.searchInput::-ms-input-placeholder {
+  /* Microsoft Edge */
+  font-family: PoppinsRegular;
+  color: $Gray;
+}
+
+.newIcon {
+  height: 30px;
+  width: 29px;
+}
+
+.tableHead {
+  font-family: PoppinsMedium !important;
+  @include responsiveProperty(
+    (
+      "font-size": 12,
+    )
+  );
+  text-align: left;
+  background-color: #f9fafb !important;
+  width: 100%;
+  color: $GRAY2 !important;
+  vertical-align: middle;
+  border-bottom: 0px;
+  border-top: 1px solid $Light_Grey_1;
+}
+
+.statusContainer {
+  @include responsiveProperty(
+    (
+      "border-radius": 16,
+    )
+  );
+  background-color: #fffaeb;
+  width: fit-content;
+  padding: 2px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.statusLabel {
+  @include responsiveProperty(
+    (
+      "font-size": 12,
+    )
+  );
+  font-family: PoppinsMedium;
+  color: #b54708;
+}
+
+.tableContentLabel {
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+  font-family: PoppinsRegular;
+  color: $BLACK;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.bookStyle {
+  @include responsiveProperty(
+    (
+      "height": 40,
+      "width": 38,
+    )
+  );
+  object-fit: cover;
+  border-radius: 0% !important;
+}
+
+.bookTitleLoader {
+  @include responsiveProperty(
+    (
+      "height": 14,
+      "width": 70,
+    )
+  );
+  border-radius: 0% !important;
+}
+
+.bookTitle {
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+  font-family: PoppinsRegular;
+  color: $BLACK;
+}
+
+.statusContainer {
+  @include responsiveProperty(
+    (
+      "height": 22,
+      "border-radius": 16,
+    )
+  );
+  background-color: #ecfdf3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 10px;
+  min-width: 70px;
+}
+
+.statusLabel {
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 12,
+    )
+  );
+  color: #027a48;
+}
+
+.pendingCont {
+  background-color: #fffaeb !important;
+}
+
+.pendingLabel {
+  color: #b54708 !important;
+}
+
+.assigneeContainer {
+  @include responsiveProperty(
+    (
+      "height": 45,
+      "width": 45,
+    )
+  );
+  border: 3px solid white;
+  background-color: #ebebeb;
+  border-radius: 100%;
+}
+
+.assigneeImg {
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.arrowIconContainer {
+  @include responsiveProperty(
+    (
+      "height": 43,
+      "width": 43,
+    )
+  );
+  border-radius: 100%;
+  border: 3px solid #ebebeb;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.chevIconStyle {
+  @include responsiveProperty(
+    (
+      "height": 20,
+      "width": 20,
+    )
+  );
+}
+
+.filterContainer {
+  border: 1px solid $LIGHT_GREY;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include responsiveProperty(
+    (
+      "height": 44,
+      "width": 102,
+      "border-radius": 32,
+    )
+  );
+}
+
+.filterLabel {
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+  color: $Gray;
+}
+
+.filterIcon {
+  @include responsiveProperty(
+    (
+      "height": 20,
+      "width": 20,
+    )
+  );
+}
+
+.optionsContainer {
+  @include responsiveProperty(
+    (
+      "top": 44,
+    )
+  );
+  min-width: 120px;
+}
+
+// --------------responsive section--------------
+
+@media screen and (max-width: 576px) {
+  .coinsContainer {
+    width: 100% !important;
+    height: calculatePixels(992, 146) !important;
+    border-radius: calculatePixels(992, 8) !important;
+  }
+
+  .coinAsset {
+    height: calculatePixels(992, 48) !important;
+    width: calculatePixels(992, 48) !important;
+  }
+
+  .coinTitle {
+    font-size: calculatePixels(992, 14) !important;
+  }
+
+  .expireTitle {
+    font-size: calculatePixels(992, 16) !important;
+  }
+
+  .infoIcon {
+    height: calculatePixels(992, 21) !important;
+    width: calculatePixels(992, 21) !important;
+  }
+
+  .coinCount {
+    font-size: calculatePixels(992, 30) !important;
+  }
+
+  .tableTitle {
+    font-size: calculatePixels(992, 18) !important;
+  }
+
+  .tableSubtitle {
+    font-size: calculatePixels(992, 14) !important;
+  }
+
+  .searchContainer {
+    border-radius: calculatePixels(992, 32) !important;
+    height: calculatePixels(992, 44) !important;
+    width: calculatePixels(992, 225) !important;
+  }
+
+  .searchInput {
+    font-size: calculatePixels(992, 14) !important;
+  }
+
+  .searchIcon {
+    height: calculatePixels(992, 20) !important;
+    width: calculatePixels(992, 20) !important;
+  }
+
+  .filterContainer {
+    border-radius: calculatePixels(992, 32) !important;
+    height: calculatePixels(992, 44) !important;
+    width: calculatePixels(992, 102) !important;
+  }
+
+  .filterLabel {
+    font-size: calculatePixels(992, 14) !important;
+  }
+
+  .filterIcon {
+    height: calculatePixels(992, 20) !important;
+    width: calculatePixels(992, 20) !important;
+  }
+
+  .optionsContainer {
+    top: calculatePixels(992, 44) !important;
+  }
+
+  .tableHead {
+    font-size: calculatePixels(992, 12) !important;
+  }
+
+  .statusContainer {
+    border-radius: calculatePixels(992, 16) !important;
+  }
+
+  .statusLabel {
+    font-size: calculatePixels(992, 12) !important;
+  }
+
+  .tableContentLabel {
+    font-size: calculatePixels(992, 14) !important;
+  }
+
+  .bookStyle {
+    height: calculatePixels(992, 40) !important;
+    width: calculatePixels(992, 38) !important;
+  }
+
+  .bookTitle {
+    font-size: calculatePixels(992, 14) !important;
+  }
+
+  .bookTitleLoader {
+    height: calculatePixels(992, 14) !important;
+    width: calculatePixels(992, 70) !important;
+  }
+
+  .statusContainer {
+    height: calculatePixels(992, 22) !important;
+    border-radius: calculatePixels(992, 16) !important;
+  }
+
+  .statusLabel {
+    font-size: calculatePixels(992, 12) !important;
+  }
+
+  .assigneeContainer {
+    height: calculatePixels(992, 45) !important;
+    width: calculatePixels(992, 45) !important;
+  }
+
+  .arrowIconContainer {
+    height: calculatePixels(992, 43) !important;
+    width: calculatePixels(992, 43) !important;
+  }
+
+  .chevIconStyle {
+    height: calculatePixels(992, 20) !important;
+    width: calculatePixels(992, 20) !important;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .coinsContainer {
+    width: 100% !important;
+    height: calculatePixels(1200, 146) !important;
+    border-radius: calculatePixels(1200, 8) !important;
+  }
+
+  .coinAsset {
+    height: calculatePixels(1200, 48) !important;
+    width: calculatePixels(1200, 48) !important;
+  }
+
+  .coinTitle {
+    font-size: calculatePixels(1200, 14) !important;
+  }
+
+  .expireTitle {
+    font-size: calculatePixels(1200, 16) !important;
+  }
+
+  .infoIcon {
+    height: calculatePixels(1200, 21) !important;
+    width: calculatePixels(1200, 21) !important;
+  }
+
+  .coinCount {
+    font-size: calculatePixels(1200, 30) !important;
+  }
+
+  .tableTitle {
+    font-size: calculatePixels(1200, 18) !important;
+  }
+
+  .tableSubtitle {
+    font-size: calculatePixels(1200, 14) !important;
+  }
+
+  .searchContainer {
+    border-radius: calculatePixels(1200, 32) !important;
+    height: calculatePixels(1200, 44) !important;
+    width: calculatePixels(1200, 225) !important;
+  }
+
+  .searchInput {
+    font-size: calculatePixels(1200, 14) !important;
+  }
+
+  .searchIcon {
+    height: calculatePixels(1200, 20) !important;
+    width: calculatePixels(1200, 20) !important;
+  }
+
+  .filterContainer {
+    border-radius: calculatePixels(1200, 32) !important;
+    height: calculatePixels(1200, 44) !important;
+    width: calculatePixels(1200, 102) !important;
+  }
+
+  .filterLabel {
+    font-size: calculatePixels(1200, 14) !important;
+  }
+
+  .filterIcon {
+    height: calculatePixels(1200, 20) !important;
+    width: calculatePixels(1200, 20) !important;
+  }
+
+  .optionsContainer {
+    top: calculatePixels(1200, 44) !important;
+  }
+
+  .tableHead {
+    font-size: calculatePixels(1200, 12) !important;
+  }
+
+  .statusContainer {
+    border-radius: calculatePixels(1200, 16) !important;
+  }
+
+  .statusLabel {
+    font-size: calculatePixels(1200, 12) !important;
+  }
+
+  .tableContentLabel {
+    font-size: calculatePixels(1200, 14) !important;
+  }
+
+  .bookStyle {
+    height: calculatePixels(1200, 40) !important;
+    width: calculatePixels(1200, 38) !important;
+  }
+
+  .bookTitle {
+    font-size: calculatePixels(1200, 14) !important;
+  }
+
+  .bookTitleLoader {
+    height: calculatePixels(1200, 14) !important;
+    width: calculatePixels(1200, 70) !important;
+  }
+
+  .statusContainer {
+    height: calculatePixels(1200, 22) !important;
+    border-radius: calculatePixels(1200, 16) !important;
+  }
+
+  .statusLabel {
+    font-size: calculatePixels(1200, 12) !important;
+  }
+
+  .assigneeContainer {
+    height: calculatePixels(1200, 45) !important;
+    width: calculatePixels(1200, 45) !important;
+  }
+
+  .arrowIconContainer {
+    height: calculatePixels(1200, 43) !important;
+    width: calculatePixels(1200, 43) !important;
+  }
+
+  .chevIconStyle {
+    height: calculatePixels(1200, 20) !important;
+    width: calculatePixels(1200, 20) !important;
+  }
+}

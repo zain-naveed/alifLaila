@@ -1,0 +1,55 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.planTopContainer {
+  background: #fffbf3;
+}
+
+.waveStyle {
+  @include responsiveProperty(
+    (
+      "height": 130,
+    )
+  );
+  width: 100%;
+}
+
+.title {
+  font-family: BitterSemiBold;
+  color: $DARK_GREEN;
+  @include responsiveProperty(
+    (
+      "font-size": 40,
+      "max-width": 931,
+    )
+  );
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.secondary {
+  color: $Secondary !important;
+}
+
+.primary {
+  color: $PRIMARY !important;
+}
+
+@media screen and (max-width: 576px) {
+  .title {
+    font-size: calculatePixels(576, 40) !important;
+    max-width: 100% !important;
+  }
+  .waveStyle {
+    height: calculatePixels(576, 130) !important;
+  }
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  .title {
+    font-size: calculatePixels(768, 40) !important;
+    max-width: calculatePixels(768, 931) !important;
+  }
+  .waveStyle {
+    height: calculatePixels(768, 130) !important;
+  }
+}

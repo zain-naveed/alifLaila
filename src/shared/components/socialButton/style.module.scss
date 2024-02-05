@@ -1,0 +1,29 @@
+@import "shared/components/common/heading/style.module.scss";
+.textHeading{
+    @extend .heading;
+    color: white;
+    font-size: 17px;
+}
+.textTitle{
+    font-size: 10px;
+}
+.iconWdith{
+    width: 17px
+}
+.button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 7px;
+    background: black;
+    color: white;
+    outline: none;
+    border: none;
+    width: fit-content !important;
+    height: 47px;
+    padding: 0 18px;
+}
+.textContainer{
+    margin-left: 18px;
+    text-align: left;
+}

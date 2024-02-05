@@ -1,0 +1,55 @@
+@import "shared/utils/colors.scss";
+
+.header {
+  padding-left: 17px;
+  padding-right: 22px;
+  padding-top: 9px;
+}
+
+.dailogContent {
+  max-width: 800px;
+}
+
+.dailogContent2 {
+  max-width: 570px;
+}
+
+.dailogContent3 {
+  max-width: 570px;
+}
+
+.detailTabContainer {
+  width: 100%;
+  height: 46px;
+  border-top: 4px solid $Ultra_Light_Grey;
+  border-bottom: 2px solid $Ultra_Light_Grey;
+  display: flex;
+
+  .detailTabItem,
+  .itemTabActive {
+    height: 42px !important;
+    top: 0;
+    color: $Gray;
+    width: 50%;
+    height: inherit;
+    border-bottom: 2px solid $Ultra_Light_Grey;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: "PoppinsMedium";
+    position: relative;
+    bottom: 4px;
+  }
+
+  .itemTabActive {
+    background: $LightPrimary;
+    color: $PRIMARY;
+    border-bottom: 2px solid $PRIMARY;
+  }
+}
+.tabContent {
+  min-height: 100px;
+}

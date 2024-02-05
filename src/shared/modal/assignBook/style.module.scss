@@ -1,0 +1,154 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.dailogContent {
+  @include MRP(
+    (
+      "max-width": 750,
+    )
+  );
+}
+
+.closeImageContainer {
+  border-radius: 100%;
+  border: 1px solid #e6ecf3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include MRP(
+    (
+      "width": 30,
+      "height": 30,
+    )
+  );
+  text-align: center;
+  img {
+    @include MRP(
+      (
+        "width": 9,
+        "height": 10,
+      )
+    );
+  }
+}
+
+.bookCover {
+  @include MRP(
+    (
+      "min-height": 229,
+      "max-height": 229,
+      "min-width": 180,
+      "max-width": 180,
+      "border-radius": 12,
+    )
+  );
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.seperator {
+  background-color: $GRAY_300;
+  height: 1px;
+  width: 100%;
+}
+
+.btn {
+  @include MRP(
+    (
+      "height": 48,
+      "font-size": 16,
+    )
+  );
+}
+
+.inputContainer {
+  @include MRP(
+    (
+      "height": 44,
+      "padding": 10,
+      "border-radius": 26,
+    )
+  );
+}
+
+.inputLabel {
+  font-family: PoppinsMedium;
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+}
+
+.inputStyle {
+  font-family: PoppinsRegular;
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+  color: $BLACK;
+}
+
+.bookTitle {
+  font-family: PoppinsMedium;
+  @include MRP(
+    (
+      "font-size": 28,
+    )
+  );
+  color: $BLACK;
+  text-align: left;
+}
+
+.authoName {
+  font-family: PoppinsMedium;
+  @include MRP(
+    (
+      "font-size": 14,
+    )
+  );
+  color: $Yellow;
+  text-align: left;
+}
+
+.statTitle {
+  font-family: PoppinsSemiBold;
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+  color: $BLACK;
+  text-align: left;
+}
+
+.statValue {
+  font-family: PoppinsRegular;
+  @include MRP(
+    (
+      "font-size": 14,
+    )
+  );
+  color: $BLACK;
+  text-align: left;
+}
+
+@media screen and (max-width: 576px) {
+  .dailogContent {
+    margin: auto !important;
+  }
+  .closeImageContainer {
+    height: calculatePixels(992, 30) !important;
+    width: calculatePixels(992, 30) !important;
+    img {
+      height: calculatePixels(992, 9) !important;
+      width: calculatePixels(992, 10) !important;
+    }
+  }
+  .btn {
+    height: calculatePixels(992, 52) !important;
+    font-size: calculatePixels(768, 16) !important;
+  }
+}

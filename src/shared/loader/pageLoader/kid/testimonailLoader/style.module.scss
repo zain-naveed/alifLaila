@@ -1,0 +1,397 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.title {
+  height: 48px;
+  max-width: 300px;
+  border-radius: 0% !important;
+}
+
+.subTitle {
+  height: 18px;
+}
+
+.activeArrowContainer {
+  min-height: 40px;
+  min-width: 40px;
+  max-height: 40px;
+  max-width: 40px;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  .title {
+    height: 22px;
+  }
+  .subTitle {
+    height: 12px;
+  }
+  .inActiveArrowContainer {
+    min-height: 22px;
+    min-width: 22px;
+    max-height: 22px;
+    max-width: 22px;
+  }
+
+  .inActiveArrowIcon {
+    height: 12px;
+    width: 12px;
+  }
+
+  .activeArrowContainer {
+    min-height: 22px;
+    min-width: 22px;
+    max-height: 22px;
+    max-width: 22px;
+  }
+
+  .activeArrowIcon {
+    height: 12px;
+    width: 12px;
+  }
+
+  .activeDot {
+    height: 8px;
+    width: 8px;
+  }
+
+  .inActiveDot {
+    height: 6px;
+    width: 6px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .title {
+    height: 22px;
+  }
+  .subTitle {
+    height: 12px;
+  }
+  .inActiveArrowContainer {
+    min-height: 22px;
+    min-width: 22px;
+    max-height: 22px;
+    max-width: 22px;
+  }
+
+  .inActiveArrowIcon {
+    height: 12px;
+    width: 12px;
+  }
+
+  .activeArrowContainer {
+    min-height: 22px;
+    min-width: 22px;
+    max-height: 22px;
+    max-width: 22px;
+  }
+
+  .activeArrowIcon {
+    height: 12px;
+    width: 12px;
+  }
+
+  .activeDot {
+    height: 8px;
+    width: 8px;
+  }
+
+  .inActiveDot {
+    height: 6px;
+    width: 6px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .title {
+    height: 26px;
+  }
+  .subTitle {
+    height: 12px;
+  }
+  .inActiveArrowContainer {
+    min-height: 22px;
+    min-width: 22px;
+    max-height: 22px;
+    max-width: 22px;
+  }
+
+  .inActiveArrowIcon {
+    height: 12px;
+    width: 12px;
+  }
+
+  .activeArrowContainer {
+    min-height: 22px;
+    min-width: 22px;
+    max-height: 22px;
+    max-width: 22px;
+  }
+
+  .activeArrowIcon {
+    height: 12px;
+    width: 12px;
+  }
+
+  .activeDot {
+    height: 8px;
+    width: 8px;
+  }
+
+  .inActiveDot {
+    height: 6px;
+    width: 6px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .title {
+    height: 34px;
+  }
+  .subTitle {
+    height: 12px;
+  }
+  .inActiveArrowContainer {
+    min-height: 28px;
+    min-width: 28px;
+    max-height: 28px;
+    max-width: 28px;
+  }
+
+  .inActiveArrowIcon {
+    height: 16px;
+    width: 16px;
+  }
+
+  .activeArrowContainer {
+    min-height: 28px;
+    min-width: 28px;
+    max-height: 28px;
+    max-width: 28px;
+  }
+
+  .activeArrowIcon {
+    height: 16px;
+    width: 16px;
+  }
+
+  .activeDot {
+    height: 9px;
+    width: 9px;
+  }
+
+  .inActiveDot {
+    height: 7px;
+    width: 7px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .title {
+    height: 41px;
+  }
+  .subTitle {
+    height: 15px;
+  }
+  .inActiveArrowContainer {
+    min-height: 34px;
+    min-width: 34px;
+    max-height: 34px;
+    max-width: 34px;
+  }
+
+  .inActiveArrowIcon {
+    height: 20px;
+    width: 20px;
+  }
+
+  .activeArrowContainer {
+    min-height: 34px;
+    min-width: 34px;
+    max-height: 34px;
+    max-width: 34px;
+  }
+
+  .activeArrowIcon {
+    height: 20px;
+    width: 20px;
+  }
+
+  .activeDot {
+    height: 10px;
+    width: 10px;
+  }
+
+  .inActiveDot {
+    height: 8px;
+    width: 8px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .title {
+    height: 48px;
+  }
+  .subTitle {
+    height: 18px;
+  }
+  .inActiveArrowContainer {
+    min-height: 40px;
+    min-width: 40px;
+    max-height: 40px;
+    max-width: 40px;
+  }
+
+  .inActiveArrowIcon {
+    height: 24px;
+    width: 24px;
+  }
+
+  .activeArrowContainer {
+    min-height: 40px;
+    min-width: 40px;
+    max-height: 40px;
+    max-width: 40px;
+  }
+
+  .activeArrowIcon {
+    height: 24px;
+    width: 24px;
+  }
+
+  .activeDot {
+    height: 10px;
+    width: 10px;
+  }
+
+  .inActiveDot {
+    height: 8px;
+    width: 8px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .title {
+    height: 55px;
+  }
+  .subTitle {
+    height: 21px;
+  }
+  .inActiveArrowContainer {
+    min-height: 46px;
+    min-width: 46px;
+    max-height: 46px;
+    max-width: 46px;
+  }
+
+  .inActiveArrowIcon {
+    height: 27px;
+    width: 27px;
+  }
+
+  .activeArrowContainer {
+    min-height: 46px;
+    min-width: 46px;
+    max-height: 46px;
+    max-width: 46px;
+  }
+
+  .activeArrowIcon {
+    height: 27px;
+    width: 27px;
+  }
+
+  .activeDot {
+    height: 11px;
+    width: 11px;
+  }
+
+  .inActiveDot {
+    height: 9px;
+    width: 9px;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .title {
+    height: 62px;
+  }
+  .subTitle {
+    height: 24px;
+  }
+  .inActiveArrowContainer {
+    min-height: 52px;
+    min-width: 52px;
+    max-height: 52px;
+    max-width: 52px;
+  }
+
+  .inActiveArrowIcon {
+    height: 30px;
+    width: 30px;
+  }
+
+  .activeArrowContainer {
+    min-height: 52px;
+    min-width: 52px;
+    max-height: 52px;
+    max-width: 52px;
+  }
+
+  .activeArrowIcon {
+    height: 30px;
+    width: 30px;
+  }
+
+  .activeDot {
+    height: 12px;
+    width: 12px;
+  }
+
+  .inActiveDot {
+    height: 10px;
+    width: 10px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .title {
+    height: 69px;
+  }
+  .subTitle {
+    height: 27px;
+  }
+  .inActiveArrowContainer {
+    min-height: 58px;
+    min-width: 58px;
+    max-height: 58px;
+    max-width: 58px;
+  }
+
+  .inActiveArrowIcon {
+    height: 33px;
+    width: 33px;
+  }
+
+  .activeArrowContainer {
+    min-height: 58px;
+    min-width: 58px;
+    max-height: 58px;
+    max-width: 58px;
+  }
+
+  .activeArrowIcon {
+    height: 33px;
+    width: 33px;
+  }
+
+  .activeDot {
+    height: 13px;
+    width: 13px;
+  }
+
+  .inActiveDot {
+    height: 11px;
+    width: 11px;
+  }
+}

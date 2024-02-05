@@ -1,0 +1,258 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.topLevelContainer {
+  height: calc(100vh - 94px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.filterBtnStyle {
+  @include responsiveProperty(
+    (
+      "height": 44,
+      "width": 140,
+      "font-size": 14,
+    )
+  );
+  border: 1px solid $PRIMARY !important;
+  background-color: white !important;
+  color: $PRIMARY !important;
+}
+
+.loadMoreBtn {
+  @include responsiveProperty(
+    (
+      "height": 44,
+      "width": 140,
+      "font-size": 14,
+    )
+  );
+}
+
+.iconStyle {
+  @include responsiveProperty(
+    (
+      "height": 20,
+      "width": 20,
+    )
+  );
+}
+
+.iconStyle path {
+  stroke: $PRIMARY;
+}
+
+.filter2Container {
+  @include responsiveProperty(
+    (
+      "height": 44,
+      "width": 208,
+      "border-radius": 25,
+      "padding-left": 12,
+      "padding-right": 12,
+    )
+  );
+  border: 1px solid $LIGHT_GREY;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.filter2Label {
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+  text-align: left;
+  color: $BLACK;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.optionsContainer {
+  @include responsiveProperty(
+    (
+      "top": 46,
+    )
+  );
+  right: 0px;
+  z-index: 1;
+}
+
+.filterResultLabel {
+  font-family: PoppinsMedium;
+  color: $Secondary;
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+  text-align: left;
+}
+
+.searchContainer {
+  @include responsiveProperty(
+    (
+      "height": 44,
+      "width": 225,
+      "border-radius": 32,
+    )
+  );
+  border: 1px solid $LIGHT_GREY;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: white;
+}
+
+.searchInput {
+  outline: 0px;
+  border: 0px;
+  background: transparent;
+  width: 100%;
+  font-family: PoppinsRegular;
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+}
+
+.searchIcon {
+  @include responsiveProperty(
+    (
+      "height": 20,
+      "width": 20,
+    )
+  );
+}
+
+.searchInput::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: PoppinsRegular;
+  color: $Gray;
+  opacity: 1; /* Firefox */
+}
+
+.searchInput:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-family: PoppinsRegular;
+  color: $Gray;
+}
+
+.searchInput::-ms-input-placeholder {
+  /* Microsoft Edge */
+  font-family: PoppinsRegular;
+  color: $Gray;
+}
+
+.sideFiltersContainer {
+  width: 20%;
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+@media (max-width: 576px) {
+  .filterBtnStyle {
+    height: calculatePixels(576, 44) !important;
+    width: calculatePixels(576, 140) !important;
+    font-size: calculatePixels(576, 14) !important;
+  }
+  .loadMoreBtn {
+    height: calculatePixels(576, 44) !important;
+    width: calculatePixels(576, 140) !important;
+    font-size: calculatePixels(576, 14) !important;
+  }
+  .iconStyle {
+    height: calculatePixels(576, 20) !important;
+    width: calculatePixels(576, 20) !important;
+  }
+  .filter2Container {
+    height: calculatePixels(576, 44) !important;
+    width: calculatePixels(576, 208) !important;
+    border-radius: calculatePixels(576, 25) !important;
+    padding-left: calculatePixels(576, 12) !important;
+    padding-right: calculatePixels(576, 12) !important;
+  }
+  .filter2Label {
+    font-size: calculatePixels(576, 14) !important;
+  }
+  .optionsContainer {
+    top: calculatePixels(576, 46) !important;
+  }
+  .filterResultLabel {
+    font-size: calculatePixels(576, 14) !important;
+  }
+  .searchContainer {
+    height: calculatePixels(576, 44) !important;
+    width: calculatePixels(576, 225) !important;
+    border-radius: calculatePixels(576, 32) !important;
+  }
+  .searchInput {
+    font-size: calculatePixels(576, 14) !important;
+  }
+  .searchIcon {
+    height: calculatePixels(576, 20) !important;
+    width: calculatePixels(576, 20) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .filterBtnStyle {
+    height: calculatePixels(768, 44) !important;
+    width: calculatePixels(768, 140) !important;
+    font-size: calculatePixels(768, 14) !important;
+  }
+  .loadMoreBtn {
+    height: calculatePixels(768, 44) !important;
+    width: calculatePixels(768, 140) !important;
+    font-size: calculatePixels(768, 14) !important;
+  }
+  .iconStyle {
+    height: calculatePixels(768, 20) !important;
+    width: calculatePixels(768, 20) !important;
+  }
+  .filter2Container {
+    height: calculatePixels(768, 44) !important;
+    width: calculatePixels(768, 208) !important;
+    border-radius: calculatePixels(768, 25) !important;
+    padding-left: calculatePixels(768, 12) !important;
+    padding-right: calculatePixels(768, 12) !important;
+  }
+  .filter2Label {
+    font-size: calculatePixels(768, 14) !important;
+  }
+  .optionsContainer {
+    top: calculatePixels(768, 46) !important;
+  }
+  .filterResultLabel {
+    font-size: calculatePixels(768, 14) !important;
+  }
+  .searchContainer {
+    height: calculatePixels(768, 44) !important;
+    width: calculatePixels(768, 225) !important;
+    border-radius: calculatePixels(768, 32) !important;
+  }
+  .searchInput {
+    font-size: calculatePixels(768, 14) !important;
+  }
+  .searchIcon {
+    height: calculatePixels(768, 20) !important;
+    width: calculatePixels(768, 20) !important;
+  }
+}

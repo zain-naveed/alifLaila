@@ -1,0 +1,22 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.header {
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+.dailogContent {
+  @include MRP(
+    (
+      "max-width": 530,
+    )
+  );
+}
+
+@media screen and (max-width: 576px) {
+  .dailogContent {
+    max-width: 300px !important;
+    margin: auto !important;
+  }
+}

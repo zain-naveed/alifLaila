@@ -1,0 +1,46 @@
+@import "shared/utils/colors.scss";
+@mixin heading {
+  font-family: "PoppinsRegular";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  color: #0f1106;
+}
+@mixin primaryBtn {
+  background-color: $PRIMARY;
+  color: white;
+  height: 45px;
+  border: 0px;
+  border-radius: 32px;
+  font-family: PoppinsMedium;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  font-size: 14px;
+  outline: 0px;
+}
+@mixin defaultBtn {
+  background-color: white;
+  color: $PRIMARY;
+  height: 45px;
+  border: 0px;
+  border-radius: 32px;
+  font-family: PoppinsMedium;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  font-size: 14px;
+  outline: 0px;
+  border: 1px solid #9a469b;
+}
+
+@mixin hideScrollBar {
+  overflow: auto;
+  -ms-overflow-style: none; /* IE 11 */
+  scrollbar-width: none; /* Firefox 64 */
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+}

@@ -1,0 +1,132 @@
+@import "shared/components/common/customInput/style.module.scss";
+
+.selectionStyle {
+  width: 100%;
+  background-color: white;
+  border: 0px;
+  outline: 0;
+  font-family: "PoppinsRegular";
+  font-size: 14px;
+  text-align: left;
+  color: #808191;
+}
+
+.optionsContainer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  border-radius: 14px;
+  box-shadow: 0px 0px 2px 0px #e4e4e4;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  top: 60px;
+  z-index: 3;
+  height: fit-content;
+  box-shadow: 0px 2px 5px lightgray;
+  max-height: 255px;
+  overflow: auto;
+  &::-webkit-scrollbar-track {
+    border: 7px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: #f2f2f2;
+  }
+
+  &::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 7px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: $PRIMARY;
+  }
+}
+
+.optionLabel {
+  width: 100%;
+  font-family: "PoppinsRegular";
+  font-size: 13px;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+  text-align: left;
+  min-height: 50px;
+  white-space: nowrap;
+}
+
+.optionLabel:hover {
+  background-color: #e4e4e4;
+}
+.arrow {
+  width: 20px;
+  height: 20px;
+}
+
+.crossIcon {
+  width: 20px;
+  height: 20px;
+  path {
+    stroke-width: 1px;
+  }
+}
+
+.inputStyle {
+  cursor: pointer;
+}
+
+.avt {
+  height: 36px;
+  width: 36px;
+  border-radius: 100%;
+}
+
+.userName {
+  font-family: PoppinsRegular;
+  color: $BLACK;
+  font-size: 14px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.userContainer {
+  border-bottom: 1px solid $Light_Grey_1;
+  width: 100%;
+  .avt {
+    height: 36px;
+    width: 36px;
+    border-radius: 100%;
+  }
+
+  .userName {
+    font-family: PoppinsRegular;
+    color: $BLACK;
+    font-size: 14px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .userNameLoader {
+    height: 20px;
+    width: 80px;
+  }
+
+  &:hover {
+    background-color: $LightPrimary;
+    .userName {
+      color: $PRIMARY;
+    }
+  }
+}
+
+.noFoundIconStyle {
+  height: 140px;
+  width: 200px;
+}
+
+.noFoundLabel1 {
+  font-size: 17px;
+}

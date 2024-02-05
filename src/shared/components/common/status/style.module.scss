@@ -1,0 +1,49 @@
+@import "shared/utils/colors.scss";
+
+.statusContainer {
+  font-size: 12px;
+  border-radius: 16px;
+  text-align: center;
+  color: $brown;
+  font-weight: 500;
+  min-height: 22px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 10px;
+  width: fit-content;
+}
+
+.statusPending {
+  background-color: #fcefc7;
+  color: #b54708;
+}
+.statusProcess {
+  background-color: #ecfdf3;
+  color: #027a48;
+}
+.statusShipped {
+  background-color: #eff8ff;
+  color: #175cd3;
+}
+.statusCompeted {
+  background-color: #f8f9fc;
+  color: #363f72;
+}
+.statusReject {
+  background-color: #fdf2fa;
+  color: #c11574;
+}
+.statusRevision {
+  background-color: #eef4ff;
+  color: #3538cd;
+}
+.statusApproved {
+  background-color: #f2f9f9;
+  color: #008080;
+}
+.statusPublished {
+  background-color: #ecfdf3;
+  color: #027a48;
+}

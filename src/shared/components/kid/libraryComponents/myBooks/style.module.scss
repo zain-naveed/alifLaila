@@ -1,0 +1,206 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.title {
+  @include responsiveProperty(
+    (
+      "font-size": 24,
+    )
+  );
+  font-family: PoppinsSemiBold;
+  color: $BLACK;
+  text-align: left;
+}
+
+.subTitle {
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+  font-family: PoppinsRegular;
+  color: $Gray;
+  text-align: left;
+}
+
+.searchContainer {
+  @include responsiveProperty(
+    (
+      "border-radius": 32,
+      "height": 44,
+      "width": 225,
+    )
+  );
+  border: 1px solid $LIGHT_GREY;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.filterContainer {
+  @include responsiveProperty(
+    (
+      "border-radius": 25,
+      "height": 44,
+      "width": 145,
+    )
+  );
+  border: 1px solid $LIGHT_GREY;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.filterLabel {
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+  font-family: PoppinsRegular;
+  color: $BLACK;
+  text-align: left;
+}
+
+.inActiveLabel {
+  color: $Gray;
+}
+
+.chevIcon {
+  @include responsiveProperty(
+    (
+      "height": 24,
+      "width": 24,
+    )
+  );
+}
+
+.inActive path {
+  stroke: $Gray;
+}
+
+.searchInput {
+  outline: 0px;
+  border: 0px;
+  background: transparent;
+  width: 100%;
+  font-family: PoppinsRegular;
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+}
+
+.searchIcon {
+  @include responsiveProperty(
+    (
+      "height": 20,
+      "width": 20,
+    )
+  );
+}
+
+.searchInput::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: PoppinsRegular;
+  color: $Gray;
+  opacity: 1; /* Firefox */
+}
+
+.searchInput:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-family: PoppinsRegular;
+  color: $Gray;
+}
+
+.searchInput::-ms-input-placeholder {
+  /* Microsoft Edge */
+  font-family: PoppinsRegular;
+  color: $Gray;
+}
+
+.seperator {
+  height: 1px;
+  background-color: $Light_Grey_1;
+  width: 100%;
+}
+
+.optionsContainer {
+  @include responsiveProperty(
+    (
+      "top": 45,
+    )
+  );
+  width: 140px !important;
+  z-index: 2;
+  right: 0px;
+}
+
+@media screen and (max-width: 576px) {
+  .title {
+    font-size: calculatePixels(992, 24) !important;
+  }
+  .subTitle {
+    font-size: calculatePixels(992, 14) !important;
+  }
+  .searchContainer {
+    border-radius: calculatePixels(992, 32) !important;
+
+    height: calculatePixels(992, 44) !important;
+    width: calculatePixels(992, 225) !important;
+  }
+  .searchInput {
+    font-size: calculatePixels(992, 14) !important;
+  }
+  .searchIcon {
+    height: calculatePixels(992, 20) !important;
+    width: calculatePixels(992, 20) !important;
+  }
+  .filterContainer {
+    height: calculatePixels(992, 44) !important;
+    width: calculatePixels(992, 145) !important;
+    border-radius: calculatePixels(992, 25) !important;
+  }
+  .filterLabel {
+    font-size: calculatePixels(992, 14) !important;
+  }
+  .chevIcon {
+    height: calculatePixels(992, 24) !important;
+    width: calculatePixels(992, 24) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .title {
+    font-size: calculatePixels(1200, 24) !important;
+  }
+  .subTitle {
+    font-size: calculatePixels(1200, 14) !important;
+  }
+  .searchContainer {
+    border-radius: calculatePixels(1200, 32) !important;
+
+    height: calculatePixels(1200, 44) !important;
+    width: calculatePixels(1200, 225) !important;
+  }
+  .searchInput {
+    font-size: calculatePixels(1200, 14) !important;
+  }
+  .searchIcon {
+    height: calculatePixels(1200, 20) !important;
+    width: calculatePixels(1200, 20) !important;
+  }
+  .filterContainer {
+    height: calculatePixels(1200, 44) !important;
+    width: calculatePixels(1200, 145) !important;
+    border-radius: calculatePixels(1200, 25) !important;
+  }
+  .filterLabel {
+    font-size: calculatePixels(1200, 14) !important;
+  }
+  .chevIcon {
+    height: calculatePixels(1200, 24) !important;
+    width: calculatePixels(1200, 24) !important;
+  }
+}

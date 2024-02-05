@@ -1,0 +1,264 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.topContainer {
+  border-top: 1px solid $BorderGray;
+}
+
+.title {
+  font-family: BitterSemiBold;
+  color: $DARK_GREEN;
+  @include responsiveProperty(
+    (
+      "font-size": 48,
+    )
+  );
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.listContainer {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.listContainer::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.listContainer {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.mainContainer {
+  @include responsiveProperty(
+    (
+      "min-height": 406,
+      "max-height": 406,
+      "min-width": 406,
+      "max-width": 406,
+    )
+  );
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+}
+
+.img {
+  @include responsiveProperty(
+    (
+      "height": 148,
+      "width": 148,
+    )
+  );
+}
+
+.cardTitle {
+  font-family: BitterSemiBold;
+  @include responsiveProperty(
+    (
+      "font-size": 26,
+      "max-width": 317,
+    )
+  );
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.content {
+  font-family: PoppinsRegular;
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+      "max-width": 317,
+    )
+  );
+  text-align: center;
+  color: $GRAY2;
+}
+
+.inActiveArrowContainer {
+  @include responsiveProperty(
+    (
+      "height": 40,
+      "width": 40,
+    )
+  );
+  border-radius: 100%;
+  border: 1px solid $BorderGray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  &:hover {
+    cursor: not-allowed;
+  }
+}
+
+.inActiveArrowIcon {
+  @include responsiveProperty(
+    (
+      "height": 24,
+      "width": 24,
+    )
+  );
+}
+
+.inActiveArrowIcon path {
+  fill: black;
+}
+
+.activeArrowContainer {
+  @include responsiveProperty(
+    (
+      "height": 40,
+      "width": 40,
+    )
+  );
+  border-radius: 100%;
+  border: 1px solid $DARK_GREEN;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $DARK_GREEN;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.activeArrowIcon {
+  @include responsiveProperty(
+    (
+      "height": 24,
+      "width": 24,
+    )
+  );
+}
+
+.activeArrowIcon path {
+  fill: white;
+}
+
+.activeDot {
+  @include responsiveProperty(
+    (
+      "height": 10,
+      "width": 10,
+    )
+  );
+  background-color: $Secondary;
+  border-radius: 100%;
+}
+
+.inActiveDot {
+  @include responsiveProperty(
+    (
+      "height": 8,
+      "width": 8,
+    )
+  );
+  background-color: #ffebf1;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  .title {
+    font-size: calculatePixels(576, 48) !important;
+  }
+  .mainContainer {
+    min-height: calculatePixels(576, 406) !important;
+    max-height: calculatePixels(576, 406) !important;
+    min-width: calculatePixels(576, 406) !important;
+    max-width: calculatePixels(576, 406) !important;
+    border-radius: 100%;
+  }
+  .img {
+    height: calculatePixels(576, 148) !important;
+    width: calculatePixels(576, 148) !important;
+  }
+  .cardTitle {
+    font-size: calculatePixels(576, 26) !important;
+    max-width: calculatePixels(576, 317) !important;
+  }
+  .content {
+    font-size: calculatePixels(576, 16) !important;
+    max-width: calculatePixels(576, 317) !important;
+  }
+  .inActiveArrowContainer {
+    height: calculatePixels(576, 40) !important;
+    width: calculatePixels(576, 40) !important;
+  }
+  .inActiveArrowIcon {
+    height: calculatePixels(576, 24) !important;
+    width: calculatePixels(576, 24) !important;
+  }
+  .activeArrowContainer {
+    height: calculatePixels(576, 40) !important;
+    width: calculatePixels(576, 40) !important;
+  }
+  .activeArrowIcon {
+    height: calculatePixels(576, 24) !important;
+    width: calculatePixels(576, 24) !important;
+  }
+  .activeDot {
+    height: calculatePixels(576, 10) !important;
+    width: calculatePixels(576, 10) !important;
+  }
+  .inActiveDot {
+    height: calculatePixels(576, 8) !important;
+    width: calculatePixels(576, 8) !important;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .title {
+    font-size: calculatePixels(768, 48) !important;
+  }
+  .mainContainer {
+    min-height: calculatePixels(768, 406) !important;
+    max-height: calculatePixels(768, 406) !important;
+    min-width: calculatePixels(768, 406) !important;
+    max-width: calculatePixels(768, 406) !important;
+    border-radius: 100%;
+  }
+  .img {
+    height: calculatePixels(768, 148) !important;
+    width: calculatePixels(768, 148) !important;
+  }
+  .cardTitle {
+    font-size: calculatePixels(768, 26) !important;
+    max-width: calculatePixels(768, 317) !important;
+  }
+  .content {
+    font-size: calculatePixels(768, 16) !important;
+    max-width: calculatePixels(768, 317) !important;
+  }
+  .inActiveArrowContainer {
+    height: calculatePixels(768, 40) !important;
+    width: calculatePixels(768, 40) !important;
+  }
+  .inActiveArrowIcon {
+    height: calculatePixels(768, 24) !important;
+    width: calculatePixels(768, 24) !important;
+  }
+  .activeArrowContainer {
+    height: calculatePixels(768, 40) !important;
+    width: calculatePixels(768, 40) !important;
+  }
+  .activeArrowIcon {
+    height: calculatePixels(768, 24) !important;
+    width: calculatePixels(768, 24) !important;
+  }
+  .activeDot {
+    height: calculatePixels(768, 10) !important;
+    width: calculatePixels(768, 10) !important;
+  }
+  .inActiveDot {
+    height: calculatePixels(768, 8) !important;
+    width: calculatePixels(768, 8) !important;
+  }
+}

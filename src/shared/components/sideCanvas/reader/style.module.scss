@@ -1,0 +1,86 @@
+@import "shared/utils/colors.scss";
+@import "shared/components/header/main/style.module.scss";
+.backDropContainer {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 1000;
+  padding: 0px !important;
+  transition: visibility 0.2s;
+  overflow: hidden;
+}
+
+.mainContainer {
+  background-color: white;
+  max-width: 300px;
+  height: 100%;
+  padding: 0px !important;
+  overflow-y: auto;
+  transition: transform 0.3s;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  overflow-x: hidden;
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.hidden {
+  transform: translateX(300px);
+}
+
+.shown {
+  transform: translateX(0px);
+}
+
+.mainContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.crossIconContainer {
+  height: 30px;
+  width: 30px;
+  border-radius: 8px;
+  border: 1px solid $LIGHT_GREY;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchContainer {
+  width: 100%;
+}
+
+.itemContainer:hover .routeIconStyle {
+  filter: none;
+}
+
+.routeIconStyle {
+  height: 24px;
+  width: 24px;
+  &:hover {
+    filter: none;
+  }
+}
+
+.inActiveIcon {
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+}
+
+.totalCoinsLabel {
+  font-family: PoppinsMedium;
+  font-size: 18px;
+  color: $Gray;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.totalCoins {
+  font-family: PoppinsRegular;
+  font-size: 18px;
+  color: $Secondary;
+  text-align: left;
+}

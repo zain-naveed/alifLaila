@@ -1,0 +1,158 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.header {
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+.dailogContent {
+  @include MRP(
+    (
+      "max-width": 530,
+    )
+  );
+}
+
+.heading {
+  font-family: PoppinsSemiBold;
+  @include MRP(
+    (
+      "font-size": 28,
+    )
+  );
+  text-align: center;
+  color: $BLACK;
+}
+
+.paragraph {
+  font-family: PoppinsRegular;
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+  text-align: center;
+  color: $Gray;
+}
+
+.buttonContainer {
+  @include MRP(
+    (
+      "height": 52,
+      "width": 174,
+      "border-radius": 32,
+      "font-size": 16,
+    )
+  );
+}
+
+.buttonContainer2 {
+  @include MRP(
+    (
+      "height": 52,
+      "width": 174,
+      "border-radius": 32,
+      "font-size": 16,
+    )
+  );
+  border: 1px solid $PRIMARY !important;
+  color: $PRIMARY !important;
+  background-color: white !important;
+}
+
+.insufficientIcon {
+  @include MRP(
+    (
+      "height": 247,
+      "width": 281,
+    )
+  );
+}
+
+.remainingContainerLoader {
+  @include MRP(
+    (
+      "height": 42,
+      "width": 191,
+    )
+  );
+}
+
+.remainingContainer {
+  @include MRP(
+    (
+      "height": 42,
+      "border-radius": 21,
+    )
+  );
+  width: fit-content;
+  border: 1px solid $Yellow;
+  background-color: rgba($color: #eeaf61, $alpha: 0.19);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coinIcon {
+  @include MRP(
+    (
+      "height": 30,
+      "width": 30,
+    )
+  );
+}
+
+.remLabel {
+  font-family: PoppinsMedium;
+  @include MRP(
+    (
+      "font-size": 14,
+    )
+  );
+  color: $Yellow;
+}
+
+@media screen and (max-width: 576px) {
+  .dailogContent {
+    max-width: 300px !important;
+    margin: auto !important;
+  }
+  .heading {
+    font-size: calculatePixels(768, 28) !important;
+  }
+  .paragraph {
+    font-size: calculatePixels(768, 16) !important;
+  }
+  .buttonContainer {
+    height: calculatePixels(768, 52) !important;
+    width: calculatePixels(768, 174) !important;
+    border-radius: calculatePixels(768, 32) !important;
+    font-size: calculatePixels(768, 16) !important;
+  }
+  .buttonContainer2 {
+    height: calculatePixels(768, 52) !important;
+    width: calculatePixels(768, 174) !important;
+    border-radius: calculatePixels(768, 32) !important;
+    font-size: calculatePixels(768, 16) !important;
+  }
+  .insufficientIcon {
+    height: calculatePixels(768, 247) !important;
+    width: calculatePixels(768, 281) !important;
+  }
+  .remainingContainerLoader {
+    height: calculatePixels(768, 42) !important;
+    width: calculatePixels(768, 191) !important;
+  }
+  .remainingContainer {
+    height: calculatePixels(768, 42) !important;
+    border-radius: calculatePixels(768, 21) !important;
+  }
+  .coinIcon {
+    height: calculatePixels(768, 30) !important;
+    width: calculatePixels(768, 30) !important;
+  }
+  .remLabel {
+    font-size: calculatePixels(768, 14) !important;
+  }
+}

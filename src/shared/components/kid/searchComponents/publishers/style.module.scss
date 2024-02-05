@@ -1,0 +1,122 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.pubContainer {
+  @include responsiveProperty(
+    (
+      "height": 220,
+      "width": 207,
+      "border-radius": 40,
+      "gap": 5,
+    )
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  @include responsiveProperty(
+    (
+      "height": 100,
+      "width": 100,
+    )
+  );
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.title {
+  @include responsiveProperty(
+    (
+      "font-size": 18,
+    )
+  );
+  font-family: BitterSemiBold;
+  color: $BLACK;
+  text-align: center;
+}
+
+.titleLoader {
+  @include responsiveProperty(
+    (
+      "height": 18,
+      "width": 115,
+    )
+  );
+}
+
+.count {
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  font-family: PoppinsRegular;
+  color: $Gray;
+  text-align: center;
+}
+
+.countLoader {
+  @include responsiveProperty(
+    (
+      "height": 16,
+      "width": 69,
+    )
+  );
+}
+
+@media screen and (max-width: 576px) {
+  .pubContainer {
+    height: calculatePixels(768, 220) !important;
+    width: calculatePixels(768, 207) !important;
+    border-radius: calculatePixels(768, 40) !important;
+    gap: calculatePixels(768, 5) !important;
+  }
+  .avatar {
+    height: calculatePixels(768, 100) !important;
+    width: calculatePixels(768, 100) !important;
+  }
+  .title {
+    font-size: calculatePixels(768, 18) !important;
+  }
+  .titleLoader {
+    height: calculatePixels(768, 18) !important;
+    width: calculatePixels(768, 115) !important;
+  }
+  .count {
+    font-size: calculatePixels(768, 16) !important;
+  }
+  .countLoader {
+    height: calculatePixels(768, 16) !important;
+    width: calculatePixels(768, 69) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .pubContainer {
+    height: calculatePixels(992, 220) !important;
+    width: calculatePixels(992, 207) !important;
+    border-radius: calculatePixels(992, 40) !important;
+    gap: calculatePixels(992, 5) !important;
+  }
+  .avatar {
+    height: calculatePixels(992, 100) !important;
+    width: calculatePixels(992, 100) !important;
+  }
+  .title {
+    font-size: calculatePixels(992, 18) !important;
+  }
+  .titleLoader {
+    height: calculatePixels(992, 18) !important;
+    width: calculatePixels(992, 115) !important;
+  }
+  .count {
+    font-size: calculatePixels(992, 16) !important;
+  }
+  .countLoader {
+    height: calculatePixels(992, 16) !important;
+    width: calculatePixels(992, 69) !important;
+  }
+}

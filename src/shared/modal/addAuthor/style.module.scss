@@ -1,0 +1,367 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.ageCategory {
+  width: 50%;
+}
+
+.reportDialog {
+  @include MRP(
+    (
+      "max-width": 650,
+    )
+  );
+}
+
+.emailContainer{
+  width: 50%;
+}
+
+.labelText {
+  @include MRP(
+    (
+      "font-size": 24,
+    )
+  );
+  font-family: PoppinsSemiBold;
+  color: $PRIMARY;
+}
+
+.reportButton {
+  @include MRP(
+    (
+      "font-size": 16,
+      "height": 52,
+      "border-radius": 32,
+      "width": 160,
+    )
+  );
+  font-family: PoppinsMedium !important;
+}
+
+.closeImageContainer {
+  border-radius: 100%;
+  border: 1px solid #e6ecf3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include MRP(
+    (
+      "width": 30,
+      "height": 30,
+    )
+  );
+  text-align: center;
+
+  img {
+    @include MRP(
+      (
+        "width": 9,
+        "height": 10,
+      )
+    );
+  }
+}
+
+.dropDownLabel {
+  font-family: PoppinsMedium;
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+  margin-bottom: 5px;
+}
+
+.asterik {
+  color: $PRIMARY;
+}
+
+.dropDownContainer {
+  @include MRP(
+    (
+      "height": 52,
+      "padding": 10,
+      "border-radius": 26,
+    )
+  );
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid $LIGHT_GREY;
+}
+
+.selectText {
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+  font-family: PoppinsRegular;
+  color: #808191 !important;
+}
+
+.inputContainer {
+  @include MRP(
+    (
+      "height": 52,
+      "padding": 10,
+      "border-radius": 26,
+    )
+  );
+}
+
+.inputLabel {
+  font-family: PoppinsRegular;
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+  margin-bottom: 5px;
+}
+
+.inputStyle {
+  font-family: PoppinsRegular;
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+  color: $BLACK;
+}
+
+.error {
+  color: #ea5b5b;
+  font-size: 11px;
+  text-align: left;
+
+  z-index: 1;
+  margin-left: 5px;
+}
+
+.iconStyle {
+  @include MRP(
+    (
+      "height": 24,
+      "width": 24,
+    )
+  );
+
+  path {
+    stroke: #adb5bd;
+  }
+}
+
+.profileContainer {
+  @include MRP(
+    (
+      "height": 114,
+      "width": 114,
+    )
+  );
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.imgStyle {
+  @include MRP(
+    (
+      "height": 114,
+      "width": 114,
+    )
+  );
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.cameraContainer {
+  position: absolute;
+  height: 30px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.optionsContainer {
+  top: -180px;
+  max-height: 200px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar-track {
+    border: 7px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: #f2f2f2;
+  }
+
+  &::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 7px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: $DARK_GREEN;
+  }
+}
+
+.uploadContainer {
+  @include MRP(
+    (
+      "height": 126,
+      "border-radius": 20,
+    )
+  );
+
+  width: 100%;
+  border: 1px solid $LIGHT_GREY;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    @include MRP(
+      (
+        "height": 46,
+        "width": 46,
+      )
+    );
+  }
+}
+
+.bookUploadContent {
+  font-family: PoppinsMedium;
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+  color: $PRIMARY;
+  span {
+    font-family: PoppinsRegular;
+    @include MRP(
+      (
+        "font-size": 16,
+      )
+    );
+    color: $Gray;
+  }
+  p {
+    font-family: PoppinsRegular;
+    @include MRP(
+      (
+        "font-size": 14,
+      )
+    );
+    color: $Gray;
+    margin: 0px !important;
+  }
+}
+
+.bookUploadActivePreview {
+  border: 1px solid $PRIMARY;
+  display: flex;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 96px;
+  width: 100%;
+  border-radius: 8px;
+
+  div {
+    width: 100%;
+
+    .coverHeading {
+      font-size: 14px;
+      color: #344054;
+      font-weight: 500;
+      margin-bottom: 0px;
+      font-family: "Inter";
+    }
+
+    .coverTitle {
+      font-family: "Inter";
+      font-weight: 400;
+      font-size: 14px;
+      color: #667085;
+    }
+
+    .closeImageContainer {
+      border-radius: 100%;
+      border: 1px solid #e6ecf3;
+      width: 28px;
+      height: 26px;
+      text-align: center;
+
+      img {
+        width: 9px;
+        height: 9px;
+        margin-bottom: 2px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .emailContainer{
+    width: 100%;
+  }
+  .reportDialog {
+    max-width: 100% !important;
+    margin: auto !important;
+  }
+
+  .ageCategory {
+    width: 100%;
+  }
+
+  .labelText {
+    font-size: calculatePixels(1200, 24) !important;
+  }
+
+  .reportButton {
+    font-size: calculatePixels(1200, 16) !important;
+    height: calculatePixels(1200, 52) !important;
+    border-radius: calculatePixels(1200, 32) !important;
+    width: calculatePixels(1200, 160) !important;
+  }
+
+  .closeImageContainer {
+    height: calculatePixels(1200, 30) !important;
+    width: calculatePixels(1200, 30) !important;
+
+    img {
+      height: calculatePixels(1200, 9) !important;
+      width: calculatePixels(1200, 10) !important;
+    }
+  }
+
+  .iconStyle {
+    height: calculatePixels(1200, 24) !important;
+    width: calculatePixels(1200, 24) !important;
+  }
+
+  .inputContainer {
+    height: calculatePixels(1200, 52) !important;
+    padding: calculatePixels(1200, 10) !important;
+    border-radius: calculatePixels(1200, 26) !important;
+  }
+
+  .inputLabel {
+    font-size: calculatePixels(1200, 16) !important;
+  }
+
+  .inputStyle {
+    font-size: calculatePixels(1200, 16) !important;
+  }
+
+  .dropDownContainer {
+    height: calculatePixels(1200, 52) !important;
+    padding: calculatePixels(1200, 10) !important;
+    border-radius: calculatePixels(1200, 26) !important;
+  }
+}

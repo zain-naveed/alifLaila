@@ -1,0 +1,31 @@
+@import "shared/utils/colors.scss";
+
+.header {
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+.dailogContent {
+  max-width: 630px !important;
+}
+
+.attach {
+  font-family: PoppinsRegular;
+  font-size: 16px;
+  color: $Gray;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.attachIcon {
+  height: 24px;
+  width: 24px;
+}
+
+.btnContainer {
+  height: 44px !important;
+  width: 140px !important;
+  align-self: flex-end !important;
+}

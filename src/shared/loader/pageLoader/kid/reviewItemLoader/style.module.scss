@@ -1,0 +1,75 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.reviewMainContainer {
+  border-bottom: 1px solid $Light_Grey_3;
+}
+.reviewName {
+  @include responsiveProperty(
+    (
+      "height": 21,
+      "width": 116,
+    )
+  );
+}
+.reviewTime {
+  @include responsiveProperty(
+    (
+      "height": 21,
+      "width": 82,
+    )
+  );
+}
+.reviewMsg {
+  @include responsiveProperty(
+    (
+      "height": 18,
+    )
+  );
+}
+.imgStyle {
+  @include responsiveProperty(
+    (
+      "height": 76,
+      "width": 76,
+    )
+  );
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 576px) {
+  .reviewName {
+    height: calculatePixels(992, 21) !important;
+    width: calculatePixels(992, 116) !important;
+  }
+  .reviewTime {
+    height: calculatePixels(992, 21) !important;
+    width: calculatePixels(992, 82) !important;
+  }
+  .reviewMsg {
+    height: calculatePixels(992, 18) !important;
+  }
+  .imgStyle {
+    height: calculatePixels(992, 76) !important;
+    width: calculatePixels(992, 76) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .reviewName {
+    height: calculatePixels(1200, 21) !important;
+    width: calculatePixels(1200, 116) !important;
+  }
+  .reviewTime {
+    height: calculatePixels(1200, 21) !important;
+    width: calculatePixels(1200, 82) !important;
+  }
+  .reviewMsg {
+    height: calculatePixels(1200, 18) !important;
+  }
+  .imgStyle {
+    height: calculatePixels(1200, 76) !important;
+    width: calculatePixels(1200, 76) !important;
+  }
+}

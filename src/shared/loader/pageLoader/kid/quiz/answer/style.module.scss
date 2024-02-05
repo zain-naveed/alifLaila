@@ -1,0 +1,12 @@
+@import "shared/utils/colors.scss";
+.answerContainer {
+    margin-top: 42px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    .answerItem{
+        border-radius: 8px;
+        margin-bottom: 12px;
+        height: 47px;
+    }
+}

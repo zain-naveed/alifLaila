@@ -1,0 +1,116 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.bookMainHeading {
+  font-size: 18px;
+  font-family: PoppinsMedium;
+  text-align: left;
+  color: $BLACK;
+}
+
+.bookMainTitle {
+  font-size: 14px;
+  font-family: PoppinsRegular;
+  text-align: left;
+  color: $Gray;
+}
+
+.buttonMain {
+  max-width: 140px;
+}
+
+.searchContainer {
+  height: 44px;
+  width: 225px;
+  border-radius: 32px;
+  border: 1px solid $LIGHT_GREY;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.searchInput {
+  outline: 0px;
+  border: 0px;
+  background: transparent;
+  width: 100%;
+  font-family: PoppinsRegular;
+  font-size: 14px;
+}
+
+.searchIcon {
+  height: 20px;
+  width: 20px;
+}
+
+.searchInput::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: PoppinsRegular;
+  color: $Gray;
+  opacity: 1; /* Firefox */
+}
+
+.searchInput:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-family: PoppinsRegular;
+  color: $Gray;
+}
+
+.searchInput::-ms-input-placeholder {
+  /* Microsoft Edge */
+  font-family: PoppinsRegular;
+  color: $Gray;
+}
+
+//  -------------------------------table styling-------------------------
+.tableMain {
+  background-color: white;
+  border: 1px solid #e4e7ec;
+  box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1),
+    0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+  border-radius: 8px;
+}
+
+.tableContentLabel {
+  font-size: 14px;
+  font-family: PoppinsRegular;
+  color: $BLACK;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.kidAvt {
+  height: 32px;
+  width: 32px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.actionContainer {
+  height: 36px !important;
+  width: 36px !important;
+  border-radius: 100%;
+  background-color: $Ultra_Light_Grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.actionIcon {
+  height: 20px;
+  width: 20px;
+}
+
+.labelLoader {
+  height: 20px !important;
+  width: 117px !important;
+}
+
+.statusContainerLoader {
+  height: 22px !important;
+  width: 76px !important;
+  border-radius: 16px !important;
+}

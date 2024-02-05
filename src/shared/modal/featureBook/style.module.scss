@@ -1,0 +1,26 @@
+@import "shared/utils/responsive.module.scss";
+
+.dailogContent {
+  @include MRP(
+    (
+      "max-width": 630,
+    )
+  );
+}
+
+.dailogContent2 {
+  @include MRP(
+    (
+      "max-width": 840,
+    )
+  );
+}
+
+@media screen and (max-width: 576px) {
+  .dailogContent {
+    max-width: 100% !important;
+  }
+  .dailogContent2 {
+    max-width: 100% !important;
+  }
+}

@@ -1,0 +1,76 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.dailogContent {
+  @include MRP(
+    (
+      "max-width": 630,
+    )
+  );
+}
+
+.modalHeaderHeaing {
+  @include MRP(
+    (
+      "font-size": 24,
+    )
+  );
+  font-family: "BitterSemiBold";
+  margin-bottom: 0;
+}
+
+.subHeading {
+  @include MRP(
+    (
+      "font-size": 14,
+    )
+  );
+  font-family: "PoppinsRegular";
+  color: $GRAY2;
+  text-align: center;
+  max-width: 440px;
+}
+
+.closeImageContainer {
+  border-radius: 100%;
+  border: 1px solid #e6ecf3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include MRP(
+    (
+      "width": 30,
+      "height": 30,
+    )
+  );
+  text-align: center;
+  img {
+    @include MRP(
+      (
+        "width": 9,
+        "height": 10,
+      )
+    );
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .dailogContent {
+    max-width: 400px !important;
+    margin: auto !important;
+  }
+  .modalHeaderHeaing {
+    font-size: calculatePixels(992, 24) !important;
+  }
+  .subHeading {
+    font-size: calculatePixels(992, 14) !important;
+  }
+  .closeImageContainer {
+    height: calculatePixels(992, 30) !important;
+    width: calculatePixels(992, 30) !important;
+    img {
+      height: calculatePixels(992, 9) !important;
+      width: calculatePixels(992, 10) !important;
+    }
+  }
+}

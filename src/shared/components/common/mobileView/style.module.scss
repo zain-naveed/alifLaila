@@ -1,0 +1,37 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.icon {
+  width: 103px;
+  height: 68px;
+}
+
+.viewContainer {
+  border-radius: 8px;
+  border: 1px solid #dddddd;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+
+.imgStyle {
+  height: 193px;
+  object-fit: contain;
+}
+
+.title {
+  font-family: PoppinsSemiBold;
+  font-size: 16px;
+  color: $BLACK;
+  text-align: center;
+  width: 100%;
+}
+
+.subTitle {
+  font-family: PoppinsRegular;
+  font-size: 14px;
+  color: $Gray;
+  text-align: center;
+  width: 100%;
+}

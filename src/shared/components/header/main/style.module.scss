@@ -1,0 +1,118 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.topLevelContainer {
+  border-bottom: 1px solid #e1e1e1;
+  background-color: #fff8ee;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  transition: 0.2s;
+}
+
+.logoStyle {
+  width: 90px;
+  height: 60px;
+}
+.searchContainer {
+  height: 44px;
+  width: 253px;
+  border-radius: 25px;
+  border: 1px solid $LIGHT_GREY;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.searchIconStyle {
+  height: 20px;
+  width: 20px;
+}
+
+.micIconStyle {
+  height: 24px;
+  width: 24px;
+}
+
+.searchInputStyle {
+  background-color: transparent;
+  border: 0px;
+  outline: 0px;
+}
+
+.searchInputStyle::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: PoppinsRegular;
+  color: $LIGHT_GREY;
+  opacity: 1; /* Firefox */
+}
+
+.searchInputStyle:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-family: PoppinsRegular;
+  color: $LIGHT_GREY;
+}
+
+.searchInputStyle::-ms-input-placeholder {
+  /* Microsoft Edge */
+  font-family: PoppinsRegular;
+  color: $LIGHT_GREY;
+}
+
+.listItemtext {
+  font-family: PoppinsRegular;
+  color: #6e7c87;
+  font-size: 16px;
+  margin: 13px;
+  &:hover {
+    cursor: pointer;
+    color: $PRIMARY;
+  }
+}
+
+.activeItem {
+  color: $PRIMARY !important;
+  font-family: PoppinsMedium;
+}
+
+.btnContainer {
+  width: 162px !important;
+  background-color: #f9a11b;
+  color: white;
+  height: 48px !important;
+  border: 0px !important;
+  border-radius: 28px !important;
+  font-family: PoppinsMedium;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.greenBtn {
+  background-color: $DARK_GREEN;
+}
+
+.primaryBtn {
+  background-color: $PRIMARY;
+}
+
+.menuIconStyle {
+  height: 48px;
+  width: 48px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.iconStyle {
+  min-height: 24px;
+  min-width: 24px;
+  max-height: 24px;
+  max-width: 24px;
+  height: 100%;
+  width: 100%;
+}

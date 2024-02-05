@@ -1,0 +1,147 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/mixin.module.scss";
+
+.title {
+  font-family: BitterSemiBold;
+  @include responsiveProperty(
+    (
+      "font-size": 40,
+    )
+  );
+  color: $DARK_GREEN;
+  text-align: center;
+  text-transform: capitalize;
+  span {
+    color: $Secondary;
+  }
+}
+
+.titleLoader {
+  @include responsiveProperty(
+    (
+      "height": 40,
+      "width": 300,
+    )
+  );
+  border-radius: 0% !important;
+}
+
+.progressBookList {
+  overflow-x: auto;
+  background-color: transparent;
+  scroll-behavior: smooth;
+  @include hideScrollBar();
+}
+
+.leftArrowContainer {
+  @include responsiveProperty(
+    (
+      "height": 72,
+      "width": 72,
+      "left": -20,
+    )
+  );
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  background-color: white;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $BorderGray;
+  cursor: pointer;
+  box-shadow: 0px 5.14286px 24.42857px 0px rgba(0, 0, 0, 0.16);
+}
+
+.rightArrowContainer {
+  @include responsiveProperty(
+    (
+      "height": 72,
+      "width": 72,
+      "right": -20,
+    )
+  );
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  background-color: white;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $BorderGray;
+  cursor: pointer;
+  box-shadow: 0px 5.14286px 24.42857px 0px rgba(0, 0, 0, 0.16);
+}
+
+.arrowIcon {
+  @include responsiveProperty(
+    (
+      "height": 28,
+      "width": 28,
+    )
+  );
+  path {
+    fill: black;
+  }
+}
+
+.active {
+  background-color: $DARK_GREEN;
+  border-color: $DARK_GREEN;
+  .arrowIcon path {
+    fill: white;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: calculatePixels(576, 40) !important;
+  }
+  .titleLoader {
+    height: calculatePixels(576, 40) !important;
+    width: calculatePixels(576, 300) !important;
+  }
+  .leftArrowContainer {
+    height: calculatePixels(576, 72) !important;
+    width: calculatePixels(576, 72) !important;
+    left: -5px !important;
+  }
+  .rightArrowContainer {
+    height: calculatePixels(576, 72) !important;
+    width: calculatePixels(576, 72) !important;
+    right: -5px !important;
+  }
+  .arrowIcon {
+    height: calculatePixels(576, 28) !important;
+    width: calculatePixels(576, 28) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .title {
+    font-size: calculatePixels(768, 40) !important;
+  }
+  .titleLoader {
+    height: calculatePixels(768, 40) !important;
+    width: calculatePixels(768, 300) !important;
+  }
+  .leftArrowContainer {
+    height: calculatePixels(768, 72) !important;
+    width: calculatePixels(768, 72) !important;
+    left: calculatePixels(768, -36) !important;
+  }
+  .rightArrowContainer {
+    height: calculatePixels(768, 72) !important;
+    width: calculatePixels(768, 72) !important;
+    right: calculatePixels(768, -36) !important;
+  }
+  .arrowIcon {
+    height: calculatePixels(768, 28) !important;
+    width: calculatePixels(768, 28) !important;
+  }
+}

@@ -1,0 +1,133 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.cartContainer {
+  display: flex;
+  @include responsiveProperty(
+    (
+      "width": 127,
+      "height": 52,
+      "border-radius": 24,
+    )
+  );
+  background: #f5f5f5;
+  align-items: center;
+  justify-content: center;
+}
+
+.minus {
+  width: 33%;
+  height: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    width: 33%;
+    background-color: #f2f7fb;
+    height: inherit;
+    @include responsiveProperty(
+      (
+        "border-top-left-radius": 24,
+        "border-bottom-left-radius": 24,
+      )
+    );
+  }
+}
+
+.iconStyle {
+  @include responsiveProperty(
+    (
+      "width": 20,
+      "height": 20,
+    )
+  );
+}
+
+.cartValue {
+  width: 33%;
+  text-align: center;
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  font-family: PoppinsSemiBold;
+}
+
+.add {
+  width: 33%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  height: inherit;
+
+  &:hover {
+    background-color: #f2f7fb;
+    height: inherit;
+    @include responsiveProperty(
+      (
+        "border-top-right-radius": 24,
+        "border-bottom-right-radius": 24,
+      )
+    );
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .cartContainer {
+    width: calculatePixels(992, 127) !important;
+    height: calculatePixels(992, 52) !important;
+    border-radius: calculatePixels(992, 24) !important;
+  }
+  .minus {
+    &:hover {
+      border-top-left-radius: calculatePixels(992, 24) !important;
+      border-bottom-left-radius: calculatePixels(992, 24) !important;
+    }
+  }
+  .add {
+    &:hover {
+      border-top-right-radius: calculatePixels(992, 24) !important;
+      border-bottom-right-radius: calculatePixels(992, 24) !important;
+    }
+  }
+  .iconStyle {
+    width: calculatePixels(992, 20) !important;
+    height: calculatePixels(992, 20) !important;
+  }
+
+  .cartValue {
+    font-size: calculatePixels(992, 16) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .cartContainer {
+    width: calculatePixels(1200, 127) !important;
+    height: calculatePixels(1200, 52) !important;
+    border-radius: calculatePixels(1200, 24) !important;
+  }
+  .minus {
+    &:hover {
+      border-top-left-radius: calculatePixels(1200, 24) !important;
+      border-bottom-left-radius: calculatePixels(1200, 24) !important;
+    }
+  }
+  .add {
+    &:hover {
+      border-top-right-radius: calculatePixels(1200, 24) !important;
+      border-bottom-right-radius: calculatePixels(1200, 24) !important;
+    }
+  }
+  .iconStyle {
+    width: calculatePixels(1200, 20) !important;
+    height: calculatePixels(1200, 20) !important;
+  }
+
+  .cartValue {
+    font-size: calculatePixels(1200, 16) !important;
+  }
+}

@@ -1,0 +1,344 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.topContainer {
+  background-image: url("../../../../assets/images/landing-asset-0.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include responsiveProperty(
+    (
+      "min-height": 334,
+      "max-height": 334,
+    )
+  );
+  overflow-y: visible;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  label {
+    font-family: BitterSemiBold;
+    @include responsiveProperty(
+      (
+        "font-size": 44,
+        "max-width": 920,
+        "margin-top": -30,
+      )
+    );
+    text-align: center;
+    color: $DARK_GREEN;
+    text-transform: capitalize;
+  }
+}
+
+.primary {
+  color: $PRIMARY !important;
+}
+
+.secondary {
+  color: $Secondary !important;
+}
+
+.yellow {
+  color: $Yellow !important;
+}
+
+.green {
+  color: $DARK_GREEN !important;
+}
+
+.textContainer {
+  @include responsiveProperty(
+    (
+      "max-width": 574,
+    )
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contentTitle {
+  @include responsiveProperty(
+    (
+      "font-size": 24,
+    )
+  );
+  font-family: BitterSemiBold;
+  text-align: left;
+  color: $PRIMARY;
+  text-transform: capitalize;
+}
+
+.lineStyle1 {
+  @include responsiveProperty(
+    (
+      "width": 120,
+    )
+  );
+  height: 2px;
+  background-color: $PRIMARY;
+}
+
+.contentSubTitle {
+  @include responsiveProperty(
+    (
+      "font-size": 18,
+    )
+  );
+  font-family: PoppinsRegular;
+  text-align: left;
+  color: $Gray;
+}
+
+.asset1Style {
+  @include responsiveProperty(
+    (
+      "height": 321,
+      "width": 549,
+    )
+  );
+  object-fit: cover;
+}
+
+.content2Container {
+  background-color: $Light_Blue;
+  @include responsiveProperty(
+    (
+      "min-height": 426,
+      "gap": 99,
+      "margin-top": -15,
+    )
+  );
+}
+
+.asset2Style {
+  @include responsiveProperty(
+    (
+      "height": 385,
+      "width": 385,
+    )
+  );
+  object-fit: cover;
+}
+
+.lineStyle2 {
+  @include responsiveProperty(
+    (
+      "width": 64,
+    )
+  );
+  height: 2px;
+  background-color: $Yellow;
+}
+.waveUpBlue {
+  @include responsiveProperty(
+    (
+      "height": 118,
+    )
+  );
+  width: 100% !important;
+  object-fit: cover;
+}
+.waveUp {
+  @include responsiveProperty(
+    (
+      "height": 134,
+      "margin-top": -100,
+    )
+  );
+  width: 100% !important;
+  object-fit: cover;
+}
+
+.textContainer2 {
+  @include responsiveProperty(
+    (
+      "margin-top": 55,
+    )
+  );
+}
+
+.asset3Style {
+  @include responsiveProperty(
+    (
+      "height": 456,
+      "width": 511,
+    )
+  );
+  object-fit: cover;
+}
+
+.lineStyle3 {
+  background-color: $DARK_GREEN !important;
+}
+
+.content3Container {
+  @include responsiveProperty(
+    (
+      "margin-top": -100,
+    )
+  );
+}
+
+.content4Container {
+  background-color: $Light_Blue;
+  @include responsiveProperty(
+    (
+      "gap": 45,
+    )
+  );
+}
+
+.asset4Style {
+  @include responsiveProperty(
+    (
+      "height": 295,
+      "width": 541,
+    )
+  );
+  object-fit: cover;
+}
+
+.lineStyle4 {
+  background-color: $Secondary !important;
+}
+
+.waveFlip {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+@media screen and (max-width: 576px) {
+  .textContainer {
+    max-width: 100% !important;
+  }
+  .contentTitle {
+    font-size: calculatePixels(768, 24) !important;
+  }
+  .lineStyle1 {
+    width: calculatePixels(768, 120) !important;
+  }
+  .lineStyle2 {
+    width: calculatePixels(768, 64) !important;
+  }
+  .contentSubTitle {
+    font-size: calculatePixels(768, 18) !important;
+  }
+  .asset1Style {
+    height: calculatePixels(768, 321) !important;
+    width: 100% !important;
+    max-width: calculatePixels(768, 549) !important;
+  }
+  .asset2Style {
+    height: calculatePixels(768, 385) !important;
+    width: 100% !important;
+    max-width: calculatePixels(768, 385) !important;
+  }
+  .content2Container {
+    min-height: calculatePixels(992, 426) !important;
+    gap: calculatePixels(576, 40) !important;
+    margin-top: calculatePixels(576, -15) !important;
+    padding-bottom: 40px;
+  }
+  .waveUpBlue {
+    height: calculatePixels(768, 118) !important;
+  }
+  .waveUp {
+    height: calculatePixels(768, 134) !important;
+    margin-top: calculatePixels(576, -110) !important;
+  }
+  .textContainer2 {
+    margin-top: calculatePixels(768, 0) !important;
+  }
+  .asset3Style {
+    height: calculatePixels(768, 456) !important;
+    width: 100% !important;
+    max-width: calculatePixels(768, 511) !important;
+  }
+  .content3Container {
+    margin-top: calculatePixels(576, 0) !important;
+  }
+  .content4Container {
+    gap: calculatePixels(576, 45) !important;
+  }
+  .asset4Style {
+    height: calculatePixels(768, 295) !important;
+    width: 100% !important;
+    max-width: calculatePixels(768, 541) !important;
+  }
+  .topContainer {
+    min-height: calculatePixels(768, 334) !important;
+    max-height: calculatePixels(768, 334) !important;
+    label {
+      font-size: calculatePixels(768, 44) !important;
+      max-width: calculatePixels(768, 920) !important;
+      margin-top: calculatePixels(768, -30) !important;
+    }
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .textContainer {
+    max-width: 100% !important;
+  }
+  .contentTitle {
+    font-size: calculatePixels(768, 24) !important;
+  }
+  .lineStyle1 {
+    width: calculatePixels(768, 120) !important;
+  }
+  .lineStyle2 {
+    width: calculatePixels(768, 64) !important;
+  }
+  .contentSubTitle {
+    font-size: calculatePixels(768, 18) !important;
+  }
+  .asset1Style {
+    height: calculatePixels(768, 321) !important;
+    width: calculatePixels(768, 549) !important;
+  }
+  .asset2Style {
+    height: calculatePixels(768, 385) !important;
+    width: calculatePixels(768, 385) !important;
+  }
+  .content2Container {
+    min-height: calculatePixels(768, 426) !important;
+    gap: calculatePixels(768, 99) !important;
+    margin-top: calculatePixels(768, -15) !important;
+  }
+  .waveUpBlue {
+    height: calculatePixels(768, 118) !important;
+  }
+  .waveUp {
+    height: calculatePixels(768, 134) !important;
+    margin-top: calculatePixels(768, -100) !important;
+  }
+  .textContainer2 {
+    margin-top: calculatePixels(768, 55) !important;
+  }
+  .asset3Style {
+    height: calculatePixels(768, 456) !important;
+    width: calculatePixels(768, 511) !important;
+  }
+  .content3Container {
+    margin-top: calculatePixels(768, -100) !important;
+  }
+  .content4Container {
+    gap: calculatePixels(768, 45) !important;
+  }
+  .asset4Style {
+    height: calculatePixels(768, 295) !important;
+    width: calculatePixels(768, 541) !important;
+  }
+  .topContainer {
+    min-height: calculatePixels(768, 334) !important;
+    max-height: calculatePixels(768, 334) !important;
+    label {
+      font-size: calculatePixels(768, 44) !important;
+      max-width: calculatePixels(768, 920) !important;
+      margin-top: calculatePixels(768, -30) !important;
+    }
+  }
+}

@@ -1,0 +1,125 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.ticketsCard {
+  width: 100%;
+  min-height: 140px;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 16px;
+  padding: 22px 14px;
+  cursor: pointer;
+
+  .ticketTitle {
+    font-size: 20px;
+    font-family: PoppinsMedium;
+    color: #000;
+    @include elipsis(1);
+  }
+
+  .ticketDate {
+    font-size: 14px;
+    font-family: PoppinsRegular;
+    color: #9ea5ab;
+    text-wrap: nowrap;
+  }
+
+  .label1 {
+    font-size: 16px;
+    font-family: PoppinsRegular;
+    color: #000;
+    cursor: pointer;
+    @include elipsis(1);
+  }
+  .label2 {
+    font-size: 14px;
+    font-family: PoppinsRegular;
+    color: $Gray;
+    cursor: pointer;
+    @include elipsis(1);
+  }
+
+  &:hover {
+    .statusContainer {
+      background-color: white;
+      span {
+        color: $Secondary;
+      }
+    }
+
+    .decline {
+      background-color: white;
+    }
+
+    .pending {
+      background-color: white;
+    }
+  }
+
+  &:hover,
+  &:active {
+    background-color: $Secondary;
+    border: 1px solid $Secondary;
+    color: #ffffff;
+
+    .label1,
+    .label2,
+    .ticketTitle,
+    .ticketDate {
+      color: #ffffff;
+    }
+  }
+}
+
+.activeTicket {
+  background-color: $Secondary;
+  border: 1px solid $Secondary;
+  color: #ffffff;
+
+  .label1,
+  .label2,
+  .ticketTitle,
+  .ticketDate {
+    color: #ffffff;
+  }
+  .statusContainer {
+    background-color: white;
+    span {
+      color: $Secondary;
+    }
+  }
+
+  .decline {
+    background-color: white;
+  }
+
+  .pending {
+    background-color: white;
+  }
+}
+
+.statusContainer {
+  background-color: $Secondary;
+  height: 26px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 28px;
+  width: fit-content;
+  span {
+    color: white;
+    font-family: PoppinsMedium;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+.decline {
+  background-color: $PRIMARY;
+}
+
+.pending {
+  background-color: $DARK_GREEN;
+}

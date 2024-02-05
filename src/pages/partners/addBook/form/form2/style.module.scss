@@ -1,0 +1,142 @@
+@import "shared/components/common/customButton/style.module.scss";
+.customButton {
+  @extend .customBtnContainer;
+  max-width: 160px;
+}
+.preVBtn {
+  height: 44px !important;
+  width: 160px !important;
+  background-color: white !important;
+  border: 1px solid $PRIMARY !important;
+  color: $PRIMARY !important;
+}
+.inputStyle {
+  border: 1px solid #adb5bd;
+  height: 39px;
+  padding: 10px;
+  border-radius: 5px;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &::placeholder {
+    font-size: 14px;
+  }
+}
+
+.sugestionContainer {
+  top: 40px !important;
+  bottom: auto !important;
+}
+
+.activeCheckBox {
+  border: 2px solid $PRIMARY !important;
+  background-color: $PRIMARY !important;
+}
+
+.checkBoxContainer {
+  min-height: 24px;
+  max-height: 24px;
+  min-width: 24px;
+  max-width: 24px;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  border: 2px solid $Gray;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    height: 12px;
+    width: 12px;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.termTitle {
+  font-family: PoppinsMedium;
+  font-size: 16px;
+  color: $Gray;
+  text-align: left;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.chevIcon {
+  height: 20px;
+  width: 20px;
+  path {
+    stroke: $LIGHT_GREY;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.termsLabel {
+  display: flex;
+  align-items: flex-start;
+  font-family: PoppinsMedium;
+  font-size: 14px;
+  color: $Gray;
+  text-align: left;
+  gap: 10px;
+  span {
+    margin-top: 7px;
+    display: flex;
+    min-height: 6px;
+    max-height: 6px;
+    min-width: 6px;
+    max-width: 6px;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    background-color: $Gray;
+  }
+}
+
+.suggestionInput {
+  font-family: "PoppinsRegular";
+  font-size: 13px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.optionContainer {
+  border-bottom: 1px solid $Light_Grey_1;
+  &:hover,
+  &:hover > .labelStyle {
+    background-color: $LightPrimary;
+    color: $PRIMARY;
+  }
+}
+
+.topradius {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.btmradius {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.suggestionCheckBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  height: 15px;
+  width: 15px;
+  border: 1px solid $LIGHT_GREY;
+}
+
+.activeSuggestionCheckBox {
+  background-color: $PRIMARY;
+  border-color: $PRIMARY;
+}

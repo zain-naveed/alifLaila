@@ -1,0 +1,190 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.plansCardContainer {
+  @include responsiveProperty(
+    (
+      "width": 416,
+      "border-radius": 24,
+      "padding": 24,
+    )
+  );
+  background-color: #fcfcfc;
+  border: 1px solid #efefef;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: center;
+
+  h2 {
+    @include responsiveProperty(
+      (
+        "font-size": 24,
+        "line-height": 44,
+      )
+    );
+    margin-bottom: 0px !important;
+    color: $Secondary;
+    font-family: BitterBold;
+  }
+
+  .descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    @include responsiveProperty(
+      (
+        "margin-top": 24,
+        "margin-bottom": 24,
+        "gap": 24,
+      )
+    );
+
+    svg {
+      @include responsiveProperty(
+        (
+          "min-height": 24,
+          "min-width": 24,
+          "max-height": 24,
+          "max-width": 24,
+        )
+      );
+      height: 100%;
+      width: 100%;
+    }
+
+    span {
+      @include responsiveProperty(
+        (
+          "font-size": 16,
+        )
+      );
+      color: $Gray;
+      font-family: PoppinsRegular;
+    }
+  }
+
+  .priceContainer {
+    .seeMore {
+      @include responsiveProperty(
+        (
+          "height": 48,
+          "font-size": 14,
+          "width": 142,
+        )
+      );
+      background-color: $Secondary;
+    }
+
+    label {
+      @include responsiveProperty(
+        (
+          "font-size": 24,
+        )
+      );
+      color: $DARK_GREEN;
+      font-family: BitterSemiBold;
+    }
+    p {
+      margin: 0px !important;
+      @include responsiveProperty(
+        (
+          "font-size": 12,
+        )
+      );
+      color: $LIGHT_GREY;
+      font-family: BitterMedium;
+    }
+  }
+}
+
+.familyPlansCardContainer {
+  background-color: white !important;
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .plansCardContainer {
+    width: calculatePixels(767, 416) !important;
+    border-radius: calculatePixels(767, 24) !important;
+    padding: calculatePixels(767, 24) !important;
+
+    h2 {
+      font-size: calculatePixels(767, 24) !important;
+      line-height: calculatePixels(767, 44) !important;
+    }
+
+    .descriptionContainer {
+      margin-top: calculatePixels(767, 24) !important;
+      margin-bottom: calculatePixels(767, 24) !important;
+      gap: calculatePixels(767, 24) !important;
+      svg {
+        min-height: calculatePixels(767, 24) !important;
+        max-height: calculatePixels(767, 24) !important;
+        min-width: calculatePixels(767, 24) !important;
+        max-width: calculatePixels(767, 24) !important;
+      }
+      span {
+        font-size: calculatePixels(767, 16) !important;
+      }
+    }
+
+    .priceContainer {
+      .seeMore {
+        height: calculatePixels(767, 48) !important;
+        font-size: calculatePixels(767, 14) !important;
+        width: calculatePixels(767, 142) !important;
+      }
+      label {
+        font-size: calculatePixels(767, 24) !important;
+      }
+      p {
+        font-size: calculatePixels(767, 12) !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .plansCardContainer {
+    width: calculatePixels(767, 416) !important;
+    border-radius: calculatePixels(767, 24) !important;
+    padding: calculatePixels(767, 24) !important;
+
+    h2 {
+      font-size: calculatePixels(767, 24) !important;
+      line-height: calculatePixels(767, 44) !important;
+    }
+
+    .descriptionContainer {
+      margin-top: calculatePixels(767, 24) !important;
+      margin-bottom: calculatePixels(767, 24) !important;
+      gap: calculatePixels(767, 24) !important;
+      svg {
+        min-height: calculatePixels(767, 24) !important;
+        max-height: calculatePixels(767, 24) !important;
+        min-width: calculatePixels(767, 24) !important;
+        max-width: calculatePixels(767, 24) !important;
+      }
+      span {
+        font-size: calculatePixels(767, 16) !important;
+      }
+    }
+
+    .priceContainer {
+      .seeMore {
+        height: calculatePixels(767, 48) !important;
+        font-size: calculatePixels(767, 14) !important;
+        width: calculatePixels(767, 142) !important;
+      }
+      label {
+        font-size: calculatePixels(767, 24) !important;
+      }
+      p {
+        font-size: calculatePixels(767, 12) !important;
+      }
+    }
+  }
+}

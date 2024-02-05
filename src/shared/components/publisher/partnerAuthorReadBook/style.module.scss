@@ -1,0 +1,168 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.readBookWraper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @include responsiveProperty(
+    (
+      "padding": 12,
+      "border-radius": 8,
+    )
+  );
+  border: 1px solid #f1f1f5;
+
+  .img {
+    @include responsiveProperty(
+      (
+        "height": 251,
+        "width": 173,
+        "border-radius": 12,
+      )
+    );
+    object-fit: fill;
+  }
+
+  .bookContentWrapper {
+    @include responsiveProperty(
+      (
+        "margin-top": 12,
+        "gap": 6,
+      )
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    h5 {
+      @include responsiveProperty(
+        (
+          "font-size": 14,
+        )
+      );
+      margin-bottom: -2px;
+      font-family: "PoppinsRegular";
+      color: #0f1106;
+    }
+
+    span {
+      @include responsiveProperty(
+        (
+          "font-size": 12,
+        )
+      );
+      color: $Gray;
+    }
+  }
+}
+
+.headingLoader {
+  @include responsiveProperty(
+    (
+      "height": 14,
+      "width": 94,
+      "margin-bottom": 5,
+    )
+  );
+}
+
+.countLabelLoader {
+  @include responsiveProperty(
+    (
+      "height": 14,
+      "width": 128,
+    )
+  );
+}
+
+.noFavBookIcon {
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+}
+
+.noFavBookLabel1 {
+  font-size: 18px;
+  color: $Gray;
+  margin-top: 20px;
+}
+
+.noFavBookLabel2 {
+  font-size: 14px;
+  color: $Gray;
+}
+
+@media screen and (max-width: 576px) {
+  .readBookWraper {
+    padding: calculatePixels(768, 12) !important;
+    border-radius: calculatePixels(768, 8) !important;
+
+    .img {
+      height: calculatePixels(768, 251) !important;
+      width: calculatePixels(768, 173) !important;
+      border-radius: calculatePixels(768, 12) !important;
+    }
+
+    .bookContentWrapper {
+      margin-top: calculatePixels(768, 12) !important;
+      gap: calculatePixels(768, 6) !important;
+
+      h5 {
+        font-size: calculatePixels(768, 14) !important;
+      }
+
+      span {
+        font-size: calculatePixels(768, 12) !important;
+      }
+    }
+  }
+
+  .headingLoader {
+    height: calculatePixels(768, 14) !important;
+    width: calculatePixels(768, 94) !important;
+    margin-bottom: calculatePixels(768, 5) !important;
+  }
+
+  .countLabelLoader {
+    height: calculatePixels(768, 14) !important;
+    width: calculatePixels(768, 128) !important;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .readBookWraper {
+    padding: calculatePixels(992, 12) !important;
+    border-radius: calculatePixels(992, 8) !important;
+
+    .img {
+      height: calculatePixels(992, 251) !important;
+      width: calculatePixels(992, 173) !important;
+      border-radius: calculatePixels(992, 12) !important;
+    }
+
+    .bookContentWrapper {
+      margin-top: calculatePixels(992, 12) !important;
+      gap: calculatePixels(992, 6) !important;
+
+      h5 {
+        font-size: calculatePixels(992, 14) !important;
+      }
+
+      span {
+        font-size: calculatePixels(992, 12) !important;
+      }
+    }
+  }
+
+  .headingLoader {
+    height: calculatePixels(992, 14) !important;
+    width: calculatePixels(992, 94) !important;
+    margin-bottom: calculatePixels(992, 5) !important;
+  }
+
+  .countLabelLoader {
+    height: calculatePixels(992, 14) !important;
+    width: calculatePixels(992, 128) !important;
+  }
+}

@@ -1,0 +1,90 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.dailogContent {
+  @include MRP(
+    (
+      "max-width": 550,
+    )
+  );
+}
+.ratingHeading {
+  @include MRP(
+    (
+      "font-size": 24,
+      "max-width": 400,
+    )
+  );
+  font-family: PoppinsMedium;
+  color: $BLACK;
+  text-align: center;
+}
+
+.description {
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+  font-family: PoppinsRegular !important;
+  color: $Gray !important;
+  text-align: center;
+}
+
+.ratingContainer {
+  border-top: 1px solid $BorderGray;
+  border-bottom: 1px solid $BorderGray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ratingSize {
+  @include MRP(
+    (
+      "height": 51,
+      "width": 51,
+    )
+  );
+}
+
+.buttonContainer {
+  @include MRP(
+    (
+      "height": 48,
+      "border-radius": 32,
+      "font-size": 16,
+    )
+  );
+}
+
+.btn2 {
+  background-color: white;
+  border: 1px solid $GRAY_300;
+  color: #344054;
+}
+
+@media screen and (max-width: 576px) {
+  .dailogContent {
+    max-width: 100% !important;
+    margin: auto !important;
+  }
+  .ratingHeading {
+    max-width: 100% !important;
+    font-size: calculatePixels(768, 24) !important;
+  }
+  .description {
+    font-size: calculatePixels(768, 16) !important;
+  }
+  .ratingSize {
+    height: calculatePixels(768, 41) !important;
+    width: calculatePixels(768, 41) !important;
+  }
+  .buttonContainer {
+    height: calculatePixels(768, 48) !important;
+    width: calculatePixels(768, 180) !important;
+    border-radius: calculatePixels(768, 32) !important;
+    font-size: calculatePixels(768, 16) !important;
+  }
+}

@@ -1,0 +1,85 @@
+@import "shared/components/common/heading/style.module.scss";
+@import "shared/components/common/title/style.module.scss";
+@import "shared/components/common/customButton/style.module.scss";
+
+.bookMainHeading {
+  @extend .heading;
+  font-size: 18px !important;
+}
+
+.bookMainTitle {
+  @extend .title;
+  font-size: 13px;
+}
+
+.buttonMain {
+  @extend .customBtnContainer;
+  width: 140px !important;
+}
+
+.buttonFilter {
+  @extend .customBtnContainer;
+  width: 109px !important;
+  background: #ffffff !important;
+  border: 1px solid #adb5bd !important;
+  color: $Gray !important;
+}
+
+.iconStyle {
+  path {
+    fill: #adb5bd;
+  }
+}
+
+.searchContainer {
+  height: 44px;
+  border-radius: 24px;
+  border: 1px solid $LIGHT_GREY;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.searchInputStyle {
+  background-color: transparent;
+  border: 0px;
+  outline: 0px;
+  margin-right: 8px;
+}
+
+.searchInputStyle::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: PoppinsRegular;
+  color: $LIGHT_GREY;
+  opacity: 1;
+  /* Firefox */
+}
+
+.searchInputStyle:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-family: PoppinsRegular;
+  color: $LIGHT_GREY;
+}
+
+.searchInputStyle::-ms-input-placeholder {
+  /* Microsoft Edge */
+  font-family: PoppinsRegular;
+  color: $LIGHT_GREY;
+}
+
+.searchIconStyle {
+  margin-left: 10px;
+}
+
+//  -------------------------------table styling
+.tableMain {
+  background-color: white;
+  border: 1px solid #e4e7ec;
+  box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1),
+    0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+  border-radius: 8px;
+}
+
+.bookWrapper {
+  align-items: center;
+}

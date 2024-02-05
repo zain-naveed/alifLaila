@@ -1,0 +1,139 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.tag {
+  color: $WHITE;
+  font-family: PoppinsSemiBold;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  border-radius: 4px;
+  background: var(--Main-Colors-Secondary, $Secondary);
+  padding: 0px 10px;
+  position: absolute;
+  top: -15px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.publisherCard {
+  border: 1px solid $BLACK_300;
+  width: 17.5%;
+  flex: 0 0 17.5%;
+  max-width: 17.5%;
+  @include responsiveProperty(
+    (
+      "border-radius": 40,
+      "height": 272,
+      // "width": 296,
+    )
+  );
+}
+
+.img {
+  @include responsiveProperty(
+    (
+      "max-width": 120,
+      "max-height": 120,
+      "min-width": 120,
+      "min-height": 120,
+    )
+  );
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.title {
+  font-family: BitterSemiBold;
+  @include responsiveProperty(
+    (
+      "font-size": 18,
+    )
+  );
+  color: $BLACK;
+}
+
+.subtitle {
+  font-family: PoppinsRegular;
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+  color: $Gray;
+}
+
+@media screen and (max-width: 576px) {
+  .img {
+    max-width: calcultn(0.7, 137) !important;
+    max-height: calcultn(0.7, 137) !important;
+    min-width: calcultn(0.7, 137) !important;
+    min-height: calcultn(0.7, 137) !important;
+  }
+  .title {
+    font-size: calcultn(0.7, 16) !important;
+  }
+  .subtitle {
+    font-size: calcultn(0.7, 12) !important;
+  }
+  .publisherCard {
+    height: calcultn(0.7, 328) !important;
+    width: calcultn(0.7, 296) !important;
+  }
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  .img {
+    max-width: calcultn(0.7, 137) !important;
+    max-height: calcultn(0.7, 137) !important;
+    min-width: calcultn(0.7, 137) !important;
+    min-height: calcultn(0.7, 137) !important;
+  }
+  .title {
+    font-size: calcultn(0.7, 16) !important;
+  }
+  .subtitle {
+    font-size: calcultn(0.7, 12) !important;
+  }
+
+
+  .publisherCard {
+    width: 33%;
+    flex: 0 0 33%;
+    max-width: 22%;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .img {
+    max-width: calcultn(0.7, 130) !important;
+    max-height: calcultn(0.7, 130) !important;
+    min-width: calcultn(0.7, 130) !important;
+    min-height: calcultn(0.7, 130) !important;
+  }
+  .publisherCard {
+    width: 33%;
+    flex: 0 0 33%;
+    max-width: 28%;
+    height: calcultn(0.7, 300) !important;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .img {
+    max-width: calcultn(0.7, 120) !important;
+    max-height: calcultn(0.7, 120) !important;
+    min-width: calcultn(0.7, 120) !important;
+    min-height: calcultn(0.7, 120) !important;
+  }
+  .publisherCard {
+    width: 43%;
+    flex: 0 0 43%;
+    max-width: 43%;
+    height: calcultn(0.7, 300) !important;
+  }
+}

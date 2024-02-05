@@ -1,0 +1,26 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.publisherCard {
+  background-color: #e1fcff;
+  @include responsiveProperty(
+    (
+      "border-radius": 40,
+      "height": 328,
+      "width": 296,
+    )
+  );
+}
+
+@media screen and (max-width: 576px) {
+  .publisherCard {
+    height: calcultn(0.7, 328) !important;
+    width: calcultn(0.7, 296) !important;
+  }
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  .publisherCard {
+    height: calcultn(0.7, 328) !important;
+    width: calcultn(0.7, 296) !important;
+  }
+}

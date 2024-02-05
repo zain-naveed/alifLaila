@@ -1,0 +1,608 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.topMainContainer {
+  height: calc(100vh - 94px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.icon {
+  @include responsiveProperty(
+    (
+      "height": 301,
+      "width": 514,
+    )
+  );
+}
+
+.publishHeaderContainer {
+  background-color: #fff8ee;
+}
+
+.mainHeading {
+  @include responsiveProperty(
+    (
+      "max-width": 780,
+      "font-size": 38,
+    )
+  );
+  color: $PRIMARY;
+  font-family: BitterSemiBold;
+  text-align: left;
+  text-transform: capitalize;
+  span {
+    color: $DARK_GREEN;
+  }
+}
+
+.subtitle {
+  font-family: PoppinsRegular;
+  @include responsiveProperty(
+    (
+      "max-width": 760,
+      "font-size": 16,
+    )
+  );
+  text-align: left;
+  span {
+    color: $Secondary;
+  }
+}
+
+.joinAuthor {
+  @include responsiveProperty(
+    (
+      "height": 48,
+      "max-width": 154,
+      "font-size": 16,
+    )
+  );
+  font-family: PoppinsMedium;
+  background: transparent;
+  border: 1px solid $PRIMARY;
+  color: $PRIMARY;
+}
+
+.publisher,
+.author {
+  @include responsiveProperty(
+    (
+      "height": 48,
+      "max-width": 177,
+      "font-size": 16,
+    )
+  );
+  font-family: PoppinsMedium;
+}
+
+.author {
+  background: transparent;
+  border: 1px solid $PRIMARY;
+  color: $PRIMARY;
+}
+
+.contentSubContainer {
+  @include responsiveProperty(
+    (
+      "max-width": 564,
+    )
+  );
+}
+
+.contentTitle {
+  font-family: BitterBold;
+  @include responsiveProperty(
+    (
+      "font-size": 38,
+    )
+  );
+  color: $PRIMARY;
+  text-align: left;
+  text-transform: capitalize;
+  z-index: 1;
+}
+
+.highlighted1 {
+  color: $PRIMARY;
+}
+.highlighted2 {
+  color: $Secondary;
+}
+
+.asset1 {
+  @include responsiveProperty(
+    (
+      "max-width": 617,
+      "max-height": 645,
+    )
+  );
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.contentIcon {
+  @include responsiveProperty(
+    (
+      "max-width": 36,
+      "max-height": 36,
+      "min-width": 36,
+      "min-height": 36,
+    )
+  );
+  width: 100%;
+  height: 100%;
+  align-self: start;
+}
+
+.contentLabel {
+  font-family: PoppinsRegular;
+  @include responsiveProperty(
+    (
+      "font-size": 18,
+    )
+  );
+  color: $BLACK;
+  text-align: left;
+}
+
+.tabIcon {
+  @include responsiveProperty(
+    (
+      "width": 276,
+      "height": 230,
+    )
+  );
+}
+
+.tabIcon1 {
+  @include responsiveProperty(
+    (
+      "width": 241,
+      "height": 245,
+    )
+  );
+}
+
+.arrowBookIcon {
+  position: absolute;
+  @include responsiveProperty(
+    (
+      "right": 40,
+      "width": 297,
+      "height": 227,
+    )
+  );
+  top: 0px;
+  z-index: 0;
+}
+
+.searchContainer {
+  @include responsiveProperty(
+    (
+      "width": 252,
+      "height": 44,
+      "border-radius": 24,
+    )
+  );
+  border: 1px solid $LIGHT_GREY;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.iconStyle {
+  @include responsiveProperty(
+    (
+      "width": 20,
+      "height": 20,
+    )
+  );
+}
+
+.searchInput {
+  border: 0;
+  background-color: transparent;
+  outline: 0;
+  width: 90%;
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+  font-family: PoppinsRegular;
+  color: $BLACK;
+}
+
+.searchInput::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $LIGHT_GREY;
+  opacity: 1; /* Firefox */
+}
+
+.searchInput:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: $LIGHT_GREY;
+}
+
+.searchInput::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: $LIGHT_GREY;
+}
+
+.tabsHeading li button {
+  padding: 9px 50px !important;
+  border-bottom: none;
+  color: var(--Gray-Gray-06, #adb5bd);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-feature-settings: "cpsp" on, "cv06" on, "cv09" on, "cv04" on, "cv03" on,
+    "case" on, "ss03" on;
+  text-shadow: 4px 0px 14px rgba(0, 0, 0, 0.14);
+  font-family: "BitterMedium" !important;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+
+.tabsHeading li button:hover {
+  border: 1px solid transparent !important;
+  color: var(--Gray-Gray-06, #adb5bd) !important;
+}
+
+.tabsHeading {
+  border-color: $Secondary;
+
+  @include responsiveProperty(
+    (
+      "font-size": 18,
+    )
+  );
+}
+
+.tabsHeading:hover {
+  border-color: $Secondary;
+}
+
+.tabsContainer {
+  background: var(--Gray-Gray-02, $Ultra_Light_Grey);
+  padding: 25px 90px 40px 90px;
+}
+
+.tabHeading {
+  color: var(--Main-Colors-Secondary, $Secondary);
+  font-family: BitterSemiBold;
+  font-style: normal;
+  line-height: 160%;
+  text-transform: capitalize;
+
+  @include responsiveProperty(
+    (
+      "font-size": 32,
+    )
+  );
+}
+
+.secondary {
+  color: $Secondary;
+}
+
+.primary {
+  color: $PRIMARY;
+}
+
+.tertiary {
+  color: $DARK_GREEN;
+}
+
+.pointer {
+  min-width: 50px !important;
+  height: 20px !important;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+
+.pointerHeading {
+  color: var(--Main-Colors-Secondary, $Secondary);
+  font-size: 16px;
+  font-style: normal;
+  line-height: 180%;
+  font-family: PoppinsSemiBold;
+  font-weight: 600;
+
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+}
+
+.pointerDescription {
+  color: var(--Text, $GRAY2);
+  font-family: PoppinsRegular;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 180%;
+  font-weight: 400;
+
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+}
+
+.cardsList {
+  @include responsiveProperty(
+    (
+      "gap": 40,
+    )
+  );
+}
+
+.contentContainer {
+  @include responsiveProperty(
+    (
+      "max-width": 508,
+    )
+  );
+}
+
+.viewAllbtn {
+  @include responsiveProperty(
+    (
+      "width": 141,
+      "height": 48,
+      "font-size": 16,
+    )
+  );
+}
+
+.seperator {
+  height: 1px;
+  width: 100%;
+  background-color: $BLACK_300;
+}
+
+// --------------responsive section--------------
+
+@media screen and (max-width: 576px) {
+  .tabHeading {
+    font-size: calculatePixels(768, 32) !important;
+  }
+
+  .tabsHeading {
+    font-size: calculatePixels(768, 18) !important;
+  }
+
+  .pointerHeading {
+    font-size: calculatePixels(768, 16) !important;
+  }
+
+  .tabIcon {
+    height: calculatePixels(768, 230) !important;
+    width: calculatePixels(768, 276) !important;
+  }
+
+  .tabIcon1 {
+    height: calculatePixels(768, 241) !important;
+    width: calculatePixels(768, 245) !important;
+  }
+
+  .pointerDescription {
+    font-size: calculatePixels(768, 16) !important;
+  }
+
+  .mainHeading {
+    font-size: calculatePixels(768, 38) !important;
+    max-width: calculatePixels(768, 780) !important;
+  }
+
+  .subtitle {
+    font-size: calculatePixels(768, 16) !important;
+    max-width: calculatePixels(768, 760) !important;
+  }
+
+  .joinAuthor {
+    height: calculatePixels(768, 48) !important;
+    max-width: calculatePixels(768, 154) !important;
+    font-size: calculatePixels(768, 16) !important;
+  }
+
+  .publisher,
+  .author {
+    height: calculatePixels(768, 48) !important;
+    max-width: calculatePixels(768, 177) !important;
+    font-size: calculatePixels(768, 16) !important;
+  }
+
+  .contentSubContainer {
+    max-width: calculatePixels(768, 564) !important;
+  }
+
+  .contentTitle {
+    font-size: calculatePixels(768, 38) !important;
+  }
+
+  .asset1 {
+    max-width: calculatePixels(768, 617) !important;
+    max-height: calculatePixels(768, 645) !important;
+  }
+
+  .contentIcon {
+    min-height: calculatePixels(768, 36) !important;
+    min-width: calculatePixels(768, 36) !important;
+    max-height: calculatePixels(768, 36) !important;
+    max-width: calculatePixels(768, 36) !important;
+  }
+
+  .contentLabel {
+    font-size: calculatePixels(768, 18) !important;
+  }
+
+  .arrowBookIcon {
+    right: calculatePixels(768, 40) !important;
+    width: calculatePixels(768, 297) !important;
+    height: calculatePixels(768, 227) !important;
+  }
+
+  .searchContainer {
+    height: calculatePixels(768, 44) !important;
+    width: calculatePixels(768, 253) !important;
+    border-radius: calculatePixels(768, 24) !important;
+  }
+
+  .iconStyle {
+    height: calculatePixels(768, 20) !important;
+    width: calculatePixels(768, 20) !important;
+  }
+
+  .searchInput {
+    font-size: calculatePixels(768, 14) !important;
+  }
+
+  .cardsList {
+    gap: calculatePixels(768, 45) !important;
+  }
+
+  .contentContainer {
+    max-width: calculatePixels(768, 508) !important;
+  }
+
+  .viewAllbtn {
+    height: calculatePixels(768, 48) !important;
+    width: calculatePixels(768, 141) !important;
+    font-size: calculatePixels(768, 16) !important;
+  }
+  .tabsHeading li button {
+    padding: 9px 20px !important;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .tabsHeading {
+    font-size: calculatePixels(768, 18) !important;
+  }
+
+  .tabHeading {
+    font-size: calculatePixels(768, 32) !important;
+  }
+
+  .pointerHeading {
+    font-size: calculatePixels(768, 16) !important;
+  }
+
+  .pointerDescription {
+    font-size: calculatePixels(768, 16) !important;
+  }
+
+  .tabIcon {
+    height: calculatePixels(768, 230) !important;
+    width: calculatePixels(768, 276) !important;
+  }
+
+  .tabIcon1 {
+    height: calculatePixels(768, 241) !important;
+    width: calculatePixels(768, 245) !important;
+  }
+
+  .mainHeading {
+    font-size: calculatePixels(768, 38) !important;
+    max-width: calculatePixels(768, 780) !important;
+  }
+
+  .subtitle {
+    font-size: calculatePixels(768, 16) !important;
+    max-width: calculatePixels(768, 760) !important;
+  }
+
+  .joinAuthor {
+    height: calculatePixels(768, 48) !important;
+    max-width: calculatePixels(768, 154) !important;
+    font-size: calculatePixels(768, 16) !important;
+  }
+
+  .publisher,
+  .author {
+    height: calculatePixels(768, 48) !important;
+    max-width: calculatePixels(768, 177) !important;
+    font-size: calculatePixels(768, 16) !important;
+  }
+
+  .contentSubContainer {
+    max-width: calculatePixels(768, 564) !important;
+  }
+
+  .contentTitle {
+    font-size: calculatePixels(768, 38) !important;
+  }
+
+  .asset1 {
+    max-width: calculatePixels(768, 617) !important;
+    max-height: calculatePixels(768, 645) !important;
+  }
+
+  .contentIcon {
+    min-height: calculatePixels(768, 36) !important;
+    min-width: calculatePixels(768, 36) !important;
+    max-height: calculatePixels(768, 36) !important;
+    max-width: calculatePixels(768, 36) !important;
+  }
+
+  .contentLabel {
+    font-size: calculatePixels(768, 18) !important;
+  }
+
+  .arrowBookIcon {
+    right: calculatePixels(768, 40) !important;
+    width: calculatePixels(768, 297) !important;
+    height: calculatePixels(768, 227) !important;
+  }
+
+  .searchContainer {
+    height: calculatePixels(768, 44) !important;
+    width: calculatePixels(768, 253) !important;
+    border-radius: calculatePixels(768, 24) !important;
+  }
+
+  .iconStyle {
+    height: calculatePixels(768, 20) !important;
+    width: calculatePixels(768, 20) !important;
+  }
+
+  .searchInput {
+    font-size: calculatePixels(768, 14) !important;
+  }
+
+  .cardsList {
+    gap: calculatePixels(768, 45) !important;
+  }
+
+  .contentContainer {
+    max-width: calculatePixels(768, 508) !important;
+  }
+
+  .viewAllbtn {
+    height: calculatePixels(768, 48) !important;
+    width: calculatePixels(768, 141) !important;
+    font-size: calculatePixels(768, 16) !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .tabsContainer {
+    padding: 30px;
+  }
+
+  .pointer {
+    margin-right: 3px;
+  }
+}

@@ -1,0 +1,81 @@
+@import "shared/utils/colors.scss";
+
+.inputLabel {
+  font-size: 14px;
+  font-family: "PoppinsMedium";
+  margin-bottom: 5px;
+  color: #11142d;
+  font-weight: 500;
+}
+
+.asterik {
+  color: $PRIMARY;
+}
+
+.inputContainer {
+  // background-color: #f8f8f9;
+  height: 163px;
+  border-radius: 26px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid $LIGHT_GREY;
+  flex-direction: column;
+}
+
+.inputStyle {
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  outline: 0;
+  font-family: "PoppinsMedium";
+  font-size: 14px;
+  resize: none;
+}
+
+.input-style::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: PoppinsRegular;
+  color: #808191;
+  opacity: 1;
+  /* Firefox */
+}
+
+.input-style:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-family: PoppinsRegular;
+  color: #808191;
+}
+
+.input-style::-ms-input-placeholder {
+  /* Microsoft Edge */
+  font-family: PoppinsRegular;
+  color: #808191;
+}
+
+.reviewButton {
+  background: transparent;
+  border: none;
+  font-weight: 500;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  font-family: "PoppinsRegular";
+
+  svg {
+    margin-left: 7px;
+    width: 15px;
+  }
+}
+
+.error {
+  color: #ea5b5b;
+  font-size: 11px;
+  text-align: left;
+  // position: absolute;
+  // top: 78px;
+  z-index: 1;
+  margin-left: 5px;
+  /* margin: 10px 0; */
+}

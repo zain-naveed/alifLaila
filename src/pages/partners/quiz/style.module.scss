@@ -1,0 +1,82 @@
+@import "shared/utils/colors.scss";
+@import "shared/components/common/heading/style.module.scss";
+@import "shared/components/common/customButton/style.module.scss";
+
+.quizWraper {
+  padding: 31px 37px;
+  max-width: 801px;
+  background: #ffffff;
+  border: 1px solid #e2ebfa;
+  border-radius: 8px;
+  margin: 0 auto;
+
+  .quizheader {
+    align-items: center;
+    margin-bottom: 14px;
+    margin-bottom: 14px;
+
+    .quizHeading {
+      @extend .heading;
+      font-weight: 600;
+      font-size: 24px;
+      color: $PRIMARY;
+    }
+
+    .trashContainer {
+      display: flex;
+      align-items: center;
+
+      svg {
+        width: 18px;
+
+        & g path {
+          stroke: #ef437b;
+          stroke-width: 2px;
+        }
+      }
+
+      span {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 24px;
+        color: #ef437b;
+        margin-left: 7px;
+        font-family: "PoppinsMedium";
+      }
+    }
+  }
+
+  .quizMain {
+    border: 1px solid $LIGHT_GREY;
+    border-radius: 14px;
+    padding: 17px 16px;
+
+    div {
+      svg {
+        width: 24px;
+      }
+    }
+  }
+
+  .addQuestionWrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+
+    .addQuestion {
+      font-size: 14px;
+      color: $PRIMARY;
+      font-weight: 500;
+    }
+  }
+  .publishButton {
+    @extend .customBtnContainer;
+    width: 200px;
+    margin-left: auto;
+    margin-top: 10px;
+  }
+}
+
+.quizTopMargin {
+  margin-top: 53px;
+}

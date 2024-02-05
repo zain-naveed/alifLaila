@@ -1,0 +1,527 @@
+@import "shared/utils/book-responsive.module.scss";
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.accessContainer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.3);
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.btnGrupContainer {
+  flex-direction: row;
+}
+
+.btnContainer {
+  height: 57px !important;
+  width: 50% !important;
+  background-color: $Secondary !important;
+  border-radius: 32px !important;
+  font-size: 16px !important;
+  color: white !important;
+  gap: 3px !important;
+}
+
+.btnContainer1 {
+  height: 57px !important;
+  width: 50% !important;
+  background-color: $Secondary !important;
+  border-radius: 32px !important;
+  font-size: 16px !important;
+  color: white !important;
+  gap: 3px !important;
+}
+
+.btnIcon {
+  height: 24px;
+  width: 24px;
+}
+
+.greenBtn {
+  background-color: $DARK_GREEN !important;
+}
+
+.lockIcon {
+  height: 48px;
+  width: 48px;
+}
+
+.cotinueReadingStyle {
+  font-family: PoppinsMedium;
+  font-size: 28px;
+  text-align: center;
+  color: $BLACK;
+}
+
+.assignBtnContainer {
+  @include BRP(
+    (
+      "max-height": 57,
+      "min-height": 57,
+      "border-radius": 32,
+      "font-size": 16,
+      "gap": 10,
+    )
+  );
+  height: 100%;
+  width: 100% !important;
+  color: white;
+  &:hover {
+    svg {
+      path {
+        stroke: $PRIMARY !important;
+      }
+    }
+  }
+}
+
+.btnIcon {
+  @include BRP(
+    (
+      "height": 24,
+      "width": 24,
+    )
+  );
+}
+
+
+
+@media screen and (max-height: 400px) {
+  .accessContainer {
+    padding-left: calculatePixels(576, 50) !important;
+    padding-right: calculatePixels(576, 50) !important;
+  }
+  .btnGrupContainer {
+    flex-direction: column;
+  }
+  .btnContainer {
+    height: calculatePixels(576, 57) !important;
+    width: 100% !important;
+    border-radius: calculatePixels(576, 32) !important;
+    font-size: calculatePixels(576, 16) !important;
+  }
+  .btnIcon {
+    height: calculatePixels(576, 24) !important;
+    width: calculatePixels(576, 24) !important;
+  }
+  .lockIcon {
+    height: calculatePixels(576, 48) !important;
+    width: calculatePixels(576, 48) !important;
+  }
+  .cotinueReadingStyle {
+    font-size: calculatePixels(576, 28) !important;
+  }
+}
+
+@media screen and (min-height: 400px) {
+  .accessContainer {
+    padding-left: calculatePixels(576, 50) !important;
+    padding-right: calculatePixels(576, 50) !important;
+  }
+  .btnGrupContainer {
+    flex-direction: column;
+  }
+  .btnContainer {
+    height: calculatePixels(576, 57) !important;
+    width: 100% !important;
+    border-radius: calculatePixels(576, 32) !important;
+    font-size: calculatePixels(576, 16) !important;
+  }
+  .btnIcon {
+    height: calculatePixels(576, 24) !important;
+    width: calculatePixels(576, 24) !important;
+  }
+  .lockIcon {
+    height: calculatePixels(576, 48) !important;
+    width: calculatePixels(576, 48) !important;
+  }
+  .cotinueReadingStyle {
+    font-size: calculatePixels(576, 28) !important;
+  }
+}
+
+@media screen and (min-height: 576px) {
+  .accessContainer {
+    padding-left: calculatePixels(868, 50) !important;
+    padding-right: calculatePixels(868, 50) !important;
+  }
+  .btnGrupContainer {
+    flex-direction: row;
+  }
+  .btnContainer {
+    height: calculatePixels(868, 57) !important;
+    width: 50%;
+    border-radius: calculatePixels(868, 32) !important;
+    font-size: calculatePixels(868, 16) !important;
+  }
+  .btnIcon {
+    height: calculatePixels(868, 24) !important;
+    width: calculatePixels(868, 24) !important;
+  }
+  .lockIcon {
+    height: calculatePixels(868, 48) !important;
+    width: calculatePixels(868, 48) !important;
+  }
+  .cotinueReadingStyle {
+    font-size: calculatePixels(868, 28) !important;
+  }
+}
+
+@media screen and (min-height: 700px) {
+  .accessContainer {
+    padding-left: calculatePixels(992, 50) !important;
+    padding-right: calculatePixels(992, 50) !important;
+  }
+  .btnGrupContainer {
+    flex-direction: row;
+  }
+  .btnContainer {
+    height: calculatePixels(992, 57) !important;
+    width: 50%;
+    border-radius: calculatePixels(992, 32) !important;
+    font-size: calculatePixels(992, 16) !important;
+  }
+  .btnIcon {
+    height: calculatePixels(992, 24) !important;
+    width: calculatePixels(992, 24) !important;
+  }
+  .lockIcon {
+    height: calculatePixels(992, 48) !important;
+    width: calculatePixels(992, 48) !important;
+  }
+  .cotinueReadingStyle {
+    font-size: calculatePixels(992, 28) !important;
+  }
+}
+
+@media screen and (min-height: 768px) {
+  .accessContainer {
+    padding-left: calculatePixels(1200, 50) !important;
+    padding-right: calculatePixels(1200, 50) !important;
+  }
+  .btnGrupContainer {
+    flex-direction: row;
+  }
+  .btnContainer {
+    height: calculatePixels(1200, 57) !important;
+    width: 50%;
+    border-radius: calculatePixels(1200, 32) !important;
+    font-size: calculatePixels(1200, 16) !important;
+  }
+  .btnIcon {
+    height: calculatePixels(1200, 24) !important;
+    width: calculatePixels(1200, 24) !important;
+  }
+  .lockIcon {
+    height: calculatePixels(1200, 48) !important;
+    width: calculatePixels(1200, 48) !important;
+  }
+  .cotinueReadingStyle {
+    font-size: calculatePixels(1200, 28) !important;
+  }
+}
+
+@media screen and (min-height: 868px) {
+  .accessContainer {
+    padding-left: calculatePixels(1250, 50) !important;
+    padding-right: calculatePixels(1250, 50) !important;
+  }
+  .btnGrupContainer {
+    flex-direction: row;
+  }
+  .btnContainer {
+    height: calculatePixels(1250, 57) !important;
+    width: 50%;
+    border-radius: calculatePixels(1250, 32) !important;
+    font-size: calculatePixels(1250, 16) !important;
+  }
+  .btnIcon {
+    height: calculatePixels(1250, 24) !important;
+    width: calculatePixels(1250, 24) !important;
+  }
+  .lockIcon {
+    height: calculatePixels(1250, 48) !important;
+    width: calculatePixels(1250, 48) !important;
+  }
+  .cotinueReadingStyle {
+    font-size: calculatePixels(1250, 28) !important;
+  }
+}
+
+@media screen and (min-height: 950px) {
+  .accessContainer {
+    padding-left: calculatePixels(1400, 50) !important;
+    padding-right: calculatePixels(1400, 50) !important;
+  }
+  .btnGrupContainer {
+    flex-direction: row;
+  }
+  .btnContainer {
+    height: calculatePixels(1400, 57) !important;
+    width: 50%;
+    border-radius: calculatePixels(1400, 32) !important;
+    font-size: calculatePixels(1400, 16) !important;
+  }
+  .btnIcon {
+    height: calculatePixels(1400, 24) !important;
+    width: calculatePixels(1400, 24) !important;
+  }
+  .lockIcon {
+    height: calculatePixels(1400, 48) !important;
+    width: calculatePixels(1400, 48) !important;
+  }
+  .cotinueReadingStyle {
+    font-size: calculatePixels(1400, 28) !important;
+  }
+}
+
+@media (max-width: 576px) and (min-height: 868px) {
+  .accessContainer {
+    padding-left: calculatePixels(576, 50) !important;
+    padding-right: calculatePixels(576, 50) !important;
+  }
+  .btnGrupContainer {
+    flex-direction: column;
+  }
+  .btnContainer {
+    height: calculatePixels(576, 57) !important;
+    width: 100%;
+    border-radius: calculatePixels(576, 32) !important;
+    font-size: calculatePixels(576, 16) !important;
+  }
+  .btnIcon {
+    height: calculatePixels(576, 24) !important;
+    width: calculatePixels(576, 24) !important;
+  }
+  .lockIcon {
+    height: calculatePixels(576, 48) !important;
+    width: calculatePixels(576, 48) !important;
+  }
+  .cotinueReadingStyle {
+    font-size: calculatePixels(576, 28) !important;
+  }
+}
+
+@media (min-width: 576px) and (min-height: 868px) {
+  .accessContainer {
+    padding-left: calculatePixels(576, 50) !important;
+    padding-right: calculatePixels(576, 50) !important;
+  }
+  .btnGrupContainer {
+    flex-direction: column;
+  }
+  .btnContainer {
+    height: calculatePixels(576, 57) !important;
+    width: 100%;
+    border-radius: calculatePixels(576, 32) !important;
+    font-size: calculatePixels(576, 16) !important;
+  }
+  .btnIcon {
+    height: calculatePixels(576, 24) !important;
+    width: calculatePixels(576, 24) !important;
+  }
+  .lockIcon {
+    height: calculatePixels(576, 48) !important;
+    width: calculatePixels(576, 48) !important;
+  }
+  .cotinueReadingStyle {
+    font-size: calculatePixels(576, 28) !important;
+  }
+}
+
+@media (min-width: 768px) and (min-height: 868px) {
+  .accessContainer {
+    padding-left: calculatePixels(768, 50) !important;
+    padding-right: calculatePixels(768, 50) !important;
+  }
+  .btnGrupContainer {
+    flex-direction: column;
+  }
+  .btnContainer {
+    height: calculatePixels(768, 57) !important;
+    width: 100%;
+    border-radius: calculatePixels(768, 32) !important;
+    font-size: calculatePixels(768, 16) !important;
+  }
+  .btnIcon {
+    height: calculatePixels(768, 24) !important;
+    width: calculatePixels(768, 24) !important;
+  }
+  .lockIcon {
+    height: calculatePixels(768, 48) !important;
+    width: calculatePixels(768, 48) !important;
+  }
+  .cotinueReadingStyle {
+    font-size: calculatePixels(768, 28) !important;
+  }
+}
+
+@media (min-width: 992px) and (min-height: 868px) {
+  .accessContainer {
+    padding-left: calculatePixels(992, 50) !important;
+    padding-right: calculatePixels(992, 50) !important;
+  }
+  .btnContainer {
+    height: calculatePixels(992, 57) !important;
+    width: 50%;
+    border-radius: calculatePixels(992, 32) !important;
+    font-size: calculatePixels(992, 16) !important;
+  }
+  .btnGrupContainer {
+    flex-direction: row;
+  }
+  .btnIcon {
+    height: calculatePixels(992, 24) !important;
+    width: calculatePixels(992, 24) !important;
+  }
+  .lockIcon {
+    height: calculatePixels(992, 48) !important;
+    width: calculatePixels(992, 48) !important;
+  }
+  .cotinueReadingStyle {
+    font-size: calculatePixels(992, 28) !important;
+  }
+}
+
+@media (min-width: 1200px) and (min-height: 868px) {
+  .accessContainer {
+    padding-left: calculatePixels(1200, 50) !important;
+    padding-right: calculatePixels(1200, 50) !important;
+  }
+  .btnGrupContainer {
+    flex-direction: row;
+  }
+  .btnContainer {
+    height: calculatePixels(1200, 57) !important;
+    width: 50%;
+    border-radius: calculatePixels(1200, 32) !important;
+    font-size: calculatePixels(1200, 16) !important;
+  }
+  .btnIcon {
+    height: calculatePixels(1200, 24) !important;
+    width: calculatePixels(1200, 24) !important;
+  }
+  .lockIcon {
+    height: calculatePixels(1200, 48) !important;
+    width: calculatePixels(1200, 48) !important;
+  }
+  .cotinueReadingStyle {
+    font-size: calculatePixels(1200, 28) !important;
+  }
+}
+
+@media (min-width: 1400px) and (min-height: 868px) {
+  .accessContainer {
+    padding-left: calculatePixels(1400, 50) !important;
+    padding-right: calculatePixels(1400, 50) !important;
+  }
+  .btnGrupContainer {
+    flex-direction: row;
+  }
+  .btnContainer {
+    height: calculatePixels(1400, 57) !important;
+    width: 50%;
+    border-radius: calculatePixels(1400, 32) !important;
+    font-size: calculatePixels(1400, 16) !important;
+  }
+  .btnIcon {
+    height: calculatePixels(1400, 24) !important;
+    width: calculatePixels(1400, 24) !important;
+  }
+  .lockIcon {
+    height: calculatePixels(1400, 48) !important;
+    width: calculatePixels(1400, 48) !important;
+  }
+  .cotinueReadingStyle {
+    font-size: calculatePixels(1400, 28) !important;
+  }
+}
+
+@media (min-width: 1600px) and (min-height: 868px) {
+  .accessContainer {
+    padding-left: calculatePixels(1400, 50) !important;
+    padding-right: calculatePixels(1400, 50) !important;
+  }
+  .btnGrupContainer {
+    flex-direction: row;
+  }
+  .btnContainer {
+    height: calculatePixels(1400, 57) !important;
+    width: 50%;
+    border-radius: calculatePixels(1400, 32) !important;
+    font-size: calculatePixels(1400, 16) !important;
+  }
+  .btnIcon {
+    height: calculatePixels(1400, 24) !important;
+    width: calculatePixels(1400, 24) !important;
+  }
+  .lockIcon {
+    height: calculatePixels(1400, 48) !important;
+    width: calculatePixels(1400, 48) !important;
+  }
+  .cotinueReadingStyle {
+    font-size: calculatePixels(1400, 28) !important;
+  }
+}
+
+@media (min-width: 1800px) and (min-height: 868px) {
+  .btnGrupContainer {
+    flex-direction: row;
+  }
+  .accessContainer {
+    padding-left: calculatePixels(1400, 50) !important;
+    padding-right: calculatePixels(1400, 50) !important;
+  }
+  .btnContainer {
+    height: calculatePixels(1400, 57) !important;
+    width: 50%;
+    border-radius: calculatePixels(1400, 32) !important;
+    font-size: calculatePixels(1400, 16) !important;
+  }
+  .btnIcon {
+    height: calculatePixels(1400, 24) !important;
+    width: calculatePixels(1400, 24) !important;
+  }
+  .lockIcon {
+    height: calculatePixels(1400, 48) !important;
+    width: calculatePixels(1400, 48) !important;
+  }
+  .cotinueReadingStyle {
+    font-size: calculatePixels(1400, 28) !important;
+  }
+}
+
+@media (min-width: 2000px) and (min-height: 868px) {
+  .accessContainer {
+    padding-left: calculatePixels(1400, 50) !important;
+    padding-right: calculatePixels(1400, 50) !important;
+  }
+  .btnGrupContainer {
+    flex-direction: row;
+  }
+  .btnContainer {
+    height: calculatePixels(1400, 57) !important;
+    width: 50%;
+    border-radius: calculatePixels(1400, 32) !important;
+    font-size: calculatePixels(1400, 16) !important;
+  }
+  .btnIcon {
+    height: calculatePixels(1400, 24) !important;
+    width: calculatePixels(1400, 24) !important;
+  }
+  .lockIcon {
+    height: calculatePixels(1400, 48) !important;
+    width: calculatePixels(1400, 48) !important;
+  }
+  .cotinueReadingStyle {
+    font-size: calculatePixels(1400, 28) !important;
+  }
+}

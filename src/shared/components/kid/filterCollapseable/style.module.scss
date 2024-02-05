@@ -1,0 +1,100 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.title {
+  font-family: BitterSemiBold;
+  font-size: 18px;
+  color: $BLACK;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.icon {
+  height: 24px;
+  width: 24px;
+}
+
+.collapseItem {
+  transition: height 200ms;
+  overflow: hidden;
+}
+
+.hide {
+  height: 0 !important;
+}
+
+.seperator {
+  height: 1px;
+  width: 100%;
+  background-color: #e7e7e7;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: calcultn(0.7, 18) !important;
+  }
+  .icon {
+    height: calcultn(0.7, 24) !important;
+    width: calcultn(0.7, 24) !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .title {
+    font-size: calcultn(0.7, 18) !important;
+  }
+  .icon {
+    height: calcultn(0.7, 24) !important;
+    width: calcultn(0.7, 24) !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: calcultn(0.85, 18) !important;
+  }
+  .icon {
+    height: calcultn(0.85, 24) !important;
+    width: calcultn(0.85, 24) !important;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .title {
+    font-size: calcultn(1, 18) !important;
+  }
+  .icon {
+    height: calcultn(1, 24) !important;
+    width: calcultn(1, 24) !important;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .title {
+    font-size: calcultn(1.14, 18) !important;
+  }
+  .icon {
+    height: calcultn(1.14, 24) !important;
+    width: calcultn(1.14, 24) !important;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .title {
+    font-size: calcultn(1.28, 18) !important;
+  }
+  .icon {
+    height: calcultn(1.28, 24) !important;
+    width: calcultn(1.28, 24) !important;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .title {
+    font-size: calcultn(1.42, 18) !important;
+  }
+  .icon {
+    height: calcultn(1.42, 24) !important;
+    width: calcultn(1.42, 24) !important;
+  }
+}

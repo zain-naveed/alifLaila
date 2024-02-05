@@ -1,0 +1,180 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.notContentFoundContnr {
+  height: calc(100vh - 82px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftContainer {
+  min-height: fit-content;
+  max-height: calc(100vh - 82px);
+  height: 100%;
+  border-radius: 8px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: sticky;
+  float: left;
+  top: 82px;
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.mouItemContainer {
+  background-color: white;
+  border-radius: 12px;
+  min-height: 128px;
+  max-height: 128px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  transition: all 0.4s ease-in-out;
+  &:hover {
+    background-color: $Secondary !important;
+    color: white !important;
+    cursor: pointer;
+
+    .statusContainer {
+      background-color: white;
+      span {
+        color: $Secondary;
+      }
+    }
+
+    .decline {
+      background-color: white;
+    }
+
+    .pending {
+      background-color: white;
+    }
+
+    .mouTitle {
+      color: white;
+      cursor: pointer;
+    }
+
+    .mouDate {
+      color: white;
+      cursor: pointer;
+    }
+
+    .mouDesc {
+      color: #ffffff;
+      cursor: pointer;
+    }
+  }
+
+  .statusContainer {
+    background-color: $Secondary;
+    height: 26px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 28px;
+    span {
+      color: white;
+      font-family: PoppinsMedium;
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+
+  .decline {
+    background-color: $PRIMARY;
+  }
+
+  .pending {
+    background-color: $DARK_GREEN;
+  }
+
+  .mouTitle {
+    font-family: PoppinsMedium;
+    font-size: 18px;
+    text-align: left;
+    color: black;
+  }
+
+  .mouDate {
+    font-family: PoppinsRegular;
+    font-size: 14px;
+    text-align: left;
+    color: black;
+  }
+
+  .mouDesc {
+    font-family: PoppinsRegular;
+    font-size: 14px;
+    text-align: left;
+    color: $Gray;
+    @include elipsis(1);
+  }
+}
+
+.active {
+  background-color: $Secondary;
+  color: white;
+
+  .statusContainer {
+    background-color: white;
+    span {
+      color: $Secondary;
+    }
+  }
+
+  .decline {
+    background-color: white;
+  }
+
+  .pending {
+    background-color: white;
+  }
+
+  .mouTitle {
+    color: white;
+  }
+
+  .mouDate {
+    color: white;
+  }
+
+  .mouDesc {
+    color: #ffffff;
+  }
+}
+
+.contentContainer {
+  background-color: white;
+  border: 1px solid $LightBlueWhite;
+  gap: 10px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+
+  .declineBtn {
+    background-color: white !important;
+    border: 1px solid $PRIMARY !important;
+    color: $PRIMARY !important;
+    width: 160px !important;
+  }
+
+  .agreeBtn {
+    width: 180px !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .leftContainer {
+    min-height: fit-content;
+    max-height: fit-content;
+    height: 100%;
+  }
+}

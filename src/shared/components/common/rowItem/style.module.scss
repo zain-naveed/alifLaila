@@ -1,0 +1,42 @@
+@import "shared/components/common/heading/style.module.scss";
+@import "shared/utils/colors.scss";
+.bookItemContainer {
+    .bookItemHeading {
+        @extend .heading;
+        white-space: nowrap;
+        font-size: 13px;
+        font-family: 'PoppinsSemiBold';
+    }
+
+    span {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:621px) {
+    .bookInfoContainer {
+        .bookItemContainer {
+            margin-left: 0 !important;
+            margin-top: 3px !important;
+        }
+
+        // .marginLeftRight {
+        //     margin-left: 13px !important;
+        //     margin-right: 13px !important;
+        // }
+
+        // .marginLeft {
+        //     margin-left: 13px !important;
+        // }
+    }
+}
+
+@media screen and (max-width:401px) {
+    .bookInfoContainer {
+        flex-direction: column;
+        .bookItemContainer {
+            margin-left: 0 !important;
+            margin-top: 3px !important;
+        }
+
+    }
+}

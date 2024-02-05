@@ -1,0 +1,12 @@
+@import "shared/utils/colors.scss";
+.termsCheckBoxActive,.termsCheckBox {
+    background-color: $DARK_GREEN;
+    border: 1px solid $DARK_GREEN;
+    height: 16px;
+    width: 16px;
+    border-radius: 5px;
+  }
+
+  .termsCheckBox{
+    background: transparent;
+  }

@@ -1,0 +1,171 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.mainHeaderContainer {
+  background-image: url("../../../../assets/images/main-hero-asset.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include responsiveProperty(
+    (
+      "min-height": 666,
+    )
+  );
+}
+
+.contentContainer2 {
+  @include responsiveProperty(
+    (
+      "max-width": 740,
+    )
+  );
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentContainer {
+  @include responsiveProperty(
+    (
+      "max-width": 1007,
+    )
+  );
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  @include responsiveProperty(
+    (
+      "font-size": 44,
+      "margin-top": 30,
+    )
+  );
+  font-family: BitterSemiBold;
+  text-align: center;
+  color: $DARK_GREEN;
+  text-transform: capitalize;
+}
+
+.slideContainer {
+  outline: 0px !important;
+  .slideImage {
+    width: 100%;
+    height: 100%;
+    @include responsiveProperty(
+      (
+        "max-width": 1358,
+        "max-height": 344,
+      )
+    );
+    object-fit: fill;
+  }
+
+  .slideImage2 {
+    width: 100%;
+    height: 100%;
+    @include responsiveProperty(
+      (
+        "max-width": 799,
+        "max-height": 412,
+      )
+    );
+    object-fit: fill;
+  }
+}
+
+.dotsContainer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  @include responsiveProperty(
+    (
+      "gap": 10,
+    )
+  );
+  .dot {
+    @include responsiveProperty(
+      (
+        "width": 14,
+        "height": 14,
+      )
+    );
+    background-color: #d9d9d9;
+    border-radius: 100%;
+  }
+  .active {
+    background-color: $Secondary;
+  }
+}
+.primary {
+  color: $PRIMARY !important;
+}
+
+.secondary {
+  color: $Secondary !important;
+}
+
+.yellow {
+  color: $Yellow !important;
+}
+
+@media screen and (max-width: 576px) {
+  .mainHeaderContainer {
+    min-height: calculatePixels(768, 666) !important;
+  }
+  .contentContainer {
+    max-width: calculatePixels(768, 1007) !important;
+  }
+  .contentContainer2 {
+    max-width: calculatePixels(768, 740) !important;
+  }
+  .title {
+    font-size: calculatePixels(768, 48) !important;
+    margin-top: calculatePixels(768, 30) !important;
+  }
+  .slideContainer {
+    .slideImage {
+      max-width: calculatePixels(992, 1358) !important;
+      max-height: calculatePixels(768, 344) !important;
+    }
+    .slideImage2 {
+      max-width: calculatePixels(768, 799) !important;
+      max-height: calculatePixels(768, 412) !important;
+    }
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .mainHeaderContainer {
+    min-height: calculatePixels(768, 666) !important;
+  }
+  .contentContainer {
+    max-width: calculatePixels(768, 1007) !important;
+  }
+  .contentContainer2 {
+    max-width: calculatePixels(768, 740) !important;
+  }
+  .title {
+    font-size: calculatePixels(768, 48) !important;
+    margin-top: calculatePixels(768, 30) !important;
+  }
+  .slideContainer {
+    .slideImage {
+      max-width: calculatePixels(767, 1358) !important;
+      max-height: calculatePixels(767, 344) !important;
+    }
+    .slideImage2 {
+      max-width: calculatePixels(767, 799) !important;
+      max-height: calculatePixels(767, 412) !important;
+    }
+  }
+}

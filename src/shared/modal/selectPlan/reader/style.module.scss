@@ -1,0 +1,83 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.heading {
+  font-family: PoppinsSemiBold;
+  @include MRP(
+    (
+      "font-size": 28,
+    )
+  );
+  text-align: center;
+  color: $BLACK;
+}
+
+.paragraph {
+  font-family: PoppinsRegular;
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+  text-align: center;
+  color: $Gray;
+}
+
+.buttonContainer {
+  @include MRP(
+    (
+      "height": 52,
+      "border-radius": 32,
+      "width": 174,
+      "font-size": 16,
+    )
+  );
+}
+
+.button2Container {
+  @include MRP(
+    (
+      "height": 52,
+      "width": 216,
+      "border-radius": 32,
+      "font-size": 16,
+    )
+  );
+  background-color: white !important;
+  border: 1px solid $PRIMARY !important;
+  color: $PRIMARY !important;
+}
+
+.insufficientIcon {
+  @include MRP(
+    (
+      "width": 389.6,
+      "height": 240.141,
+    )
+  );
+}
+
+@media screen and (max-width: 576px) {
+  .heading {
+    font-size: calculatePixels(768, 28) !important;
+  }
+  .paragraph {
+    font-size: calculatePixels(768, 16) !important;
+  }
+  .buttonContainer {
+    height: calculatePixels(768, 52) !important;
+    width: calculatePixels(768, 174) !important;
+    border-radius: calculatePixels(768, 32) !important;
+    font-size: calculatePixels(768, 16) !important;
+  }
+  .button2Container {
+    height: calculatePixels(768, 52) !important;
+    width: calculatePixels(768, 216) !important;
+    border-radius: calculatePixels(768, 32) !important;
+    font-size: calculatePixels(768, 16) !important;
+  }
+  .insufficientIcon {
+    height: calculatePixels(768, 240.141) !important;
+    width: calculatePixels(768, 389.6) !important;
+  }
+}

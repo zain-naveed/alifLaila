@@ -1,0 +1,79 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+.editProfileContainer {
+  max-width: 640px;
+  margin: 0 auto;
+  border: 1px solid $Light_Grey_2;
+  border-radius: 24px;
+  background-color: white;
+}
+
+.inputLabel {
+  font-family: PoppinsMedium;
+  font-size: 14px;
+  color: $Gray;
+  margin-bottom: 5px;
+}
+
+.inputStyle {
+  font-family: PoppinsRegular;
+  font-size: 16px;
+  color: $BLACK;
+  background-color: transparent;
+}
+
+.btnStyle {
+  font-family: PoppinsRegular;
+  font-size: 14px;
+  height: 40px;
+  width: 137px;
+  border-radius: 24px;
+}
+
+.title {
+  font-family: PoppinsRegular;
+  font-size: 14px;
+  color: $BLACK;
+}
+
+.dropDownContainer {
+  height: 52px;
+  border-radius: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid $LIGHT_GREY;
+}
+
+.error {
+  color: #ea5b5b;
+  font-size: 11px;
+  text-align: left;
+  // position: absolute;
+  // top: 78px;
+  z-index: 1;
+  margin-left: 5px;
+  /* margin: 10px 0; */
+}
+
+.asterik {
+  color: $PRIMARY;
+}
+
+.notSelectedLabel {
+  font-family: PoppinsRegular;
+  font-size: 16px;
+  color: $Gray;
+}
+
+.downIcon path {
+  stroke: $Gray;
+  stroke-width: 1px;
+}
+
+.optionsContainer {
+  top: 52px;
+  right: 0px;
+  z-index: 1;
+}

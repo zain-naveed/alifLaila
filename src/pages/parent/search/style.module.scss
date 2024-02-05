@@ -1,0 +1,63 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.mainContainer {
+  background-color: white;
+  width: 100%;
+  border-radius: 8px;
+  @include responsiveProperty(
+    (
+      "padding": 20,
+    )
+  );
+}
+
+.title {
+  font-family: BitterSemiBold;
+  color: $DARK_GREEN;
+  @include responsiveProperty(
+    (
+      "font-size": 32,
+    )
+  );
+  text-align: left;
+  text-transform: capitalize;
+  span {
+    color: $Secondary;
+  }
+}
+
+.resultLabel {
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 20,
+    )
+  );
+  color: $Gray;
+  text-align: left;
+}
+
+@media (max-width: 576px) {
+  .mainContainer {
+    padding: calculatePixels(768, 20) !important;
+  }
+  .title {
+    font-size: calculatePixels(768, 32) !important;
+  }
+  .resultLabel {
+    font-size: calculatePixels(768, 20) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .mainContainer {
+    padding: calculatePixels(1200, 20) !important;
+  }
+  .title {
+    font-size: calculatePixels(1200, 32) !important;
+  }
+  .resultLabel {
+    font-size: calculatePixels(1200, 20) !important;
+  }
+}

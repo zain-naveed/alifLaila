@@ -1,0 +1,65 @@
+@import "shared/utils/colors.scss";
+
+.readBookWraper {
+  display: flex;
+  align-items: center;
+
+  .img {
+    width: 60px;
+    height: 67px;
+    border-radius: 5px;
+  }
+
+  .bookContentWrapper {
+    margin-left: 13px;
+
+    h5 {
+      font-size: 14px;
+      margin-bottom: -2px;
+      font-family: "PoppinsRegular";
+      color: #0f1106;
+    }
+
+    span {
+      font-size: 12px;
+      color: $Gray;
+    }
+  }
+}
+
+.borderWithPaddingBottom {
+  border-bottom: 1px solid #f1f1f5;
+  padding-bottom: 21px;
+}
+
+.padingTop21 {
+  padding-top: 21px;
+}
+
+.headingLoader {
+  width: 94px !important;
+  height: 14px !important;
+  margin-bottom: 5px !important;
+  border-radius: 0 !important;
+}
+
+.countLabelLoader {
+  width: 128px !important;
+  height: 14px !important;
+  border-radius: 0 !important;
+}
+
+.noFavBookIcon {
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+}
+.noFavBookLabel1 {
+  font-size: 18px;
+  color: $Gray;
+  margin-top: 20px;
+}
+.noFavBookLabel2 {
+  font-size: 14px;
+  color: $Gray;
+}

@@ -1,0 +1,236 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.header {
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+.title {
+  font-family: PoppinsMedium;
+  @include MRP(
+    (
+      "font-size": 28,
+    )
+  );
+  color: $BLACK;
+  text-align: center;
+}
+
+.inputContainer {
+  height: 44px;
+}
+
+.inputStyle {
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+}
+
+.heading {
+  font-family: PoppinsMedium;
+  @include MRP(
+    (
+      "font-size": 18,
+    )
+  );
+  color: $BLACK;
+  text-align: left;
+}
+
+.headingLoader {
+  @include MRP(
+    (
+      "min-height": 27,
+      "max-height": 27,
+      "min-width": 176,
+      "max-width": 176,
+    )
+  );
+  height: 100%;
+  width: 100%;
+}
+
+.desc {
+  font-family: PoppinsRegular;
+  @include MRP(
+    (
+      "font-size": 14,
+    )
+  );
+  color: $Gray;
+  text-align: left;
+}
+
+.descLoader {
+  @include MRP(
+    (
+      "min-height": 21,
+      "max-height": 21,
+      "min-width": 180,
+      "max-width": 180,
+    )
+  );
+  height: 100%;
+  width: 100%;
+}
+
+.booksContainer {
+  @include MRP(
+    (
+      "max-height": 556,
+    )
+  );
+  overflow: auto;
+  &::-webkit-scrollbar-track {
+    border: 7px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: #f2f2f2;
+  }
+
+  &::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 7px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: $Secondary;
+  }
+}
+
+.border {
+  border: 1px solid transparent;
+  @include MRP(
+    (
+      "border-radius": 14,
+    )
+  );
+}
+
+.active {
+  border: 1px solid $Secondary;
+  @include MRP(
+    (
+      "border-radius": 14,
+    )
+  );
+}
+
+.bookCover {
+  @include MRP(
+    (
+      "height": 100,
+      "width": 94,
+    )
+  );
+  object-fit: fill;
+  border-radius: 8px;
+}
+
+.tickContainer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $Secondary;
+  border-radius: 100%;
+}
+
+.nextBtn {
+  @include MRP(
+    (
+      "width": 195,
+      "height": 52,
+      "font-size": 16,
+    )
+  );
+}
+
+.noFoundIconStyle {
+  @include MRP(
+    (
+      "height": 187,
+      "width": 275,
+    )
+  );
+}
+
+.noFoundLabel1 {
+  @include MRP(
+    (
+      "font-size": 20,
+    )
+  );
+}
+
+.noFoundLabel2 {
+  @include MRP(
+    (
+      "font-size": 17,
+    )
+  );
+}
+
+@media screen and (max-width: 576px) {
+  .title {
+    font-size: calculatePixels(768, 28) !important;
+  }
+  .inputStyle {
+    font-size: calculatePixels(768, 16) !important;
+  }
+  .heading {
+    font-size: calculatePixels(768, 18) !important;
+  }
+  .headingLoader {
+    min-height: calculatePixels(768, 27) !important;
+    max-height: calculatePixels(768, 27) !important;
+    min-width: calculatePixels(768, 176) !important;
+    max-width: calculatePixels(768, 176) !important;
+  }
+  .desc {
+    font-size: calculatePixels(768, 14) !important;
+  }
+  .descLoader {
+    min-height: calculatePixels(768, 21) !important;
+    max-height: calculatePixels(768, 21) !important;
+    min-width: calculatePixels(768, 180) !important;
+    max-width: calculatePixels(768, 180) !important;
+  }
+  .booksContainer {
+    max-height: calculatePixels(768, 556) !important;
+  }
+  .border {
+    border-radius: calculatePixels(768, 14) !important;
+  }
+  .active {
+    border-radius: calculatePixels(768, 14) !important;
+  }
+  .bookCover {
+    height: calculatePixels(768, 100) !important;
+    width: calculatePixels(768, 94) !important;
+  }
+  .nextBtn {
+    width: calculatePixels(768, 195) !important;
+    height: calculatePixels(768, 52) !important;
+    font-size: calculatePixels(768, 16) !important;
+  }
+  .noFoundIconStyle {
+    height: calculatePixels(768, 187) !important;
+    width: calculatePixels(768, 275) !important;
+  }
+  .noFoundLabel1 {
+    font-size: calculatePixels(768, 20) !important;
+  }
+  .noFoundLabel2 {
+    font-size: calculatePixels(768, 17) !important;
+  }
+}

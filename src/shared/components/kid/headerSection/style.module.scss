@@ -1,0 +1,110 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+@mixin headerContainerBg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include responsiveProperty(
+    (
+      "min-height": 200,
+    )
+  );
+}
+
+.headerContainer {
+  @include headerContainerBg();
+  background-image: url("../../../../assets/images/kid-leadership-header-section-bg.png");
+}
+
+.headerContainer2 {
+  @include headerContainerBg();
+  background-image: url("../../../../assets/images/kid-badges-header-section-bg.png");
+}
+
+.plansHeaderContainer {
+  @include responsiveProperty(
+    (
+      "height": 150,
+    )
+  );
+  border-bottom: 1px solid $Light_Grey_2;
+}
+
+.mainContainer {
+  @include responsiveProperty(
+    (
+      "height": 150,
+    )
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: auto;
+}
+
+.mainHeading {
+  color: white;
+  font-family: BitterSemiBold;
+  @include responsiveProperty(
+    (
+      "font-size": 40,
+    )
+  );
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.subHeading {
+  color: white;
+  font-family: PoppinsRegular;
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  text-align: left;
+}
+
+@media screen and (max-width: 576px) {
+  .headerContainer {
+    min-height: calculatePixels(576, 260) !important;
+  }
+  .headerContainer2 {
+    min-height: calculatePixels(576, 260) !important;
+  }
+  .plansHeaderContainer {
+    height: calculatePixels(576, 195) !important;
+  }
+  .mainContainer {
+    height: calculatePixels(576, 195) !important;
+  }
+  .mainHeading {
+    font-size: calculatePixels(576, 48) !important;
+  }
+  .subHeading {
+    font-size: calculatePixels(576, 16) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .headerContainer {
+    min-height: calculatePixels(768, 260) !important;
+  }
+  .headerContainer2 {
+    min-height: calculatePixels(768, 260) !important;
+  }
+  .plansHeaderContainer {
+    height: calculatePixels(768, 195) !important;
+  }
+  .mainContainer {
+    height: calculatePixels(768, 195) !important;
+  }
+  .mainHeading {
+    font-size: calculatePixels(768, 48) !important;
+  }
+  .subHeading {
+    font-size: calculatePixels(768, 16) !important;
+  }
+}

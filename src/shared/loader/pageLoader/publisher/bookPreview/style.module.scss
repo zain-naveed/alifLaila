@@ -1,0 +1,111 @@
+.img {
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+}
+.bookWrapper {
+  perspective: 1500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 100px);
+}
+.bookPages {
+  height: 600px;
+  width: 800px;
+  position: relative;
+  border: 10px solid transparent;
+  padding: 15px;
+}
+
+.container-padding {
+  padding: 20px !important;
+}
+
+.singlePage {
+  z-index: 200;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.singlePage:nth-child(even):before {
+  background: rgba(0, 0, 0, 0.2);
+}
+.singlePage:nth-child(even) {
+  pointer-events: none;
+  transform: rotateY(180deg);
+  transform-origin: 100% 0;
+  left: 0;
+  border-radius: 4px 0 0 4px;
+  border-color: black;
+  background-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.12) 0%,
+    rgba(0, 0, 0, 0) 10%
+  );
+}
+.singlePage.flipped:nth-child(odd) {
+  pointer-events: none;
+  transform: rotateY(-180deg);
+}
+.singlePage.flipped:nth-child(odd):before {
+  background: rgba(0, 0, 0, 0.2);
+}
+.singlePage.flipped:nth-child(even) {
+  pointer-events: all;
+  transform: rotateY(0deg);
+}
+/* .single-page:nth-child(odd)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to left, transparent, #37373770);
+}
+.single-page:nth-child(even)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to right, transparent, #4e4e4e70);
+} */
+
+.bookPages::before {
+  transition: 0.2s 0.1s ease;
+}
+.complete .bookPages::before {
+  transition: 0.2s 0.6s ease;
+}
+
+@media screen and (max-width: 1199px) {
+  .bookWrapper {
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .bookPages {
+    height: 500px;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .bookPages {
+    height: 530px;
+    width: 720px;
+  }
+  .container-padding {
+    padding: 5px 10px !important;
+  }
+  .bookWrapper {
+    min-height: unset;
+    height: calc(100vh - 94px);
+  }
+}

@@ -1,0 +1,44 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.header {
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.dailogContent {
+  max-width: 420px;
+  margin: auto !important;
+}
+
+.contentClass {
+  border-radius: 8px !important;
+}
+
+.deleteHeading {
+  font-family: PoppinsMedium;
+  font-size: 16px;
+  text-align: center;
+  color: $Gray;
+}
+.icon {
+  height: 50px;
+  width: 50px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+
+  .actionButton,
+  .defaultButton {
+    width: 126px;
+  }
+
+  .defaultButton {
+    background: transparent;
+    border: 1px solid $PRIMARY;
+    color: $PRIMARY;
+    margin-left: 0;
+  }
+}

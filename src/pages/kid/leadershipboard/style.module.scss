@@ -1,0 +1,310 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.topLevelContainer {
+  height: calc(100vh - 94px);
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.readerOfMonthContainer {
+  @include responsiveProperty(
+    (
+      "height": 353,
+      "width": 846,
+      "border-radius": 20,
+      "margin-top": 300,
+    )
+  );
+  background-color: #ffe9ff;
+  border: 1px solid $PRIMARY;
+}
+
+.readerOfMonthSubContainer {
+  @include responsiveProperty(
+    (
+      "min-height": 323,
+      "max-height": 323,
+      "min-width": 593,
+      "max-width": 593,
+      "border-radius": 45,
+      "margin-top": -130,
+    )
+  );
+  height: 100%;
+  width: 100%;
+  border: 1px solid white;
+  background-color: $Secondary;
+}
+
+.title {
+  font-family: BitterSemiBold;
+  @include responsiveProperty(
+    (
+      "font-size": 40,
+    )
+  );
+  color: $DARK_GREEN;
+  text-align: center;
+  text-transform: capitalize;
+  span {
+    color: $Secondary;
+  }
+}
+
+.avatarStyle {
+  @include responsiveProperty(
+    (
+      "height": 135,
+      "width": 135,
+    )
+  );
+  border-radius: 100%;
+  border: 4px solid white;
+  object-fit: cover;
+}
+
+.badgeStyle {
+  @include responsiveProperty(
+    (
+      "min-height": 261,
+      "max-height": 261,
+      "min-width": 199,
+      "max-width": 199,
+    )
+  );
+  height: 100%;
+  width: 100%;
+}
+
+.winnerName {
+  @include responsiveProperty(
+    (
+      "font-size": 21,
+    )
+  );
+  font-family: PoppinsSemiBold;
+  color: white;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.winnerAge {
+  @include responsiveProperty(
+    (
+      "font-size": 18,
+    )
+  );
+  font-family: PoppinsSemiBold;
+  color: white;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.userInfoContainer {
+  @include responsiveProperty(
+    (
+      "margin-top": -150,
+    )
+  );
+}
+
+.statContainer {
+  @include responsiveProperty(
+    (
+      "height": 95,
+      "width": 208,
+      "border-radius": 15,
+    )
+  );
+  background-color: rgba($color: #ffffff, $alpha: 0.2);
+}
+
+.statCount {
+  @include responsiveProperty(
+    (
+      "font-size": 21,
+    )
+  );
+  font-family: PoppinsMedium;
+  color: white;
+  text-align: left;
+}
+
+.statLabel {
+  @include responsiveProperty(
+    (
+      "font-size": 18,
+    )
+  );
+  font-family: PoppinsRegular;
+  color: white;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.weeklyTitleContainer {
+  background-color: #fffbf3;
+  @include responsiveProperty(
+    (
+      "height": 234,
+    )
+  );
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timelabel {
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+  font-family: PoppinsRegular;
+  color: $Gray;
+  text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+  .readerOfMonthContainer {
+    height: calculatePixels(576, 353) !important;
+    width: calculatePixels(576, 846) !important;
+    border-radius: calculatePixels(576, 20) !important;
+    margin-top: calculatePixels(576, 300) !important;
+  }
+
+  .readerOfMonthSubContainer {
+    min-height: calculatePixels(576, 323) !important;
+    max-height: calculatePixels(576, 323) !important;
+    min-width: calculatePixels(576, 593) !important;
+    max-width: calculatePixels(576, 593) !important;
+    border-radius: calculatePixels(576, 45) !important;
+    margin-top: calculatePixels(576, -130) !important;
+  }
+
+  .title {
+    font-size: calculatePixels(576, 40) !important;
+  }
+
+  .avatarStyle {
+    height: calculatePixels(576, 135) !important;
+    width: calculatePixels(576, 135) !important;
+  }
+
+  .badgeStyle {
+    min-width: calculatePixels(576, 199) !important;
+    max-width: calculatePixels(576, 199) !important;
+    min-height: calculatePixels(576, 261) !important;
+    max-height: calculatePixels(576, 261) !important;
+  }
+
+  .winnerName {
+    font-size: calculatePixels(576, 21) !important;
+  }
+
+  .winnerAge {
+    font-size: calculatePixels(576, 18) !important;
+  }
+
+  .userInfoContainer {
+    margin-top: calculatePixels(576, -150) !important;
+  }
+
+  .statContainer {
+    height: calculatePixels(576, 95) !important;
+    width: calculatePixels(576, 208) !important;
+    border-radius: calculatePixels(576, 15) !important;
+  }
+
+  .statCount {
+    font-size: calculatePixels(576, 21) !important;
+  }
+
+  .statLabel {
+    font-size: calculatePixels(576, 18) !important;
+  }
+
+  .weeklyTitleContainer {
+    height: calculatePixels(576, 234) !important;
+  }
+
+  .timelabel {
+    font-size: calculatePixels(576, 14) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .readerOfMonthContainer {
+    height: calculatePixels(768, 353) !important;
+    width: calculatePixels(768, 846) !important;
+    border-radius: calculatePixels(768, 20) !important;
+    margin-top: calculatePixels(768, 300) !important;
+  }
+
+  .readerOfMonthSubContainer {
+    min-height: calculatePixels(768, 323) !important;
+    max-height: calculatePixels(768, 323) !important;
+    min-width: calculatePixels(768, 593) !important;
+    max-width: calculatePixels(768, 593) !important;
+    border-radius: calculatePixels(768, 45) !important;
+    margin-top: calculatePixels(768, -130) !important;
+  }
+
+  .title {
+    font-size: calculatePixels(768, 40) !important;
+  }
+
+  .avatarStyle {
+    height: calculatePixels(768, 135) !important;
+    width: calculatePixels(768, 135) !important;
+  }
+
+  .badgeStyle {
+    min-width: calculatePixels(768, 199) !important;
+    max-width: calculatePixels(768, 199) !important;
+    min-height: calculatePixels(768, 261) !important;
+    max-height: calculatePixels(768, 261) !important;
+  }
+
+  .winnerName {
+    font-size: calculatePixels(768, 21) !important;
+  }
+
+  .winnerAge {
+    font-size: calculatePixels(768, 18) !important;
+  }
+
+  .userInfoContainer {
+    margin-top: calculatePixels(768, -150) !important;
+  }
+
+  .statContainer {
+    height: calculatePixels(768, 95) !important;
+    width: calculatePixels(768, 208) !important;
+    border-radius: calculatePixels(768, 15) !important;
+  }
+
+  .statCount {
+    font-size: calculatePixels(768, 21) !important;
+  }
+
+  .statLabel {
+    font-size: calculatePixels(768, 18) !important;
+  }
+
+  .weeklyTitleContainer {
+    height: calculatePixels(768, 234) !important;
+  }
+
+  .timelabel {
+    font-size: calculatePixels(768, 14) !important;
+  }
+}

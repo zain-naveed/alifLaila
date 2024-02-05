@@ -1,0 +1,103 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.checkContainer {
+  height: 16px;
+  width: 16px;
+  border: 1px solid #597e8d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.activeCheckContainer {
+  background-color: $PRIMARY;
+  border-color: $PRIMARY;
+  border-radius: 3px;
+}
+
+.labelStyle {
+  font-family: PoppinsRegular;
+  font-size: 16px;
+  color: $Gray;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 768px) {
+  .checkContainer {
+    height: calcultn(0.7, 16) !important;
+    width: calcultn(0.7, 16) !important;
+  }
+
+  .labelStyle {
+    font-size: calcultn(0.7, 16) !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .checkContainer {
+    height: calcultn(0.7, 16) !important;
+    width: calcultn(0.7, 16) !important;
+  }
+
+  .labelStyle {
+    font-size: calcultn(0.7, 16) !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .checkContainer {
+    height: calcultn(0.85, 16) !important;
+    width: calcultn(0.85, 16) !important;
+  }
+
+  .labelStyle {
+    font-size: calcultn(0.85, 16) !important;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .checkContainer {
+    height: calcultn(1, 16) !important;
+    width: calcultn(1, 16) !important;
+  }
+
+  .labelStyle {
+    font-size: calcultn(1, 16) !important;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .checkContainer {
+    height: calcultn(1.14, 16) !important;
+    width: calcultn(1.14, 16) !important;
+  }
+
+  .labelStyle {
+    font-size: calcultn(1.14, 16) !important;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .checkContainer {
+    height: calcultn(1.28, 16) !important;
+    width: calcultn(1.28, 16) !important;
+  }
+
+  .labelStyle {
+    font-size: calcultn(1.28, 16) !important;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .checkContainer {
+    height: calcultn(1.42, 16) !important;
+    width: calcultn(1.42, 16) !important;
+  }
+
+  .labelStyle {
+    font-size: calcultn(1.42, 16) !important;
+  }
+}

@@ -1,0 +1,80 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.header {
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
+.dailogContent {
+  @include MRP(
+    (
+      "max-width": 530,
+    )
+  );
+}
+
+.title {
+  font-family: PoppinsSemiBold;
+  @include MRP(
+    (
+      "font-size": 28,
+    )
+  );
+  color: $BLACK;
+  text-align: center;
+}
+
+.subTitle {
+  font-family: PoppinsRegular;
+  @include MRP(
+    (
+      "font-size": 16,
+      "max-width": 407,
+    )
+  );
+  color: #7c7c7c;
+  text-align: center;
+}
+
+.viewBtn {
+  @include MRP(
+    (
+      "height": 48,
+      "width": 200,
+      "font-size": 16,
+    )
+  );
+}
+
+.iconStyle {
+  @include MRP(
+    (
+      "height": 159,
+      "width": 171,
+    )
+  );
+}
+
+@media screen and (max-width: 576px) {
+  .dailogContent {
+    max-width: 300px !important;
+    margin: auto !important;
+  }
+  .title {
+    font-size: calculatePixels(768, 28) !important;
+  }
+  .subTitle {
+    font-size: calculatePixels(768, 16) !important;
+    max-width: calculatePixels(768, 407) !important;
+  }
+  .viewBtn {
+    height: calculatePixels(768, 48) !important;
+    width: calculatePixels(768, 200) !important;
+    font-size: calculatePixels(768, 16) !important;
+  }
+  .iconStyle {
+    height: calculatePixels(768, 159) !important;
+    width: calculatePixels(768, 171) !important;
+  }
+}

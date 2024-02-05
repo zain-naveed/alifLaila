@@ -1,0 +1,36 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.tableContentLabel {
+  font-size: 14px;
+  font-family: PoppinsRegular;
+  color: $BLACK;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.bookNameItem {
+  display: flex;
+  align-items: center;
+  img {
+    width: 37px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+
+  span {
+    margin-left: 9px;
+    @include elipsis(1);
+  }
+}
+
+.IconSyle {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f7fb;
+  border-radius: 50px;
+}

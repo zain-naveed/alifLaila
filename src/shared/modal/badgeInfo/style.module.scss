@@ -1,0 +1,159 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.header {
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+.dailogContent {
+  @include MRP(
+    (
+      "max-width": 530,
+    )
+  );
+}
+
+.badgeIcon {
+  @include MRP(
+    (
+      "height": 276,
+      "width": 276,
+    )
+  );
+}
+
+.levelstyle {
+  font-family: PoppinsSemiBold;
+  @include MRP(
+    (
+      "font-size": 18,
+    )
+  );
+  color: $Gray;
+  text-align: center;
+}
+
+.badgeName {
+  font-family: PoppinsMedium;
+  @include MRP(
+    (
+      "font-size": 32,
+    )
+  );
+  color: $BLACK;
+  text-align: center;
+}
+
+.badgeDesc {
+  font-family: PoppinsRegular;
+  @include MRP(
+    (
+      "font-size": 14,
+    )
+  );
+  color: #6b7280;
+  text-align: center;
+}
+
+.btnStyle {
+  @include MRP(
+    (
+      "height": 52,
+      "font-size": 16,
+    )
+  );
+}
+
+.copyLabel {
+  font-family: PoppinsMedium;
+  @include MRP(
+    (
+      "font-size": 14,
+    )
+  );
+  color: #344054;
+  text-align: center;
+}
+
+.shareInputContainer {
+  @include MRP(
+    (
+      "height": 44,
+      "border-radius": 8,
+    )
+  );
+  border: 1px solid $GRAY_300;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inputContainer {
+  border: 0px !important;
+  outline: 0px !important;
+  width: 100%;
+  background-color: transparent;
+  font-family: PoppinsRegular;
+  @include MRP(
+    (
+      "font-size": 14,
+    )
+  );
+  color: $BLACK;
+  text-align: left;
+}
+
+.copyIcon {
+  @include MRP(
+    (
+      "height": 20,
+      "width": 20,
+    )
+  );
+}
+
+.grayScale {
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+}
+
+@media screen and (max-width: 576px) {
+  .dailogContent {
+    max-width: 400px !important;
+    margin: auto !important;
+  }
+  .badgeIcon {
+    height: calculatePixels(992, 276) !important;
+    width: calculatePixels(992, 276) !important;
+  }
+  .levelstyle {
+    font-size: calculatePixels(992, 18) !important;
+  }
+  .badgeName {
+    font-size: calculatePixels(992, 32) !important;
+  }
+  .badgeDesc {
+    font-size: calculatePixels(992, 14) !important;
+  }
+  .btnStyle {
+    height: calculatePixels(992, 52) !important;
+    font-size: calculatePixels(992, 16) !important;
+  }
+  .copyLabel {
+    font-size: calculatePixels(992, 14) !important;
+  }
+  .shareInputContainer {
+    height: calculatePixels(992, 44) !important;
+    border-radius: calculatePixels(992, 8) !important;
+  }
+  .inputContainer {
+    font-size: calculatePixels(992, 14) !important;
+  }
+  .copyIcon {
+    height: calculatePixels(992, 20) !important;
+    width: calculatePixels(992, 20) !important;
+  }
+}

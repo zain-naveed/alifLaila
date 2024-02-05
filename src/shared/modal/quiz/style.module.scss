@@ -1,0 +1,39 @@
+@import "shared/utils/responsive.module.scss";
+
+.dailogContent {
+  @include MRP(
+    (
+      "max-width": 450,
+    )
+  );
+  margin: auto !important;
+  height: 100vh;
+}
+
+.dailogContent2 {
+  @include MRP(
+    (
+      "max-width": 550,
+    )
+  );
+  margin: auto !important;
+  height: 100vh;
+}
+
+.quizBackground,
+.questionBackground {
+  background-image: url(../../../assets/images/quizBackground.png);
+  object-fit: contain;
+  background-position: center;
+  background-size: cover;
+}
+.questionBackground {
+  background-image: url(../../../assets/images/questionBackground.png);
+}
+
+@media screen and (max-width: 576px) {
+  .dailogContent {
+    max-width: 320px !important;
+    margin: auto !important;
+  }
+}

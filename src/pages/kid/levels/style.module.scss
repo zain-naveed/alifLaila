@@ -1,0 +1,352 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.topLevelContainer {
+  height: calc(100vh - 94px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.title {
+  font-family: BitterSemiBold;
+  @include responsiveProperty(
+    (
+      "font-size": 40,
+    )
+  );
+  color: $DARK_GREEN;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.titleLoader {
+  @include responsiveProperty(
+    (
+      "height": 40,
+      "width": 160,
+    )
+  );
+  border-radius: 0px !important;
+}
+
+.badgeLabel {
+  font-family: BitterSemiBold;
+  @include responsiveProperty(
+    (
+      "font-size": 24,
+    )
+  );
+  color: $DARK_GREEN;
+  text-align: left;
+  text-transform: capitalize;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.badgeLabelLoader {
+  @include responsiveProperty(
+    (
+      "height": 24,
+      "width": 115,
+    )
+  );
+  border-radius: 0px !important;
+}
+
+.badgeContainer {
+  @include responsiveProperty(
+    (
+      "height": 327,
+      "width": 308,
+      "border-radius": 16,
+    )
+  );
+  background-color: white;
+  border: 1px solid #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.badgeIcon {
+  @include responsiveProperty(
+    (
+      "height": 208,
+      "width": 208,
+    )
+  );
+  border-radius: 0px !important;
+}
+
+.shareIcon {
+  @include responsiveProperty(
+    (
+      "height": 20,
+      "width": 20,
+      "top": 20,
+      "right": 20,
+    )
+  );
+  position: absolute;
+  &:hover {
+    cursor: pointer;
+  }
+  path {
+    stroke: $Secondary;
+  }
+}
+
+.grayScale {
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+}
+
+.progressConntainer {
+  @include responsiveProperty(
+    (
+      "height": 10,
+      "border-radius": 20,
+    )
+  );
+  width: 90%;
+  background-color: $Gray;
+}
+
+.progress {
+  @include responsiveProperty(
+    (
+      "border-radius": 20,
+    )
+  );
+  height: 100%;
+  background-color: $Secondary;
+}
+
+.percentLabel {
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+  font-family: BitterSemiBold;
+  color: $BLACK;
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.percentLabelLoader {
+  @include responsiveProperty(
+    (
+      "height": 14,
+      "width": 35,
+    )
+  );
+  border-radius: 0px !important;
+}
+
+.championContainer {
+  @include responsiveProperty(
+    (
+      "height": 327,
+      "width": 500,
+      "border-radius": 16,
+    )
+  );
+  background-color: white;
+  border: 1px solid #f1f1f1;
+}
+
+.championIcon {
+  @include responsiveProperty(
+    (
+      "height": 234,
+      "width": 234,
+    )
+  );
+  border-radius: 0px !important;
+}
+
+.championLabel {
+  @include responsiveProperty(
+    (
+      "font-size": 40,
+    )
+  );
+  font-family: BitterSemiBold;
+  color: $Secondary;
+  text-align: center;
+}
+
+.championLabelLoader {
+  @include responsiveProperty(
+    (
+      "height": 40,
+      "width": 200,
+    )
+  );
+  border-radius: 0px !important;
+}
+
+@media screen and (max-width: 576px) {
+  .title {
+    font-size: calculatePixels(576, 40) !important;
+  }
+
+  .titleLoader {
+    height: calculatePixels(576, 40) !important;
+    width: calculatePixels(576, 160) !important;
+  }
+
+  .badgeLabel {
+    font-size: calculatePixels(576, 24) !important;
+  }
+
+  .badgeLabelLoader {
+    height: calculatePixels(576, 24) !important;
+    width: calculatePixels(576, 115) !important;
+  }
+
+  .badgeContainer {
+    height: calculatePixels(576, 327) !important;
+    width: calculatePixels(576, 308) !important;
+    border-radius: calculatePixels(576, 16) !important;
+  }
+
+  .badgeIcon {
+    height: calculatePixels(576, 208) !important;
+    width: calculatePixels(576, 208) !important;
+  }
+
+  .shareIcon {
+    height: calculatePixels(576, 20) !important;
+    width: calculatePixels(576, 20) !important;
+    top: calculatePixels(576, 20) !important;
+    right: calculatePixels(576, 20) !important;
+  }
+
+  .progressConntainer {
+    height: calculatePixels(576, 10) !important;
+    border-radius: calculatePixels(576, 20) !important;
+  }
+
+  .progress {
+    border-radius: calculatePixels(576, 20) !important;
+  }
+
+  .percentLabel {
+    font-size: calculatePixels(576, 14) !important;
+  }
+
+  .percentLabelLoader {
+    height: calculatePixels(576, 14) !important;
+    width: calculatePixels(576, 35) !important;
+  }
+
+  .championContainer {
+    width: calculatePixels(576, 500) !important;
+    height: calculatePixels(576, 327) !important;
+    border-radius: calculatePixels(576, 16) !important;
+  }
+
+  .championIcon {
+    height: calculatePixels(576, 234) !important;
+    width: calculatePixels(576, 234) !important;
+  }
+
+  .championLabel {
+    font-size: calculatePixels(576, 40) !important;
+  }
+
+  .championLabelLoader {
+    height: calculatePixels(576, 40) !important;
+    width: calculatePixels(576, 200) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .title {
+    font-size: calculatePixels(768, 40) !important;
+  }
+
+  .titleLoader {
+    height: calculatePixels(768, 40) !important;
+    width: calculatePixels(768, 160) !important;
+  }
+
+  .badgeLabel {
+    font-size: calculatePixels(768, 24) !important;
+  }
+
+  .badgeLabelLoader {
+    height: calculatePixels(768, 24) !important;
+    width: calculatePixels(768, 115) !important;
+  }
+
+  .badgeContainer {
+    height: calculatePixels(768, 327) !important;
+    width: calculatePixels(768, 308) !important;
+    border-radius: calculatePixels(768, 16) !important;
+  }
+
+  .badgeIcon {
+    height: calculatePixels(768, 208) !important;
+    width: calculatePixels(768, 208) !important;
+  }
+
+  .shareIcon {
+    height: calculatePixels(768, 20) !important;
+    width: calculatePixels(768, 20) !important;
+    top: calculatePixels(768, 20) !important;
+    right: calculatePixels(768, 20) !important;
+  }
+
+  .progressConntainer {
+    height: calculatePixels(768, 10) !important;
+    border-radius: calculatePixels(768, 20) !important;
+  }
+
+  .progress {
+    border-radius: calculatePixels(768, 20) !important;
+  }
+
+  .percentLabel {
+    font-size: calculatePixels(768, 14) !important;
+  }
+
+  .percentLabelLoader {
+    height: calculatePixels(768, 14) !important;
+    width: calculatePixels(768, 35) !important;
+  }
+
+  .championContainer {
+    width: calculatePixels(768, 500) !important;
+    height: calculatePixels(768, 327) !important;
+    border-radius: calculatePixels(768, 16) !important;
+  }
+
+  .championIcon {
+    height: calculatePixels(768, 234) !important;
+    width: calculatePixels(768, 234) !important;
+  }
+
+  .championLabel {
+    font-size: calculatePixels(768, 40) !important;
+  }
+
+  .championLabelLoader {
+    height: calculatePixels(768, 40) !important;
+    width: calculatePixels(768, 200) !important;
+  }
+}

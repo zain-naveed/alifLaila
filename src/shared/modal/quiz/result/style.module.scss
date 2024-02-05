@@ -1,0 +1,145 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.header {
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.quizResultCont {
+  background-image: url(../../../../assets/images/quizResult.png);
+  @include MRP(
+    (
+      "min-height": 518,
+    )
+  );
+  background-size: cover;
+  text-align: center;
+}
+
+.Icon {
+  @include MRP(
+    (
+      "height": 246,
+      "width": 303,
+    )
+  );
+}
+
+.percentage {
+  font-family: PoppinsSemiBold;
+  @include MRP(
+    (
+      "font-size": 94,
+    )
+  );
+  color: $Secondary;
+}
+
+.closeImage {
+  @include MRP(
+    (
+      "width": 35,
+      "height": 35,
+    )
+  );
+  img {
+    @include MRP(
+      (
+        "width": 35,
+        "height": 35,
+      )
+    );
+  }
+}
+
+.cotentContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.correct {
+  font-family: PoppinsRegular;
+  @include MRP(
+    (
+      "font-size": 20,
+    )
+  );
+}
+
+.para {
+  font-family: PoppinsMedium;
+  color: $DARK_GREEN;
+  text-transform: capitalize;
+  @include MRP(
+    (
+      "font-size": 24,
+    )
+  );
+}
+
+.done {
+  @include MRP(
+    (
+      "width": 220,
+      "border-radius": 32,
+      "height": 48,
+      "font-size": 16,
+    )
+  );
+}
+
+.retake {
+  @include MRP(
+    (
+      "width": 220,
+      "border-radius": 32,
+      "height": 48,
+      "font-size": 16,
+    )
+  );
+  border: 1px solid $PRIMARY !important;
+  background-color: white !important;
+  color: $PRIMARY !important;
+}
+
+@media screen and (max-width: 576px) {
+  .quizResultCont {
+    min-height: calculatePixels(768, 518) !important;
+  }
+  .Icon {
+    height: calculatePixels(768, 246) !important;
+    width: calculatePixels(768, 303) !important;
+  }
+  .percentage {
+    font-size: calculatePixels(768, 94) !important;
+  }
+  .closeImage {
+    width: calculatePixels(768, 35) !important;
+    height: calculatePixels(768, 35) !important;
+    img {
+      width: calculatePixels(768, 35) !important;
+      height: calculatePixels(768, 35) !important;
+    }
+  }
+  .correct {
+    font-size: calculatePixels(768, 20) !important;
+  }
+  .para {
+    font-size: calculatePixels(768, 24) !important;
+  }
+  .done {
+    font-size: calculatePixels(768, 16) !important;
+    width: calculatePixels(768, 220) !important;
+    height: calculatePixels(768, 48) !important;
+    border-radius: calculatePixels(768, 16) !important;
+  }
+  .retake {
+    font-size: calculatePixels(768, 16) !important;
+    width: calculatePixels(768, 220) !important;
+    height: calculatePixels(768, 48) !important;
+    border-radius: calculatePixels(768, 16) !important;
+  }
+}

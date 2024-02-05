@@ -1,0 +1,181 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.testmonialContainer {
+  width: 525px;
+  min-height: 267px;
+  border: 1px solid $PRIMARY;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.assetStyle {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.userName {
+  font-family: BitterSemiBold;
+  font-size: 26px;
+  color: $PRIMARY;
+  text-align: left;
+}
+
+.post {
+  font-family: PoppinsRegular;
+  font-size: 14px;
+  color: $GRAY2;
+  text-align: left;
+}
+
+@media screen and (max-width: 576px) {
+  .testmonialContainer {
+    width: 90%;
+    min-height: 185px;
+  }
+  .assetStyle {
+    width: 50px;
+    height: 50px;
+  }
+  .userName {
+    font-size: 18px;
+  }
+  .post {
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .testmonialContainer {
+    width: 90%;
+    min-height: 185px;
+  }
+  .assetStyle {
+    width: 50px;
+    height: 50px;
+  }
+  .userName {
+    font-size: 18px;
+  }
+  .post {
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .testmonialContainer {
+    width: 90%;
+    min-height: 185px;
+  }
+  .assetStyle {
+    width: 50px;
+    height: 50px;
+  }
+  .userName {
+    font-size: 18px;
+  }
+  .post {
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .testmonialContainer {
+    width: 365px;
+    min-height: 185px;
+  }
+  .assetStyle {
+    width: 50px;
+    height: 50px;
+  }
+  .userName {
+    font-size: 18px;
+  }
+  .post {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .testmonialContainer {
+    width: 446px;
+    min-height: 226px;
+  }
+  .assetStyle {
+    width: 61px;
+    height: 61px;
+  }
+  .userName {
+    font-size: 22px;
+  }
+  .post {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .testmonialContainer {
+    width: 525px;
+    min-height: 267px;
+  }
+  .assetStyle {
+    width: 72px;
+    height: 72px;
+  }
+  .userName {
+    font-size: 26px;
+  }
+  .post {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .testmonialContainer {
+    width: 598px;
+    min-height: 304px;
+  }
+  .assetStyle {
+    width: 82px;
+    height: 82px;
+  }
+  .userName {
+    font-size: 30px;
+  }
+  .post {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .testmonialContainer {
+    width: 672px;
+    min-height: 342px;
+  }
+  .assetStyle {
+    width: 92px;
+    height: 92px;
+  }
+  .userName {
+    font-size: 34px;
+  }
+  .post {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .testmonialContainer {
+    width: 745px;
+    min-height: 379px;
+  }
+  .assetStyle {
+    width: 102px;
+    height: 102px;
+  }
+  .userName {
+    font-size: 38px;
+  }
+  .post {
+    font-size: 20px;
+  }
+}

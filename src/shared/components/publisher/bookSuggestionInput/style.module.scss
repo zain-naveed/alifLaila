@@ -1,0 +1,70 @@
+@import "shared/utils/colors.scss";
+.suggestionContainer {
+  min-height: 48px;
+  border: 1px solid #adb5bd;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  padding: 0 17px;
+  position: relative;
+  .placeholder {
+    font-family: PoppinsRegular;
+    color: rgb(128, 129, 145) !important;
+    font-size: 14px;
+  }
+  .badgeMain {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    .badgeContainer {
+      background: #f2f4f7;
+      border-radius: 16px;
+      width: fit-content;
+      padding: 4px 9px;
+
+      .badgeText {
+        font-weight: 500;
+        font-size: 12px;
+        margin-right: 9px;
+      }
+    }
+  }
+
+  div {
+    .image {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .suggestion {
+    max-height: 255px;
+    overflow: auto;
+    position: absolute;
+    bottom: 56px;
+    left: 0px;
+    width: 100%;
+    background: white;
+    z-index: 100;
+    border-radius: 24px;
+    box-shadow: 0px 0px 12px 0px #e4e4e4;
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+.inputLabel {
+  font-size: 14px;
+  font-family: "PoppinsMedium";
+  margin-bottom: 5px;
+  color: #11142d;
+  font-weight: 500;
+}
+
+.asterik {
+  color: $PRIMARY;
+}

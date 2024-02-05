@@ -1,0 +1,135 @@
+@import "shared/utils/colors.scss";
+@import "shared/utils/responsive.module.scss";
+
+.topLevelContainer {
+  height: calc(100vh - 94px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.headerContainer {
+  background-image: url("../../assets/images/public-plans-asset.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include responsiveProperty(
+    (
+      "min-height": 310,
+    )
+  );
+
+  .contentContainer {
+    height: 100%;
+    margin: auto;
+    @include responsiveProperty(
+      (
+        "margin-top": 60,
+        "max-width": 632,
+      )
+    );
+  }
+
+  .mainHeading {
+    color: $DARK_GREEN;
+    font-family: BitterSemiBold;
+    @include responsiveProperty(
+      (
+        "font-size": 38,
+      )
+    );
+    text-align: center;
+    text-transform: capitalize;
+    span {
+      color: $Secondary !important;
+    }
+  }
+
+  .subTitle {
+    color: $BLACK;
+    font-family: PoppinsRegular;
+    @include responsiveProperty(
+      (
+        "font-size": 16,
+      )
+    );
+    text-align: center;
+  }
+}
+
+.title {
+  @include responsiveProperty(
+    (
+      "padding-top": 50,
+      "font-size": 44,
+      "padding-bottom": 30,
+    )
+  );
+  font-family: BitterSemiBold;
+  margin-bottom: 0px !important;
+  color: $DARK_GREEN;
+  text-align: center;
+}
+
+.seeMore {
+  @include responsiveProperty(
+    (
+      "height": 48,
+      "font-size": 14,
+      "width": 142,
+    )
+  );
+  background-color: $Secondary;
+}
+
+.familyPlans {
+  background-color: #fcfcfc;
+}
+
+@media screen and (max-width: 576px) {
+  .headerContainer {
+    min-height: calculatePixels(768, 310) !important;
+    .contentContainer {
+      margin-top: calculatePixels(768, 60) !important;
+      max-width: calculatePixels(768, 632) !important;
+    }
+    .mainHeading {
+      font-size: calculatePixels(768, 38) !important;
+    }
+    .subTitle {
+      font-size: calculatePixels(768, 16) !important;
+    }
+  }
+  .title {
+    padding-top: calculatePixels(768, 50) !important;
+    font-size: calculatePixels(768, 44) !important;
+    padding-bottom: calculatePixels(768, 30) !important;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .headerContainer {
+    min-height: calculatePixels(768, 310) !important;
+    .contentContainer {
+      margin-top: calculatePixels(768, 60) !important;
+      max-width: calculatePixels(768, 632) !important;
+    }
+    .mainHeading {
+      font-size: calculatePixels(768, 38) !important;
+    }
+    .subTitle {
+      font-size: calculatePixels(768, 16) !important;
+    }
+  }
+  .title {
+    padding-top: calculatePixels(768, 50) !important;
+    font-size: calculatePixels(768, 44) !important;
+    padding-bottom: calculatePixels(768, 30) !important;
+  }
+}

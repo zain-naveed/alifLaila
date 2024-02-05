@@ -1,0 +1,76 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.reviewMainContainer {
+  border-bottom: 1px solid $Light_Grey_3;
+}
+.reviewName {
+  @include responsiveProperty(
+    (
+      "font-size": 18,
+    )
+  );
+  margin-bottom: 0;
+  font-family: PoppinsMedium;
+}
+.reviewTime {
+  color: $Gray;
+  @include responsiveProperty(
+    (
+      "font-size": 15,
+    )
+  );
+  font-family: "PoppinsRegular";
+  font-weight: 400;
+}
+.reviewMsg {
+  color: $Gray;
+  @include responsiveProperty(
+    (
+      "font-size": 18,
+    )
+  );
+  font-family: PoppinsRegular;
+}
+.imgStyle {
+  @include responsiveProperty(
+    (
+      "height": 76,
+      "width": 76,
+    )
+  );
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 576px) {
+  .reviewName {
+    font-size: calculatePixels(992, 18) !important;
+  }
+  .reviewTime {
+    font-size: calculatePixels(992, 15) !important;
+  }
+  .reviewMsg {
+    font-size: calculatePixels(992, 18) !important;
+  }
+  .imgStyle {
+    height: calculatePixels(992, 76) !important;
+    width: calculatePixels(992, 76) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .reviewName {
+    font-size: calculatePixels(1200, 18) !important;
+  }
+  .reviewTime {
+    font-size: calculatePixels(1200, 15) !important;
+  }
+  .reviewMsg {
+    font-size: calculatePixels(1200, 18) !important;
+  }
+  .imgStyle {
+    height: calculatePixels(1200, 76) !important;
+    width: calculatePixels(1200, 76) !important;
+  }
+}

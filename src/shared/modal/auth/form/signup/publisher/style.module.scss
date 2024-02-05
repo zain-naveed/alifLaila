@@ -1,0 +1,197 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.header {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.heading {
+  @include MRP(
+    (
+      "font-size": 32,
+    )
+  );
+  font-family: BitterSemiBold;
+  color: $BLACK;
+  text-align: left;
+  text-transform: capitalize;
+  align-self: flex-start;
+}
+
+.formWrapper {
+  text-align: left;
+
+  .form2HeaderContainer {
+    justify-content: flex-start;
+
+    .form1Heading {
+      width: auto;
+    }
+  }
+}
+
+.hr {
+  border: 1px solid #c9cfda;
+  margin-left: 6px;
+  margin-right: 9px;
+}
+
+.inputLabel {
+  font-family: PoppinsMedium;
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+}
+
+.inputStyle {
+  font-family: PoppinsRegular;
+  @include MRP(
+    (
+      "font-size": 16,
+    )
+  );
+  color: $BLACK;
+}
+
+.btnStyle {
+  font-family: PoppinsMedium;
+  width: 100%;
+  @include MRP(
+    (
+      "font-size": 16,
+      "height": 52,
+      "border-radius": 32,
+    )
+  );
+}
+
+.inputContainer {
+  @include MRP(
+    (
+      "height": 52,
+      "padding": 10,
+    )
+  );
+}
+
+.inputTextAreaContainer {
+  @include MRP(
+    (
+      "height": 122,
+      "padding": 10,
+    )
+  );
+}
+
+.uploadContainer {
+  @include MRP(
+    (
+      "height": 114,
+      "width": 114,
+    )
+  );
+}
+
+.uploadIconStyle {
+  @include MRP(
+    (
+      "height": 25,
+      "width": 25,
+    )
+  );
+}
+
+.termsText {
+  @include MRP(
+    (
+      "font-size": 14,
+    )
+  );
+  font-family: PoppinsRegular;
+  color: $Gray;
+}
+
+.signupContnr {
+  text-align: center;
+  @include MRP(
+    (
+      "margin-top": 24,
+    )
+  );
+}
+
+.signupText {
+  @include MRP(
+    (
+      "font-size": 14,
+    )
+  );
+  font-family: PoppinsMedium;
+  color: $Gray;
+  span {
+    @include MRP(
+      (
+        "font-size": 14,
+      )
+    );
+    font-family: PoppinsSemiBold;
+    text-align: center;
+    color: $DARK_GREEN;
+    cursor: pointer;
+  }
+}
+
+.highlighted {
+  color: $PRIMARY;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+  .heading {
+    font-size: calculatePixels(992, 32) !important;
+  }
+  .inputContainer {
+    height: calculatePixels(992, 52) !important;
+    padding: calculatePixels(992, 10) !important;
+  }
+  .inputLabel {
+    font-size: calculatePixels(992, 16) !important;
+  }
+  .inputStyle {
+    font-size: calculatePixels(992, 16) !important;
+  }
+  .btnStyle {
+    font-size: calculatePixels(992, 16) !important;
+    height: calculatePixels(992, 52) !important;
+    border-radius: calculatePixels(992, 32) !important;
+  }
+  .termsText {
+    font-size: calculatePixels(992, 14) !important;
+  }
+  .signupContnr {
+    margin-top: calculatePixels(992, 24) !important;
+  }
+  .signupText {
+    font-size: calculatePixels(992, 14) !important;
+    span {
+      font-size: calculatePixels(992, 14) !important;
+    }
+  }
+  .inputTextAreaContainer {
+    height: calculatePixels(992, 122) !important;
+    padding: calculatePixels(992, 10) !important;
+  }
+  .uploadContainer {
+    height: calculatePixels(992, 114) !important;
+    width: calculatePixels(992, 114) !important;
+  }
+  .uploadIconStyle {
+    height: calculatePixels(992, 25) !important;
+    width: calculatePixels(992, 25) !important;
+  }
+}

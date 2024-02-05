@@ -1,0 +1,454 @@
+@import "shared/utils/responsive.module.scss";
+@import "shared/utils/colors.scss";
+
+.topContainer {
+  background-color: white;
+  @include responsiveProperty(
+    (
+      "border-radius": 10,
+    )
+  );
+}
+
+.viewCartHeading {
+  font-family: PoppinsSemiBold;
+  text-align: left;
+  @include responsiveProperty(
+    (
+      "font-size": 24,
+    )
+  );
+}
+
+.viewCartHeadingLoader {
+  @include responsiveProperty(
+    (
+      "height": 24,
+      "width": 116,
+    )
+  );
+  border-radius: 0% !important;
+}
+
+// --------------cart section---------------
+
+.publisherName {
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+
+  span {
+    color: $Secondary;
+  }
+}
+
+.publisherNameLoader {
+  @include responsiveProperty(
+    (
+      "height": 14,
+      "width": 146,
+    )
+  );
+  border-radius: 0% !important;
+}
+
+.shipCharges {
+  font-family: PoppinsMedium;
+  color: $PRIMARY;
+  @include responsiveProperty(
+    (
+      "font-size": 14,
+    )
+  );
+}
+
+.shipChargesLoader {
+  @include responsiveProperty(
+    (
+      "height": 14,
+      "width": 177,
+    )
+  );
+  border-radius: 0% !important;
+}
+
+.cartDetailMain {
+  overflow-x: auto;
+}
+
+.cartHeading {
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  color: $BLACK;
+}
+
+.cartHeadingLoader {
+  @include responsiveProperty(
+    (
+      "height": 16,
+      "width": 70,
+    )
+  );
+  border-radius: 0% !important;
+}
+
+.card_FirstHeading {
+  width: 50%;
+}
+
+.card_OtherHeading {
+  width: 16.667%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.cartContent {
+  min-width: 600px;
+}
+
+.itemContainer {
+  background-color: #f6f9fc;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.itemContainer2 {
+  background-color: white;
+}
+
+.cartContainer {
+  display: flex;
+  @include responsiveProperty(
+    (
+      "width": 80,
+      "height": 32,
+      "border-radius": 54,
+    )
+  );
+  background: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantityIconStyle {
+  @include responsiveProperty(
+    (
+      "width": 16,
+      "height": 16,
+    )
+  );
+}
+
+.cartValue {
+  width: 33%;
+  text-align: center;
+  @include responsiveProperty(
+    (
+      "font-size": 12,
+    )
+  );
+  font-family: PoppinsSemiBold;
+}
+
+.priceLabel {
+  font-family: PoppinsRegular;
+  @include responsiveProperty(
+    (
+      "font-size": 18,
+    )
+  );
+  color: $BLACK;
+}
+
+.priceLabelLoader {
+  @include responsiveProperty(
+    (
+      "height": 18,
+      "width": 92,
+    )
+  );
+  border-radius: 0% !important;
+}
+
+.totalBookPrice {
+  font-family: PoppinsSemiBold;
+  @include responsiveProperty(
+    (
+      "font-size": 18,
+    )
+  );
+  color: $BLACK;
+}
+
+// --------------checkout section---------------
+
+.checkoutLeftContainer {
+  @include responsiveProperty(
+    (
+      "max-width": 424,
+    )
+  );
+  align-self: center;
+}
+
+.couponHeading {
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 22,
+    )
+  );
+  text-align: left;
+}
+
+.couponHeadingLoader {
+  @include responsiveProperty(
+    (
+      "height": 22,
+      "width": 200,
+    )
+  );
+  border-radius: 0% !important;
+}
+
+.discountTitle {
+  font-family: PoppinsRegular;
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  color: #605f5f;
+  text-align: left;
+}
+
+.discountTitleLoader {
+  @include responsiveProperty(
+    (
+      "height": 16,
+      "width": 150,
+    )
+  );
+  border-radius: 0% !important;
+}
+
+.couponInputContainer {
+  @include responsiveProperty(
+    (
+      "height": 52,
+      "border-radius": 45,
+    )
+  );
+  width: 100%;
+  border: 1px solid #cbcbcb;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.couponInputContainerLoader {
+  @include responsiveProperty(
+    (
+      "height": 52,
+      "border-radius": 45,
+    )
+  );
+}
+
+.couponInput {
+  height: 100%;
+  width: 100%;
+  border: 0px;
+  background-color: transparent;
+  outline: 0px;
+  font-family: PoppinsRegular;
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  color: $BLACK;
+}
+
+.applyBtn {
+  font-family: PoppinsMedium;
+  color: $BLACK;
+  @include responsiveProperty(
+    (
+      "font-size": 16,
+    )
+  );
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// --------------book suggestion section--------------
+
+.bookSuggestedHeading {
+  font-family: PoppinsMedium;
+  @include responsiveProperty(
+    (
+      "font-size": 30,
+    )
+  );
+  color: $BLACK;
+}
+
+.bookListContainer {
+  @include responsiveProperty(
+    (
+      "gap": 30,
+    )
+  );
+}
+
+.bookListContainer2 {
+  @include responsiveProperty(
+    (
+      "gap": 8,
+    )
+  );
+}
+
+// --------------responsive section--------------
+
+@media screen and (max-width: 576px) {
+  .cartHeadingContainer,
+  .mainItemBackground {
+    width: 626px;
+  }
+
+  .topContainer {
+    border-radius: calculatePixels(992, 10) !important;
+  }
+
+  .viewCartHeading {
+    font-size: calculatePixels(992, 24) !important;
+  }
+
+  .viewCartHeadingLoader {
+    height: calculatePixels(992, 24) !important;
+    width: calculatePixels(992, 116) !important;
+  }
+
+  .checkoutLeftContainer {
+    max-width: 100% !important;
+  }
+
+  .couponHeading {
+    font-size: calculatePixels(992, 22) !important;
+  }
+
+  .couponHeadingLoader {
+    height: calculatePixels(992, 22) !important;
+    width: calculatePixels(992, 200) !important;
+  }
+
+  .discountTitle {
+    font-size: calculatePixels(992, 16) !important;
+  }
+
+  .discountTitleLoader {
+    height: calculatePixels(992, 16) !important;
+    width: calculatePixels(992, 150) !important;
+  }
+
+  .couponInputContainer {
+    height: calculatePixels(992, 52) !important;
+    border-radius: calculatePixels(992, 45) !important;
+  }
+
+  .couponInputContainerLoader {
+    height: calculatePixels(992, 52) !important;
+    border-radius: calculatePixels(992, 45) !important;
+  }
+
+  .couponInput {
+    font-size: calculatePixels(992, 16) !important;
+  }
+
+  .applyBtn {
+    font-size: calculatePixels(992, 16) !important;
+  }
+
+  .bookListContainer {
+    gap: calculatePixels(576, 30) !important;
+  }
+
+  .bookListContainer2 {
+    gap: calculatePixels(576, 30) !important;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .viewCartHeading {
+    font-size: calculatePixels(1200, 24) !important;
+  }
+
+  .topContainer {
+    border-radius: calculatePixels(1200, 10) !important;
+  }
+
+  .viewCartHeadingLoader {
+    height: calculatePixels(1200, 24) !important;
+    width: calculatePixels(1200, 116) !important;
+  }
+
+  .checkoutLeftContainer {
+    max-width: calculatePixels(1200, 424) !important;
+  }
+
+  .couponHeading {
+    font-size: calculatePixels(1200, 22) !important;
+  }
+
+  .couponHeadingLoader {
+    height: calculatePixels(1200, 22) !important;
+    width: calculatePixels(1200, 200) !important;
+  }
+
+  .discountTitle {
+    font-size: calculatePixels(1200, 16) !important;
+  }
+
+  .discountTitleLoader {
+    height: calculatePixels(1200, 16) !important;
+    width: calculatePixels(1200, 150) !important;
+  }
+
+  .couponInputContainer {
+    height: calculatePixels(1200, 52) !important;
+    border-radius: calculatePixels(1200, 45) !important;
+  }
+
+  .couponInputContainerLoader {
+    height: calculatePixels(1200, 52) !important;
+    border-radius: calculatePixels(1200, 45) !important;
+  }
+
+  .couponInput {
+    font-size: calculatePixels(1200, 16) !important;
+  }
+
+  .applyBtn {
+    font-size: calculatePixels(1200, 16) !important;
+  }
+
+  .bookListContainer {
+    gap: calculatePixels(768, 30) !important;
+  }
+
+  .bookListContainer2 {
+    gap: calculatePixels(576, 30) !important;
+  }
+}

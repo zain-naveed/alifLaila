@@ -1,0 +1,52 @@
+@import "shared/utils/colors.scss";
+
+.genreWrapper {
+    .numItem {
+        font-weight: 800;
+        font-size: 20px;
+        margin-right: 18px;
+        color: #EF437B;
+    }
+
+    .itemText {
+        font-weight: 400;
+        font-size: 18px;
+        color: #868E96;
+    }
+}
+.borderWithPaddingBottom {
+    border-bottom: 1px solid #F1F1F5;
+    padding-bottom: 18px;
+}
+
+.padingTop18 {
+    padding-top: 18px;
+}
+
+.numLoader {
+    width: 21px!important;
+    height: 20px!important;
+    margin-right: 18px;
+    border-radius: 0!important;
+}
+
+.itemLoader {
+    width: 78px!important;
+    height: 18px!important;
+    border-radius: 0!important;
+}
+.noFavBookIcon{
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+}
+
+.noFavBookLabel1{
+    font-size: 18px;
+    color: $Gray;
+    margin-top: 20px;
+}
+.noFavBookLabel2{
+    font-size: 14px;
+    color: $Gray;
+}

@@ -1,0 +1,100 @@
+@import "shared/utils/colors.scss";
+
+.agreementlabel {
+  font-family: PoppinsMedium;
+  font-size: 16px;
+  color: $BLACK;
+  text-align: left;
+}
+
+.outOfLabel {
+  font-family: PoppinsRegular;
+  font-size: 14px;
+  color: black;
+  text-wrap: nowrap;
+  min-width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.agreementContent {
+  height: 393px;
+  overflow-y: auto;
+  border: 1px solid $LIGHT_GREY;
+  border-radius: 14px;
+  p {
+    font-family: PoppinsRegular;
+    font-size: 16px;
+    color: $Gray;
+    margin-bottom: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border: 7px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: #f2f2f2;
+  }
+
+  &::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 7px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: rgba(239, 67, 123, 0.5);
+  }
+}
+
+.signatureContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+
+  .signatureImage {
+    height: 66px;
+    width: 154px;
+  }
+
+  .seperator {
+    height: 1px;
+    width: 100%;
+    background-color: $LIGHT_GREY;
+  }
+
+  .signedPerson {
+    font-family: PoppinsMedium;
+    font-size: 16px;
+    color: $BLACK;
+  }
+}
+
+.statContainer {
+  min-width: 180px;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  background-color: $lightYellow;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+
+  label {
+    font-family: PoppinsMedium;
+    font-size: 16px;
+    color: $PRIMARY;
+    text-align: left;
+  }
+
+  span {
+    font-family: PoppinsRegular;
+    font-size: 14px;
+    color: $BLACK;
+    text-align: left;
+  }
+}
